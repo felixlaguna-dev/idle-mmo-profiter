@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useDataProvider } from '../composables/useDataProvider'
 import { useMarketRefresh } from '../composables/useMarketRefresh'
 import { useStaticMode } from '../composables/useStaticMode'
@@ -150,6 +150,54 @@ const sortedRecipes = computed(() => sortItems(
   (r) => r.price,
   (r) => r.name,
 ))
+
+// Mobile display limit — show 20 items per section initially on mobile
+const MOBILE_INITIAL_LIMIT = 20
+const isMobileView = ref(false)
+const showAllMaterials = ref(false)
+const showAllCraftables = ref(false)
+const showAllResources = ref(false)
+const showAllRecipes = ref(false)
+
+// eslint-disable-next-line no-undef
+let mediaQuery: MediaQueryList | null = null
+const onMediaChange = (e: { matches: boolean }) => {
+  isMobileView.value = e.matches
+}
+onMounted(() => {
+  mediaQuery = window.matchMedia('(max-width: 767px)')
+  isMobileView.value = mediaQuery.matches
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mediaQuery.addEventListener('change', onMediaChange as any)
+})
+onUnmounted(() => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mediaQuery?.removeEventListener('change', onMediaChange as any)
+})
+
+const displayMaterials = computed(() => {
+  const items = sortedMaterials.value
+  if (!isMobileView.value || showAllMaterials.value || items.length <= MOBILE_INITIAL_LIMIT) return items
+  return items.slice(0, MOBILE_INITIAL_LIMIT)
+})
+
+const displayCraftables = computed(() => {
+  const items = sortedCraftables.value
+  if (!isMobileView.value || showAllCraftables.value || items.length <= MOBILE_INITIAL_LIMIT) return items
+  return items.slice(0, MOBILE_INITIAL_LIMIT)
+})
+
+const displayResources = computed(() => {
+  const items = sortedResources.value
+  if (!isMobileView.value || showAllResources.value || items.length <= MOBILE_INITIAL_LIMIT) return items
+  return items.slice(0, MOBILE_INITIAL_LIMIT)
+})
+
+const displayRecipes = computed(() => {
+  const items = sortedRecipes.value
+  if (!isMobileView.value || showAllRecipes.value || items.length <= MOBILE_INITIAL_LIMIT) return items
+  return items.slice(0, MOBILE_INITIAL_LIMIT)
+})
 
 // Per-item refresh loading state
 const itemRefreshLoading = ref<Record<string, boolean>>({})
@@ -1115,7 +1163,7 @@ const refreshItemData = async () => {
           </thead>
           <tbody>
             <tr
-              v-for="material in sortedMaterials"
+              v-for="material in displayMaterials"
               :key="material.id"
               :class="{ excluded: dataProvider.isRefreshExcluded('materials', material.id) }"
             >
@@ -1206,6 +1254,13 @@ const refreshItemData = async () => {
             </tr>
           </tbody>
         </table>
+        <button
+          v-if="isMobileView && !showAllMaterials && sortedMaterials.length > MOBILE_INITIAL_LIMIT"
+          class="btn-show-more"
+          @click="showAllMaterials = true"
+        >
+          Show all {{ sortedMaterials.length }} items
+        </button>
       </div>
     </section>
 
@@ -1270,7 +1325,7 @@ const refreshItemData = async () => {
           </thead>
           <tbody>
             <tr
-              v-for="craftable in sortedCraftables"
+              v-for="craftable in displayCraftables"
               :key="craftable.id"
               :class="{ excluded: dataProvider.isRefreshExcluded('craftables', craftable.id) }"
             >
@@ -1361,6 +1416,13 @@ const refreshItemData = async () => {
             </tr>
           </tbody>
         </table>
+        <button
+          v-if="isMobileView && !showAllCraftables && sortedCraftables.length > MOBILE_INITIAL_LIMIT"
+          class="btn-show-more"
+          @click="showAllCraftables = true"
+        >
+          Show all {{ sortedCraftables.length }} items
+        </button>
       </div>
     </section>
 
@@ -1423,7 +1485,7 @@ const refreshItemData = async () => {
           </thead>
           <tbody>
             <tr
-              v-for="resource in sortedResources"
+              v-for="resource in displayResources"
               :key="resource.id"
               :class="{ excluded: dataProvider.isRefreshExcluded('resources', resource.id) }"
             >
@@ -1510,6 +1572,13 @@ const refreshItemData = async () => {
             </tr>
           </tbody>
         </table>
+        <button
+          v-if="isMobileView && !showAllResources && sortedResources.length > MOBILE_INITIAL_LIMIT"
+          class="btn-show-more"
+          @click="showAllResources = true"
+        >
+          Show all {{ sortedResources.length }} items
+        </button>
       </div>
     </section>
 
@@ -1593,7 +1662,7 @@ const refreshItemData = async () => {
           </thead>
           <tbody>
             <tr
-              v-for="recipe in sortedRecipes"
+              v-for="recipe in displayRecipes"
               :key="recipe.id"
               :class="{ excluded: dataProvider.isRefreshExcluded('recipes', recipe.id) }"
             >
@@ -1720,6 +1789,13 @@ const refreshItemData = async () => {
             </tr>
           </tbody>
         </table>
+        <button
+          v-if="isMobileView && !showAllRecipes && sortedRecipes.length > MOBILE_INITIAL_LIMIT"
+          class="btn-show-more"
+          @click="showAllRecipes = true"
+        >
+          Show all {{ sortedRecipes.length }} items
+        </button>
       </div>
     </section>
   </div>
@@ -2594,6 +2670,25 @@ const refreshItemData = async () => {
 }
 
 /* Mobile market card density */
+/* Show More Button */
+.btn-show-more {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-accent);
+  border: 1px dashed var(--border-color);
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-show-more:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-primary);
+}
+
 @media (max-width: 767px) {
   .market-items-table.mobile-card-layout tbody tr {
     padding: 0.25rem 0.375rem;
