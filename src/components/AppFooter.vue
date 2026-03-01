@@ -68,6 +68,7 @@ const currentYear = ref(new Date().getFullYear())
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   padding: 2rem 2rem 1.5rem;
+  margin-top: 2rem;
 }
 
 .footer-content {
@@ -99,8 +100,8 @@ const currentYear = ref(new Date().getFullYear())
 }
 
 .footer-disclaimer {
-  font-size: 0.75rem;
-  opacity: 0.8;
+  font-size: 0.6875rem;
+  opacity: 0.6;
 }
 
 .footer-links {
