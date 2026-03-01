@@ -321,7 +321,7 @@ const isUntradableRecipe = (recipeName: string): boolean => {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 

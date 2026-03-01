@@ -153,19 +153,6 @@ const formatNumber = (num: number): string => {
   return Math.round(num).toLocaleString()
 }
 
-// Format time
-const formatTime = (seconds: number): string => {
-  if (seconds < 60) {
-    return `${Math.round(seconds)}s`
-  }
-  const minutes = Math.floor(seconds / 60)
-  const remainingSeconds = Math.round(seconds % 60)
-  if (remainingSeconds === 0) {
-    return `${minutes}m`
-  }
-  return `${minutes}m ${remainingSeconds}s`
-}
-
 // Get last update text
 const lastUpdateText = computed(() => {
   if (!lastUpdateTime.value) {
@@ -317,48 +304,8 @@ onUnmounted(() => {
     <!-- Main Content -->
     <main class="app-main">
       <div class="content-wrapper">
-        <!-- Hero Section: Best Action (Full - All Activities tab only, hidden on narrow mobile) -->
-        <section v-if="bestAction && currentTab === 'all'" class="hero-section hero-full-only" aria-labelledby="best-action-heading">
-          <div class="hero-content">
-            <p class="hero-label">Best Action Right Now</p>
-            <div class="hero-activity">
-              <h2 id="best-action-heading" class="hero-name">{{ bestAction.name }}</h2>
-              <span class="hero-badge" :class="getTypeBadgeClass(bestAction.activityType)">
-                {{ bestAction.activityType }}
-              </span>
-            </div>
-            <div class="hero-profit" aria-label="Profit per hour">
-              <span class="hero-profit-value" aria-label="{{ formatNumber(bestAction.profitPerHour) }} gold per hour">{{ formatNumber(bestAction.profitPerHour) }}</span>
-              <span class="hero-profit-label" aria-hidden="true">gold/hr</span>
-            </div>
-            <dl class="hero-details">
-              <div class="hero-detail">
-                <dt class="detail-label">Profit per action</dt>
-                <dd class="detail-value">{{ formatNumber(bestAction.profitPerAction) }} gold</dd>
-              </div>
-              <div class="hero-detail">
-                <dt class="detail-label">Time per action</dt>
-                <dd class="detail-value">{{ formatTime(bestAction.timePerAction) }}</dd>
-              </div>
-              <div class="hero-detail">
-                <dt class="detail-label">Cost</dt>
-                <dd class="detail-value">{{ formatNumber(bestAction.cost) }} gold</dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-
-        <!-- Hero Compact: shown on All tab at narrow mobile, always on other tabs -->
-        <div v-if="bestAction && currentTab === 'all'" class="hero-compact hero-compact-fallback" aria-label="Best action summary">
-          <span class="hero-compact-label">Best:</span>
-          <span class="hero-compact-name">{{ bestAction.name }}</span>
-          <span class="hero-compact-badge" :class="getTypeBadgeClass(bestAction.activityType)">
-            {{ bestAction.activityType }}
-          </span>
-          <span class="hero-compact-separator" aria-hidden="true"></span>
-          <span class="hero-compact-profit">{{ formatNumber(bestAction.profitPerHour) }} gold/hr</span>
-        </div>
-        <div v-if="bestAction && currentTab !== 'all'" class="hero-compact" aria-label="Best action summary">
+        <!-- Hero Compact: shown on all tabs -->
+        <div v-if="bestAction" class="hero-compact" aria-label="Best action summary">
           <span class="hero-compact-label">Best:</span>
           <span class="hero-compact-name">{{ bestAction.name }}</span>
           <span class="hero-compact-badge" :class="getTypeBadgeClass(bestAction.activityType)">
@@ -658,146 +605,6 @@ onUnmounted(() => {
   margin: 0 auto;
 }
 
-/* Hero compact fallback: hidden by default, shown at narrow mobile */
-.hero-compact-fallback {
-  display: none;
-}
-
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 100%);
-  border: 2px solid rgba(245, 158, 11, 0.3);
-  border-radius: 0.75rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--warning) 0%,
-    var(--accent-primary) 50%,
-    var(--warning) 100%
-  );
-  opacity: 0.5;
-}
-
-.hero-section:hover {
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25), 0 10px 28px rgba(0, 0, 0, 0.35);
-  transform: translateY(-2px);
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.hero-label {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--warning);
-  font-weight: 600;
-}
-
-.hero-activity {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.hero-name {
-  font-size: 2rem;
-  color: var(--text-primary);
-  font-weight: 700;
-  margin: 0;
-}
-
-.hero-badge {
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.badge-dungeon {
-  background-color: rgba(168, 85, 247, 0.2);
-  color: #c084fc;
-  border: 1px solid rgba(168, 85, 247, 0.4);
-}
-
-.badge-craftable {
-  background-color: rgba(34, 197, 94, 0.2);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.4);
-}
-
-.badge-resource {
-  background-color: rgba(59, 130, 246, 0.2);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.4);
-}
-
-.hero-profit {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.hero-profit-value {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--warning);
-  line-height: 1;
-}
-
-.hero-profit-label {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-}
-
-.hero-details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
-
-.hero-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin: 0;
-}
-
-.detail-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.detail-value {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0;
-}
-
 /* Hero Compact */
 .hero-compact {
   display: flex;
@@ -1079,7 +886,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 
@@ -1109,18 +916,6 @@ onUnmounted(() => {
 
   .app-main {
     padding: 1.5rem;
-  }
-
-  .hero-section {
-    padding: 1.75rem;
-  }
-
-  .hero-name {
-    font-size: 1.75rem;
-  }
-
-  .hero-profit-value {
-    font-size: 2.5rem;
   }
 
   .tab-button {
@@ -1163,51 +958,6 @@ onUnmounted(() => {
 
   .app-main {
     padding: 0.5rem;
-  }
-
-  .hero-section {
-    padding: 0.625rem;
-    margin-bottom: 0.375rem;
-  }
-
-  .hero-content {
-    gap: 0.375rem;
-  }
-
-  .hero-label {
-    font-size: 0.6875rem;
-  }
-
-  .hero-name {
-    font-size: 1rem;
-  }
-
-  .hero-badge {
-    padding: 0.1875rem 0.375rem;
-    font-size: 0.6875rem;
-  }
-
-  .hero-profit-value {
-    font-size: 1.25rem;
-  }
-
-  .hero-profit-label {
-    font-size: 0.875rem;
-  }
-
-  .hero-details {
-    display: none;
-  }
-
-  /* At narrow mobile (<=393px), swap full hero for compact on All tab */
-  @media (max-width: 393px) {
-    .hero-full-only {
-      display: none;
-    }
-
-    .hero-compact-fallback {
-      display: flex;
-    }
   }
 
   .hero-compact {

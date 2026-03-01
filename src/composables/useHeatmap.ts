@@ -58,8 +58,8 @@ export function getHeatmapStyle(
   const linear = maxProfit === 0 ? 1 : profit / maxProfit
   const normalized = Math.pow(Math.max(linear, 0), 0.3)
 
-  // Continuous alpha: 0.03 (lowest) to 0.25 (highest)
-  const alpha = 0.03 + normalized * 0.22
+  // Continuous alpha: 0.06 (lowest) to 0.28 (highest)
+  const alpha = 0.06 + normalized * 0.22
   const textColor = normalized > 0.5 ? '#059669' : '#10b981'
 
   return {
