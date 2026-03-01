@@ -1199,8 +1199,8 @@ onUnmounted(() => {
     display: none;
   }
 
-  /* At 375px, swap full hero for compact on All tab */
-  @media (max-width: 375px) {
+  /* At narrow mobile (<=393px), swap full hero for compact on All tab */
+  @media (max-width: 393px) {
     .hero-full-only {
       display: none;
     }

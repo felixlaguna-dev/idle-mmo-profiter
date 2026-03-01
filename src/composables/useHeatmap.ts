@@ -53,14 +53,10 @@ export function getHeatmapStyle(
   }
 
   // Handle positive profits - use continuous green gradient
-  // Use logarithmic normalization to avoid extreme compression when max >> min
-  // (e.g., 17M max vs 440K min would make most rows look identical with linear)
-  const logNormalize = (value: number, max: number): number => {
-    if (max <= 1) return 1
-    if (value <= 0) return 0
-    return Math.log(1 + value) / Math.log(1 + max)
-  }
-  const normalized = maxProfit === 0 ? 1 : logNormalize(profit, maxProfit)
+  // Power scale (exponent 0.3) spreads values much better than linear or log
+  // when max >> min (e.g., 17M max vs 440K min: linear=0.026, log=0.78, pow0.3=0.30)
+  const linear = maxProfit === 0 ? 1 : profit / maxProfit
+  const normalized = Math.pow(Math.max(linear, 0), 0.3)
 
   // Continuous alpha: 0.03 (lowest) to 0.25 (highest)
   const alpha = 0.03 + normalized * 0.22
