@@ -214,6 +214,12 @@ const formatTime = (seconds: number): string => {
       </button>
     </div>
 
+    <!-- Pagination info -->
+    <div v-if="hasMoreCraftables && !showAllCraftables" class="pagination-info">
+      Showing {{ DEFAULT_DISPLAY_LIMIT }} of {{ filteredCraftables.length }} items
+      <button class="btn-show-all-inline" @click="showAllCraftables = true">Show all</button>
+    </div>
+
     <div class="table-container">
       <!-- Empty state when no craftables match the active sub-tab -->
       <EmptyState
@@ -561,6 +567,29 @@ const formatTime = (seconds: number): string => {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.pagination-info {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 0.25rem 0;
+}
+
+.btn-show-all-inline {
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 0.25rem;
+}
+
+.btn-show-all-inline:hover {
+  color: var(--text-primary);
 }
 
 .show-more-container {

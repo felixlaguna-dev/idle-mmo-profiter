@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
+import { ref, computed, watch, nextTick, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
 import { useDataProvider } from './composables/useDataProvider'
 import { useRecipePricing } from './composables/useRecipePricing'
 import { useProfitRanking } from './composables/useProfitRanking'
@@ -214,6 +214,16 @@ const handleTabKeydown = (e: KeyboardEvent) => {
   }, 0)
 }
 
+// Auto-scroll active tab into view on mobile
+const scrollActiveTabIntoView = () => {
+  nextTick(() => {
+    const activeTab = document.querySelector('.tab-button.active') as HTMLElement
+    activeTab?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  })
+}
+
+watch(currentTab, scrollActiveTabIntoView)
+
 // Get all focusable elements within a container
 const getFocusableElements = (container: HTMLElement) => {
   const focusableSelectors = [
@@ -373,7 +383,8 @@ onUnmounted(() => {
             @click="currentTab = 'dungeons'"
             @keydown="handleTabKeydown"
           >
-            Dungeons
+            <span class="tab-label-full">Dungeons</span>
+            <span class="tab-label-short">Dung.</span>
           </button>
           <button
             class="tab-button"
@@ -396,7 +407,8 @@ onUnmounted(() => {
             @click="currentTab = 'resources'"
             @keydown="handleTabKeydown"
           >
-            Resources
+            <span class="tab-label-full">Resources</span>
+            <span class="tab-label-short">Res.</span>
           </button>
           <button
             class="tab-button"
@@ -407,7 +419,8 @@ onUnmounted(() => {
             @click="currentTab = 'market'"
             @keydown="handleTabKeydown"
           >
-            Market
+            <span class="tab-label-full">Market</span>
+            <span class="tab-label-short">Mkt.</span>
             <span v-if="overrideStats.total > 0 && !isStaticMode" class="tab-badge">{{
               overrideStats.total
             }}</span>
@@ -421,7 +434,8 @@ onUnmounted(() => {
             @click="currentTab = 'charts'"
             @keydown="handleTabKeydown"
           >
-            Charts
+            <span class="tab-label-full">Charts</span>
+            <span class="tab-label-short">Charts</span>
           </button>
         </nav>
         </div>
@@ -822,16 +836,25 @@ onUnmounted(() => {
 }
 
 @media (max-width: 767px) {
+  .tab-navigation-wrapper::before,
   .tab-navigation-wrapper::after {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
     height: calc(100% - 1.5rem);
-    width: 3rem;
-    background: linear-gradient(to right, transparent, var(--bg-primary) 85%);
+    width: 2rem;
     pointer-events: none;
     z-index: 2;
+  }
+
+  .tab-navigation-wrapper::before {
+    left: 0;
+    background: linear-gradient(to left, transparent, var(--bg-primary) 85%);
+  }
+
+  .tab-navigation-wrapper::after {
+    right: 0;
+    background: linear-gradient(to right, transparent, var(--bg-primary) 85%);
   }
 }
 
