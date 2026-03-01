@@ -49,8 +49,10 @@ const untrackedCraftableCount = computed(() => {
 const searchQuery = ref('')
 
 // Section collapse state
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
 const sectionsExpanded = ref({
-  materials: true,
+  materials: !isMobile,
   craftables: false,
   resources: false,
   recipes: false,

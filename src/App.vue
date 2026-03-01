@@ -1124,7 +1124,7 @@ onUnmounted(() => {
   }
 
   .last-update {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
   }
 
   .btn-settings {

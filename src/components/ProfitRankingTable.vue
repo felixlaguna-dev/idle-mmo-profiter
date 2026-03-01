@@ -635,13 +635,13 @@ const profitRange = computed(() => {
     flex: 1 1 0;
     min-width: 0;
     max-width: none;
-    min-height: 36px;
+    min-height: 44px;
     padding: 0.375rem 0.25rem;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
   }
 
   .pagination-info {
-    font-size: 0.625rem;
+    font-size: 0.6875rem;
   }
 
   .ranking-table th,
