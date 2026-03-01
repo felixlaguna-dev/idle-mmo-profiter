@@ -499,7 +499,8 @@ hr {
     display: inline-flex;
     width: 50%;
     max-width: 50%;
-    flex: 0 0 50%;
+    flex: 0 1 50%;
+    min-width: 0;
     font-size: 0.75rem;
     padding: 0.125rem 0.375rem;
   }
