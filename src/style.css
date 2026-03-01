@@ -454,11 +454,19 @@ hr {
     display: none;
   }
 
-  /* De-emphasize less important fields */
+  /* Hide profit/action on mobile — redundant with profit/hr */
+  .mobile-card-layout td[data-label='Profit/action'] {
+    display: none;
+  }
+
+  /* De-emphasize less important fields — compact inline */
   .mobile-card-layout td[data-label='Time'],
   .mobile-card-layout td[data-label='Cost'] {
     font-size: 0.75rem;
     color: var(--text-secondary);
+    display: inline-flex;
+    width: 50%;
+    padding: 0.125rem 0.375rem;
   }
 
   /* Hide expand buttons on mobile to save space */

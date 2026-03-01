@@ -2264,6 +2264,7 @@ const refreshItemData = async () => {
 
 .section-content {
   overflow-x: auto;
+  max-width: 960px;
 }
 
 /* Market Items Table */

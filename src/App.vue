@@ -384,7 +384,7 @@ onUnmounted(() => {
             @keydown="handleTabKeydown"
           >
             <span class="tab-label-full">Dungeons</span>
-            <span class="tab-label-short">Dung.</span>
+            <span class="tab-label-short">Dung</span>
           </button>
           <button
             class="tab-button"
@@ -408,7 +408,7 @@ onUnmounted(() => {
             @keydown="handleTabKeydown"
           >
             <span class="tab-label-full">Resources</span>
-            <span class="tab-label-short">Res.</span>
+            <span class="tab-label-short">Res</span>
           </button>
           <button
             class="tab-button"
@@ -420,7 +420,7 @@ onUnmounted(() => {
             @keydown="handleTabKeydown"
           >
             <span class="tab-label-full">Market</span>
-            <span class="tab-label-short">Mkt.</span>
+            <span class="tab-label-short">Mkt</span>
             <span v-if="overrideStats.total > 0 && !isStaticMode" class="tab-badge">{{
               overrideStats.total
             }}</span>
@@ -602,9 +602,13 @@ onUnmounted(() => {
 }
 
 .last-update {
-  font-size: 0.875rem;
-  color: #b0b8c4;
-  opacity: 1;
+  font-size: 0.6875rem;
+  color: #fbbf24;
+  background: rgba(250, 204, 21, 0.1);
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .btn-settings {
@@ -825,7 +829,6 @@ onUnmounted(() => {
   margin: 0 0.75rem;
   vertical-align: middle;
   opacity: 0.4;
-  border-radius: 1px;
   border-radius: 1px;
 }
 

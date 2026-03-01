@@ -268,7 +268,14 @@ const profitRange = computed(() => {
             :class="{ 'is-top-rank': activity.rank === 1, 'negative-profit': activity.profitPerHour < 0 }"
           >
             <td class="rank-cell" data-label="Rank">
-              <span class="rank-number" :class="{ 'rank-first': activity.rank === 1 }">
+              <span
+                class="rank-number"
+                :class="{
+                  'rank-first': activity.rank === 1,
+                  'rank-second': activity.rank === 2,
+                  'rank-third': activity.rank === 3,
+                }"
+              >
                 {{ activity.rank }}
               </span>
             </td>
@@ -540,27 +547,33 @@ const profitRange = computed(() => {
 /* Rank Cell */
 .rank-cell {
   font-weight: 600;
+  width: 48px;
 }
 
 .rank-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2rem;
-  height: 2rem;
-  padding: 0 0.5rem;
-  background-color: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
+  min-width: 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .rank-number.rank-first {
-  background-color: rgba(245, 158, 11, 0.2);
-  color: var(--warning);
-  border-color: rgba(245, 158, 11, 0.4);
+  color: #f59e0b;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
+}
+
+.rank-number.rank-second {
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.rank-number.rank-third {
+  color: #b45309;
+  font-weight: 700;
 }
 
 /* Name Cell */

@@ -191,36 +191,34 @@ watch(hasData, (newVal) => {
 </script>
 
 <template>
-  <div class="price-history-chart">
-    <div class="chart-header">
-      <h3 class="chart-title">Price History Over Time</h3>
-    </div>
+  <div class="price-history-chart" :class="{ 'is-empty': !hasData }">
     <div v-if="!hasData" class="no-data">
-      <div class="no-data-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="48"
-          height="48"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M3 3v18h18" />
-          <path d="m19 9-5 5-4-4-3 3" />
-        </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="no-data-icon"
+      >
+        <path d="M3 3v18h18" />
+        <path d="m19 9-5 5-4-4-3 3" />
+      </svg>
+      <span class="no-data-text">Price History</span>
+      <span class="no-data-badge">Coming Soon</span>
+    </div>
+    <template v-else>
+      <div class="chart-header">
+        <h3 class="chart-title">Price History Over Time</h3>
       </div>
-      <h4 class="no-data-title">No Market History Available</h4>
-      <p class="no-data-message">
-        Price history data will be available once the API integration is complete. This feature will
-        show market price trends over time for selected items.
-      </p>
-    </div>
-    <div v-else class="chart-container">
-      <canvas ref="chartCanvas"></canvas>
-    </div>
+      <div class="chart-container">
+        <canvas ref="chartCanvas"></canvas>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -230,6 +228,10 @@ watch(hasData, (newVal) => {
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   padding: 1.5rem;
+}
+
+.price-history-chart.is-empty {
+  padding: 0;
 }
 
 .chart-header {
@@ -251,40 +253,35 @@ watch(hasData, (newVal) => {
 
 .no-data {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  min-height: 0;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
   border: 1px dashed var(--border-color);
   border-radius: 0.375rem;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .no-data-icon {
   color: var(--text-secondary);
-  opacity: 0.4;
-  margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
-.no-data-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
-.no-data-title {
-  font-size: 0.875rem;
+.no-data-text {
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
 }
 
-.no-data-message {
-  font-size: 0.75rem;
+.no-data-badge {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--text-secondary);
-  max-width: 400px;
-  line-height: 1.5;
+  background: var(--bg-tertiary);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  margin-left: auto;
 }
 
 @media (max-width: 767px) {
@@ -292,12 +289,12 @@ watch(hasData, (newVal) => {
     padding: 1rem;
   }
 
-  .chart-container {
-    height: 300px;
+  .price-history-chart.is-empty {
+    padding: 0;
   }
 
-  .no-data {
-    padding: 1rem;
+  .chart-container {
+    height: 300px;
   }
 }
 </style>
