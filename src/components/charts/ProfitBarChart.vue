@@ -269,7 +269,7 @@ watch(showAll, () => {
   background-color: var(--bg-tertiary);
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
@@ -280,6 +280,11 @@ watch(showAll, () => {
   background-color: var(--bg-primary);
   color: var(--accent-primary);
   border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-toggle:active {
+  transform: scale(0.97);
 }
 
 .chart-container {

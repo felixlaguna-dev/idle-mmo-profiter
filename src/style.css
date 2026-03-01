@@ -377,15 +377,19 @@ hr {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    margin-bottom: 0.125rem;
+    margin-bottom: 0.25rem;
     border: 1px solid var(--border-color);
-    border-radius: 0.375rem;
-    padding: 0.1875rem 0.375rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
     background-color: var(--bg-secondary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .mobile-card-layout tbody tr:hover {
+  .mobile-card-layout tbody tr:hover,
+  .mobile-card-layout tbody tr:active {
     background-color: var(--bg-tertiary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   }
 
   /* Stack table cells vertically - compact layout */

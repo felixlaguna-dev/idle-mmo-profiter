@@ -938,13 +938,18 @@ const refreshItemData = async () => {
     <!-- Search Bar -->
     <div class="search-bar-container">
       <div class="search-bar">
-        <input
-          v-model="searchQuery"
-          type="text"
-          class="search-input"
-          placeholder="Search items..."
-          autocomplete="off"
-        />
+        <div class="search-input-wrapper">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+          </svg>
+          <input
+            v-model="searchQuery"
+            type="text"
+            class="search-input"
+            placeholder="Search items..."
+            autocomplete="off"
+          />
+        </div>
         <div class="search-stats">
           <span v-if="searchQuery" class="search-count">
             {{
@@ -1112,7 +1117,7 @@ const refreshItemData = async () => {
     >
       <div class="section-header" @click="toggleSection('materials')">
         <div class="section-title">
-          <span class="expand-icon">{{ sectionsExpanded.materials ? '▼' : '▶' }}</span>
+          <svg class="expand-icon" :class="{ expanded: sectionsExpanded.materials }" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
           <h2>Materials</h2>
           <span class="item-count">{{ filteredMaterials.length }} items</span>
           <span v-if="overrideStats.materials > 0 && !isStaticMode" class="override-badge">
@@ -1270,7 +1275,7 @@ const refreshItemData = async () => {
     >
       <div class="section-header" @click="toggleSection('craftables')">
         <div class="section-title">
-          <span class="expand-icon">{{ sectionsExpanded.craftables ? '▼' : '▶' }}</span>
+          <svg class="expand-icon" :class="{ expanded: sectionsExpanded.craftables }" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
           <h2>Craftables</h2>
           <span class="item-count">{{ filteredCraftables.length }} items</span>
           <span v-if="overrideStats.craftables > 0 && !isStaticMode" class="override-badge">
@@ -1430,7 +1435,7 @@ const refreshItemData = async () => {
     >
       <div class="section-header" @click="toggleSection('resources')">
         <div class="section-title">
-          <span class="expand-icon">{{ sectionsExpanded.resources ? '▼' : '▶' }}</span>
+          <svg class="expand-icon" :class="{ expanded: sectionsExpanded.resources }" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
           <h2>Resources</h2>
           <span class="item-count">{{ filteredResources.length }} items</span>
           <span v-if="overrideStats.resources > 0 && !isStaticMode" class="override-badge">
@@ -1586,7 +1591,7 @@ const refreshItemData = async () => {
     >
       <div class="section-header" @click="toggleSection('recipes')">
         <div class="section-title">
-          <span class="expand-icon">{{ sectionsExpanded.recipes ? '▼' : '▶' }}</span>
+          <svg class="expand-icon" :class="{ expanded: sectionsExpanded.recipes }" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
           <h2>Recipes</h2>
           <span class="item-count">{{ filteredRecipes.length }} items</span>
           <span v-if="overrideStats.recipes > 0 && !isStaticMode" class="override-badge">
@@ -1832,20 +1837,39 @@ const refreshItemData = async () => {
   gap: 0.5rem;
 }
 
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.875rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.search-input-wrapper:focus-within .search-icon {
+  color: var(--accent-primary);
+}
+
 .search-input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
   font-size: 1rem;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
   border: 2px solid var(--border-color);
   border-radius: 0.5rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .search-input:focus {
   outline: none;
   border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .search-input::placeholder {
@@ -2204,9 +2228,14 @@ const refreshItemData = async () => {
 }
 
 .expand-icon {
-  font-size: 0.875rem;
   color: var(--text-secondary);
-  transition: transform 0.2s;
+  transition: transform 0.25s ease;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+.expand-icon.expanded {
+  transform: rotate(0deg);
 }
 
 .section-title h2 {
@@ -2699,7 +2728,7 @@ const refreshItemData = async () => {
   background-color: var(--bg-tertiary);
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
@@ -2710,6 +2739,11 @@ const refreshItemData = async () => {
   background-color: var(--bg-primary);
   color: var(--accent-primary);
   border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-show-more:active {
+  transform: scale(0.98);
 }
 
 @media (max-width: 767px) {
