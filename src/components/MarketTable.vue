@@ -1612,9 +1612,9 @@ const refreshItemData = async () => {
   top: 0;
   z-index: 10;
   background-color: var(--bg-primary);
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
@@ -2310,9 +2310,14 @@ const refreshItemData = async () => {
 
 /* Responsive Design */
 @media (max-width: 767px) {
+  .market-table {
+    gap: 0.75rem;
+  }
+
   .search-bar-container {
     flex-direction: column;
     align-items: stretch;
+    padding: 0.5rem 0;
   }
 
   .btn-refresh-all,
@@ -2322,8 +2327,9 @@ const refreshItemData = async () => {
 
   .section-header {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: flex-start;
+    padding: 0.75rem;
   }
 
   .section-actions {

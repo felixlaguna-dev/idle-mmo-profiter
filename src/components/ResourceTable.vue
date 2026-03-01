@@ -366,6 +366,10 @@ const handleMarketPriceUpdate = (resourceName: string, value: number) => {
 
 /* Mobile card layout overrides */
 @media (max-width: 767px) {
+  .resource-table {
+    gap: 0.5rem;
+  }
+
   .table-container {
     overflow-x: visible !important;
     overflow-y: visible !important;

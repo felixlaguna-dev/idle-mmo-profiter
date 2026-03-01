@@ -1087,12 +1087,12 @@ onUnmounted(() => {
   }
 
   .app-main {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .hero-section {
     padding: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-content {
@@ -1136,10 +1136,10 @@ onUnmounted(() => {
 
   .hero-compact {
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 1rem;
-    min-height: 44px;
+    gap: 0.375rem;
+    padding: 0.375rem 0.625rem;
+    margin-bottom: 0.5rem;
+    min-height: 40px;
   }
 
   .hero-compact-label {
@@ -1165,28 +1165,9 @@ onUnmounted(() => {
 
 
   .tab-navigation {
-    margin-bottom: 1rem;
-    position: relative;
+    margin-bottom: 0.5rem;
     scroll-snap-type: x mandatory;
     scroll-padding-inline: 0.5rem;
-  }
-
-  .tab-navigation::after {
-    content: '›';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 2px;
-    width: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, transparent, var(--bg-primary) 30%);
-    color: var(--text-secondary);
-    font-size: 1.5rem;
-    font-weight: 700;
-    pointer-events: none;
-    opacity: 0.8;
   }
 
   .tab-button {

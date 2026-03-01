@@ -539,6 +539,10 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 
 /* Mobile card layout overrides */
 @media (max-width: 767px) {
+  .dungeon-table {
+    gap: 0.5rem;
+  }
+
   .table-container {
     overflow-x: visible !important;
     overflow-y: visible !important;

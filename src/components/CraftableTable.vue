@@ -863,6 +863,10 @@ const formatTime = (seconds: number): string => {
 }
 
 @media (max-width: 767px) {
+  .craftable-table {
+    gap: 0.5rem;
+  }
+
   .sub-tab-navigation {
     gap: 0;
   }

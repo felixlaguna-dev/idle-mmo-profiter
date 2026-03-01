@@ -530,6 +530,15 @@ const profitRange = computed(() => {
 
 /* Mobile card layout overrides */
 @media (max-width: 767px) {
+  .profit-ranking-table {
+    gap: 0.5rem;
+  }
+
+  .filter-controls {
+    padding: 0.5rem;
+    gap: 0.375rem;
+  }
+
   .table-container {
     overflow-x: visible !important;
     overflow-y: visible !important;
