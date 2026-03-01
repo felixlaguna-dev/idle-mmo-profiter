@@ -44,8 +44,8 @@ export function getHeatmapStyle(
     }
   }
 
-  // Handle zero or very small positive profits - use yellow
-  if (profit < maxProfit * 0.1) {
+  // Handle zero or near-zero positive profits - use yellow
+  if (profit <= 0 || profit < maxProfit * 0.02) {
     return {
       backgroundColor: 'rgba(234, 179, 8, 0.1)',
       color: '#eab308', // Yellow text
@@ -53,12 +53,12 @@ export function getHeatmapStyle(
   }
 
   // Handle positive profits - use continuous green gradient
-  const range = maxProfit - minProfit
-  const normalized = range === 0 ? 1 : (profit - minProfit) / range
+  // Normalize within positive range only (0 to maxProfit) for proportional intensity
+  const normalized = maxProfit === 0 ? 1 : profit / maxProfit
 
-  // Continuous alpha: 0.05 (lowest) to 0.30 (highest)
-  const alpha = 0.05 + normalized * 0.25
-  const textColor = normalized > 0.6 ? '#059669' : '#10b981'
+  // Continuous alpha: 0.03 (lowest) to 0.25 (highest)
+  const alpha = 0.03 + normalized * 0.22
+  const textColor = normalized > 0.5 ? '#059669' : '#10b981'
 
   return {
     backgroundColor: `rgba(16, 185, 129, ${alpha.toFixed(3)})`,

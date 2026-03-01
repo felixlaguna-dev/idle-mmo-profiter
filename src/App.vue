@@ -1179,7 +1179,7 @@ onUnmounted(() => {
     display: none;
   }
 
-  /* At 375px, compress hero further: label + name inline, tighter padding */
+  /* At 375px, compress hero to 2 tight lines */
   @media (max-width: 375px) {
     .hero-section {
       padding: 0.375rem 0.5rem;
@@ -1187,27 +1187,17 @@ onUnmounted(() => {
     }
 
     .hero-content {
-      gap: 0.25rem;
+      gap: 0.125rem;
     }
 
     .hero-label {
-      display: inline;
       font-size: 0.5625rem;
-      margin-right: 0.375rem;
-    }
-
-    .hero-activity {
-      display: inline;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .hero-name {
-      display: inline;
       font-size: 0.9375rem;
-    }
-
-    .hero-badge {
-      display: inline;
-      vertical-align: middle;
     }
 
     .hero-profit-value {

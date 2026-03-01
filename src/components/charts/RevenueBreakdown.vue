@@ -234,6 +234,26 @@ watch(
             >{{ Math.round(categoryTotals.grandTotal).toLocaleString() }} gold</span
           >
         </div>
+        <div class="category-stats">
+          <div class="category-stat" v-if="categoryTotals.dungeonCount > 0">
+            <span class="category-dot" style="background: rgba(168, 85, 247, 0.7)"></span>
+            <span class="category-label">Dungeons</span>
+            <span class="category-value">{{ Math.round(categoryTotals.dungeon).toLocaleString() }}</span>
+            <span class="category-pct">({{ categoryTotals.dungeonPercent.toFixed(1) }}%)</span>
+          </div>
+          <div class="category-stat" v-if="categoryTotals.craftableCount > 0">
+            <span class="category-dot" style="background: rgba(34, 197, 94, 0.7)"></span>
+            <span class="category-label">Craftables</span>
+            <span class="category-value">{{ Math.round(categoryTotals.craftable).toLocaleString() }}</span>
+            <span class="category-pct">({{ categoryTotals.craftablePercent.toFixed(1) }}%)</span>
+          </div>
+          <div class="category-stat" v-if="categoryTotals.resourceCount > 0">
+            <span class="category-dot" style="background: rgba(59, 130, 246, 0.7)"></span>
+            <span class="category-label">Resources</span>
+            <span class="category-value">{{ Math.round(categoryTotals.resource).toLocaleString() }}</span>
+            <span class="category-pct">({{ categoryTotals.resourcePercent.toFixed(1) }}%)</span>
+          </div>
+        </div>
       </div>
     </template>
     <div v-else class="empty-state">
@@ -298,6 +318,47 @@ watch(
   text-align: center;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+
+.category-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.category-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.category-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.category-label {
+  color: var(--text-secondary);
+  min-width: 70px;
+}
+
+.category-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.category-pct {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  min-width: 50px;
+  text-align: right;
 }
 
 @media (max-width: 767px) {
