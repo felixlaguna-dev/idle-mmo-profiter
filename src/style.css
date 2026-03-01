@@ -497,8 +497,9 @@ hr {
     display: none;
   }
 
-  /* Hide Market Price on mobile — visible via scoped override where needed */
-  .mobile-card-layout td[data-label='Market Price'] {
+  /* Hide less essential columns on mobile */
+  .mobile-card-layout td[data-label='Market Price'],
+  .mobile-card-layout td[data-label='Vendor Price'] {
     display: none;
   }
 

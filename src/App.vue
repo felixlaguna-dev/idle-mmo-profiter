@@ -641,28 +641,6 @@ onUnmounted(() => {
   position: relative;
 }
 
-@media (max-width: 767px) {
-  .tab-navigation-wrapper::before,
-  .tab-navigation-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: calc(100% - 1.5rem);
-    width: 2rem;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .tab-navigation-wrapper::before {
-    left: 0;
-    background: linear-gradient(to left, transparent, var(--bg-primary) 85%);
-  }
-
-  .tab-navigation-wrapper::after {
-    right: 0;
-    background: linear-gradient(to right, transparent, var(--bg-primary) 85%);
-  }
-}
 
 .tab-navigation {
   display: flex;
@@ -976,12 +954,16 @@ onUnmounted(() => {
     gap: 0.125rem;
   }
 
+  .tab-navigation {
+    align-items: flex-end;
+  }
+
   .tab-button {
     scroll-snap-align: start;
-    height: 40px;
-    padding: 0.5rem 0.5rem;
+    min-height: unset;
+    height: 36px;
+    padding: 0.375rem 0.5rem;
     font-size: 0.8125rem;
-    overflow: hidden;
   }
 
   .tab-content {
