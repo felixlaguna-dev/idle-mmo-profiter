@@ -50,7 +50,7 @@ const searchQuery = ref('')
 
 // Section collapse state
 const sectionsExpanded = ref({
-  materials: false,
+  materials: true,
   craftables: false,
   resources: false,
   recipes: false,
@@ -777,6 +777,11 @@ const refreshItemData = async () => {
 
 <template>
   <div class="market-table">
+    <!-- Market Summary -->
+    <div class="market-summary">
+      {{ filteredMaterials.length + filteredCraftables.length + filteredResources.length + filteredRecipes.length }} items across 4 categories
+    </div>
+
     <!-- Search Bar -->
     <div class="search-bar-container">
       <div class="search-bar">
@@ -1604,6 +1609,13 @@ const refreshItemData = async () => {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.market-summary {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 0.25rem 0;
 }
 
 /* Search Bar */

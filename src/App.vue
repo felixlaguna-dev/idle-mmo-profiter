@@ -1134,47 +1134,37 @@ onUnmounted(() => {
   }
 
   .hero-section {
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
+    padding: 0.625rem;
+    margin-bottom: 0.375rem;
   }
 
   .hero-content {
-    gap: 0.5rem;
+    gap: 0.375rem;
   }
 
   .hero-label {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
   }
 
   .hero-name {
-    font-size: 1.125rem;
-  }
-
-  .hero-badge {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-  }
-
-  .hero-profit-value {
-    font-size: 1.5rem;
-  }
-
-  .hero-profit-label {
     font-size: 1rem;
   }
 
-  .hero-details {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    margin-top: 0.25rem;
+  .hero-badge {
+    padding: 0.1875rem 0.375rem;
+    font-size: 0.6875rem;
   }
 
-  .detail-label {
-    font-size: 0.625rem;
+  .hero-profit-value {
+    font-size: 1.25rem;
   }
 
-  .detail-value {
+  .hero-profit-label {
     font-size: 0.875rem;
+  }
+
+  .hero-details {
+    display: none;
   }
 
   .hero-compact {

@@ -625,8 +625,8 @@ const profitRange = computed(() => {
 
 @media (max-width: 767px) {
   .filter-controls {
-    gap: 0.5rem;
-    padding: 0.75rem;
+    gap: 0.375rem;
+    padding: 0.5rem;
   }
 
   .filter-label {
@@ -637,21 +637,19 @@ const profitRange = computed(() => {
     flex: 1 1 0;
     min-width: 0;
     max-width: none;
-    min-height: 44px;
-    padding: 0.5rem 0.375rem;
+    min-height: 36px;
+    padding: 0.375rem 0.25rem;
+    font-size: 0.6875rem;
+  }
+
+  .pagination-info {
     font-size: 0.75rem;
+    padding: 0.125rem 0;
   }
 
   .ranking-table th,
   .ranking-table td {
     padding: 0.25rem 0.5rem;
-  }
-}
-
-@media (max-width: 479px) {
-  .filter-button {
-    padding: 0.375rem 0.25rem;
-    font-size: 0.6875rem;
   }
 }
 </style>

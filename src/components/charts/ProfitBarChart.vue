@@ -129,9 +129,13 @@ const createChart = () => {
             font: {
               size: isMobile ? 10 : 11,
             },
+            maxTicksLimit: isMobile ? 4 : 6,
             callback: function (value) {
               if (typeof value === 'number') {
-                return Math.round(value).toLocaleString()
+                const abs = Math.abs(value)
+                if (abs >= 1_000_000) return (value / 1_000_000).toFixed(abs >= 10_000_000 ? 0 : 1) + 'M'
+                if (abs >= 1_000) return (value / 1_000).toFixed(0) + 'K'
+                return String(value)
               }
               return value !== null ? String(value) : ''
             },

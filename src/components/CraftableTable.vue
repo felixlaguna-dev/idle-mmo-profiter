@@ -935,7 +935,7 @@ const formatTime = (seconds: number): string => {
 
 @media (max-width: 767px) {
   .craftable-table {
-    gap: 0.5rem;
+    gap: 0.375rem;
   }
 
   .sub-tab-navigation {
@@ -944,8 +944,8 @@ const formatTime = (seconds: number): string => {
 
   .sub-tab-button {
     min-height: 44px;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
   }
 
   .expand-button {
