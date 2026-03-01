@@ -976,6 +976,15 @@ const formatTime = (seconds: number): string => {
   .main-table td {
     padding: 0.25rem 0.5rem;
   }
+
+  /* Un-hide Market Price on Craftables mobile — pairs with Total Cost at 50% each */
+  .craftable-table :deep(.mobile-card-layout td[data-label='Market Price']) {
+    display: inline-flex;
+    width: 50%;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    padding: 0.125rem 0.375rem;
+  }
 }
 
 @media (max-width: 640px) {

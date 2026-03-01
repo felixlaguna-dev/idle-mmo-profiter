@@ -32,17 +32,20 @@ const chartData = computed(() => {
   const labels = reversed.map((a) => a.name)
   const data = reversed.map((a) => a.profitPerHour)
 
-  // Color by type
-  const backgroundColors = reversed.map((a) => {
+  // Color by type with intensity gradient based on rank
+  const total = reversed.length
+  const backgroundColors = reversed.map((a, i) => {
+    // i=0 is the lowest-ranked (bottom of chart), i=total-1 is the highest
+    const intensity = 0.4 + 0.5 * (i / Math.max(total - 1, 1))
     switch (a.activityType) {
       case 'dungeon':
-        return 'rgba(168, 85, 247, 0.7)' // Purple
+        return `rgba(168, 85, 247, ${intensity.toFixed(2)})` // Purple
       case 'craftable':
-        return 'rgba(34, 197, 94, 0.7)' // Green
+        return `rgba(34, 197, 94, ${intensity.toFixed(2)})` // Green
       case 'resource':
-        return 'rgba(59, 130, 246, 0.7)' // Blue
+        return `rgba(59, 130, 246, ${intensity.toFixed(2)})` // Blue
       default:
-        return 'rgba(156, 163, 175, 0.7)' // Gray
+        return `rgba(156, 163, 175, ${intensity.toFixed(2)})` // Gray
     }
   })
 

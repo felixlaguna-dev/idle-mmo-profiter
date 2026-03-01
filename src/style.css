@@ -465,11 +465,12 @@ hr {
     display: none;
   }
 
-  /* De-emphasize less important fields — compact inline */
+  /* De-emphasize less important fields — compact inline 50% */
   .mobile-card-layout td[data-label='Time'],
   .mobile-card-layout td[data-label='Cost'],
   .mobile-card-layout td[data-label='Run Cost'],
-  .mobile-card-layout td[data-label='Total Cost'] {
+  .mobile-card-layout td[data-label='Total Cost'],
+  .mobile-card-layout td[data-label='Best Method'] {
     font-size: 0.75rem;
     color: var(--text-secondary);
     display: inline-flex;
@@ -488,7 +489,7 @@ hr {
     display: none;
   }
 
-  /* Hide Market Price on mobile — reduces card height, Profit/hr is sufficient */
+  /* Hide Market Price on mobile — visible via scoped override where needed */
   .mobile-card-layout td[data-label='Market Price'] {
     display: none;
   }
