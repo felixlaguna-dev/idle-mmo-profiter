@@ -2410,25 +2410,41 @@ const refreshItemData = async () => {
 .col-name {
   font-weight: 600;
   color: var(--text-primary);
-  width: 30%;
 }
 
 .col-vendor {
   color: var(--text-secondary);
   font-size: 0.875rem;
-  width: 20%;
-  text-align: right;
-}
-
-.col-market {
-  width: 20%;
-  min-width: 160px;
-  text-align: right;
 }
 
 .col-actions {
-  width: 100px;
   text-align: center;
+}
+
+/* Desktop-only column widths — must not apply on mobile where card layout controls sizing */
+@media (min-width: 768px) {
+  .col-name {
+    width: 30%;
+  }
+
+  .col-vendor {
+    width: 20%;
+    text-align: right;
+  }
+
+  .col-market {
+    width: 20%;
+    min-width: 160px;
+    text-align: right;
+  }
+
+  .col-spread {
+    width: 12%;
+  }
+
+  .col-actions {
+    width: 100px;
+  }
 }
 
 .actions-wrapper {
@@ -2643,7 +2659,6 @@ const refreshItemData = async () => {
 
 /* Spread column */
 .col-spread {
-  width: 12%;
   font-weight: 600;
   font-size: 0.875rem;
   white-space: nowrap;
