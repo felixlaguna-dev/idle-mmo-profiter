@@ -820,11 +820,12 @@ onUnmounted(() => {
 .hero-compact-separator {
   display: inline-block;
   width: 2px;
-  height: 14px;
-  background-color: var(--border-color);
-  margin: 0 0.625rem;
+  height: 16px;
+  background-color: var(--text-secondary);
+  margin: 0 0.75rem;
   vertical-align: middle;
-  opacity: 0.5;
+  opacity: 0.4;
+  border-radius: 1px;
   border-radius: 1px;
 }
 

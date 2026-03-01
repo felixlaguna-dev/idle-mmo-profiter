@@ -111,6 +111,18 @@ const formatNumber = (num: number): string => {
   return Math.round(num).toLocaleString()
 }
 
+// Format time (seconds to human-readable)
+const formatTime = (seconds: number): string => {
+  if (seconds < 60) return `${Math.round(seconds)}s`
+  const hours = Math.floor(seconds / 3600)
+  const mins = Math.floor((seconds % 3600) / 60)
+  const secs = Math.round(seconds % 60)
+  if (hours > 0) {
+    return secs > 0 ? `${hours}h ${mins}m ${secs}s` : `${hours}h ${mins}m`
+  }
+  return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`
+}
+
 // Format percentage
 const formatPercent = (value: number): string => {
   return `${(value * 100).toFixed(2)}%`
@@ -210,12 +222,15 @@ const isUntradableRecipe = (recipeName: string): boolean => {
                 />
               </td>
               <td class="text-right" data-label="Time">
-                <EditableValue
-                  :model-value="dungeon.timeSeconds"
-                  :default-value="dungeon.timeSeconds"
-                  suffix="s"
-                  @update:model-value="(value) => handleTimeUpdate(dungeon.name, value)"
-                />
+                <span class="time-display">
+                  <EditableValue
+                    :model-value="dungeon.timeSeconds"
+                    :default-value="dungeon.timeSeconds"
+                    suffix="s"
+                    @update:model-value="(value) => handleTimeUpdate(dungeon.name, value)"
+                  />
+                  <span class="time-formatted">({{ formatTime(dungeon.timeSeconds) }})</span>
+                </span>
               </td>
               <td class="text-right" data-label="Expected Value">
                 {{ formatNumber(getTotalExpectedValue(dungeon)) }}
@@ -434,6 +449,19 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 .profit {
   color: var(--success);
   font-weight: 600;
+}
+
+/* Time Display */
+.time-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.time-formatted {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .loss {

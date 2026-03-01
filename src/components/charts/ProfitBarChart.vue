@@ -197,7 +197,7 @@ watch(showAll, () => {
         class="btn-toggle"
         @click="showAll = !showAll"
       >
-        {{ showAll ? 'Show Less' : `Show All (${activities.length})` }}
+        {{ showAll ? 'Show less' : `Show all (${activities.length})` }}
       </button>
     </div>
     <div
