@@ -941,10 +941,10 @@ onUnmounted(() => {
 
   .hero-compact {
     flex-wrap: wrap;
-    gap: 0.375rem;
-    padding: 0.375rem 0.625rem;
-    margin-bottom: 0.5rem;
-    min-height: 40px;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.25rem;
+    min-height: 36px;
   }
 
   .hero-compact-label {
@@ -964,13 +964,13 @@ onUnmounted(() => {
     font-size: 0.9375rem;
     width: 100%;
     margin-left: 0;
-    margin-top: 0.25rem;
+    margin-top: 0.125rem;
     text-align: left;
   }
 
 
   .tab-navigation {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     scroll-snap-type: x mandatory;
     scroll-padding-inline: 0.5rem;
     gap: 0.125rem;
@@ -978,8 +978,8 @@ onUnmounted(() => {
 
   .tab-button {
     scroll-snap-align: start;
-    min-height: 44px;
-    padding: 0.625rem 0.5rem;
+    min-height: 40px;
+    padding: 0.5rem 0.5rem;
     font-size: 0.8125rem;
   }
 
