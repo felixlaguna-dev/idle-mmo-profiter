@@ -2651,14 +2651,17 @@ const refreshItemData = async () => {
 .spread-extreme {
   color: var(--success);
   font-weight: 700;
+  background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.15) 100%);
 }
 
 .spread-high {
   color: var(--success);
+  background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.08) 100%);
 }
 
 .spread-moderate {
   color: var(--text-primary);
+  background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.04) 100%);
 }
 
 .spread-low {
@@ -2667,6 +2670,7 @@ const refreshItemData = async () => {
 
 .spread-negative {
   color: var(--danger);
+  background: linear-gradient(90deg, transparent 0%, rgba(239, 68, 68, 0.08) 100%);
 }
 
 /* Mobile market card density */

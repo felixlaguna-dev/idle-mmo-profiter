@@ -460,6 +460,11 @@ hr {
     display: none;
   }
 
+  /* Hide type column on mobile — filter pills show active types */
+  .mobile-card-layout td[data-label='Type'] {
+    display: none;
+  }
+
   /* De-emphasize less important fields — compact inline */
   .mobile-card-layout td[data-label='Time'],
   .mobile-card-layout td[data-label='Cost'],
