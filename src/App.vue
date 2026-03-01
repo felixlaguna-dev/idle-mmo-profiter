@@ -978,9 +978,10 @@ onUnmounted(() => {
 
   .tab-button {
     scroll-snap-align: start;
-    min-height: 40px;
+    height: 40px;
     padding: 0.5rem 0.5rem;
     font-size: 0.8125rem;
+    overflow: hidden;
   }
 
   .tab-content {
