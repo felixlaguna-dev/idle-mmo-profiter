@@ -792,6 +792,7 @@ onUnmounted(() => {
 /* Tab Content */
 .tab-content {
   min-height: 400px;
+  margin-top: 0.5rem;
 }
 
 .tab-content > * {
