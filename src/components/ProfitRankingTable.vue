@@ -511,7 +511,7 @@ const profitRange = computed(() => {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #e5e7eb;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -543,7 +543,7 @@ const profitRange = computed(() => {
 }
 
 .ranking-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.015);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .ranking-table tbody tr:hover {

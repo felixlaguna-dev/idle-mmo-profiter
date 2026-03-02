@@ -2233,14 +2233,20 @@ const refreshItemData = async () => {
 }
 
 .expand-icon {
-  color: var(--text-secondary);
-  transition: transform 0.25s ease;
+  color: var(--accent-primary);
+  transition: transform 0.25s ease, color 0.2s;
   transform: rotate(-90deg);
   flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.section-header:hover .expand-icon {
+  opacity: 1;
 }
 
 .expand-icon.expanded {
   transform: rotate(0deg);
+  opacity: 1;
 }
 
 .section-title h2 {
@@ -2395,7 +2401,7 @@ const refreshItemData = async () => {
   padding: 0.625rem 0.75rem;
   text-align: left;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #e5e7eb;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -2415,7 +2421,7 @@ const refreshItemData = async () => {
 }
 
 .market-items-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.015);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .market-items-table tbody tr:hover {

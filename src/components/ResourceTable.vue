@@ -275,7 +275,7 @@ const handleMarketPriceUpdate = (resourceName: string, value: number) => {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #e5e7eb;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -307,7 +307,7 @@ const handleMarketPriceUpdate = (resourceName: string, value: number) => {
 }
 
 .main-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.015);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .main-table tbody tr:hover {
@@ -387,9 +387,9 @@ const handleMarketPriceUpdate = (resourceName: string, value: number) => {
     gap: 0.375rem;
   }
 
-  /* Hide less important rows — Best Method and Profit/HR tell the story */
-  .resource-table :deep(.mobile-card-layout td[data-label='Cost']),
-  .resource-table :deep(.mobile-card-layout td[data-label='Vendor Price']) {
+  /* Hide less important rows on mobile — show COST + TIME to match other tabs */
+  .resource-table :deep(.mobile-card-layout td[data-label='Vendor Price']),
+  .resource-table :deep(.mobile-card-layout td[data-label='Best']) {
     display: none;
   }
 

@@ -741,7 +741,7 @@ const formatTime = (seconds: number): string => {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #e5e7eb;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -773,7 +773,7 @@ const formatTime = (seconds: number): string => {
 }
 
 .main-table tbody tr.main-row:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.015);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .main-table tbody tr.main-row:hover {
