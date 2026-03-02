@@ -428,13 +428,14 @@ hr {
     padding: 0.5rem 0.625rem 0.5rem 0.75rem;
     background: linear-gradient(135deg, #1e2436 0%, #1a1f2e 100%);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    transition: all 0.15s ease;
+    transition: all 0.15s var(--ease-in-out);
   }
 
   .mobile-card-layout tbody tr:active {
     background: #232938;
     border-left-color: var(--accent-hover);
-    transform: scale(0.99);
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   }
 
   /* Stack table cells vertically */

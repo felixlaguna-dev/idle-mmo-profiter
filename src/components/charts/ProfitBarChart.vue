@@ -226,6 +226,11 @@ watch(showAll, () => {
   <div class="profit-bar-chart">
     <div class="chart-header">
       <h3 class="chart-title">Profit Comparison</h3>
+      <div class="chart-legend">
+        <span class="legend-item"><span class="legend-dot legend-dungeon"></span>Dungeons</span>
+        <span class="legend-item"><span class="legend-dot legend-craftable"></span>Craftables</span>
+        <span class="legend-item"><span class="legend-dot legend-resource"></span>Resources</span>
+      </div>
     </div>
     <div
       class="chart-container"
@@ -263,6 +268,39 @@ watch(showAll, () => {
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-dungeon {
+  background-color: rgba(168, 85, 247, 0.8);
+}
+
+.legend-craftable {
+  background-color: rgba(34, 197, 94, 0.8);
+}
+
+.legend-resource {
+  background-color: rgba(59, 130, 246, 0.8);
 }
 
 .btn-toggle {
