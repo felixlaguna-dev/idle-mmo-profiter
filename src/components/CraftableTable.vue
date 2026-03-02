@@ -201,16 +201,14 @@ const formatTime = (seconds: number): string => {
         :class="{ active: activeSubTab === 'alchemy' }"
         @click="activeSubTab = 'alchemy'"
       >
-        <span class="sub-tab-icon">🧪</span>
-        <span>Alchemy</span>
+        Alchemy
       </button>
       <button
         class="sub-tab-button sub-tab-forging"
         :class="{ active: activeSubTab === 'forging' }"
         @click="activeSubTab = 'forging'"
       >
-        <span class="sub-tab-icon">⚒️</span>
-        <span>Forging</span>
+        Forging
       </button>
       <span v-if="hasMoreCraftables && !showAllCraftables" class="pagination-info-inline">
         {{ DEFAULT_DISPLAY_LIMIT }}/{{ filteredCraftables.length }}
@@ -630,7 +628,6 @@ const formatTime = (seconds: number): string => {
 .sub-tab-button {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
   padding: 0.5rem 1rem;
   background-color: transparent;
   color: var(--text-secondary);
@@ -695,11 +692,6 @@ const formatTime = (seconds: number): string => {
 
 .sub-tab-forging.active::before {
   background-color: #fbbf24;
-}
-
-.sub-tab-icon {
-  font-size: 1rem;
-  line-height: 1;
 }
 
 .pagination-info-inline {
@@ -1065,9 +1057,14 @@ const formatTime = (seconds: number): string => {
   .craftable-table :deep(.mobile-card-layout td[data-label='Market Price']) {
     display: inline-flex;
     width: 50%;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     color: var(--text-secondary);
     padding: 0.125rem 0.375rem;
+  }
+
+  /* Shorten "MARKET PRICE" label to "PRICE" for compact mobile cards */
+  .craftable-table :deep(.mobile-card-layout td[data-label='Market Price'])::before {
+    content: 'PRICE';
   }
 }
 

@@ -447,6 +447,9 @@ hr {
     color: var(--text-primary);
     width: 50%;
     display: inline-flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Hide redundant label on name cell — the name IS the content */
@@ -521,6 +524,15 @@ hr {
 
   .mobile-card-layout td[data-label='Total Cost']::before {
     content: 'COST';
+  }
+
+  /* Shorten long labels on mobile for consistent card sizing */
+  .mobile-card-layout td[data-label='Vendor Value']::before {
+    content: 'VENDOR';
+  }
+
+  .mobile-card-layout td[data-label='Market Value']::before {
+    content: 'MARKET';
   }
 
   /* Hide expand buttons on mobile to save space */
