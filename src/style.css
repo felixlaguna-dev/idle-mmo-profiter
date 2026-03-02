@@ -216,6 +216,15 @@ th {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
+/* Secondary data columns — less visual weight than profit values */
+td[data-label='Cost'],
+td[data-label='Run Cost'],
+td[data-label='Total Cost'],
+td[data-label='Time'] {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
 tbody tr {
   transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -629,5 +638,21 @@ hr {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced contrast for users who need it */
+@media (prefers-contrast: more) {
+  :root {
+    --border-color: #6b7280;
+    --text-secondary: #d1d5db;
+  }
+
+  th {
+    border-bottom-width: 2px;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.08);
   }
 }

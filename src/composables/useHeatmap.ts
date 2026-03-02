@@ -59,11 +59,12 @@ export function getHeatmapStyle(
   const normalized = Math.pow(Math.max(linear, 0), 0.3)
 
   // Continuous alpha: 0.04 (lowest) to 0.16 (highest) — subtle to avoid visual clash
+  // Teal hue (20, 184, 166) differentiates heatmap from craftable type badges (emerald green)
   const alpha = 0.04 + normalized * 0.12
-  const textColor = normalized > 0.5 ? '#10a37f' : '#10b981'
+  const textColor = normalized > 0.5 ? '#0d9488' : '#14b8a6'
 
   return {
-    backgroundColor: `rgba(16, 185, 129, ${alpha.toFixed(3)})`,
+    backgroundColor: `rgba(20, 184, 166, ${alpha.toFixed(3)})`,
     color: textColor,
   }
 }

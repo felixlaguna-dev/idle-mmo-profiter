@@ -657,29 +657,29 @@ const profitRange = computed(() => {
 /* Type Badge */
 .type-badge {
   display: inline-block;
-  padding: 0.25rem 0.625rem;
+  padding: 0.1875rem 0.5rem;
   border-radius: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.6875rem;
+  font-weight: 500;
   text-transform: capitalize;
 }
 
 .badge-dungeon {
-  background-color: rgba(168, 85, 247, 0.2);
+  background-color: rgba(168, 85, 247, 0.12);
   color: #c084fc;
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  border: 1px solid rgba(168, 85, 247, 0.25);
 }
 
 .badge-craftable {
-  background-color: rgba(34, 197, 94, 0.2);
+  background-color: rgba(34, 197, 94, 0.12);
   color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.4);
+  border: 1px solid rgba(34, 197, 94, 0.25);
 }
 
 .badge-resource {
-  background-color: rgba(59, 130, 246, 0.2);
+  background-color: rgba(59, 130, 246, 0.12);
   color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
 /* Profit Cell */
