@@ -2239,15 +2239,15 @@ const refreshItemData = async () => {
   color: var(--text-secondary);
 }
 
-/* Market Section */
+/* Market Section — uses shared surface tokens */
 .market-section {
-  background: linear-gradient(180deg, #1e2436 0%, var(--bg-secondary) 100%);
-  border: 1px solid rgba(55, 65, 81, 0.7);
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
   border-left: 3px solid rgba(96, 165, 250, 0.35);
-  border-radius: 0.75rem;
+  border-radius: var(--surface-radius);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: border-left-color 0.2s;
+  box-shadow: var(--surface-shadow);
+  transition: border-left-color 0.2s var(--ease-in-out);
 }
 
 .market-section:not(.collapsed):hover {
@@ -2432,7 +2432,7 @@ const refreshItemData = async () => {
 
 .section-content {
   overflow-x: auto;
-  animation: accordion-open 0.2s ease-out;
+  animation: accordion-open 0.2s var(--ease-out);
 }
 
 @keyframes accordion-open {

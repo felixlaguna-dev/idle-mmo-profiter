@@ -796,7 +796,7 @@ onUnmounted(() => {
 }
 
 .tab-content > * {
-  animation: tab-fade-in 0.2s ease-out;
+  animation: tab-fade-in 0.2s var(--ease-out);
 }
 
 @keyframes tab-fade-in {

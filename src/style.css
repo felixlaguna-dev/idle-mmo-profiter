@@ -27,6 +27,16 @@
   --text-base: 0.8125rem;/* 13px — table headers */
   --text-md: 0.875rem;   /* 14px — body text, table cells */
   --text-lg: 1rem;       /* 16px — prominent values */
+
+  /* Easing curves */
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+  /* Shared surface tokens */
+  --surface-bg: linear-gradient(180deg, #1e2436 0%, var(--bg-secondary) 100%);
+  --surface-border: rgba(55, 65, 81, 0.7);
+  --surface-radius: 0.75rem;
+  --surface-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -242,7 +252,7 @@ td[data-label='Time'] {
 }
 
 tbody tr {
-  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s var(--ease-in-out), box-shadow 0.15s var(--ease-in-out);
 }
 
 tbody tr:nth-child(even) {

@@ -249,13 +249,13 @@ const handleMarketPriceUpdate = (resourceName: string, value: number) => {
   margin: 0 auto;
 }
 
-/* Table Container */
+/* Table Container — uses shared surface tokens */
 .table-container {
-  background: linear-gradient(180deg, #1e2436 0%, var(--bg-secondary) 100%);
-  border: 1px solid rgba(55, 65, 81, 0.7);
-  border-radius: 0.75rem;
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--surface-radius);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--surface-shadow);
 }
 
 .main-table {
