@@ -593,45 +593,50 @@ hr {
     display: none;
   }
 
-  /* Market tab: name shares top row with Spread (matches other tabs' Name+Profit/hr pattern) */
+  /* Market tab: name takes full width on row 1 */
   .mobile-card-layout td.name-cell[data-label='Name'] {
-    width: 50%;
-    order: -2;
+    width: 100%;
+    order: -3;
   }
 
-  /* Market tab: Profit in top-right (mirrors Profit/hr position in other tabs) */
-  .mobile-card-layout td[data-label='Profit'] {
-    order: -1;
-    display: inline-flex;
-    width: 50%;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0.1875rem 0.375rem;
-    justify-content: flex-end;
-  }
-
-  /* Hide label on Profit cell — green color conveys meaning */
-  .mobile-card-layout td[data-label='Profit']::before {
-    display: none;
-  }
-
-  /* Market tab: Spread shown as secondary data alongside Vendor Value */
-  .mobile-card-layout td[data-label='Spread'] {
-    display: inline-flex;
-    width: 50%;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    padding: 0.125rem 0.375rem;
-    justify-content: flex-end;
-    order: 1;
-  }
-
-  /* Market tab: place Vendor Value on second row */
+  /* Market tab: Vendor and Market consolidated on row 2 */
   .mobile-card-layout td[data-label='Vendor Value'] {
     display: inline-flex;
     width: 50%;
     max-width: 50%;
     flex: 0 1 50%;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    padding: 0.125rem 0.375rem;
+    order: -2;
+  }
+
+  .mobile-card-layout td[data-label='Market Value'] {
+    display: inline-flex;
+    width: 50%;
+    max-width: 50%;
+    flex: 0 1 50%;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    padding: 0.125rem 0.375rem;
+    justify-content: flex-end;
+    order: -1;
+  }
+
+  /* Market tab: Spread on row 3, full width */
+  .mobile-card-layout td[data-label='Spread'] {
+    display: inline-flex;
+    width: 100%;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 0.25rem 0.375rem;
+    justify-content: flex-start;
+    order: 0;
+  }
+
+  /* Hide Profit cell on Market tab mobile — Spread is the key metric */
+  .mobile-card-layout td[data-label='Profit'] {
+    display: none;
     min-width: 0;
     font-size: 0.8125rem;
     color: var(--text-secondary);

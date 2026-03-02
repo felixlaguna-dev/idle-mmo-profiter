@@ -289,7 +289,7 @@ const formatTime = (seconds: number): string => {
                 />
               </td>
               <td
-                class="text-right"
+                class="text-right craft-profit-cell"
                 data-label="Profit"
                 :style="
                   getSubduedHeatmapStyle(craftable.profit, profitRange.profit.min, profitRange.profit.max)
@@ -352,7 +352,7 @@ const formatTime = (seconds: number): string => {
                 <span v-else>{{ formatNumber(craftable.profit) }}</span>
               </td>
               <td
-                class="text-right profit-hr"
+                class="text-right profit-hr craft-profithr-cell"
                 data-label="Profit/hr"
                 :style="
                   getHeatmapStyle(

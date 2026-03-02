@@ -119,6 +119,26 @@ const getProfitColorClass = (marketPrice: number, vendorValue?: number): string 
   return profit >= 0 ? 'profit-positive' : 'profit-negative'
 }
 
+// Helper to determine if profit/spread columns are meaningful for a category
+type ItemCategory = 'materials' | 'craftables' | 'resources' | 'recipes'
+const shouldShowProfitSpread = (category: ItemCategory): boolean => {
+  // Only show profit/spread for materials and resources (raw items with vendor prices)
+  // Craftables are end products and recipes are recipe scrolls - profit/spread is misleading
+  return category === 'materials' || category === 'resources'
+}
+
+// Format profit with category context
+const formatGoldProfitForCategory = (category: ItemCategory, marketPrice: number, vendorValue?: number): string => {
+  if (!shouldShowProfitSpread(category)) return 'N/A'
+  return formatGoldProfit(marketPrice, vendorValue)
+}
+
+// Format spread with category context
+const formatSpreadForCategory = (category: ItemCategory, marketPrice: number, vendorValue?: number): string => {
+  if (!shouldShowProfitSpread(category)) return 'N/A'
+  return formatSpread(marketPrice, vendorValue)
+}
+
 // Generic sort function for market items
 function sortItems<T>(items: T[], getVendor: (i: T) => number | undefined, getMarket: (i: T) => number, getName: (i: T) => string): T[] {
   return [...items].sort((a, b) => {
@@ -604,7 +624,7 @@ const addUntrackedCraftable = async (
     const recipeData = recipeDetails.recipe
 
     // Step 2: For each material, ensure it exists in data with a market price
-    const materials: Array<{ name: string; quantity: number; unitCost: number }> = []
+    const materials: Array<{ name: string; quantity: number }> = []
 
     for (const mat of recipeData.materials) {
       let material = dataProvider.materials.value.find((m) => m.name === mat.item_name)
@@ -661,7 +681,6 @@ const addUntrackedCraftable = async (
       materials.push({
         name: mat.item_name,
         quantity: mat.quantity,
-        unitCost: material.price,
       })
     }
 
@@ -1236,10 +1255,10 @@ const refreshItemData = async () => {
                 />
               </td>
               <td class="col-profit" :class="getProfitColorClass(material.price, material.vendorValue)" data-label="Profit" :style="getHeatmapStyle(getGoldProfit(material.price, material.vendorValue), profitRange.min, profitRange.max)">
-                {{ formatGoldProfit(material.price, material.vendorValue) }}
+                {{ formatGoldProfitForCategory('materials', material.price, material.vendorValue) }}
               </td>
               <td class="col-spread" :class="getSpreadColorClass(material.price, material.vendorValue)" data-label="Spread">
-                {{ formatSpread(material.price, material.vendorValue) }}
+                {{ formatSpreadForCategory('materials', material.price, material.vendorValue) }}
               </td>
               <td v-if="!isStaticMode" class="col-actions" data-label="Actions">
                 <div class="actions-wrapper">
@@ -1399,11 +1418,11 @@ const refreshItemData = async () => {
                   @update:model-value="(value) => updateCraftablePrice(craftable.id, value)"
                 />
               </td>
-              <td class="col-profit" :class="getProfitColorClass(craftable.price, craftable.vendorValue)" data-label="Profit" :style="getHeatmapStyle(getGoldProfit(craftable.price, craftable.vendorValue), profitRange.min, profitRange.max)">
-                {{ formatGoldProfit(craftable.price, craftable.vendorValue) }}
+              <td class="col-profit" data-label="Profit">
+                {{ formatGoldProfitForCategory('craftables', craftable.price, craftable.vendorValue) }}
               </td>
-              <td class="col-spread" :class="getSpreadColorClass(craftable.price, craftable.vendorValue)" data-label="Spread">
-                {{ formatSpread(craftable.price, craftable.vendorValue) }}
+              <td class="col-spread" data-label="Spread">
+                {{ formatSpreadForCategory('craftables', craftable.price, craftable.vendorValue) }}
               </td>
               <td v-if="!isStaticMode" class="col-actions" data-label="Actions">
                 <div class="actions-wrapper">
@@ -1560,10 +1579,10 @@ const refreshItemData = async () => {
                 />
               </td>
               <td class="col-profit" :class="getProfitColorClass(resource.marketPrice, resource.vendorValue)" data-label="Profit" :style="getHeatmapStyle(getGoldProfit(resource.marketPrice, resource.vendorValue), profitRange.min, profitRange.max)">
-                {{ formatGoldProfit(resource.marketPrice, resource.vendorValue) }}
+                {{ formatGoldProfitForCategory('resources', resource.marketPrice, resource.vendorValue) }}
               </td>
               <td class="col-spread" :class="getSpreadColorClass(resource.marketPrice, resource.vendorValue)" data-label="Spread">
-                {{ formatSpread(resource.marketPrice, resource.vendorValue) }}
+                {{ formatSpreadForCategory('resources', resource.marketPrice, resource.vendorValue) }}
               </td>
               <td v-if="!isStaticMode" class="col-actions" data-label="Actions">
                 <div class="actions-wrapper">
@@ -1751,11 +1770,11 @@ const refreshItemData = async () => {
                   @update:model-value="(value) => updateRecipePrice(recipe.id, value)"
                 />
               </td>
-              <td class="col-profit" :class="getProfitColorClass(recipe.price, recipe.vendorValue)" data-label="Profit" :style="getHeatmapStyle(getGoldProfit(recipe.price, recipe.vendorValue), profitRange.min, profitRange.max)">
-                {{ formatGoldProfit(recipe.price, recipe.vendorValue) }}
+              <td class="col-profit" data-label="Profit">
+                {{ formatGoldProfitForCategory('recipes', recipe.price, recipe.vendorValue) }}
               </td>
-              <td class="col-spread" :class="getSpreadColorClass(recipe.price, recipe.vendorValue)" data-label="Spread">
-                {{ formatSpread(recipe.price, recipe.vendorValue) }}
+              <td class="col-spread" data-label="Spread">
+                {{ formatSpreadForCategory('recipes', recipe.price, recipe.vendorValue) }}
               </td>
               <td v-if="!isStaticMode" class="col-actions" data-label="Actions">
                 <div class="actions-wrapper">
