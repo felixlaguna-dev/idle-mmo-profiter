@@ -264,7 +264,10 @@ onUnmounted(() => {
     <!-- Top Bar -->
     <header class="app-header">
       <div class="header-content">
-        <h1 class="app-title">IdleMMO Profit Calculator</h1>
+        <h1 class="app-title">
+          <span class="title-full">IdleMMO Profit Calculator</span>
+          <span class="title-short">Profit Calc</span>
+        </h1>
         <div class="header-actions">
           <span class="last-update"><svg class="info-icon" viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9v5M10 6.5v.01"/></svg>{{ lastUpdateText }}</span>
           <button
@@ -535,6 +538,14 @@ onUnmounted(() => {
   font-size: 1.5rem;
   color: var(--text-primary);
   font-weight: 700;
+}
+
+.title-full {
+  display: inline;
+}
+
+.title-short {
+  display: none;
 }
 
 .header-actions {
@@ -1056,6 +1067,32 @@ onUnmounted(() => {
 
   .hero-profit-value {
     font-size: 1.5rem;
+  }
+}
+
+/* Tiny mobile (<395px): short title, icon-only badge */
+@media (max-width: 394px) {
+  .title-full {
+    display: none;
+  }
+
+  .title-short {
+    display: inline;
+  }
+
+  .last-update {
+    font-size: 0;
+    padding: 0.25rem;
+    gap: 0;
+    min-width: 24px;
+    min-height: 24px;
+    justify-content: center;
+  }
+
+  .last-update .info-icon {
+    font-size: initial;
+    width: 14px;
+    height: 14px;
   }
 }
 </style>

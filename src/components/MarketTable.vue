@@ -2191,9 +2191,15 @@ const refreshItemData = async () => {
 .market-section {
   background: linear-gradient(180deg, #1e2436 0%, var(--bg-secondary) 100%);
   border: 1px solid rgba(55, 65, 81, 0.7);
+  border-left: 3px solid rgba(96, 165, 250, 0.35);
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: border-left-color 0.2s;
+}
+
+.market-section:not(.collapsed):hover {
+  border-left-color: var(--accent-primary);
 }
 
 .section-header {

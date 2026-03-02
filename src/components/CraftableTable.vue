@@ -588,31 +588,31 @@ const formatTime = (seconds: number): string => {
 .show-more-container {
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .btn-show-more {
-  padding: 0.625rem 1.5rem;
-  background-color: var(--bg-tertiary);
+  padding: 0.375rem 1rem;
+  background-color: transparent;
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
   border-radius: 0.375rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn-show-more:hover {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-tertiary);
   color: var(--accent-primary);
   border-color: var(--accent-primary);
 }
 
 @media (max-width: 767px) {
   .btn-show-more {
-    width: 100%;
-    padding: 0.75rem;
+    width: auto;
+    padding: 0.375rem 1rem;
     font-weight: 600;
   }
 }
@@ -684,13 +684,14 @@ const formatTime = (seconds: number): string => {
 
 .pagination-info-inline {
   margin-left: auto;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: var(--text-secondary);
   white-space: nowrap;
-  background-color: var(--bg-tertiary);
-  padding: 0.25rem 0.625rem;
+  background-color: rgba(55, 65, 81, 0.4);
+  padding: 0.1875rem 0.5rem;
   border-radius: 1rem;
   font-weight: 500;
+  border: 1px solid var(--border-color);
 }
 
 
