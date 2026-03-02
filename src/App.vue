@@ -980,6 +980,7 @@ onUnmounted(() => {
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 0;
+    flex: 1 1 0;
   }
 
   .hero-compact-badge {

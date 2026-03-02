@@ -1262,7 +1262,7 @@ const refreshItemData = async () => {
           class="btn-show-more"
           @click="showAllMaterials = true"
         >
-          Show all {{ sortedMaterials.length }} items
+          Show all ({{ sortedMaterials.length }})
         </button>
       </div>
     </section>
@@ -1422,7 +1422,7 @@ const refreshItemData = async () => {
           class="btn-show-more"
           @click="showAllCraftables = true"
         >
-          Show all {{ sortedCraftables.length }} items
+          Show all ({{ sortedCraftables.length }})
         </button>
       </div>
     </section>
@@ -1578,7 +1578,7 @@ const refreshItemData = async () => {
           class="btn-show-more"
           @click="showAllResources = true"
         >
-          Show all {{ sortedResources.length }} items
+          Show all ({{ sortedResources.length }})
         </button>
       </div>
     </section>
@@ -1795,7 +1795,7 @@ const refreshItemData = async () => {
           class="btn-show-more"
           @click="showAllRecipes = true"
         >
-          Show all {{ sortedRecipes.length }} items
+          Show all ({{ sortedRecipes.length }})
         </button>
       </div>
     </section>
@@ -2701,7 +2701,7 @@ const refreshItemData = async () => {
 
 /* Spread column */
 .col-spread {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.875rem;
   white-space: nowrap;
   text-align: right;
@@ -2719,12 +2719,14 @@ const refreshItemData = async () => {
 }
 
 .spread-moderate {
-  color: var(--text-primary);
-  background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.04) 100%);
+  color: #86efac;
+  font-weight: 700;
+  background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.06) 100%);
 }
 
 .spread-low {
   color: var(--text-secondary);
+  font-weight: 600;
 }
 
 .spread-negative {
