@@ -310,6 +310,14 @@ onUnmounted(() => {
           <span class="hero-compact-badge" :class="getTypeBadgeClass(bestAction.activityType)">
             {{ bestAction.activityType }}
           </span>
+          <span
+            v-if="bestAction.saleMethod"
+            class="hero-compact-method"
+            :class="bestAction.saleMethod === 'vendor' ? 'method-vendor' : 'method-market'"
+            :aria-label="`Sold via ${bestAction.saleMethod}`"
+          >
+            {{ bestAction.saleMethod === 'vendor' ? 'Vendor' : 'Market' }}
+          </span>
           <span class="hero-compact-profit">{{ formatNumber(bestAction.profitPerHour) }} gold/hr</span>
         </div>
 
@@ -683,6 +691,27 @@ onUnmounted(() => {
   border: 1px solid rgba(59, 130, 246, 0.5);
 }
 
+.hero-compact-method {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+
+.hero-compact-method.method-vendor {
+  background-color: rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+}
+
+.hero-compact-method.method-market {
+  background-color: rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
 .hero-compact-profit {
   font-weight: 700;
   color: #fbbf24;
@@ -1026,6 +1055,12 @@ onUnmounted(() => {
   }
 
   .hero-compact-badge {
+    padding: 0.1875rem 0.375rem;
+    font-size: 0.625rem;
+    flex-shrink: 0;
+  }
+
+  .hero-compact-method {
     padding: 0.1875rem 0.375rem;
     font-size: 0.625rem;
     flex-shrink: 0;

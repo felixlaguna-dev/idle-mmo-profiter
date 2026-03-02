@@ -1,7 +1,7 @@
 import type { ActivityType } from '../types'
 import type { DungeonProfitResult } from './dungeonCalculator'
 import type { CraftableProfitResult } from './craftableCalculator'
-import type { ResourceProfitResult } from './resourceCalculator'
+import type { ResourceProfitResult, SaleMethod } from './resourceCalculator'
 
 export interface RankedActivity {
   rank: number
@@ -13,6 +13,7 @@ export interface RankedActivity {
   cost: number
   details: string
   isRecommended: boolean
+  saleMethod?: SaleMethod
 }
 
 /**
@@ -68,6 +69,7 @@ export function rankAllActivities(
       timePerAction: resource.timeSeconds,
       cost: resource.cost,
       details: `Best: ${resource.bestMethod}, ${Math.round(resource.timeSeconds)} sec`,
+      saleMethod: resource.bestMethod,
     })
   })
 
