@@ -60,7 +60,7 @@ export function getHeatmapStyle(
 
   // Continuous alpha: 0.04 (lowest) to 0.16 (highest) — subtle to avoid visual clash
   const alpha = 0.04 + normalized * 0.12
-  const textColor = normalized > 0.5 ? '#059669' : '#10b981'
+  const textColor = normalized > 0.5 ? '#10a37f' : '#10b981'
 
   return {
     backgroundColor: `rgba(16, 185, 129, ${alpha.toFixed(3)})`,

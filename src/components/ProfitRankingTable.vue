@@ -597,13 +597,13 @@ const profitRange = computed(() => {
 
 .ranking-table tbody tr.is-rank-3 {
   background: linear-gradient(135deg, rgba(180, 83, 9, 0.1) 0%, rgba(180, 83, 9, 0.04) 100%);
-  border-left: 3px solid #b45309;
+  border-left: 3px solid #d97706;
 }
 
 .ranking-table tbody tr.is-rank-3:hover {
   background: linear-gradient(135deg, rgba(180, 83, 9, 0.15) 0%, rgba(180, 83, 9, 0.06) 100%);
   transform: translateX(4px);
-  box-shadow: -4px 0 0 0 #b45309;
+  box-shadow: -4px 0 0 0 #d97706;
 }
 
 .ranking-table td {
@@ -645,7 +645,7 @@ const profitRange = computed(() => {
 }
 
 .rank-number.rank-third {
-  color: #b45309;
+  color: #d97706;
   font-weight: 700;
 }
 
