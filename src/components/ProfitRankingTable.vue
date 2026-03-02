@@ -427,8 +427,25 @@ const profitRange = computed(() => {
   min-height: 44px;
 }
 
+.filter-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-primary);
+  transform: translateX(-50%);
+  transition: width 0.2s ease-in-out;
+}
+
 .filter-button:hover {
   color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.filter-button:hover::before {
+  width: 80%;
 }
 
 .filter-button:active {
@@ -441,16 +458,31 @@ const profitRange = computed(() => {
   background-color: rgba(168, 85, 247, 0.05);
 }
 
+.filter-button.active.badge-dungeon::before {
+  width: 100%;
+  background-color: #c084fc;
+}
+
 .filter-button.active.badge-craftable {
   color: #4ade80;
   border-bottom-color: #4ade80;
   background-color: rgba(34, 197, 94, 0.05);
 }
 
+.filter-button.active.badge-craftable::before {
+  width: 100%;
+  background-color: #4ade80;
+}
+
 .filter-button.active.badge-resource {
   color: #60a5fa;
   border-bottom-color: #60a5fa;
   background-color: rgba(59, 130, 246, 0.05);
+}
+
+.filter-button.active.badge-resource::before {
+  width: 100%;
+  background-color: #60a5fa;
 }
 
 /* Table Container */

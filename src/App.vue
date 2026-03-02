@@ -527,7 +527,7 @@ onUnmounted(() => {
 }
 
 .header-content {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -607,7 +607,7 @@ onUnmounted(() => {
 }
 
 .content-wrapper {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 

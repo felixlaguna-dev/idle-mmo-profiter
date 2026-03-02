@@ -458,19 +458,17 @@ hr {
   .mobile-card-layout td[data-label='Profit/hr'] {
     order: -1;
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--success);
     width: 50%;
     display: inline-flex;
     justify-content: flex-end;
   }
 
-  /* Shrink label on profit/hr cell to prevent truncation at 375px */
+  /* Hide label on profit/hr cell — green color is the semantic indicator */
   .mobile-card-layout td.profit-hr::before,
   .mobile-card-layout td[data-label='Profit/hr']::before {
-    font-size: 0.625rem;
-    letter-spacing: 0;
-    margin-right: 0.25rem;
+    display: none;
   }
 
   /* Hide rank row on mobile — cards are in rank order, badge visible */
@@ -537,11 +535,9 @@ hr {
     justify-content: flex-end;
   }
 
-  /* Shrink Spread label to match Profit/hr label treatment */
+  /* Hide Spread label — mirrors Profit/hr treatment, position conveys meaning */
   .mobile-card-layout td[data-label='Spread']::before {
-    font-size: 0.625rem;
-    letter-spacing: 0;
-    margin-right: 0.25rem;
+    display: none;
   }
 
   /* Market tab: place Vendor Value and Market Value side-by-side on second row */
