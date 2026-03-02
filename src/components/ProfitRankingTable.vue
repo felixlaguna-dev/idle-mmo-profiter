@@ -265,7 +265,12 @@ const profitRange = computed(() => {
           <tr
             v-for="activity in displayedActivities"
             :key="activity.name"
-            :class="{ 'is-top-rank': activity.rank === 1, 'negative-profit': activity.profitPerHour < 0 }"
+            :class="{
+              'is-top-rank': activity.rank === 1,
+              'is-rank-2': activity.rank === 2,
+              'is-rank-3': activity.rank === 3,
+              'negative-profit': activity.profitPerHour < 0,
+            }"
           >
             <td class="rank-cell" data-label="Rank">
               <span
@@ -577,6 +582,28 @@ const profitRange = computed(() => {
   box-shadow:
     inset 0 1px 0 rgba(245, 158, 11, 0.2),
     0 4px 16px rgba(245, 158, 11, 0.25);
+}
+
+.ranking-table tbody tr.is-rank-2 {
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.1) 0%, rgba(148, 163, 184, 0.04) 100%);
+  border-left: 3px solid #94a3b8;
+}
+
+.ranking-table tbody tr.is-rank-2:hover {
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.15) 0%, rgba(148, 163, 184, 0.06) 100%);
+  transform: translateX(4px);
+  box-shadow: -4px 0 0 0 #94a3b8;
+}
+
+.ranking-table tbody tr.is-rank-3 {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.1) 0%, rgba(180, 83, 9, 0.04) 100%);
+  border-left: 3px solid #b45309;
+}
+
+.ranking-table tbody tr.is-rank-3:hover {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.15) 0%, rgba(180, 83, 9, 0.06) 100%);
+  transform: translateX(4px);
+  box-shadow: -4px 0 0 0 #b45309;
 }
 
 .ranking-table td {
