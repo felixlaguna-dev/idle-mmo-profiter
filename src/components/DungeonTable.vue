@@ -29,7 +29,7 @@ type SortKey =
   | 'profitPerHour'
 type SortOrder = 'asc' | 'desc'
 
-const sortKey = ref<SortKey>('profitPerHour')
+const sortKey = ref<SortKey>('runCost')
 const sortOrder = ref<SortOrder>('desc')
 
 // Computed sorted dungeons
@@ -223,13 +223,15 @@ const isUntradableRecipe = (recipeName: string): boolean => {
               </td>
               <td class="text-right" data-label="Time">
                 <span class="time-display">
-                  <EditableValue
-                    :model-value="dungeon.timeSeconds"
-                    :default-value="dungeon.timeSeconds"
-                    suffix="s"
-                    @update:model-value="(value) => handleTimeUpdate(dungeon.name, value)"
-                  />
-                  <span class="time-formatted">({{ formatTime(dungeon.timeSeconds) }})</span>
+                  <span class="time-formatted">{{ formatTime(dungeon.timeSeconds) }}</span>
+                  <span class="time-raw">
+                    <EditableValue
+                      :model-value="dungeon.timeSeconds"
+                      :default-value="dungeon.timeSeconds"
+                      suffix="s"
+                      @update:model-value="(value) => handleTimeUpdate(dungeon.name, value)"
+                    />
+                  </span>
                 </span>
               </td>
               <td class="text-right" data-label="Expected Value">
@@ -486,9 +488,21 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 }
 
 .time-formatted {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.time-raw {
+  display: none;
   color: var(--text-secondary);
   font-size: 0.75rem;
-  white-space: nowrap;
+  opacity: 0.5;
+}
+
+.main-row:hover .time-raw {
+  display: inline-flex;
+  margin-left: 0.25rem;
 }
 
 @media (max-width: 767px) {
