@@ -86,7 +86,8 @@ const marketTaxRate = useStorage<number>('marketTaxRate', 0.12)
 const { recipesWithComputedPrices } = useRecipePricing(
   dataProvider.recipes,
   dataProvider.craftableRecipes,
-  marketTaxRate
+  marketTaxRate,
+  dataProvider.materialPriceMap
 )
 
 // Calculate profit rankings
@@ -97,6 +98,7 @@ const { rankedActivities } = useProfitRanking({
   resourceGathering: dataProvider.resourceGathering,
   magicFind: computed(() => magicFind.value),
   taxRate: computed(() => marketTaxRate.value),
+  materialPriceMap: dataProvider.materialPriceMap,
 })
 
 // Use shared filter state to get filtered best action
@@ -122,6 +124,7 @@ const craftableProfits = computed(() => {
   return calculateCraftableProfits(
     dataProvider.craftableRecipes.value,
     marketTaxRate.value,
+    dataProvider.materialPriceMap.value,
     dataProvider.recipes.value
   )
 })
@@ -168,6 +171,22 @@ const getTypeBadgeClass = (type: string): string => {
       return 'badge-resource'
     default:
       return ''
+  }
+}
+
+// Navigate to tab based on activity type
+const navigateToActivityTab = () => {
+  if (!bestAction.value) return
+
+  const typeToTabMap: Record<string, Tab> = {
+    dungeon: 'dungeons',
+    craftable: 'craftables',
+    resource: 'resources',
+  }
+
+  const targetTab = typeToTabMap[bestAction.value.activityType]
+  if (targetTab) {
+    currentTab.value = targetTab
   }
 }
 
@@ -304,7 +323,12 @@ onUnmounted(() => {
     <main class="app-main">
       <div class="content-wrapper">
         <!-- Hero Compact: shown on all tabs -->
-        <div v-if="bestAction" class="hero-compact" aria-label="Best action summary">
+        <button
+          v-if="bestAction"
+          class="hero-compact"
+          aria-label="Best action summary. Click to view in category"
+          @click="navigateToActivityTab"
+        >
           <span class="hero-compact-label">Best:</span>
           <span class="hero-compact-name">{{ bestAction.name }}</span>
           <span class="hero-compact-badge" :class="getTypeBadgeClass(bestAction.activityType)">
@@ -319,7 +343,7 @@ onUnmounted(() => {
             {{ bestAction.saleMethod === 'vendor' ? 'Vendor' : 'Market' }}
           </span>
           <span class="hero-compact-profit">{{ formatNumber(bestAction.profitPerHour) }} gold/hr</span>
-        </div>
+        </button>
 
         <!-- Tab Navigation -->
         <div class="tab-navigation-wrapper">
@@ -649,6 +673,27 @@ onUnmounted(() => {
   font-size: 0.875rem;
   line-height: 1;
   min-height: 44px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  text-align: left;
+}
+
+.hero-compact:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.08) 100%);
+  border-color: rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.hero-compact:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.15);
+}
+
+.hero-compact:focus-visible {
+  outline: 2px solid rgba(245, 158, 11, 0.6);
+  outline-offset: 2px;
 }
 
 .hero-compact-label {
@@ -1071,6 +1116,37 @@ onUnmounted(() => {
     margin-left: auto;
     flex-shrink: 0;
     white-space: nowrap;
+  }
+}
+
+/* Extra small mobile (<380px): Further compress hero for maximum content visibility */
+@media (max-width: 379px) {
+  .hero-compact {
+    padding: 0.1875rem 0.375rem;
+    margin-bottom: 0.1875rem;
+    min-height: 32px;
+    gap: 0.1875rem 0.25rem;
+  }
+
+  .hero-compact-label {
+    font-size: 0.625rem;
+  }
+
+  .hero-compact-name {
+    font-size: 0.75rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-compact-badge,
+  .hero-compact-method {
+    padding: 0.125rem 0.25rem;
+    font-size: 0.5625rem;
+  }
+
+  .hero-compact-profit {
+    font-size: 0.75rem;
   }
 
 
