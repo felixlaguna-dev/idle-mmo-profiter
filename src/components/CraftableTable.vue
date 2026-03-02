@@ -788,17 +788,17 @@ const formatTime = (seconds: number): string => {
   min-width: 32px;
   width: 32px;
   height: 32px;
-  background-color: transparent;
+  background-color: rgba(55, 65, 81, 0.2);
   color: var(--text-secondary);
-  border: 1px solid rgba(55, 65, 81, 0.4);
+  border: 1px solid rgba(55, 65, 81, 0.5);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  font-size: 0.875rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 .expand-button:hover {

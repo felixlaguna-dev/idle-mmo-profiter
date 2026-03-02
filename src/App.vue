@@ -648,6 +648,24 @@ onUnmounted(() => {
   text-transform: capitalize;
 }
 
+.hero-compact-badge.badge-dungeon {
+  background-color: rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+}
+
+.hero-compact-badge.badge-craftable {
+  background-color: rgba(34, 197, 94, 0.25);
+  color: #6ee7b7;
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}
+
+.hero-compact-badge.badge-resource {
+  background-color: rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
 .hero-compact-profit {
   font-weight: 700;
   color: #fbbf24;
