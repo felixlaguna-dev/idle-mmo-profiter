@@ -343,3 +343,37 @@ All tests passing (389/389).
 **2026-03-02T09:50:45Z**
 
 Starting implementation of 5 MEDIUM-IMPACT visual polish items (M1-M5)
+
+**2026-03-02T10:12:00Z**
+
+Medium-impact items completed:
+
+**M1** (Craft tab double green column): DONE
+- Changed subdued heatmap from 0.5x to 0.33x alpha (3:1 ratio)
+- Profit column is now visually secondary to Profit/hr column
+
+**M2** (Dungeon time display): DONE (already implemented in dungeon commit)
+- Human-readable time (2h 40m) shown first
+- Raw seconds only visible on hover for editing
+
+**M3** (Hero separator visibility): DONE
+- Added visible amber separator bar between badges and profit
+- 2px width, 16px height, 40% opacity amber
+
+**M4** (Market mobile card consolidation): DONE (already implemented in market commit)
+- Consolidated Vendor and Market onto one row
+- Cards reduced from 4 rows to 3 rows
+
+**M5** (Market spread logarithmic scaling): DONE
+- Replaced step-based spread classes with continuous logarithmic scale
+- Added getSpreadStyle function using log10 for wide dynamic range
+- Items from +24% to +13789% now show proportional gradient intensity
+
+Files modified:
+- /home/felix/idle-mmo-profiter/src/composables/useHeatmap.ts
+- /home/felix/idle-mmo-profiter/src/components/MarketTable.vue
+- /home/felix/idle-mmo-profiter/src/App.vue
+
+All tests passing (389/389). TypeScript clean.
+
+**Remaining:** Low-impact items L1-L4 (optional flourishes)
