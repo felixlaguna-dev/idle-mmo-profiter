@@ -2756,10 +2756,12 @@ const refreshItemData = async () => {
 
 .profit-positive {
   color: var(--success);
+  background: linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.1) 100%);
 }
 
 .profit-negative {
   color: var(--danger);
+  background: linear-gradient(90deg, transparent 0%, rgba(239, 68, 68, 0.08) 100%);
 }
 
 /* Spread column */
