@@ -649,10 +649,11 @@ const formatTime = (seconds: number): string => {
   bottom: 0;
   left: 50%;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: var(--accent-primary);
   transform: translateX(-50%);
   transition: width 0.2s ease-in-out;
+  border-radius: 3px 3px 0 0;
 }
 
 .sub-tab-button:hover {
