@@ -266,7 +266,7 @@ onUnmounted(() => {
       <div class="header-content">
         <h1 class="app-title">IdleMMO Profit Calculator</h1>
         <div class="header-actions">
-          <span class="last-update">{{ lastUpdateText }}</span>
+          <span class="last-update"><svg class="info-icon" viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9v5M10 6.5v.01"/></svg>{{ lastUpdateText }}</span>
           <button
             v-if="!isStaticMode"
             class="btn-settings"
@@ -544,6 +544,9 @@ onUnmounted(() => {
 }
 
 .last-update {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   font-size: 0.6875rem;
   color: var(--text-secondary);
   background: var(--bg-tertiary);
@@ -552,6 +555,11 @@ onUnmounted(() => {
   border-radius: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.01em;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  opacity: 0.7;
 }
 
 .btn-settings {
@@ -919,32 +927,38 @@ onUnmounted(() => {
   }
 
   .hero-compact {
-    flex-wrap: wrap;
-    gap: 0.25rem;
+    flex-wrap: nowrap;
+    gap: 0.375rem;
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.25rem;
     min-height: 36px;
+    overflow: hidden;
   }
 
   .hero-compact-label {
     font-size: 0.6875rem;
+    flex-shrink: 0;
   }
 
   .hero-compact-name {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
   }
 
   .hero-compact-badge {
     padding: 0.1875rem 0.375rem;
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
+    flex-shrink: 0;
   }
 
   .hero-compact-profit {
-    font-size: 0.9375rem;
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0.125rem;
-    text-align: left;
+    font-size: 0.8125rem;
+    margin-left: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
 

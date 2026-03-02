@@ -266,7 +266,7 @@ const formatTime = (seconds: number): string => {
                   :aria-expanded="isExpanded(craftable.name)"
                   @click="toggleRow(craftable.name)"
                 >
-                  {{ isExpanded(craftable.name) ? '▼' : '▶' }}
+                  <svg class="expand-icon" :class="{ expanded: isExpanded(craftable.name) }" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
                 </button>
               </td>
               <td class="name-cell" data-label="Craftable">
@@ -791,6 +791,15 @@ const formatTime = (seconds: number): string => {
   color: white;
   border-color: var(--accent-primary);
   box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
+.expand-icon {
+  transition: transform 0.25s ease;
+  transform: rotate(-90deg);
+}
+
+.expand-icon.expanded {
+  transform: rotate(0deg);
 }
 
 /* Name Cell */
