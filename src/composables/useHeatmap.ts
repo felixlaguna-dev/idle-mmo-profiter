@@ -58,9 +58,9 @@ export function getHeatmapStyle(
   const linear = maxProfit === 0 ? 1 : profit / maxProfit
   const normalized = Math.pow(Math.max(linear, 0), 0.3)
 
-  // Continuous alpha: 0.04 (lowest) to 0.16 (highest) — subtle to avoid visual clash
+  // Continuous alpha: 0.06 (lowest) to 0.18 (highest) — visible even at low values
   // Teal hue (20, 184, 166) differentiates heatmap from craftable type badges (emerald green)
-  const alpha = 0.04 + normalized * 0.12
+  const alpha = 0.06 + normalized * 0.12
   const textColor = normalized > 0.5 ? '#0d9488' : '#14b8a6'
 
   return {
