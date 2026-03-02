@@ -2749,8 +2749,12 @@ const refreshItemData = async () => {
 
 @media (max-width: 767px) {
   .market-items-table.mobile-card-layout tbody tr {
-    padding: 0.25rem 0.375rem;
-    margin-bottom: 0.125rem;
+    padding: 0.375rem 0.5rem 0.375rem 0.625rem;
+    margin-bottom: 0.375rem;
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #1e2436 0%, #1a1f2e 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 
   .market-items-table.mobile-card-layout td {

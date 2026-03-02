@@ -71,6 +71,8 @@ const chartData = computed(() => {
         backgroundColor: backgroundColors,
         borderColor: borderColors,
         borderWidth: 1,
+        borderRadius: 4,
+        borderSkipped: false,
       },
     ],
   }
