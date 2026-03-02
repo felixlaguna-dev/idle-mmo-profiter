@@ -730,8 +730,8 @@ const formatTime = (seconds: number): string => {
 }
 
 .main-table thead {
-  background-color: var(--bg-tertiary);
-  border-bottom: 2px solid rgba(96, 165, 250, 0.2);
+  background-color: rgba(35, 41, 56, 0.9);
+  border-bottom: 2px solid rgba(96, 165, 250, 0.35);
 }
 
 .main-table th {

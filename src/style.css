@@ -215,7 +215,7 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.015);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 tr:hover {
@@ -499,6 +499,19 @@ hr {
     display: inline-flex;
     width: 50%;
     padding: 0.125rem 0.375rem;
+  }
+
+  /* Standardize field ordering: cost/price first, time/method second */
+  .mobile-card-layout td[data-label='Cost'],
+  .mobile-card-layout td[data-label='Run Cost'],
+  .mobile-card-layout td[data-label='Total Cost'] {
+    order: 0;
+  }
+
+  .mobile-card-layout td[data-label='Time'],
+  .mobile-card-layout td[data-label='Best'],
+  .mobile-card-layout td[data-label='Best Method'] {
+    order: 1;
   }
 
   /* Hide expand buttons on mobile to save space */
