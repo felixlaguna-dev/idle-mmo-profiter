@@ -294,6 +294,21 @@ const categories = computed(() => {
   font-size: 1.125rem;
   color: var(--success);
   font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Stack label/value on small mobile to prevent text wrapping */
+@media (max-width: 400px) {
+  .summary-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .summary-value {
+    align-self: flex-end;
+    font-size: 1.25rem;
+  }
 }
 
 .empty-state {
