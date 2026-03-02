@@ -226,13 +226,6 @@ watch(showAll, () => {
   <div class="profit-bar-chart">
     <div class="chart-header">
       <h3 class="chart-title">Profit Comparison</h3>
-      <button
-        v-if="activities.length > maxDisplayItems"
-        class="btn-toggle"
-        @click="showAll = !showAll"
-      >
-        {{ showAll ? 'Show less' : `Show all (${activities.length})` }}
-      </button>
     </div>
     <div
       class="chart-container"
@@ -240,6 +233,11 @@ watch(showAll, () => {
       aria-label="Bar chart showing profit per hour for different activities"
     >
       <canvas ref="chartCanvas"></canvas>
+    </div>
+    <div v-if="activities.length > maxDisplayItems" class="show-more-container">
+      <button class="btn-toggle" @click="showAll = !showAll">
+        {{ showAll ? 'Show less' : `Show all (${activities.length})` }}
+      </button>
     </div>
   </div>
 </template>
@@ -287,6 +285,12 @@ watch(showAll, () => {
 
 .btn-toggle:active {
   transform: scale(0.97);
+}
+
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
 }
 
 .chart-container {

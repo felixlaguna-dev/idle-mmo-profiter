@@ -393,76 +393,64 @@ const profitRange = computed(() => {
 .filter-controls {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  background: linear-gradient(180deg, #1e2436 0%, var(--bg-secondary) 100%);
-  border: 1px solid rgba(55, 65, 81, 0.7);
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  gap: 0.5rem;
+  padding: 0;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 0.5rem;
 }
 
 .filter-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .filter-button {
+  display: flex;
+  align-items: center;
   padding: 0.5rem 1rem;
-  background-color: var(--bg-tertiary);
+  background-color: transparent;
   color: var(--text-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.375rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  border-radius: 0;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s;
   text-transform: capitalize;
   position: relative;
   min-height: 44px;
 }
 
 .filter-button:hover {
-  background-color: var(--bg-primary);
-  border-color: var(--accent-primary);
   color: var(--text-primary);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .filter-button:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transform: none;
 }
 
 .filter-button.active.badge-dungeon {
-  background-color: rgba(168, 85, 247, 0.15);
   color: #c084fc;
-  border-color: rgba(168, 85, 247, 0.3);
-}
-
-.filter-button.active.badge-dungeon:hover {
-  background-color: rgba(168, 85, 247, 0.2);
+  border-bottom-color: #c084fc;
+  background-color: rgba(168, 85, 247, 0.05);
 }
 
 .filter-button.active.badge-craftable {
-  background-color: rgba(34, 197, 94, 0.15);
   color: #4ade80;
-  border-color: rgba(34, 197, 94, 0.3);
-}
-
-.filter-button.active.badge-craftable:hover {
-  background-color: rgba(34, 197, 94, 0.2);
+  border-bottom-color: #4ade80;
+  background-color: rgba(34, 197, 94, 0.05);
 }
 
 .filter-button.active.badge-resource {
-  background-color: rgba(59, 130, 246, 0.15);
   color: #60a5fa;
-  border-color: rgba(59, 130, 246, 0.3);
-}
-
-.filter-button.active.badge-resource:hover {
-  background-color: rgba(59, 130, 246, 0.2);
+  border-bottom-color: #60a5fa;
+  background-color: rgba(59, 130, 246, 0.05);
 }
 
 /* Table Container */
@@ -678,8 +666,8 @@ const profitRange = computed(() => {
 
 @media (max-width: 767px) {
   .filter-controls {
-    gap: 0.375rem;
-    padding: 0.5rem;
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
   }
 
   .filter-label {
@@ -687,12 +675,12 @@ const profitRange = computed(() => {
   }
 
   .filter-button {
-    flex: 1 1 0;
+    flex: 0 0 auto;
     min-width: 0;
     max-width: none;
-    min-height: 44px;
-    padding: 0.375rem 0.25rem;
-    font-size: 0.75rem;
+    min-height: 36px;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.8125rem;
   }
 
   .pagination-info {
