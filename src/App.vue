@@ -639,9 +639,10 @@ onUnmounted(() => {
 
 .hero-compact-profit {
   font-weight: 700;
-  color: var(--warning);
+  color: #fbbf24;
   font-size: 1rem;
   margin-left: auto;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
 }
 
 

@@ -855,6 +855,7 @@ const formatTime = (seconds: number): string => {
 
 .profit-hr {
   font-weight: 700;
+  font-size: 0.9375rem;
 }
 
 /* Expanded Row */

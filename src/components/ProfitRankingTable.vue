@@ -538,15 +538,20 @@ const profitRange = computed(() => {
 }
 
 .ranking-table tbody tr.is-top-rank {
-  background-color: rgba(245, 158, 11, 0.1);
-  border: 2px solid rgba(245, 158, 11, 0.3);
-  box-shadow: -4px 0 0 0 var(--warning);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.06) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-left: 3px solid #f59e0b;
+  box-shadow:
+    inset 0 1px 0 rgba(245, 158, 11, 0.15),
+    0 2px 8px rgba(245, 158, 11, 0.15);
 }
 
 .ranking-table tbody tr.is-top-rank:hover {
-  background-color: rgba(245, 158, 11, 0.15);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0.08) 100%);
   transform: translateX(4px);
-  box-shadow: -4px 0 0 0 var(--warning), 0 2px 8px rgba(245, 158, 11, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(245, 158, 11, 0.2),
+    0 4px 16px rgba(245, 158, 11, 0.25);
 }
 
 .ranking-table td {
@@ -579,6 +584,7 @@ const profitRange = computed(() => {
   color: #f59e0b;
   font-weight: 700;
   font-size: 1.125rem;
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
 }
 
 .rank-number.rank-second {
@@ -626,7 +632,8 @@ const profitRange = computed(() => {
 
 /* Profit Cell */
 .profit-cell {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 0.9375rem;
   color: var(--success);
 }
 

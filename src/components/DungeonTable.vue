@@ -504,6 +504,7 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 
 .profit-hr {
   font-weight: 700;
+  font-size: 0.9375rem;
 }
 
 /* Expanded Row */
