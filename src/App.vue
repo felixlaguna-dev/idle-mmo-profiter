@@ -338,7 +338,7 @@ onUnmounted(() => {
             @keydown="handleTabKeydown"
           >
             <span class="tab-label-full">Dungeons</span>
-            <span class="tab-label-short">Dungs</span>
+            <span class="tab-label-short">Dung</span>
           </button>
           <button
             class="tab-button"
@@ -527,7 +527,7 @@ onUnmounted(() => {
 }
 
 .header-content {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -607,7 +607,7 @@ onUnmounted(() => {
 }
 
 .content-wrapper {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -961,8 +961,8 @@ onUnmounted(() => {
   }
 
   .hero-compact {
-    flex-wrap: nowrap;
-    gap: 0.375rem;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.375rem;
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.25rem;
     min-height: 36px;
@@ -976,11 +976,8 @@ onUnmounted(() => {
 
   .hero-compact-name {
     font-size: 0.8125rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 0;
-    flex: 1 1 0;
   }
 
   .hero-compact-badge {

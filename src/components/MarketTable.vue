@@ -2779,10 +2779,10 @@ const refreshItemData = async () => {
     line-height: 1.35;
   }
 
-  /* Compact the spread row */
+  /* Spread mirrors Profit/hr position — top-right of card */
   .market-items-table.mobile-card-layout .col-spread {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 700;
   }
 }
 </style>
