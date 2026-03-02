@@ -274,7 +274,7 @@ const handleMarketPriceUpdate = (resourceName: string, value: number) => {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #d1d5db;
+  color: #e5e7eb;
   font-weight: 600;
   white-space: nowrap;
 }

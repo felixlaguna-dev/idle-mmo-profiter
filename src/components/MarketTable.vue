@@ -1807,8 +1807,6 @@ const refreshItemData = async () => {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 .market-summary {
@@ -2398,7 +2396,7 @@ const refreshItemData = async () => {
   text-align: left;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #d1d5db;
+  color: #e5e7eb;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
