@@ -4,7 +4,7 @@
   --bg-secondary: #1a1f2e;
   --bg-tertiary: #232938;
   --text-primary: #e5e7eb;
-  --text-secondary: #9ca3af;
+  --text-secondary: #a8b0bb;
   --text-accent: #60a5fa;
   --border-color: #374151;
   --accent-primary: #3b82f6;
@@ -374,18 +374,18 @@ hr {
     width: 100%;
   }
 
-  /* Convert table rows to cards - ultra compact */
+  /* Convert table rows to cards */
   .mobile-card-layout tbody tr {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.5rem;
     border: 1px solid rgba(55, 65, 81, 0.7);
     border-left: 3px solid var(--accent-primary);
     border-radius: 0.5rem;
-    padding: 0.375rem 0.5rem 0.375rem 0.625rem;
+    padding: 0.5rem 0.625rem 0.5rem 0.75rem;
     background: linear-gradient(135deg, #1e2436 0%, #1a1f2e 100%);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     transition: all 0.15s ease;
@@ -397,15 +397,15 @@ hr {
     transform: scale(0.99);
   }
 
-  /* Stack table cells vertically - compact layout */
+  /* Stack table cells vertically */
   .mobile-card-layout td {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 0.125rem 0.375rem;
+    padding: 0.1875rem 0.375rem;
     border-bottom: none;
     text-align: right;
-    line-height: 1.2;
+    line-height: 1.35;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;

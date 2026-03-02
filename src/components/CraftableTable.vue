@@ -617,27 +617,33 @@ const formatTime = (seconds: number): string => {
   }
 }
 
-/* Sub-tab Navigation — inline tabs aligned with table */
+/* Sub-tab Navigation — pill-style to match filter controls */
 .sub-tab-navigation {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, #1e2436 0%, var(--bg-secondary) 100%);
+  border: 1px solid rgba(55, 65, 81, 0.7);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sub-tab-button {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.5rem 1.25rem;
-  background: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-tertiary);
   color: var(--text-secondary);
-  border: none;
-  border-bottom: 2px solid transparent;
-  font-size: 0.9375rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   text-transform: capitalize;
+  min-height: 44px;
 }
 
 .sub-tab-icon {
@@ -650,15 +656,22 @@ const formatTime = (seconds: number): string => {
   font-size: 0.75rem;
   color: var(--text-secondary);
   white-space: nowrap;
+  background-color: var(--bg-tertiary);
+  padding: 0.25rem 0.625rem;
+  border-radius: 1rem;
+  font-weight: 500;
 }
 
 .sub-tab-button:hover {
+  background-color: var(--bg-primary);
+  border-color: var(--accent-primary);
   color: var(--text-primary);
 }
 
 .sub-tab-button.active {
+  background-color: rgba(59, 130, 246, 0.15);
   color: var(--accent-primary);
-  border-bottom-color: var(--accent-primary);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
 /* Table Container */
@@ -956,13 +969,15 @@ const formatTime = (seconds: number): string => {
   }
 
   .sub-tab-navigation {
-    gap: 0;
+    gap: 0.375rem;
+    padding: 0.5rem;
   }
 
   .sub-tab-button {
     min-height: 44px;
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.5rem;
     font-size: 0.8125rem;
+    flex: 1 1 0;
   }
 
   .expand-button {
