@@ -197,7 +197,7 @@ const formatTime = (seconds: number): string => {
     <!-- Sub-tab navigation -->
     <div class="sub-tab-navigation">
       <button
-        class="sub-tab-button"
+        class="sub-tab-button sub-tab-alchemy"
         :class="{ active: activeSubTab === 'alchemy' }"
         @click="activeSubTab = 'alchemy'"
       >
@@ -205,7 +205,7 @@ const formatTime = (seconds: number): string => {
         <span>Alchemy</span>
       </button>
       <button
-        class="sub-tab-button"
+        class="sub-tab-button sub-tab-forging"
         :class="{ active: activeSubTab === 'forging' }"
         @click="activeSubTab = 'forging'"
       >
@@ -668,13 +668,33 @@ const formatTime = (seconds: number): string => {
 }
 
 .sub-tab-button.active {
-  color: var(--accent-primary);
   border-bottom-color: var(--accent-primary);
-  background-color: rgba(59, 130, 246, 0.05);
 }
 
 .sub-tab-button.active::before {
   width: 100%;
+}
+
+/* Alchemy: teal/emerald to match potion theme */
+.sub-tab-alchemy.active {
+  color: #4ade80;
+  border-bottom-color: #4ade80;
+  background-color: rgba(34, 197, 94, 0.05);
+}
+
+.sub-tab-alchemy.active::before {
+  background-color: #4ade80;
+}
+
+/* Forging: amber/orange to match metalwork theme */
+.sub-tab-forging.active {
+  color: #fbbf24;
+  border-bottom-color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.05);
+}
+
+.sub-tab-forging.active::before {
+  background-color: #fbbf24;
 }
 
 .sub-tab-icon {

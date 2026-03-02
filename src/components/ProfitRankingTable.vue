@@ -674,6 +674,11 @@ const profitRange = computed(() => {
 
 /* Mobile card layout overrides */
 @media (max-width: 767px) {
+  /* Remove heatmap backgrounds on mobile for consistency with other tabs */
+  .profit-cell {
+    background-color: transparent !important;
+  }
+
   .profit-ranking-table {
     gap: 0.5rem;
   }
