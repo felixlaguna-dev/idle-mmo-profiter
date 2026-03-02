@@ -423,7 +423,16 @@ onUnmounted(() => {
                     <ProfitBarChart :activities="rankedActivities" />
                   </template>
                   <template #fallback>
-                    <LoadingSpinner message="Loading chart..." :timeout="10000" />
+                    <div class="skeleton-chart">
+                      <div class="skeleton skeleton-bar" style="width: 40%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 50%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 55%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 65%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 70%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 80%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 90%"></div>
+                      <div class="skeleton skeleton-bar" style="width: 100%"></div>
+                    </div>
                   </template>
                 </Suspense>
               </ErrorBoundary>
@@ -909,6 +918,17 @@ onUnmounted(() => {
   gap: 1.5rem;
   max-width: 1320px;
   margin: 0 auto;
+}
+
+.skeleton-chart {
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--surface-radius);
+  padding: 1.5rem;
+  box-shadow: var(--surface-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .charts-grid {
