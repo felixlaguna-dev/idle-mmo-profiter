@@ -14,9 +14,10 @@
  * Run with: tsx scripts/refresh-market-prices.ts
  *
  * API key resolution order:
- * 1. .env file (IDLE_MMO_SECRET_KEY_CLI)
- * 2. CLI argument: --api-key=<key>
- * 3. Interactive prompt
+ * 1. CLI argument: --api-key=<key> (explicit override)
+ * 2. process.env.IDLE_MMO_SECRET_KEY_CLI (works in CI with Docker -e flag)
+ * 3. .env file (IDLE_MMO_SECRET_KEY_CLI) (local dev fallback)
+ * 4. Interactive prompt
  *
  * Options:
  * --limit=N     Process only first N items (for testing)
@@ -75,24 +76,32 @@ function loadApiKeyFromEnv(): string | null {
   }
 }
 
-// Get API key from .env, command line argument, or prompt
+// Get API key from CLI argument, process.env, .env file, or prompt
 async function getApiKey(): Promise<string> {
-  // 1. Check .env file
-  const envKey = loadApiKeyFromEnv()
-  if (envKey) {
-    console.log('Using API key from .env (IDLE_MMO_SECRET_KEY_CLI)')
-    return envKey
-  }
-
-  // 2. Check CLI argument
+  // 1. Check CLI argument (explicit override)
   const args = process.argv.slice(2)
   const apiKeyArg = args.find((arg) => arg.startsWith('--api-key='))
 
   if (apiKeyArg) {
+    console.log('Using API key from --api-key argument')
     return apiKeyArg.split('=')[1]
   }
 
-  // 3. Prompt for API key
+  // 2. Check process.env (works in CI with Docker -e flag)
+  const processEnvKey = process.env.IDLE_MMO_SECRET_KEY_CLI
+  if (processEnvKey) {
+    console.log('Using API key from process.env.IDLE_MMO_SECRET_KEY_CLI')
+    return processEnvKey
+  }
+
+  // 3. Check .env file (local dev fallback)
+  const envKey = loadApiKeyFromEnv()
+  if (envKey) {
+    console.log('Using API key from .env file (IDLE_MMO_SECRET_KEY_CLI)')
+    return envKey
+  }
+
+  // 4. Prompt for API key
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,

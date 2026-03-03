@@ -4,13 +4,12 @@ FROM node:22-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package files for dependency installation
+# Copy package files and install dependencies
+# These layers are cached until package*.json changes
 COPY package*.json ./
-
-# Install dependencies
 RUN npm ci
 
-# Copy source code
+# Copy source code (unused when volume-mounted in docker-compose)
 COPY . .
 
 # Expose Vite dev server port
