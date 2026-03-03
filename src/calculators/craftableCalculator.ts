@@ -1,30 +1,11 @@
 import type { CraftableRecipe, Recipe, CraftableMaterial } from '../types'
+import { isLowConfidence } from '../utils/priceConfidence'
 
 export interface CraftableMaterialResult {
   name: string
   quantity: number
   unitCost: number // Resolved from material price map
   totalCost: number
-}
-
-/** Number of days without sales to consider a price low-confidence */
-const LOW_CONFIDENCE_THRESHOLD_DAYS = 30
-
-/** Number of milliseconds in a day */
-const MS_PER_DAY = 24 * 60 * 60 * 1000
-
-/**
- * Check if a lastSaleAt timestamp indicates a low-confidence price.
- * A price is low-confidence if there's no sale data or the last sale was >30 days ago.
- */
-function isLowConfidence(lastSaleAt?: string): boolean {
-  if (!lastSaleAt) {
-    return true // No sale data = low confidence
-  }
-  const lastSaleTime = new Date(lastSaleAt).getTime()
-  const now = Date.now()
-  const daysSinceLastSale = (now - lastSaleTime) / MS_PER_DAY
-  return daysSinceLastSale > LOW_CONFIDENCE_THRESHOLD_DAYS
 }
 
 /**

@@ -2684,12 +2684,43 @@ const refreshItemData = async () => {
   .search-bar-container {
     flex-direction: column;
     align-items: stretch;
-    padding: 0.5rem 0;
+    padding: 0;
+    gap: 0.375rem;
+  }
+
+  .search-bar {
+    gap: 0.375rem;
+  }
+
+  .search-input {
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+    font-size: 0.875rem;
+    border-width: 1px;
+  }
+
+  .search-icon {
+    left: 0.625rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .search-stats {
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .override-count,
+  .exclusion-count {
+    padding: 0.125rem 0.375rem;
+    font-size: 0.6875rem;
   }
 
   .btn-refresh-all,
   .btn-reset-all {
     width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
   }
 
   .section-header {

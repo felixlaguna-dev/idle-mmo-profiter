@@ -2,13 +2,13 @@
 import { ref, computed } from 'vue'
 import type { DungeonProfitResult } from '../calculators/dungeonCalculator'
 import EditableValue from './EditableValue.vue'
+import LowConfidenceToggle from './LowConfidenceToggle.vue'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useLowConfidenceFilter } from '../composables/useLowConfidenceFilter'
 
 const { getHeatmapStyle } = useHeatmap()
 const {
   showLowConfidenceDungeons,
-  setShowLowConfidenceDungeons,
   filterDungeons,
 } = useLowConfidenceFilter()
 
@@ -197,24 +197,11 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 
 <template>
   <div class="dungeon-table">
-    <!-- Low-confidence toggle -->
-    <div v-if="lowConfidenceCount > 0" class="toggle-bar">
-      <label class="low-confidence-toggle">
-        <span class="toggle-switch">
-          <input
-            type="checkbox"
-            :checked="showLowConfidenceDungeons"
-            aria-label="Show low-confidence items"
-            @change="setShowLowConfidenceDungeons(!showLowConfidenceDungeons)"
-          />
-          <span class="toggle-slider"></span>
-        </span>
-        <span class="toggle-label">
-          <span class="toggle-label-full">Show low-confidence</span>
-          <span class="toggle-label-short">Low-conf.</span>
-          <span class="toggle-count">({{ lowConfidenceCount }})</span>
-        </span>
-      </label>
+    <!-- Controls bar with toggle -->
+    <div class="controls-bar">
+      <div class="toggle-wrapper">
+        <LowConfidenceToggle v-model="showLowConfidenceDungeons" :count="lowConfidenceCount" />
+      </div>
     </div>
 
     <div class="table-container">
@@ -757,111 +744,22 @@ const isUntradableRecipe = (recipeName: string): boolean => {
   opacity: 1;
 }
 
-/* Toggle bar for low-confidence filter */
-.toggle-bar {
+/* Controls bar for toggle — matches CraftableTable sub-tab-navigation pattern */
+.controls-bar {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  padding: 0 0 0.5rem 0;
   margin-bottom: 0.5rem;
+  min-height: 44px;
+  border-bottom: 2px solid var(--border-color);
 }
 
-/* Low-confidence toggle */
-.low-confidence-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
+.toggle-wrapper {
+  margin-left: auto;
 }
 
-/* Toggle switch container */
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 36px;
-  height: 20px;
-  flex-shrink: 0;
-}
-
-/* Hide the default checkbox */
-.toggle-switch input[type="checkbox"] {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-
-/* The slider */
-.toggle-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  transition: all 0.3s var(--ease-out);
-}
-
-/* The slider knob */
-.toggle-slider::before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 2px;
-  bottom: 2px;
-  background-color: var(--text-secondary);
-  border-radius: 50%;
-  transition: all 0.3s var(--ease-out);
-}
-
-/* Hover state */
-.low-confidence-toggle:hover .toggle-slider {
-  border-color: var(--warning);
-}
-
-/* Focus state for accessibility */
-.toggle-switch input[type="checkbox"]:focus + .toggle-slider {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
-}
-
-/* Checked state */
-.toggle-switch input[type="checkbox"]:checked + .toggle-slider {
-  background-color: rgba(245, 158, 11, 0.2);
-  border-color: var(--warning);
-}
-
-.toggle-switch input[type="checkbox"]:checked + .toggle-slider::before {
-  background-color: var(--warning);
-  transform: translateX(16px);
-}
-
-.low-confidence-toggle .toggle-label {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.low-confidence-toggle .toggle-label-short {
-  display: none;
-}
-
-.low-confidence-toggle .toggle-count {
-  font-size: 0.75rem;
-  opacity: 0.8;
-}
-
-.low-confidence-toggle:hover {
-  color: var(--text-primary);
-}
-
-/* Low-confidence badge */
+/* Table Container — uses shared surface tokens */
 .low-confidence-badge {
   display: inline-flex;
   align-items: center;
@@ -888,36 +786,9 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 }
 
 @media (max-width: 767px) {
-  .toggle-bar {
-    padding: 0 0.5rem;
-  }
-
-  .low-confidence-toggle {
-    font-size: 0.75rem;
-    padding: 0.25rem 0;
-    gap: 0.375rem;
-  }
-
-  .toggle-switch {
-    width: 32px;
-    height: 18px;
-  }
-
-  .toggle-slider::before {
-    height: 12px;
-    width: 12px;
-  }
-
-  .toggle-switch input[type="checkbox"]:checked + .toggle-slider::before {
-    transform: translateX(14px);
-  }
-
-  .toggle-label-full {
-    display: none;
-  }
-
-  .toggle-label-short {
-    display: inline;
+  .controls-bar {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    min-height: 40px;
   }
 
   .low-confidence-badge {

@@ -1,4 +1,5 @@
 import type { Dungeon, MagicFindSettings, Recipe } from '../types'
+import { isLowConfidence } from '../utils/priceConfidence'
 
 export interface DungeonDropResult {
   recipeName: string
@@ -18,26 +19,6 @@ export interface DungeonProfitResult {
   profitPerHour: number
   /** True if ANY drop has a low-confidence price */
   isLowConfidence?: boolean
-}
-
-/** Number of days without sales to consider a price low-confidence */
-const LOW_CONFIDENCE_THRESHOLD_DAYS = 30
-
-/** Number of milliseconds in a day */
-const MS_PER_DAY = 24 * 60 * 60 * 1000
-
-/**
- * Check if a lastSaleAt timestamp indicates a low-confidence price.
- * A price is low-confidence if there's no sale data or the last sale was >30 days ago.
- */
-function isLowConfidence(lastSaleAt?: string): boolean {
-  if (!lastSaleAt) {
-    return true // No sale data = low confidence
-  }
-  const lastSaleTime = new Date(lastSaleAt).getTime()
-  const now = Date.now()
-  const daysSinceLastSale = (now - lastSaleTime) / MS_PER_DAY
-  return daysSinceLastSale > LOW_CONFIDENCE_THRESHOLD_DAYS
 }
 
 /**

@@ -657,6 +657,137 @@ describe('calculateCraftableProfits', () => {
     // - tradable recipe (if any)
     // - ALL materials
 
+    it('should NOT mark craftable as low-confidence when vendor-sold materials lack sales data', () => {
+      const recentDate = new Date()
+      recentDate.setDate(recentDate.getDate() - 5) // 5 days ago
+
+      const craftableRecipe: CraftableRecipe = {
+        name: 'Vendor Material Craftable',
+        timeSeconds: 1000,
+        materials: [
+          { name: 'Cheap Vial', quantity: 1 }, // Vendor-sold (has vendorValue)
+          { name: 'Rare Herb', quantity: 5 }, // Market-only
+        ],
+        currentPrice: 3000,
+        lastSaleAt: recentDate.toISOString(),
+      }
+
+      const materialPriceMap = new Map<string, number>([
+        ['Cheap Vial', 10],
+        ['Rare Herb', 50],
+      ])
+
+      const materialLastSaleAtMap = new Map<string, string>([
+        // Cheap Vial has NO lastSaleAt entry (vendor-sold)
+        ['Rare Herb', recentDate.toISOString()], // Market item has recent sales
+      ])
+
+      const materialVendorValueMap = new Map<string, number>([
+        ['Cheap Vial', 10], // Vendor-sold material (vendorValue > 0)
+        // Rare Herb has no vendor value (market-only)
+      ])
+
+      const results = calculateCraftableProfits(
+        [craftableRecipe],
+        mockTaxRate,
+        materialPriceMap,
+        [],
+        materialLastSaleAtMap,
+        materialVendorValueMap
+      )
+
+      expect(results).toHaveLength(1)
+      // Vendor-sold materials are excluded from low-confidence check
+      expect(results[0].isLowConfidence).toBe(false)
+    })
+
+    it('should mark craftable as low-confidence when market-only materials lack sales data even if vendor materials are fine', () => {
+      const recentDate = new Date()
+      recentDate.setDate(recentDate.getDate() - 5)
+
+      const oldDate = new Date()
+      oldDate.setDate(oldDate.getDate() - 45)
+
+      const craftableRecipe: CraftableRecipe = {
+        name: 'Market Material Missing',
+        timeSeconds: 1000,
+        materials: [
+          { name: 'Cheap Vial', quantity: 1 }, // Vendor-sold
+          { name: 'Rare Herb', quantity: 5 }, // Market-only, but STALE
+        ],
+        currentPrice: 3000,
+        lastSaleAt: recentDate.toISOString(),
+      }
+
+      const materialPriceMap = new Map<string, number>([
+        ['Cheap Vial', 10],
+        ['Rare Herb', 50],
+      ])
+
+      const materialLastSaleAtMap = new Map<string, string>([
+        // Cheap Vial has NO entry (vendor-sold, ignored)
+        ['Rare Herb', oldDate.toISOString()], // Market material is STALE
+      ])
+
+      const materialVendorValueMap = new Map<string, number>([
+        ['Cheap Vial', 10], // Vendor-sold
+        // Rare Herb has no vendor value
+      ])
+
+      const results = calculateCraftableProfits(
+        [craftableRecipe],
+        mockTaxRate,
+        materialPriceMap,
+        [],
+        materialLastSaleAtMap,
+        materialVendorValueMap
+      )
+
+      expect(results).toHaveLength(1)
+      // Market-only material is stale = low confidence
+      expect(results[0].isLowConfidence).toBe(true)
+    })
+
+    it('should work without materialVendorValueMap parameter (backwards compatibility)', () => {
+      const recentDate = new Date()
+      recentDate.setDate(recentDate.getDate() - 5)
+
+      const craftableRecipe: CraftableRecipe = {
+        name: 'Backwards Compat Vendor Check',
+        timeSeconds: 1000,
+        materials: [
+          { name: 'Cheap Vial', quantity: 1 },
+          { name: 'Rare Herb', quantity: 5 },
+        ],
+        currentPrice: 3000,
+        lastSaleAt: recentDate.toISOString(),
+      }
+
+      const materialPriceMap = new Map<string, number>([
+        ['Cheap Vial', 10],
+        ['Rare Herb', 50],
+      ])
+
+      const materialLastSaleAtMap = new Map<string, string>([
+        ['Cheap Vial', recentDate.toISOString()],
+        ['Rare Herb', recentDate.toISOString()],
+      ])
+
+      // Call WITHOUT materialVendorValueMap parameter (it's optional)
+      const results = calculateCraftableProfits(
+        [craftableRecipe],
+        mockTaxRate,
+        materialPriceMap,
+        [],
+        materialLastSaleAtMap
+        // No materialVendorValueMap parameter
+      )
+
+      expect(results).toHaveLength(1)
+      // All materials have recent sales = high confidence
+      expect(results[0].isLowConfidence).toBe(false)
+    })
+
     it('should be high-confidence when craftable, recipe, AND all materials have recent sales', () => {
       const recentDate = new Date()
       recentDate.setDate(recentDate.getDate() - 5) // 5 days ago

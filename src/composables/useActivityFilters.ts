@@ -87,20 +87,13 @@ export function useActivityFilters(): UseActivityFiltersReturn {
       if (activity.activityType === 'craftable' && !filters.value.craftables) return false
       if (activity.activityType === 'resource' && !filters.value.resources) return false
 
-      // Filter by low-confidence status
-      if (
-        activity.activityType === 'dungeon' &&
-        activity.isLowConfidence &&
-        !lowConfidenceFilter.showLowConfidenceDungeons.value
-      ) {
-        return false
+      // Filter by low-confidence status using the composable's state
+      // This delegates to the centralized low-confidence filter logic
+      if (activity.activityType === 'dungeon' && activity.isLowConfidence) {
+        return lowConfidenceFilter.showLowConfidenceDungeons.value
       }
-      if (
-        activity.activityType === 'craftable' &&
-        activity.isLowConfidence &&
-        !lowConfidenceFilter.showLowConfidenceCraftables.value
-      ) {
-        return false
+      if (activity.activityType === 'craftable' && activity.isLowConfidence) {
+        return lowConfidenceFilter.showLowConfidenceCraftables.value
       }
 
       return true

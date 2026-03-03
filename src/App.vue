@@ -100,6 +100,7 @@ const { rankedActivities } = useProfitRanking({
   taxRate: computed(() => marketTaxRate.value),
   materialPriceMap: dataProvider.materialPriceMap,
   materialLastSaleAtMap: dataProvider.materialLastSaleAtMap,
+  materialVendorValueMap: dataProvider.materialVendorValueMap,
 })
 
 // Use shared filter state to get filtered best action
