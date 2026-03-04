@@ -41,7 +41,12 @@ const chartData = computed(() => {
       case 'dungeon':
         return `rgba(168, 85, 247, ${intensity.toFixed(2)})` // Purple
       case 'craftable':
-        return `rgba(34, 197, 94, ${intensity.toFixed(2)})` // Green
+        // Split by skill: alchemy = emerald, forging = teal
+        if (a.skill === 'alchemy') {
+          return `rgba(16, 185, 129, ${intensity.toFixed(2)})` // Emerald
+        } else {
+          return `rgba(20, 184, 166, ${intensity.toFixed(2)})` // Teal
+        }
       case 'resource':
         return `rgba(59, 130, 246, ${intensity.toFixed(2)})` // Blue
       default:
@@ -54,7 +59,12 @@ const chartData = computed(() => {
       case 'dungeon':
         return 'rgba(168, 85, 247, 1)'
       case 'craftable':
-        return 'rgba(34, 197, 94, 1)'
+        // Split by skill: alchemy = emerald, forging = teal
+        if (a.skill === 'alchemy') {
+          return 'rgba(16, 185, 129, 1)' // Emerald
+        } else {
+          return 'rgba(20, 184, 166, 1)' // Teal
+        }
       case 'resource':
         return 'rgba(59, 130, 246, 1)'
       default:
@@ -228,7 +238,8 @@ watch(showAll, () => {
       <h3 class="chart-title">Profit Comparison</h3>
       <div class="chart-legend">
         <span class="legend-item"><span class="legend-dot legend-dungeon"></span>Dungeons</span>
-        <span class="legend-item"><span class="legend-dot legend-craftable"></span>Craftables</span>
+        <span class="legend-item"><span class="legend-dot legend-alchemy"></span>Alchemy</span>
+        <span class="legend-item"><span class="legend-dot legend-forging"></span>Forging</span>
         <span class="legend-item"><span class="legend-dot legend-resource"></span>Resources</span>
       </div>
     </div>
@@ -295,8 +306,12 @@ watch(showAll, () => {
   background-color: rgba(168, 85, 247, 0.8);
 }
 
-.legend-craftable {
-  background-color: rgba(34, 197, 94, 0.8);
+.legend-alchemy {
+  background-color: rgba(16, 185, 129, 0.8);
+}
+
+.legend-forging {
+  background-color: rgba(20, 184, 166, 0.8);
 }
 
 .legend-resource {

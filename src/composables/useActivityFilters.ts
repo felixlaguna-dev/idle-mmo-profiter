@@ -5,26 +5,41 @@ import type { RankedActivity } from '../calculators/profitRanker'
 
 export interface ActivityFilters {
   dungeons: boolean
-  craftables: boolean
+  alchemy: boolean
+  forging: boolean
   resources: boolean
 }
 
 export interface UseActivityFiltersReturn {
   filterDungeons: Ref<boolean>
-  filterCraftables: Ref<boolean>
+  filterAlchemy: Ref<boolean>
+  filterForging: Ref<boolean>
   filterResources: Ref<boolean>
   getFilteredActivities: (activities: RankedActivity[]) => RankedActivity[]
   getFilteredAndRerankedActivities: (activities: RankedActivity[]) => RankedActivity[]
 }
 
-// One-time migration: Rename 'potions' to 'craftables' in active-filters
+// One-time migration: potions -> craftables -> alchemy + forging
 try {
   const stored = localStorage.getItem('active-filters')
   if (stored) {
     const filters = JSON.parse(stored)
+
+    // Step 1: Migrate potions -> craftables (legacy)
     if (filters.potions !== undefined && filters.craftables === undefined) {
       filters.craftables = filters.potions
       delete filters.potions
+    }
+
+    // Step 2: Migrate craftables -> alchemy + forging
+    if (filters.craftables !== undefined && (filters.alchemy === undefined || filters.forging === undefined)) {
+      filters.alchemy = filters.craftables
+      filters.forging = filters.craftables
+      delete filters.craftables
+    }
+
+    // Write back if any migration occurred
+    if (filters.alchemy !== undefined && filters.forging !== undefined) {
       localStorage.setItem('active-filters', JSON.stringify(filters))
     }
   }
@@ -36,7 +51,8 @@ try {
 // This ensures all components share the SAME reactive refs
 const filters = useStorage<ActivityFilters>('active-filters', {
   dungeons: true,
-  craftables: true,
+  alchemy: true,
+  forging: true,
   resources: true,
 })
 
@@ -61,10 +77,17 @@ export function useActivityFilters(): UseActivityFiltersReturn {
     },
   })
 
-  const filterCraftables = computed({
-    get: () => filters.value.craftables,
+  const filterAlchemy = computed({
+    get: () => filters.value.alchemy,
     set: (value: boolean) => {
-      filters.value.craftables = value
+      filters.value.alchemy = value
+    },
+  })
+
+  const filterForging = computed({
+    get: () => filters.value.forging,
+    set: (value: boolean) => {
+      filters.value.forging = value
     },
   })
 
@@ -84,7 +107,15 @@ export function useActivityFilters(): UseActivityFiltersReturn {
     return activities.filter((activity) => {
       // Filter by activity type
       if (activity.activityType === 'dungeon' && !filters.value.dungeons) return false
-      if (activity.activityType === 'craftable' && !filters.value.craftables) return false
+
+      // Filter craftables by skill (alchemy vs forging)
+      if (activity.activityType === 'craftable') {
+        if (activity.skill === 'alchemy' && !filters.value.alchemy) return false
+        if (activity.skill === 'forging' && !filters.value.forging) return false
+        // If skill is undefined, treat as forging (the inferSkillFromMaterials default)
+        if (!activity.skill && !filters.value.forging) return false
+      }
+
       if (activity.activityType === 'resource' && !filters.value.resources) return false
 
       // Filter by low-confidence status using the composable's state
@@ -116,7 +147,8 @@ export function useActivityFilters(): UseActivityFiltersReturn {
 
   return {
     filterDungeons,
-    filterCraftables,
+    filterAlchemy,
+    filterForging,
     filterResources,
     getFilteredActivities,
     getFilteredAndRerankedActivities,

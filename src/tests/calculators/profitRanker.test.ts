@@ -321,4 +321,155 @@ describe('profitRanker', () => {
       expect(ranked[2].isLowConfidence).toBeUndefined()
     })
   })
+
+  describe('skill field propagation', () => {
+    it('should propagate skill field from craftable activities', () => {
+      const craftableResults: CraftableProfitResult[] = [
+        {
+          name: 'Health Potion',
+          craftTimeSeconds: 60,
+          marketPrice: 200,
+          totalCost: 100,
+          profit: 100,
+          profitPerHour: 6000,
+          materials: [],
+          skill: 'alchemy',
+        },
+        {
+          name: 'Iron Sword',
+          craftTimeSeconds: 90,
+          marketPrice: 300,
+          totalCost: 150,
+          profit: 150,
+          profitPerHour: 6000,
+          materials: [],
+          skill: 'forging',
+        },
+      ]
+
+      const ranked = rankAllActivities([], craftableResults, [])
+
+      expect(ranked).toHaveLength(2)
+      expect(ranked[0].name).toBe('Health Potion')
+      expect(ranked[0].skill).toBe('alchemy')
+      expect(ranked[1].name).toBe('Iron Sword')
+      expect(ranked[1].skill).toBe('forging')
+    })
+
+    it('should have undefined skill for dungeon activities', () => {
+      const dungeonResults: DungeonProfitResult[] = [
+        {
+          name: 'Test Dungeon',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 500,
+          totalProfit: 400,
+          profitPerHour: 8000,
+          drops: [],
+        },
+      ]
+
+      const ranked = rankAllActivities(dungeonResults, [], [])
+
+      expect(ranked).toHaveLength(1)
+      expect(ranked[0].name).toBe('Test Dungeon')
+      expect(ranked[0].skill).toBeUndefined()
+    })
+
+    it('should have undefined skill for resource activities', () => {
+      const resourceResults: ResourceProfitResult[] = [
+        {
+          name: 'Oak Log',
+          timeSeconds: 10,
+          cost: 5,
+          vendorValue: 10,
+          marketPrice: 15,
+          vendorProfit: 5,
+          vendorProfitPerHour: 1800,
+          marketProfit: 10,
+          marketProfitPerHour: 3600,
+          bestMethod: 'market',
+          bestProfit: 10,
+          bestProfitPerHour: 3600,
+        },
+      ]
+
+      const ranked = rankAllActivities([], [], resourceResults)
+
+      expect(ranked).toHaveLength(1)
+      expect(ranked[0].name).toBe('Oak Log')
+      expect(ranked[0].skill).toBeUndefined()
+    })
+
+    it('should preserve skill when mixing activity types', () => {
+      const dungeonResults: DungeonProfitResult[] = [
+        {
+          name: 'Dungeon',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 1000,
+          totalProfit: 900,
+          profitPerHour: 18000,
+          drops: [],
+        },
+      ]
+
+      const craftableResults: CraftableProfitResult[] = [
+        {
+          name: 'Alchemy Item',
+          craftTimeSeconds: 60,
+          marketPrice: 500,
+          totalCost: 100,
+          profit: 400,
+          profitPerHour: 24000,
+          materials: [],
+          skill: 'alchemy',
+        },
+        {
+          name: 'Forging Item',
+          craftTimeSeconds: 60,
+          marketPrice: 400,
+          totalCost: 100,
+          profit: 300,
+          profitPerHour: 18000,
+          materials: [],
+          skill: 'forging',
+        },
+      ]
+
+      const resourceResults: ResourceProfitResult[] = [
+        {
+          name: 'Resource',
+          timeSeconds: 10,
+          cost: 5,
+          vendorValue: 10,
+          marketPrice: 15,
+          vendorProfit: 5,
+          vendorProfitPerHour: 1800,
+          marketProfit: 10,
+          marketProfitPerHour: 3600,
+          bestMethod: 'market',
+          bestProfit: 10,
+          bestProfitPerHour: 3600,
+        },
+      ]
+
+      const ranked = rankAllActivities(dungeonResults, craftableResults, resourceResults)
+
+      expect(ranked).toHaveLength(4)
+
+      // Sorted by profit per hour: alchemy > dungeon/forging > resource
+      expect(ranked[0].name).toBe('Alchemy Item')
+      expect(ranked[0].skill).toBe('alchemy')
+
+      // Dungeon and Forging Item both have 18000 profit/hour, order may vary
+      const dungeonRank = ranked.find((a) => a.name === 'Dungeon')
+      const forgingRank = ranked.find((a) => a.name === 'Forging Item')
+      expect(dungeonRank?.skill).toBeUndefined()
+      expect(forgingRank?.skill).toBe('forging')
+
+      expect(ranked[3].name).toBe('Resource')
+      expect(ranked[3].skill).toBeUndefined()
+    })
+  })
 })

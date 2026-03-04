@@ -13,8 +13,10 @@ const categoryTotals = computed(() => {
   const totals = {
     dungeon: 0,
     dungeonCount: 0,
-    craftable: 0,
-    craftableCount: 0,
+    alchemy: 0,
+    alchemyCount: 0,
+    forging: 0,
+    forgingCount: 0,
     resource: 0,
     resourceCount: 0,
   }
@@ -25,8 +27,14 @@ const categoryTotals = computed(() => {
         totals.dungeon += activity.profitPerHour
         totals.dungeonCount++
       } else if (activity.activityType === 'craftable') {
-        totals.craftable += activity.profitPerHour
-        totals.craftableCount++
+        if (activity.skill === 'alchemy') {
+          totals.alchemy += activity.profitPerHour
+          totals.alchemyCount++
+        } else {
+          // Treat undefined skill as forging
+          totals.forging += activity.profitPerHour
+          totals.forgingCount++
+        }
       } else if (activity.activityType === 'resource') {
         totals.resource += activity.profitPerHour
         totals.resourceCount++
@@ -34,13 +42,14 @@ const categoryTotals = computed(() => {
     }
   })
 
-  const grandTotal = totals.dungeon + totals.craftable + totals.resource
+  const grandTotal = totals.dungeon + totals.alchemy + totals.forging + totals.resource
 
   return {
     ...totals,
     grandTotal,
     dungeonPercent: grandTotal > 0 ? (totals.dungeon / grandTotal) * 100 : 0,
-    craftablePercent: grandTotal > 0 ? (totals.craftable / grandTotal) * 100 : 0,
+    alchemyPercent: grandTotal > 0 ? (totals.alchemy / grandTotal) * 100 : 0,
+    forgingPercent: grandTotal > 0 ? (totals.forging / grandTotal) * 100 : 0,
     resourcePercent: grandTotal > 0 ? (totals.resource / grandTotal) * 100 : 0,
   }
 })
@@ -48,7 +57,7 @@ const categoryTotals = computed(() => {
 // Categories for the bar display
 const categories = computed(() => {
   const totals = categoryTotals.value
-  const maxValue = Math.max(totals.dungeon, totals.craftable, totals.resource)
+  const maxValue = Math.max(totals.dungeon, totals.alchemy, totals.forging, totals.resource)
 
   const items = []
   if (totals.dungeonCount > 0) {
@@ -62,15 +71,26 @@ const categories = computed(() => {
       borderColor: 'rgba(168, 85, 247, 1)',
     })
   }
-  if (totals.craftableCount > 0) {
+  if (totals.alchemyCount > 0) {
     items.push({
-      label: 'Craftables',
-      value: totals.craftable,
-      count: totals.craftableCount,
-      percent: totals.craftablePercent,
-      barWidth: maxValue > 0 ? (totals.craftable / maxValue) * 100 : 0,
-      color: 'rgba(34, 197, 94, 0.7)',
-      borderColor: 'rgba(34, 197, 94, 1)',
+      label: 'Alchemy',
+      value: totals.alchemy,
+      count: totals.alchemyCount,
+      percent: totals.alchemyPercent,
+      barWidth: maxValue > 0 ? (totals.alchemy / maxValue) * 100 : 0,
+      color: 'rgba(16, 185, 129, 0.7)',
+      borderColor: 'rgba(16, 185, 129, 1)',
+    })
+  }
+  if (totals.forgingCount > 0) {
+    items.push({
+      label: 'Forging',
+      value: totals.forging,
+      count: totals.forgingCount,
+      percent: totals.forgingPercent,
+      barWidth: maxValue > 0 ? (totals.forging / maxValue) * 100 : 0,
+      color: 'rgba(20, 184, 166, 0.7)',
+      borderColor: 'rgba(20, 184, 166, 1)',
     })
   }
   if (totals.resourceCount > 0) {

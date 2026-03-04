@@ -14,6 +14,8 @@ export interface RankedActivity {
   details: string
   isRecommended: boolean
   saleMethod?: SaleMethod
+  /** The crafting skill for craftable activities */
+  skill?: 'alchemy' | 'forging'
   /** True if the activity has low-confidence price data */
   isLowConfidence?: boolean
 }
@@ -59,6 +61,7 @@ export function rankAllActivities(
       timePerAction: craftable.craftTimeSeconds,
       cost: craftable.totalCost,
       details: `${craftable.materials.length} materials, ${Math.round(craftable.craftTimeSeconds / 60)} min craft`,
+      skill: craftable.skill,
       isLowConfidence: craftable.isLowConfidence,
     })
   })

@@ -20,7 +20,7 @@ const sortKey = ref<SortKey>('rank')
 const sortOrder = ref<SortOrder>('asc')
 
 // Use shared filter state (with localStorage persistence)
-const { filterDungeons, filterCraftables, filterResources, getFilteredAndRerankedActivities } =
+const { filterDungeons, filterAlchemy, filterForging, filterResources, getFilteredAndRerankedActivities } =
   useActivityFilters()
 
 // Get filtered and sorted activities
@@ -161,12 +161,21 @@ const profitRange = computed(() => {
       </button>
       <button
         class="filter-button"
-        :class="{ active: filterCraftables, 'badge-craftable': filterCraftables }"
-        :aria-pressed="filterCraftables"
-        aria-label="Toggle craftable activities"
-        @click="filterCraftables = !filterCraftables"
+        :class="{ active: filterAlchemy, 'badge-alchemy': filterAlchemy }"
+        :aria-pressed="filterAlchemy"
+        aria-label="Toggle alchemy activities"
+        @click="filterAlchemy = !filterAlchemy"
       >
-        Craftables
+        Alchemy
+      </button>
+      <button
+        class="filter-button"
+        :class="{ active: filterForging, 'badge-forging': filterForging }"
+        :aria-pressed="filterForging"
+        aria-label="Toggle forging activities"
+        @click="filterForging = !filterForging"
+      >
+        Forging
       </button>
       <button
         class="filter-button"
@@ -477,6 +486,28 @@ const profitRange = computed(() => {
 }
 
 .filter-button.active.badge-craftable::before {
+  width: 100%;
+  background-color: #4ade80;
+}
+
+.filter-button.active.badge-alchemy {
+  color: #4ade80;
+  border-bottom-color: #4ade80;
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.filter-button.active.badge-alchemy::before {
+  width: 100%;
+  background-color: #4ade80;
+}
+
+.filter-button.active.badge-forging {
+  color: #4ade80;
+  border-bottom-color: #4ade80;
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.filter-button.active.badge-forging::before {
   width: 100%;
   background-color: #4ade80;
 }
