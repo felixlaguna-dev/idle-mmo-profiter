@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
-import { Chart } from 'chart.js'
+import { Chart, registerables } from 'chart.js'
+Chart.register(...registerables)
 import { useCharacterTracker } from '../composables/useCharacterTracker'
 import { useDataProvider } from '../composables/useDataProvider'
 import { useToast } from '../composables/useToast'
