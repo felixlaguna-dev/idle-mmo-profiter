@@ -114,10 +114,18 @@ const bestAction = computed(() => {
 
 // Calculate dungeon profits for dungeon table
 const dungeonProfits = computed(() => {
+  // Access each property explicitly to establish reactive dependencies
+  const mfSettings = {
+    streak: magicFind.value.streak,
+    dungeon: magicFind.value.dungeon,
+    item: magicFind.value.item,
+    bonus: magicFind.value.bonus,
+  }
+
   return calculateDungeonProfits(
     dataProvider.dungeons.value,
     recipesWithComputedPrices.value,
-    magicFind.value
+    mfSettings
   )
 })
 

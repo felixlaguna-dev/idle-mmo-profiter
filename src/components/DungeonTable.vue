@@ -3,6 +3,8 @@ import { ref, computed } from 'vue'
 import type { DungeonProfitResult } from '../calculators/dungeonCalculator'
 import EditableValue from './EditableValue.vue'
 import LowConfidenceToggle from './LowConfidenceToggle.vue'
+import MagicFindPanel from './MagicFindPanel.vue'
+import DungeonSelector from './DungeonSelector.vue'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useLowConfidenceFilter } from '../composables/useLowConfidenceFilter'
 import { getVolumeTierInfo } from '../utils/salesVolume'
@@ -12,6 +14,14 @@ const {
   showLowConfidenceDungeons,
   filterDungeons,
 } = useLowConfidenceFilter()
+
+// State for dungeon selector modal
+const isDungeonSelectorOpen = ref(false)
+
+// Handle opening dungeon selector
+const openDungeonSelector = () => {
+  isDungeonSelectorOpen.value = true
+}
 
 const props = defineProps<{
   dungeons: DungeonProfitResult[]
@@ -198,6 +208,9 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 
 <template>
   <div class="dungeon-table">
+    <!-- Magic Find Panel (above controls bar) -->
+    <MagicFindPanel @open-dungeon-selector="openDungeonSelector" />
+
     <!-- Controls bar with toggle -->
     <div class="controls-bar">
       <div class="toggle-wrapper">
@@ -374,6 +387,9 @@ const isUntradableRecipe = (recipeName: string): boolean => {
         </tbody>
       </table>
     </div>
+
+    <!-- Dungeon Selector Modal -->
+    <DungeonSelector v-model="isDungeonSelectorOpen" />
   </div>
 </template>
 

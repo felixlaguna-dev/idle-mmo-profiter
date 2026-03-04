@@ -2,14 +2,23 @@ import { ref, watch, type Ref } from 'vue'
 
 const STORAGE_PREFIX = 'idlemmo:'
 
+// Module-level cache to ensure singleton refs per key
+const storageCache = new Map<string, Ref<unknown>>()
+
 /**
- * Creates a reactive ref that syncs with localStorage
+ * Creates a reactive ref that syncs with localStorage.
+ * Uses a singleton pattern - all calls with the same key share the same ref.
  * @param key - Storage key (will be prefixed with 'idlemmo:')
  * @param defaultValue - Default value if key doesn't exist in storage
  * @returns Reactive ref synced with localStorage
  */
 export function useStorage<T>(key: string, defaultValue: T): Ref<T> {
   const prefixedKey = STORAGE_PREFIX + key
+
+  // Check if we already have a ref for this key
+  if (storageCache.has(key)) {
+    return storageCache.get(key) as Ref<T>
+  }
 
   // Try to load from localStorage
   const loadFromStorage = (): T => {
@@ -53,6 +62,9 @@ export function useStorage<T>(key: string, defaultValue: T): Ref<T> {
     { deep: true }
   )
 
+  // Cache the ref so future calls with the same key get the same instance
+  storageCache.set(key, data)
+
   return data
 }
 
@@ -78,6 +90,7 @@ export function getAllStorageKeys(): string[] {
 export function removeStorage(key: string): void {
   const prefixedKey = STORAGE_PREFIX + key
   localStorage.removeItem(prefixedKey)
+  storageCache.delete(key)
 }
 
 /**
@@ -86,6 +99,7 @@ export function removeStorage(key: string): void {
 export function clearAllStorage(): void {
   const keys = getAllStorageKeys()
   keys.forEach((key) => removeStorage(key))
+  storageCache.clear()
 }
 
 /**

@@ -102,11 +102,6 @@ const handleResetAll = () => {
           :default-value="DEFAULT_MF.streak"
           label="MF Streak"
         />
-        <EditableValue
-          v-model="magicFind.dungeon"
-          :default-value="DEFAULT_MF.dungeon"
-          label="MF Dungeon"
-        />
         <EditableValue v-model="magicFind.item" :default-value="DEFAULT_MF.item" label="MF Item" />
         <EditableValue
           v-model="magicFind.bonus"
@@ -114,6 +109,9 @@ const handleResetAll = () => {
           label="MF Bonus"
         />
       </div>
+      <p class="settings-note">
+        <span aria-hidden="true">ℹ️</span> Dungeon MF is configured in the Dungeons tab
+      </p>
     </section>
 
     <!-- Market Tax Rate Section -->
@@ -284,6 +282,16 @@ const handleResetAll = () => {
   font-size: 0.875rem;
   color: var(--text-secondary);
   font-style: italic;
+}
+
+.settings-note {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
 }
 
 @media (max-width: 640px) {
