@@ -33,22 +33,22 @@
     {
       "id": "mat-4",
       "name": "Orb of elemental",
-      "price": 84.5,
+      "price": 84.2,
       "hashedId": "ElzPeorXNVvxNaW0kv53",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T09:34:56.298Z",
-      "suggestedRefreshMinutes": 244,
-      "lastSaleAt": "2026-03-04T08:08:43+00:00"
+      "lastUpdated": "2026-03-04T14:08:59.821Z",
+      "suggestedRefreshMinutes": 285,
+      "lastSaleAt": "2026-03-04T13:34:28+00:00"
     },
     {
       "id": "mat-5",
       "name": "Elk Antler",
-      "price": 350,
+      "price": 350.7,
       "hashedId": "O2xMjGdBN5MqN9P1nyrv",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T13:16:48.318Z",
-      "suggestedRefreshMinutes": 38,
-      "lastSaleAt": "2026-03-04T09:05:50+00:00"
+      "lastUpdated": "2026-03-04T14:08:59.901Z",
+      "suggestedRefreshMinutes": 444,
+      "lastSaleAt": "2026-03-04T13:35:44+00:00"
     },
     {
       "id": "mat-6",
@@ -56,9 +56,9 @@
       "price": 41.2,
       "hashedId": "njoPWKDkLXeAQ06ZOX79",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T11:34:21.171Z",
-      "suggestedRefreshMinutes": 111,
-      "lastSaleAt": "2026-03-04T11:24:22+00:00"
+      "lastUpdated": "2026-03-04T14:08:59.988Z",
+      "suggestedRefreshMinutes": 31,
+      "lastSaleAt": "2026-03-04T13:28:58+00:00"
     },
     {
       "id": "mat-7",
@@ -66,7 +66,7 @@
       "price": 254.4,
       "hashedId": "Ro31P7kZL6r6LveGxXOy",
       "vendorValue": 27,
-      "lastUpdated": "2026-03-04T11:34:21.341Z",
+      "lastUpdated": "2026-03-04T14:09:00.154Z",
       "suggestedRefreshMinutes": 108,
       "lastSaleAt": "2026-03-04T09:04:34+00:00"
     },
@@ -83,12 +83,12 @@
     {
       "id": "mat-9",
       "name": "Goblin totem",
-      "price": 35.1,
+      "price": 33,
       "hashedId": "P1vlVrzjLrgwQao8mGKM",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T13:16:48.398Z",
-      "suggestedRefreshMinutes": 17,
-      "lastSaleAt": "2026-03-04T10:43:20+00:00"
+      "lastUpdated": "2026-03-04T14:09:00.348Z",
+      "suggestedRefreshMinutes": 54,
+      "lastSaleAt": "2026-03-04T14:06:17+00:00"
     },
     {
       "id": "mat-10",
@@ -150,12 +150,12 @@
     {
       "id": "mat-auto-1772226753831-sqhk",
       "name": "Venom Extract",
-      "price": 103.2,
+      "price": 98.5,
       "hashedId": "oZwey82VNAKnLD0dXM3g",
       "vendorValue": 35,
-      "lastUpdated": "2026-03-04T09:34:57.579Z",
-      "suggestedRefreshMinutes": 249,
-      "lastSaleAt": "2026-03-04T09:15:25+00:00"
+      "lastUpdated": "2026-03-04T14:09:00.661Z",
+      "suggestedRefreshMinutes": 140,
+      "lastSaleAt": "2026-03-04T14:05:10+00:00"
     },
     {
       "id": "mat-auto-1772226753831-7x2d",
@@ -177,32 +177,32 @@
     {
       "id": "mat-auto-1772226753831-xmmt",
       "name": "Goblin Totem",
-      "price": 35.1,
+      "price": 33,
       "hashedId": "P1vlVrzjLrgwQao8mGKM",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T13:16:49.057Z",
-      "suggestedRefreshMinutes": 17,
-      "lastSaleAt": "2026-03-04T10:43:20+00:00"
+      "lastUpdated": "2026-03-04T14:09:00.835Z",
+      "suggestedRefreshMinutes": 54,
+      "lastSaleAt": "2026-03-04T14:06:17+00:00"
     },
     {
       "id": "mat-auto-1772226753831-8bf6",
       "name": "Oak Log",
-      "price": 4.4,
+      "price": 4.3,
       "hashedId": "7eA59WrBQRpYzb62qKvp",
       "vendorValue": 1,
-      "lastUpdated": "2026-03-04T13:16:49.238Z",
-      "suggestedRefreshMinutes": 43,
-      "lastSaleAt": "2026-03-04T12:54:57+00:00"
+      "lastUpdated": "2026-03-04T14:09:01.025Z",
+      "suggestedRefreshMinutes": 53,
+      "lastSaleAt": "2026-03-04T13:55:32+00:00"
     },
     {
       "id": "mat-auto-1772226753831-u5wu",
       "name": "Goblin Pouch",
-      "price": 37.3,
+      "price": 32.4,
       "hashedId": "Z6aDoyRnLy26QpV5AGXm",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T13:16:49.308Z",
-      "suggestedRefreshMinutes": 51,
-      "lastSaleAt": "2026-03-04T12:54:21+00:00"
+      "lastUpdated": "2026-03-04T14:09:01.196Z",
+      "suggestedRefreshMinutes": 15,
+      "lastSaleAt": "2026-03-04T13:25:17+00:00"
     },
     {
       "id": "mat-auto-1772226753831-kseg",
@@ -217,12 +217,12 @@
     {
       "id": "mat-auto-1772226753831-z9wi",
       "name": "Goblin Crown",
-      "price": 1668.7,
+      "price": 1656.7,
       "hashedId": "O2xMjGdBN5M6N9P1nyrv",
       "vendorValue": 37,
-      "lastUpdated": "2026-03-04T11:34:22.656Z",
-      "suggestedRefreshMinutes": 104,
-      "lastSaleAt": "2026-03-04T11:11:49+00:00"
+      "lastUpdated": "2026-03-04T14:09:01.339Z",
+      "suggestedRefreshMinutes": 111,
+      "lastSaleAt": "2026-03-04T14:04:45+00:00"
     },
     {
       "id": "mat-auto-1772226753831-uskr",
@@ -247,39 +247,39 @@
       "price": 47.7,
       "hashedId": "JVM29l7kQZW5N80q6WDG",
       "vendorValue": 24,
-      "lastUpdated": "2026-03-04T13:16:49.521Z",
+      "lastUpdated": "2026-03-04T14:09:01.530Z",
       "suggestedRefreshMinutes": 37,
       "lastSaleAt": "2026-03-04T10:34:04+00:00"
     },
     {
       "id": "mat-auto-1772226753831-4by8",
       "name": "Snakes Head",
-      "price": 134,
+      "price": 134.6,
       "hashedId": "3Zbym56qLxg5YBRp7Eek",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T11:34:22.986Z",
-      "suggestedRefreshMinutes": 142,
-      "lastSaleAt": "2026-03-04T10:49:32+00:00"
+      "lastUpdated": "2026-03-04T14:09:01.699Z",
+      "suggestedRefreshMinutes": 264,
+      "lastSaleAt": "2026-03-04T12:50:51+00:00"
     },
     {
       "id": "mat-auto-1772226753831-sjzy",
       "name": "Deer Antler",
-      "price": 89.7,
+      "price": 90.3,
       "hashedId": "Z6aDoyRnLy2yQpV5AGXm",
       "vendorValue": 9,
-      "lastUpdated": "2026-03-04T13:16:49.595Z",
-      "suggestedRefreshMinutes": 28,
-      "lastSaleAt": "2026-03-04T12:34:23+00:00"
+      "lastUpdated": "2026-03-04T14:09:01.894Z",
+      "suggestedRefreshMinutes": 23,
+      "lastSaleAt": "2026-03-04T13:36:50+00:00"
     },
     {
       "id": "mat-auto-1772226753831-5mfi",
       "name": "Raw Onion",
-      "price": 44.5,
+      "price": 48.7,
       "hashedId": "gGZ2J71yYKMyQMmjbown",
       "vendorValue": 15,
-      "lastUpdated": "2026-03-04T13:17:48.093Z",
-      "suggestedRefreshMinutes": 29,
-      "lastSaleAt": "2026-03-04T10:42:44+00:00"
+      "lastUpdated": "2026-03-04T14:09:02.040Z",
+      "suggestedRefreshMinutes": 124,
+      "lastSaleAt": "2026-03-04T13:52:58+00:00"
     },
     {
       "id": "mat-auto-1772226753831-fqrf",
@@ -291,12 +291,12 @@
     {
       "id": "mat-auto-1772226753831-zjl4",
       "name": "Djinn's Bottle",
-      "price": 158.5,
+      "price": 151.5,
       "hashedId": "ZqEegBydNwJ0QkA59J61",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T13:17:49.233Z",
-      "suggestedRefreshMinutes": 16,
-      "lastSaleAt": "2026-03-04T11:44:00+00:00"
+      "lastUpdated": "2026-03-04T14:09:59.283Z",
+      "suggestedRefreshMinutes": 59,
+      "lastSaleAt": "2026-03-04T14:08:07+00:00"
     },
     {
       "id": "mat-auto-1772226753831-ieqo",
@@ -318,12 +318,12 @@
     {
       "id": "mat-auto-1772226753831-lp3a",
       "name": "Slime Extract",
-      "price": 11.4,
+      "price": 8.9,
       "hashedId": "BRn3x72JQ26lQzOMok41",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T11:59:11.025Z",
-      "suggestedRefreshMinutes": 91,
-      "lastSaleAt": "2026-03-04T11:20:46+00:00"
+      "lastUpdated": "2026-03-04T14:10:00.619Z",
+      "suggestedRefreshMinutes": 106,
+      "lastSaleAt": "2026-03-04T14:03:08+00:00"
     },
     {
       "id": "mat-auto-1772226753831-7m1c",
@@ -355,12 +355,12 @@
     {
       "id": "mat-auto-1772226753831-i7hd",
       "name": "Buffalo Horn",
-      "price": 75.1,
+      "price": 75.7,
       "hashedId": "7eA59WrBQRlKYzb62qKv",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T11:59:11.393Z",
-      "suggestedRefreshMinutes": 89,
-      "lastSaleAt": "2026-03-04T11:02:58+00:00"
+      "lastUpdated": "2026-03-04T14:10:00.874Z",
+      "suggestedRefreshMinutes": 96,
+      "lastSaleAt": "2026-03-04T13:12:15+00:00"
     },
     {
       "id": "mat-auto-1772226753831-wzc4",
@@ -368,9 +368,9 @@
       "price": 43.9,
       "hashedId": "lrx463VdQgD9N5w1zWKP",
       "vendorValue": 15,
-      "lastUpdated": "2026-03-04T11:35:21.725Z",
-      "suggestedRefreshMinutes": 119,
-      "lastSaleAt": "2026-03-04T11:19:13+00:00"
+      "lastUpdated": "2026-03-04T14:10:01.010Z",
+      "suggestedRefreshMinutes": 72,
+      "lastSaleAt": "2026-03-04T12:18:13+00:00"
     },
     {
       "id": "mat-auto-1772226753831-qsqd",
@@ -388,19 +388,19 @@
       "price": 38,
       "hashedId": "DBngxedVYJqlNX64wW8o",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T13:17:49.582Z",
+      "lastUpdated": "2026-03-04T14:10:01.165Z",
       "suggestedRefreshMinutes": 46,
       "lastSaleAt": "2026-03-04T11:16:52+00:00"
     },
     {
       "id": "mat-auto-1772226753831-eg8e",
       "name": "Long Forgotten Necklace",
-      "price": 14.8,
+      "price": 14.5,
       "hashedId": "jGXBy7a4LbWzQ0Pw6Vdg",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T13:17:49.642Z",
-      "suggestedRefreshMinutes": 47,
-      "lastSaleAt": "2026-03-04T08:27:52+00:00"
+      "lastUpdated": "2026-03-04T14:10:01.311Z",
+      "suggestedRefreshMinutes": 82,
+      "lastSaleAt": "2026-03-04T13:49:22+00:00"
     },
     {
       "id": "mat-auto-1772226753831-3x7p",
@@ -435,7 +435,7 @@
       "price": 19.3,
       "hashedId": "q9pwa0kxLBVpLgVj136l",
       "vendorValue": 15,
-      "lastUpdated": "2026-03-04T13:17:49.841Z",
+      "lastUpdated": "2026-03-04T14:10:01.585Z",
       "suggestedRefreshMinutes": 50,
       "lastSaleAt": "2026-03-04T09:40:31+00:00"
     },
@@ -482,12 +482,12 @@
     {
       "id": "mat-auto-1772226753831-s392",
       "name": "Ivory",
-      "price": 367.5,
+      "price": 356.1,
       "hashedId": "XyeZRGx9YjD4QB80gWlP",
       "vendorValue": 60,
-      "lastUpdated": "2026-03-04T09:36:58.563Z",
-      "suggestedRefreshMinutes": 261,
-      "lastSaleAt": "2026-03-04T09:05:59+00:00"
+      "lastUpdated": "2026-03-04T14:10:01.793Z",
+      "suggestedRefreshMinutes": 725,
+      "lastSaleAt": "2026-03-04T12:29:44+00:00"
     },
     {
       "id": "mat-auto-1772226753831-pvbi",
@@ -599,12 +599,12 @@
     {
       "id": "mat-auto-1772226753832-giok",
       "name": "Birch Log",
-      "price": 9.8,
+      "price": 10.8,
       "hashedId": "Ro31P7kZL6AYveGxXOy5",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T11:35:23.173Z",
-      "suggestedRefreshMinutes": 107,
-      "lastSaleAt": "2026-03-04T10:03:11+00:00"
+      "lastUpdated": "2026-03-04T14:10:02.036Z",
+      "suggestedRefreshMinutes": 139,
+      "lastSaleAt": "2026-03-04T13:33:37+00:00"
     },
     {
       "id": "mat-auto-1772226753832-eg81",
@@ -612,7 +612,7 @@
       "price": 254.4,
       "hashedId": "Ro31P7kZL6r6LveGxXOy",
       "vendorValue": 27,
-      "lastUpdated": "2026-03-04T11:35:23.237Z",
+      "lastUpdated": "2026-03-04T14:10:02.148Z",
       "suggestedRefreshMinutes": 108,
       "lastSaleAt": "2026-03-04T09:04:34+00:00"
     },
@@ -642,7 +642,7 @@
       "price": 14.2,
       "hashedId": "DBngxedVYJPQX64wW8oa",
       "vendorValue": 7,
-      "lastUpdated": "2026-03-04T11:36:21.182Z",
+      "lastUpdated": "2026-03-04T14:10:02.245Z",
       "suggestedRefreshMinutes": 105,
       "lastSaleAt": "2026-03-04T03:26:43+00:00"
     },
@@ -669,12 +669,12 @@
     {
       "id": "mat-auto-1772226753832-jki0",
       "name": "Broken Dwarven Plate",
-      "price": 312.2,
+      "price": 314.4,
       "hashedId": "j98bO5w1QPvlY3xkREVJ",
       "vendorValue": 100,
-      "lastUpdated": "2026-03-04T13:18:49.273Z",
-      "suggestedRefreshMinutes": 31,
-      "lastSaleAt": "2026-03-04T10:04:48+00:00"
+      "lastUpdated": "2026-03-04T14:10:02.400Z",
+      "suggestedRefreshMinutes": 68,
+      "lastSaleAt": "2026-03-04T13:39:15+00:00"
     },
     {
       "id": "mat-auto-1772226753832-ktp9",
@@ -699,12 +699,12 @@
     {
       "id": "mat-auto-1772226753832-ruvv",
       "name": "Coal Ore",
-      "price": 5.1,
+      "price": 5,
       "hashedId": "7eA59WrBQRXJYzb62qKv",
       "vendorValue": 1,
-      "lastUpdated": "2026-03-04T13:18:50.123Z",
-      "suggestedRefreshMinutes": 11,
-      "lastSaleAt": "2026-03-04T13:16:33+00:00"
+      "lastUpdated": "2026-03-04T14:10:02.499Z",
+      "suggestedRefreshMinutes": 5,
+      "lastSaleAt": "2026-03-04T13:56:26+00:00"
     },
     {
       "id": "mat-auto-1772226753832-gt7c",
@@ -719,12 +719,12 @@
     {
       "id": "mat-auto-1772226753832-nows",
       "name": "Chromite Bar",
-      "price": 31.6,
+      "price": 32.3,
       "hashedId": "27gw0k38L4pwLWevJxyK",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T09:38:00.408Z",
-      "suggestedRefreshMinutes": 236,
-      "lastSaleAt": "2026-03-04T07:29:07+00:00"
+      "lastUpdated": "2026-03-04T14:10:02.615Z",
+      "suggestedRefreshMinutes": 146,
+      "lastSaleAt": "2026-03-04T13:55:46+00:00"
     },
     {
       "id": "mat-auto-1772226753832-phzi",
@@ -739,12 +739,12 @@
     {
       "id": "mat-auto-1772226753832-004a",
       "name": "Dwarven Whetstone",
-      "price": 18.5,
+      "price": 18.3,
       "hashedId": "doyA279pNzlRLKRDEWm8",
       "vendorValue": 5,
-      "lastUpdated": "2026-03-04T11:36:22.609Z",
-      "suggestedRefreshMinutes": 115,
-      "lastSaleAt": "2026-03-04T10:22:11+00:00"
+      "lastUpdated": "2026-03-04T14:10:02.809Z",
+      "suggestedRefreshMinutes": 98,
+      "lastSaleAt": "2026-03-04T14:08:25+00:00"
     },
     {
       "id": "mat-auto-1772226753832-ieoc",
@@ -752,19 +752,19 @@
       "price": 83.3,
       "hashedId": "dgBq1boWYem4YkJ3rXaD",
       "vendorValue": 15,
-      "lastUpdated": "2026-03-04T13:18:50.303Z",
+      "lastUpdated": "2026-03-04T14:10:02.956Z",
       "suggestedRefreshMinutes": 30,
       "lastSaleAt": "2026-03-04T08:29:18+00:00"
     },
     {
       "id": "mat-auto-1772226753832-0s90",
       "name": "Grimoire of Shadows",
-      "price": 4872.1,
+      "price": 4880.9,
       "hashedId": "6leApVoENkKlN7nRPy2D",
       "vendorValue": 4000,
-      "lastUpdated": "2026-03-04T13:18:50.372Z",
-      "suggestedRefreshMinutes": 5,
-      "lastSaleAt": "2026-03-04T10:07:51+00:00"
+      "lastUpdated": "2026-03-04T14:11:00.161Z",
+      "suggestedRefreshMinutes": 42,
+      "lastSaleAt": "2026-03-04T13:35:41+00:00"
     },
     {
       "id": "mat-auto-1772226753832-650c",
@@ -799,32 +799,32 @@
     {
       "id": "mat-auto-1772226753833-hu4t",
       "name": "Orb of Elemental Conjuring",
-      "price": 84.5,
+      "price": 84.2,
       "hashedId": "ElzPeorXNVvxNaW0kv53",
       "vendorValue": 25,
-      "lastUpdated": "2026-03-04T09:38:59.544Z",
-      "suggestedRefreshMinutes": 244,
-      "lastSaleAt": "2026-03-04T08:08:43+00:00"
+      "lastUpdated": "2026-03-04T14:11:00.230Z",
+      "suggestedRefreshMinutes": 285,
+      "lastSaleAt": "2026-03-04T13:34:28+00:00"
     },
     {
       "id": "mat-auto-1772226753833-ey7o",
       "name": "Undying Crest",
-      "price": 210.3,
+      "price": 210.9,
       "hashedId": "7eA59WrBQRvKQzb62qKv",
       "vendorValue": 170,
-      "lastUpdated": "2026-03-04T12:00:10.835Z",
-      "suggestedRefreshMinutes": 118,
-      "lastSaleAt": "2026-03-04T09:18:47+00:00"
+      "lastUpdated": "2026-03-04T14:11:01.354Z",
+      "suggestedRefreshMinutes": 122,
+      "lastSaleAt": "2026-03-04T14:10:46+00:00"
     },
     {
       "id": "mat-auto-1772226753833-jdh1",
       "name": "Maple Log",
-      "price": 12.5,
+      "price": 12.3,
       "hashedId": "bAB1E9poQqkYnakeJj56",
       "vendorValue": 9,
-      "lastUpdated": "2026-03-04T12:00:10.972Z",
-      "suggestedRefreshMinutes": 87,
-      "lastSaleAt": "2026-03-04T11:42:04+00:00"
+      "lastUpdated": "2026-03-04T14:11:01.429Z",
+      "suggestedRefreshMinutes": 109,
+      "lastSaleAt": "2026-03-04T12:57:31+00:00"
     },
     {
       "id": "mat-auto-1772226753833-4f8d",
@@ -859,7 +859,7 @@
       "price": 33.6,
       "hashedId": "yav4OK1wNE5NZP7rzJbe",
       "vendorValue": 20,
-      "lastUpdated": "2026-03-04T13:18:50.901Z",
+      "lastUpdated": "2026-03-04T14:11:01.681Z",
       "suggestedRefreshMinutes": 51,
       "lastSaleAt": "2026-03-04T12:37:25+00:00"
     },
@@ -876,12 +876,12 @@
     {
       "id": "mat-auto-1772226753833-n0o4",
       "name": "Moonblood Tincture",
-      "price": 47221.6,
+      "price": 47331.3,
       "hashedId": "Z6aDoyRnLy06YpV5AGXm",
       "vendorValue": 10000,
-      "lastUpdated": "2026-03-04T13:18:51.078Z",
-      "suggestedRefreshMinutes": 25,
-      "lastSaleAt": "2026-03-04T09:33:32+00:00"
+      "lastUpdated": "2026-03-04T14:11:01.766Z",
+      "suggestedRefreshMinutes": 72,
+      "lastSaleAt": "2026-03-04T13:32:01+00:00"
     },
     {
       "id": "mat-auto-1772226753833-ifpu",
@@ -896,12 +896,12 @@
     {
       "id": "mat-auto-1772226753833-sx58",
       "name": "Water Elemental Essence",
-      "price": 149.5,
+      "price": 149.4,
       "hashedId": "ZjlPA8v9NMvbYEyMe2Oa",
       "vendorValue": 117,
-      "lastUpdated": "2026-03-04T11:36:23.085Z",
-      "suggestedRefreshMinutes": 103,
-      "lastSaleAt": "2026-03-04T04:27:46+00:00"
+      "lastUpdated": "2026-03-04T14:11:01.860Z",
+      "suggestedRefreshMinutes": 193,
+      "lastSaleAt": "2026-03-04T13:35:00+00:00"
     },
     {
       "id": "mat-auto-1772226753833-f4iv",
@@ -969,22 +969,22 @@
     {
       "id": "res-1",
       "name": "Coal",
-      "marketPrice": 5.1,
+      "marketPrice": 5,
       "vendorValue": 1,
       "hashedId": "7eA59WrBQRXJYzb62qKv",
-      "lastUpdated": "2026-03-04T13:18:51.210Z",
-      "suggestedRefreshMinutes": 11,
-      "lastSaleAt": "2026-03-04T13:16:33+00:00"
+      "lastUpdated": "2026-03-04T14:11:01.932Z",
+      "suggestedRefreshMinutes": 5,
+      "lastSaleAt": "2026-03-04T13:56:26+00:00"
     },
     {
       "id": "res-2",
       "name": "Stingray",
-      "marketPrice": 36.1,
+      "marketPrice": 36.3,
       "vendorValue": 22,
       "hashedId": "oaJydnOmQW2LbgRe5ME6",
-      "lastUpdated": "2026-03-04T13:18:51.276Z",
-      "suggestedRefreshMinutes": 25,
-      "lastSaleAt": "2026-03-04T12:54:38+00:00"
+      "lastUpdated": "2026-03-04T14:11:02.014Z",
+      "suggestedRefreshMinutes": 135,
+      "lastSaleAt": "2026-03-04T13:20:07+00:00"
     },
     {
       "id": "res-3",
@@ -999,32 +999,32 @@
     {
       "id": "res-4",
       "name": "Great White Shark",
-      "marketPrice": 54,
+      "marketPrice": 54.3,
       "vendorValue": 41,
       "hashedId": "3Zbym56qLxRNBRp7Eekd",
-      "lastUpdated": "2026-03-04T13:18:51.527Z",
-      "suggestedRefreshMinutes": 16,
-      "lastSaleAt": "2026-03-04T12:57:07+00:00"
+      "lastUpdated": "2026-03-04T14:11:02.090Z",
+      "suggestedRefreshMinutes": 21,
+      "lastSaleAt": "2026-03-04T13:32:44+00:00"
     },
     {
       "id": "res-5",
       "name": "Cooked Great White Shark",
-      "marketPrice": 104.6,
+      "marketPrice": 104.7,
       "vendorValue": 92,
       "hashedId": "Rv5g4z1dQnk9Nqy32jpG",
-      "lastUpdated": "2026-03-04T13:19:49.100Z",
-      "suggestedRefreshMinutes": 19,
-      "lastSaleAt": "2026-03-04T12:22:25+00:00"
+      "lastUpdated": "2026-03-04T14:11:02.304Z",
+      "suggestedRefreshMinutes": 36,
+      "lastSaleAt": "2026-03-04T13:54:15+00:00"
     },
     {
       "id": "res-6",
       "name": "Mystic Ore",
-      "marketPrice": 23.7,
+      "marketPrice": 23.4,
       "vendorValue": 17,
       "hashedId": "0kK49j1VN9yNq6B2doap",
-      "lastUpdated": "2026-03-04T09:40:01.182Z",
-      "suggestedRefreshMinutes": 224,
-      "lastSaleAt": "2026-03-04T06:40:22+00:00"
+      "lastUpdated": "2026-03-04T14:11:02.376Z",
+      "suggestedRefreshMinutes": 165,
+      "lastSaleAt": "2026-03-04T11:10:02+00:00"
     },
     {
       "id": "res-7",
@@ -1604,7 +1604,7 @@
       "producesItemName": "Shadowbane",
       "producesItemHashedId": "brz9RZnWN7a4LKAp0Mdl",
       "producesItemVendorValue": 250,
-      "lastUpdated": "2026-03-04T13:19:50.188Z",
+      "lastUpdated": "2026-03-04T14:11:02.457Z",
       "suggestedRefreshMinutes": 5,
       "lastSaleAt": "2026-02-19T05:13:08+00:00"
     },
@@ -1947,7 +1947,7 @@
       "producesItemName": "Whisperblade",
       "producesItemHashedId": "XjEaOeBkLagONlGwxVPq",
       "producesItemVendorValue": 400,
-      "lastUpdated": "2026-03-04T13:19:50.274Z",
+      "lastUpdated": "2026-03-04T14:11:02.536Z",
       "suggestedRefreshMinutes": 5,
       "lastSaleAt": "2026-02-16T14:43:59+00:00"
     },
@@ -2127,7 +2127,7 @@
       "producesItemName": "Shadowstep Footwear",
       "producesItemHashedId": "B2WEpv54Nml3Qj1xJrXk",
       "producesItemVendorValue": 300,
-      "lastUpdated": "2026-03-04T13:19:50.357Z",
+      "lastUpdated": "2026-03-04T14:11:02.621Z",
       "suggestedRefreshMinutes": 5,
       "lastSaleAt": "2026-03-02T15:13:09+00:00"
     },
@@ -2455,7 +2455,7 @@
       "producesItemName": "Guardian's Stride",
       "producesItemHashedId": "6leApVoENklBY7nRPy2D",
       "producesItemVendorValue": 400,
-      "lastUpdated": "2026-03-04T13:19:50.440Z",
+      "lastUpdated": "2026-03-04T14:11:02.721Z",
       "suggestedRefreshMinutes": 5,
       "lastSaleAt": "2026-02-26T03:49:15+00:00"
     },
@@ -2588,7 +2588,7 @@
       "producesItemName": "Quickstrike",
       "producesItemHashedId": "RVrBKlPdNd5yYWG8xJe9",
       "producesItemVendorValue": 550,
-      "lastUpdated": "2026-03-04T13:19:50.522Z",
+      "lastUpdated": "2026-03-04T14:11:02.811Z",
       "suggestedRefreshMinutes": 5,
       "lastSaleAt": "2026-02-20T13:25:36+00:00"
     },
@@ -2738,7 +2738,7 @@
       "producesItemName": "Celestial Ascenders",
       "producesItemHashedId": "doyA279pNzOAYKRDEWm8",
       "producesItemVendorValue": 450,
-      "lastUpdated": "2026-03-04T13:19:50.607Z",
+      "lastUpdated": "2026-03-04T14:11:02.900Z",
       "suggestedRefreshMinutes": 5,
       "lastSaleAt": "2026-02-26T03:50:26+00:00"
     },
@@ -7688,7 +7688,9 @@
         }
       ],
       "currentPrice": 5712.3,
-      "lastSaleAt": "2026-03-04T05:55:57+00:00"
+      "lastSaleAt": "2026-03-04T05:55:57+00:00",
+      "lastUpdated": "2026-03-04T14:13:03.585Z",
+      "suggestedRefreshMinutes": 221
     },
     {
       "name": "Cosmic Crystal",
@@ -7708,7 +7710,9 @@
         }
       ],
       "currentPrice": 49486.3,
-      "lastSaleAt": "2026-02-27T23:51:12+00:00"
+      "lastSaleAt": "2026-02-27T23:51:12+00:00",
+      "lastUpdated": "2026-03-04T14:13:03.665Z",
+      "suggestedRefreshMinutes": 4091
     },
     {
       "name": "Improved Fishing Rod",
@@ -7728,7 +7732,9 @@
         }
       ],
       "currentPrice": 430.2,
-      "lastSaleAt": "2026-03-04T12:09:56+00:00"
+      "lastSaleAt": "2026-03-04T12:09:56+00:00",
+      "lastUpdated": "2026-03-04T14:13:03.763Z",
+      "suggestedRefreshMinutes": 710
     },
     {
       "name": "Improved Pickaxe",
@@ -7744,7 +7750,9 @@
         }
       ],
       "currentPrice": 2131.1,
-      "lastSaleAt": "2026-03-04T10:09:39+00:00"
+      "lastSaleAt": "2026-03-04T10:09:39+00:00",
+      "lastUpdated": "2026-03-04T14:13:03.860Z",
+      "suggestedRefreshMinutes": 202
     },
     {
       "name": "Improved Felling axe",
@@ -7760,7 +7768,9 @@
         }
       ],
       "currentPrice": 1323.9,
-      "lastSaleAt": "2026-03-04T04:16:32+00:00"
+      "lastSaleAt": "2026-03-04T04:16:32+00:00",
+      "lastUpdated": "2026-03-04T14:13:03.950Z",
+      "suggestedRefreshMinutes": 271
     },
     {
       "name": "Herculean Strength Elixir",
@@ -7776,7 +7786,9 @@
         }
       ],
       "currentPrice": 456.8,
-      "lastSaleAt": "2026-03-02T20:44:28+00:00"
+      "lastSaleAt": "2026-03-02T20:44:28+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.026Z",
+      "suggestedRefreshMinutes": 15284
     },
     {
       "name": "Bastion Elixir",
@@ -7792,7 +7804,9 @@
         }
       ],
       "currentPrice": 119.1,
-      "lastSaleAt": "2026-02-27T09:44:31+00:00"
+      "lastSaleAt": "2026-02-27T09:44:31+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.102Z",
+      "suggestedRefreshMinutes": 10711
     },
     {
       "name": "Galeforce Speed Elixir",
@@ -7808,7 +7822,9 @@
         }
       ],
       "currentPrice": 139.9,
-      "lastSaleAt": "2026-03-04T12:08:21+00:00"
+      "lastSaleAt": "2026-03-04T12:08:21+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.181Z",
+      "suggestedRefreshMinutes": 5884
     },
     {
       "name": "Falcon's Grace Elixir",
@@ -7824,7 +7840,9 @@
         }
       ],
       "currentPrice": 123.6,
-      "lastSaleAt": "2026-03-03T04:59:03+00:00"
+      "lastSaleAt": "2026-03-03T04:59:03+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.257Z",
+      "suggestedRefreshMinutes": 14812
     },
     {
       "name": "Rivertamer",
@@ -7836,7 +7854,9 @@
         }
       ],
       "currentPrice": 1958.8,
-      "lastSaleAt": "2026-03-04T10:24:54+00:00"
+      "lastSaleAt": "2026-03-04T10:24:54+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.352Z",
+      "suggestedRefreshMinutes": 451
     },
     {
       "name": "Veinseeker",
@@ -7848,7 +7868,9 @@
         }
       ],
       "currentPrice": 9589.6,
-      "lastSaleAt": "2026-03-04T09:33:31+00:00"
+      "lastSaleAt": "2026-03-04T13:57:30+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.446Z",
+      "suggestedRefreshMinutes": 230
     },
     {
       "name": "Timberfall Talon",
@@ -7860,7 +7882,9 @@
         }
       ],
       "currentPrice": 3958.5,
-      "lastSaleAt": "2026-03-04T12:39:30+00:00"
+      "lastSaleAt": "2026-03-04T12:39:30+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.533Z",
+      "suggestedRefreshMinutes": 904
     },
     {
       "name": "Protection Potion",
@@ -7876,7 +7900,9 @@
         }
       ],
       "currentPrice": 354.7,
-      "lastSaleAt": "2026-03-03T22:31:45+00:00"
+      "lastSaleAt": "2026-03-03T22:31:45+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.615Z",
+      "suggestedRefreshMinutes": 1297
     },
     {
       "name": "Felling Essence",
@@ -7892,7 +7918,9 @@
         }
       ],
       "currentPrice": 2861.7,
-      "lastSaleAt": "2026-03-03T00:57:46+00:00"
+      "lastSaleAt": "2026-03-03T00:57:46+00:00",
+      "lastUpdated": "2026-03-04T14:13:04.710Z",
+      "suggestedRefreshMinutes": 1491
     },
     {
       "name": "Oreseeker Essence Crystal",
@@ -7908,7 +7936,9 @@
         }
       ],
       "currentPrice": 2031.6,
-      "lastSaleAt": "2026-03-04T05:17:19+00:00"
+      "lastSaleAt": "2026-03-04T05:17:19+00:00",
+      "lastUpdated": "2026-03-04T14:13:05.822Z",
+      "suggestedRefreshMinutes": 541
     },
     {
       "name": "Attack Power Potion",
@@ -7928,7 +7958,9 @@
         }
       ],
       "currentPrice": 344,
-      "lastSaleAt": "2026-03-04T12:04:00+00:00"
+      "lastSaleAt": "2026-03-04T13:32:20+00:00",
+      "lastUpdated": "2026-03-04T14:14:03.161Z",
+      "suggestedRefreshMinutes": 273
     },
     {
       "name": "Titan Power Brew",
@@ -7944,7 +7976,9 @@
         }
       ],
       "currentPrice": 313.5,
-      "lastSaleAt": "2026-03-03T07:19:14+00:00"
+      "lastSaleAt": "2026-03-03T07:19:14+00:00",
+      "lastUpdated": "2026-03-04T14:14:03.241Z",
+      "suggestedRefreshMinutes": 2492
     },
     {
       "name": "Vortex Brew",
@@ -7964,7 +7998,9 @@
         }
       ],
       "currentPrice": 1119.2,
-      "lastSaleAt": "2026-03-04T11:44:33+00:00"
+      "lastSaleAt": "2026-03-04T11:44:33+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.338Z",
+      "suggestedRefreshMinutes": 561
     },
     {
       "name": "Seasong's Lure",
@@ -7984,7 +8020,9 @@
         }
       ],
       "currentPrice": 7612.4,
-      "lastSaleAt": "2026-03-04T07:53:04+00:00"
+      "lastSaleAt": "2026-03-04T07:53:04+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.426Z",
+      "suggestedRefreshMinutes": 2628
     },
     {
       "name": "Ironbite",
@@ -8004,7 +8042,9 @@
         }
       ],
       "currentPrice": 23527.3,
-      "lastSaleAt": "2026-03-04T00:53:55+00:00"
+      "lastSaleAt": "2026-03-04T00:53:55+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.514Z",
+      "suggestedRefreshMinutes": 1335
     },
     {
       "name": "Wildwood Chopper",
@@ -8024,7 +8064,9 @@
         }
       ],
       "currentPrice": 6623.9,
-      "lastSaleAt": "2026-03-04T05:21:58+00:00"
+      "lastSaleAt": "2026-03-04T05:21:58+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.597Z",
+      "suggestedRefreshMinutes": 501
     },
     {
       "name": "Fortified Protection",
@@ -8040,7 +8082,9 @@
         }
       ],
       "currentPrice": 324.3,
-      "lastSaleAt": "2026-03-03T11:15:41+00:00"
+      "lastSaleAt": "2026-03-03T11:15:41+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.678Z",
+      "suggestedRefreshMinutes": 3113
     },
     {
       "name": "Quickstep Essence",
@@ -8060,7 +8104,9 @@
         }
       ],
       "currentPrice": 460.4,
-      "lastSaleAt": "2026-03-02T22:02:55+00:00"
+      "lastSaleAt": "2026-03-02T22:02:55+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.771Z",
+      "suggestedRefreshMinutes": 5121
     },
     {
       "name": "Precision Essence",
@@ -8076,7 +8122,9 @@
         }
       ],
       "currentPrice": 331.9,
-      "lastSaleAt": "2026-03-03T22:46:52+00:00"
+      "lastSaleAt": "2026-03-03T22:46:52+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.861Z",
+      "suggestedRefreshMinutes": 2874
     },
     {
       "name": "Merfolk Essence",
@@ -8092,7 +8140,9 @@
         }
       ],
       "currentPrice": 3382,
-      "lastSaleAt": "2026-03-04T12:25:48+00:00"
+      "lastSaleAt": "2026-03-04T12:25:48+00:00",
+      "lastUpdated": "2026-03-04T14:14:04.947Z",
+      "suggestedRefreshMinutes": 170
     },
     {
       "name": "Molten Core Tonic",
@@ -8108,7 +8158,9 @@
         }
       ],
       "currentPrice": 823.5,
-      "lastSaleAt": "2026-03-04T11:55:27+00:00"
+      "lastSaleAt": "2026-03-04T11:55:27+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.047Z",
+      "suggestedRefreshMinutes": 181
     },
     {
       "name": "Spicefinder Essence Crystal",
@@ -8124,7 +8176,9 @@
         }
       ],
       "currentPrice": 2909.8,
-      "lastSaleAt": "2026-03-04T12:22:52+00:00"
+      "lastSaleAt": "2026-03-04T12:22:52+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.153Z",
+      "suggestedRefreshMinutes": 24
     },
     {
       "name": "Bulwark Brew",
@@ -8144,7 +8198,9 @@
         }
       ],
       "currentPrice": 848.3,
-      "lastSaleAt": "2026-03-04T12:21:16+00:00"
+      "lastSaleAt": "2026-03-04T13:57:18+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.236Z",
+      "suggestedRefreshMinutes": 372
     },
     {
       "name": "Bladeburst Elixir",
@@ -8164,7 +8220,9 @@
         }
       ],
       "currentPrice": 2679.6,
-      "lastSaleAt": "2026-03-03T08:24:58+00:00"
+      "lastSaleAt": "2026-03-03T08:24:58+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.326Z",
+      "suggestedRefreshMinutes": 2114
     },
     {
       "name": "Ironclad Tonic",
@@ -8184,7 +8242,9 @@
         }
       ],
       "currentPrice": 1470,
-      "lastSaleAt": "2026-03-04T10:51:07+00:00"
+      "lastSaleAt": "2026-03-04T10:51:07+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.398Z",
+      "suggestedRefreshMinutes": 13128
     },
     {
       "name": "Moonshimmer Hook",
@@ -8204,7 +8264,9 @@
         }
       ],
       "currentPrice": 13094.7,
-      "lastSaleAt": "2026-03-04T13:02:57+00:00"
+      "lastSaleAt": "2026-03-04T13:02:57+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.477Z",
+      "suggestedRefreshMinutes": 506
     },
     {
       "name": "Boulder Breaker",
@@ -8224,7 +8286,9 @@
         }
       ],
       "currentPrice": 41913.8,
-      "lastSaleAt": "2026-03-04T13:04:12+00:00"
+      "lastSaleAt": "2026-03-04T13:04:12+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.571Z",
+      "suggestedRefreshMinutes": 1968
     },
     {
       "name": "Leafblade",
@@ -8244,7 +8308,9 @@
         }
       ],
       "currentPrice": 10078.1,
-      "lastSaleAt": "2026-03-04T02:30:00+00:00"
+      "lastSaleAt": "2026-03-04T02:30:00+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.668Z",
+      "suggestedRefreshMinutes": 376
     },
     {
       "name": "Impenetrable Essence",
@@ -8264,7 +8330,9 @@
         }
       ],
       "currentPrice": 664.2,
-      "lastSaleAt": "2026-03-04T03:25:32+00:00"
+      "lastSaleAt": "2026-03-04T03:25:32+00:00",
+      "lastUpdated": "2026-03-04T14:14:05.738Z",
+      "suggestedRefreshMinutes": 15278
     },
     {
       "name": "Windrider Essence",
@@ -8280,7 +8348,9 @@
         }
       ],
       "currentPrice": 1718.5,
-      "lastSaleAt": "2026-03-04T03:23:25+00:00"
+      "lastSaleAt": "2026-03-04T03:23:25+00:00",
+      "lastUpdated": "2026-03-04T14:14:06.832Z",
+      "suggestedRefreshMinutes": 2557
     },
     {
       "name": "Acrobatic's Essence",
@@ -8296,7 +8366,9 @@
         }
       ],
       "currentPrice": 764.8,
-      "lastSaleAt": "2026-03-04T03:25:04+00:00"
+      "lastSaleAt": "2026-03-04T03:25:04+00:00",
+      "lastUpdated": "2026-03-04T14:15:04.140Z",
+      "suggestedRefreshMinutes": 5294
     },
     {
       "name": "Strike Essence",
@@ -8312,7 +8384,9 @@
         }
       ],
       "currentPrice": 1212,
-      "lastSaleAt": "2026-03-04T13:00:53+00:00"
+      "lastSaleAt": "2026-03-04T14:13:05+00:00",
+      "lastUpdated": "2026-03-04T14:15:04.241Z",
+      "suggestedRefreshMinutes": 85
     },
     {
       "name": "Yggdrasil Nectar",
@@ -8332,7 +8406,9 @@
         }
       ],
       "currentPrice": 3477,
-      "lastSaleAt": "2026-03-04T09:50:10+00:00"
+      "lastSaleAt": "2026-03-04T13:41:46+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.360Z",
+      "suggestedRefreshMinutes": 168
     },
     {
       "name": "Earthcore Infusion",
@@ -8352,7 +8428,9 @@
         }
       ],
       "currentPrice": 8518.6,
-      "lastSaleAt": "2026-03-04T08:42:28+00:00"
+      "lastSaleAt": "2026-03-04T14:08:39+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.473Z",
+      "suggestedRefreshMinutes": 199
     },
     {
       "name": "Shadowbane",
@@ -8372,7 +8450,9 @@
         }
       ],
       "currentPrice": 19959.4,
-      "lastSaleAt": "2026-03-02T16:33:36+00:00"
+      "lastSaleAt": "2026-03-02T16:33:36+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.552Z",
+      "suggestedRefreshMinutes": 1773
     },
     {
       "name": "Soulrender",
@@ -8396,7 +8476,9 @@
         }
       ],
       "currentPrice": 14930.2,
-      "lastSaleAt": "2026-03-03T17:50:24+00:00"
+      "lastSaleAt": "2026-03-03T17:50:24+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.650Z",
+      "suggestedRefreshMinutes": 1599
     },
     {
       "name": "Shadowstrike",
@@ -8416,7 +8498,9 @@
         }
       ],
       "currentPrice": 7339.8,
-      "lastSaleAt": "2026-02-28T16:47:50+00:00"
+      "lastSaleAt": "2026-02-28T16:47:50+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.730Z",
+      "suggestedRefreshMinutes": 2893
     },
     {
       "name": "Venomfang",
@@ -8436,7 +8520,9 @@
         }
       ],
       "currentPrice": 13449.1,
-      "lastSaleAt": "2026-02-24T04:29:51+00:00"
+      "lastSaleAt": "2026-02-24T04:29:51+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.808Z",
+      "suggestedRefreshMinutes": 10344
     },
     {
       "name": "Whisperwind Bow",
@@ -8464,7 +8550,9 @@
         }
       ],
       "currentPrice": 12859.6,
-      "lastSaleAt": "2026-03-03T20:22:47+00:00"
+      "lastSaleAt": "2026-03-03T20:22:47+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.877Z",
+      "suggestedRefreshMinutes": 2786
     },
     {
       "name": "Stormcaster",
@@ -8492,7 +8580,9 @@
         }
       ],
       "currentPrice": 2440,
-      "lastSaleAt": "2026-03-04T12:48:59+00:00"
+      "lastSaleAt": "2026-03-04T12:48:59+00:00",
+      "lastUpdated": "2026-03-04T14:15:05.962Z",
+      "suggestedRefreshMinutes": 5788
     },
     {
       "name": "Radiant Crest",
@@ -8512,7 +8602,9 @@
         }
       ],
       "currentPrice": 7119.4,
-      "lastSaleAt": "2026-03-04T12:59:09+00:00"
+      "lastSaleAt": "2026-03-04T12:59:09+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.045Z",
+      "suggestedRefreshMinutes": 1644
     },
     {
       "name": "Shadow Helm",
@@ -8532,7 +8624,9 @@
         }
       ],
       "currentPrice": 8779.7,
-      "lastSaleAt": "2026-03-04T10:09:44+00:00"
+      "lastSaleAt": "2026-03-04T10:09:44+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.123Z",
+      "suggestedRefreshMinutes": 2466
     },
     {
       "name": "Ironclad Gauntlets",
@@ -8552,7 +8646,9 @@
         }
       ],
       "currentPrice": 6654.8,
-      "lastSaleAt": "2026-03-04T05:25:46+00:00"
+      "lastSaleAt": "2026-03-04T05:25:46+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.201Z",
+      "suggestedRefreshMinutes": 2792
     },
     {
       "name": "Stormguard Plate",
@@ -8572,7 +8668,9 @@
         }
       ],
       "currentPrice": 1291.8,
-      "lastSaleAt": "2026-03-04T10:17:37+00:00"
+      "lastSaleAt": "2026-03-04T10:17:37+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.289Z",
+      "suggestedRefreshMinutes": 3034
     },
     {
       "name": "Dragonheart Plate",
@@ -8600,7 +8698,9 @@
         }
       ],
       "currentPrice": 5190,
-      "lastSaleAt": "2026-03-03T10:43:37+00:00"
+      "lastSaleAt": "2026-03-03T10:43:37+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.371Z",
+      "suggestedRefreshMinutes": 3147
     },
     {
       "name": "Stormstrider Greaves",
@@ -8620,7 +8720,9 @@
         }
       ],
       "currentPrice": 1958.7,
-      "lastSaleAt": "2026-03-04T12:58:37+00:00"
+      "lastSaleAt": "2026-03-04T12:58:37+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.450Z",
+      "suggestedRefreshMinutes": 2990
     },
     {
       "name": "Shadowstep Greaves",
@@ -8636,7 +8738,9 @@
         }
       ],
       "currentPrice": 2410.3,
-      "lastSaleAt": "2026-03-02T17:00:58+00:00"
+      "lastSaleAt": "2026-03-02T17:00:58+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.518Z",
+      "suggestedRefreshMinutes": 3210
     },
     {
       "name": "Swiftwind Boots",
@@ -8652,7 +8756,9 @@
         }
       ],
       "currentPrice": 2229.8,
-      "lastSaleAt": "2026-03-04T12:56:15+00:00"
+      "lastSaleAt": "2026-03-04T12:56:15+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.606Z",
+      "suggestedRefreshMinutes": 2189
     },
     {
       "name": "Aegis of the Seraph",
@@ -8672,7 +8778,9 @@
         }
       ],
       "currentPrice": 1786.3,
-      "lastSaleAt": "2026-03-02T17:02:56+00:00"
+      "lastSaleAt": "2026-03-02T17:02:56+00:00",
+      "lastUpdated": "2026-03-04T14:15:06.684Z",
+      "suggestedRefreshMinutes": 1458
     },
     {
       "name": "Stormguard Shield",
@@ -8692,7 +8800,9 @@
         }
       ],
       "currentPrice": 17464.8,
-      "lastSaleAt": "2026-03-02T14:30:59+00:00"
+      "lastSaleAt": "2026-03-02T14:30:59+00:00",
+      "lastUpdated": "2026-03-04T14:15:07.764Z",
+      "suggestedRefreshMinutes": 7795
     },
     {
       "name": "Riverbend Essence Crystal",
@@ -8712,7 +8822,9 @@
         }
       ],
       "currentPrice": 9448,
-      "lastSaleAt": "2026-03-04T11:51:43+00:00"
+      "lastSaleAt": "2026-03-04T11:51:43+00:00",
+      "lastUpdated": "2026-03-04T14:16:05.181Z",
+      "suggestedRefreshMinutes": 67
     },
     {
       "name": "Tampering Essence Crystal",
@@ -8732,7 +8844,9 @@
         }
       ],
       "currentPrice": 5947.1,
-      "lastSaleAt": "2026-03-04T07:39:37+00:00"
+      "lastSaleAt": "2026-03-04T13:14:45+00:00",
+      "lastUpdated": "2026-03-04T14:16:05.277Z",
+      "suggestedRefreshMinutes": 813
     },
     {
       "name": "Frostbite",
@@ -8752,7 +8866,9 @@
         }
       ],
       "currentPrice": 8333.9,
-      "lastSaleAt": "2026-03-04T12:54:42+00:00"
+      "lastSaleAt": "2026-03-04T12:54:42+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.373Z",
+      "suggestedRefreshMinutes": 2606
     },
     {
       "name": "Stormbringer",
@@ -8772,7 +8888,9 @@
         }
       ],
       "currentPrice": 10465.6,
-      "lastSaleAt": "2026-03-03T21:34:27+00:00"
+      "lastSaleAt": "2026-03-03T21:34:27+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.459Z",
+      "suggestedRefreshMinutes": 6410
     },
     {
       "name": "Bloodletter",
@@ -8792,7 +8910,9 @@
         }
       ],
       "currentPrice": 4094.7,
-      "lastSaleAt": "2026-02-28T05:44:56+00:00"
+      "lastSaleAt": "2026-02-28T05:44:56+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.552Z",
+      "suggestedRefreshMinutes": 1916
     },
     {
       "name": "Whisperblade",
@@ -8812,7 +8932,9 @@
         }
       ],
       "currentPrice": 14338.3,
-      "lastSaleAt": "2026-03-04T04:54:28+00:00"
+      "lastSaleAt": "2026-03-04T04:54:28+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.647Z",
+      "suggestedRefreshMinutes": 3634
     },
     {
       "name": "Shadow Shot",
@@ -8844,7 +8966,9 @@
         }
       ],
       "currentPrice": 3619.6,
-      "lastSaleAt": "2026-03-01T06:04:28+00:00"
+      "lastSaleAt": "2026-03-01T06:04:28+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.725Z",
+      "suggestedRefreshMinutes": 2561
     },
     {
       "name": "Frostbite Shot",
@@ -8876,7 +9000,9 @@
         }
       ],
       "currentPrice": 3833.7,
-      "lastSaleAt": "2026-03-02T14:08:15+00:00"
+      "lastSaleAt": "2026-03-02T14:08:15+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.809Z",
+      "suggestedRefreshMinutes": 2167
     },
     {
       "name": "Frostguard Visage",
@@ -8896,7 +9022,9 @@
         }
       ],
       "currentPrice": 20449.8,
-      "lastSaleAt": "2026-03-02T13:23:54+00:00"
+      "lastSaleAt": "2026-03-02T13:23:54+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.892Z",
+      "suggestedRefreshMinutes": 3271
     },
     {
       "name": "Sentinel's Gaze",
@@ -8916,7 +9044,9 @@
         }
       ],
       "currentPrice": 28716.6,
-      "lastSaleAt": "2026-03-02T14:10:34+00:00"
+      "lastSaleAt": "2026-03-02T14:10:34+00:00",
+      "lastUpdated": "2026-03-04T14:16:06.957Z",
+      "suggestedRefreshMinutes": 3680
     },
     {
       "name": "Dragonfire Grasp",
@@ -8936,7 +9066,9 @@
         }
       ],
       "currentPrice": 2509,
-      "lastSaleAt": "2026-03-02T17:03:11+00:00"
+      "lastSaleAt": "2026-03-02T17:03:11+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.040Z",
+      "suggestedRefreshMinutes": 1136
     },
     {
       "name": "Shadowstrike Grips",
@@ -8964,7 +9096,9 @@
         }
       ],
       "currentPrice": 3588,
-      "lastSaleAt": "2026-03-03T17:53:04+00:00"
+      "lastSaleAt": "2026-03-03T17:53:04+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.176Z",
+      "suggestedRefreshMinutes": 1456
     },
     {
       "name": "Frostbite Gauntlets",
@@ -8984,7 +9118,9 @@
         }
       ],
       "currentPrice": 18199.4,
-      "lastSaleAt": "2026-03-04T12:57:57+00:00"
+      "lastSaleAt": "2026-03-04T12:57:57+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.255Z",
+      "suggestedRefreshMinutes": 6569
     },
     {
       "name": "Shadowcloak Vestments",
@@ -9004,7 +9140,9 @@
         }
       ],
       "currentPrice": 6533.1,
-      "lastSaleAt": "2026-03-02T02:40:23+00:00"
+      "lastSaleAt": "2026-03-02T02:40:23+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.331Z",
+      "suggestedRefreshMinutes": 1574
     },
     {
       "name": "Frostbite Plate",
@@ -9032,7 +9170,9 @@
         }
       ],
       "currentPrice": 2696.7,
-      "lastSaleAt": "2026-03-04T12:57:29+00:00"
+      "lastSaleAt": "2026-03-04T12:57:29+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.408Z",
+      "suggestedRefreshMinutes": 1598
     },
     {
       "name": "Frostbite Legguards",
@@ -9052,7 +9192,9 @@
         }
       ],
       "currentPrice": 12194.9,
-      "lastSaleAt": "2026-03-04T10:09:02+00:00"
+      "lastSaleAt": "2026-03-04T10:09:02+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.485Z",
+      "suggestedRefreshMinutes": 3108
     },
     {
       "name": "Sentinel's Resolve",
@@ -9076,7 +9218,9 @@
         }
       ],
       "currentPrice": 17135,
-      "lastSaleAt": "2026-03-04T11:47:30+00:00"
+      "lastSaleAt": "2026-03-04T11:47:30+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.565Z",
+      "suggestedRefreshMinutes": 1490
     },
     {
       "name": "Shadowstep Footwear",
@@ -9092,7 +9236,9 @@
         }
       ],
       "currentPrice": 18104.9,
-      "lastSaleAt": "2026-03-02T02:45:03+00:00"
+      "lastSaleAt": "2026-03-02T02:45:03+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.638Z",
+      "suggestedRefreshMinutes": 2477
     },
     {
       "name": "Soulward Barrier",
@@ -9112,7 +9258,9 @@
         }
       ],
       "currentPrice": 8739.9,
-      "lastSaleAt": "2026-03-04T13:00:07+00:00"
+      "lastSaleAt": "2026-03-04T13:00:07+00:00",
+      "lastUpdated": "2026-03-04T14:16:07.725Z",
+      "suggestedRefreshMinutes": 2140
     },
     {
       "name": "Hydra's Coil",
@@ -9136,7 +9284,9 @@
         }
       ],
       "currentPrice": 85233.9,
-      "lastSaleAt": "2026-03-04T11:34:19+00:00"
+      "lastSaleAt": "2026-03-04T13:32:16+00:00",
+      "lastUpdated": "2026-03-04T14:16:08.819Z",
+      "suggestedRefreshMinutes": 345
     },
     {
       "name": "Earthshaker",
@@ -9156,7 +9306,9 @@
         }
       ],
       "currentPrice": 131329.1,
-      "lastSaleAt": "2026-03-04T10:48:59+00:00"
+      "lastSaleAt": "2026-03-04T13:46:29+00:00",
+      "lastUpdated": "2026-03-04T14:17:06.141Z",
+      "suggestedRefreshMinutes": 1242
     },
     {
       "name": "Grove Cleaver",
@@ -9176,7 +9328,9 @@
         }
       ],
       "currentPrice": 45849.9,
-      "lastSaleAt": "2026-03-04T01:00:33+00:00"
+      "lastSaleAt": "2026-03-04T01:00:33+00:00",
+      "lastUpdated": "2026-03-04T14:17:06.237Z",
+      "suggestedRefreshMinutes": 701
     },
     {
       "name": "Shieldbearer's Infusion",
@@ -9196,7 +9350,9 @@
         }
       ],
       "currentPrice": 3199.7,
-      "lastSaleAt": "2026-03-04T07:03:29+00:00"
+      "lastSaleAt": "2026-03-04T07:03:29+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.334Z",
+      "suggestedRefreshMinutes": 831
     },
     {
       "name": "Unyielding Fortitude",
@@ -9216,7 +9372,9 @@
         }
       ],
       "currentPrice": 3199.1,
-      "lastSaleAt": "2026-03-03T08:42:42+00:00"
+      "lastSaleAt": "2026-03-03T08:42:42+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.487Z",
+      "suggestedRefreshMinutes": 1113
     },
     {
       "name": "Doomblade",
@@ -9240,7 +9398,9 @@
         }
       ],
       "currentPrice": 52584,
-      "lastSaleAt": "2026-03-03T04:56:05+00:00"
+      "lastSaleAt": "2026-03-03T04:56:05+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.567Z",
+      "suggestedRefreshMinutes": 4894
     },
     {
       "name": "Serpentstrike",
@@ -9264,7 +9424,9 @@
         }
       ],
       "currentPrice": 63989.3,
-      "lastSaleAt": "2026-03-04T00:03:14+00:00"
+      "lastSaleAt": "2026-03-04T00:03:14+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.651Z",
+      "suggestedRefreshMinutes": 2709
     },
     {
       "name": "Serpent's Kiss",
@@ -9284,7 +9446,9 @@
         }
       ],
       "currentPrice": 14734.9,
-      "lastSaleAt": "2026-02-16T14:33:59+00:00"
+      "lastSaleAt": "2026-02-16T14:33:59+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.723Z",
+      "suggestedRefreshMinutes": 7952
     },
     {
       "name": "Moonshadow",
@@ -9308,7 +9472,9 @@
         }
       ],
       "currentPrice": 10480.9,
-      "lastSaleAt": "2026-03-04T10:06:10+00:00"
+      "lastSaleAt": "2026-03-04T10:06:10+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.798Z",
+      "suggestedRefreshMinutes": 8598
     },
     {
       "name": "Serpent's Arrow",
@@ -9336,7 +9502,9 @@
         }
       ],
       "currentPrice": 31619.3,
-      "lastSaleAt": "2026-03-01T06:04:56+00:00"
+      "lastSaleAt": "2026-03-01T06:04:56+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.876Z",
+      "suggestedRefreshMinutes": 5498
     },
     {
       "name": "Viper",
@@ -9372,7 +9540,9 @@
         }
       ],
       "currentPrice": 48444.3,
-      "lastSaleAt": "2026-02-24T01:24:48+00:00"
+      "lastSaleAt": "2026-02-24T01:24:48+00:00",
+      "lastUpdated": "2026-03-04T14:17:07.961Z",
+      "suggestedRefreshMinutes": 3997
     },
     {
       "name": "Celestial Crown",
@@ -9396,7 +9566,9 @@
         }
       ],
       "currentPrice": 35478.2,
-      "lastSaleAt": "2026-03-03T17:55:10+00:00"
+      "lastSaleAt": "2026-03-03T17:55:10+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.042Z",
+      "suggestedRefreshMinutes": 4972
     },
     {
       "name": "Emberfire Helm",
@@ -9416,7 +9588,9 @@
         }
       ],
       "currentPrice": 26949.7,
-      "lastSaleAt": "2026-03-01T08:07:17+00:00"
+      "lastSaleAt": "2026-03-01T08:07:17+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.126Z",
+      "suggestedRefreshMinutes": 8263
     },
     {
       "name": "Titan's Embrace",
@@ -9432,7 +9606,9 @@
         }
       ],
       "currentPrice": 13984.7,
-      "lastSaleAt": "2026-03-01T14:15:50+00:00"
+      "lastSaleAt": "2026-03-01T14:15:50+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.219Z",
+      "suggestedRefreshMinutes": 22051
     },
     {
       "name": "Celestial Touch Gloves",
@@ -9456,7 +9632,9 @@
         }
       ],
       "currentPrice": 41155.2,
-      "lastSaleAt": "2026-03-02T12:23:02+00:00"
+      "lastSaleAt": "2026-03-02T12:23:02+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.306Z",
+      "suggestedRefreshMinutes": 7584
     },
     {
       "name": "Sentinel's Embrace",
@@ -9480,7 +9658,9 @@
         }
       ],
       "currentPrice": 11394.9,
-      "lastSaleAt": "2026-03-02T01:20:13+00:00"
+      "lastSaleAt": "2026-03-02T01:20:13+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.394Z",
+      "suggestedRefreshMinutes": 3760
     },
     {
       "name": "Celestial Striders",
@@ -9500,7 +9680,9 @@
         }
       ],
       "currentPrice": 19342.8,
-      "lastSaleAt": "2026-03-02T14:14:26+00:00"
+      "lastSaleAt": "2026-03-02T14:14:26+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.473Z",
+      "suggestedRefreshMinutes": 4893
     },
     {
       "name": "Frostbite Walkers",
@@ -9520,7 +9702,9 @@
         }
       ],
       "currentPrice": 6825.4,
-      "lastSaleAt": "2026-03-02T17:01:44+00:00"
+      "lastSaleAt": "2026-03-02T17:01:44+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.537Z",
+      "suggestedRefreshMinutes": 1206
     },
     {
       "name": "Guardian's Stride",
@@ -9544,7 +9728,9 @@
         }
       ],
       "currentPrice": 11826.6,
-      "lastSaleAt": "2026-03-02T14:17:04+00:00"
+      "lastSaleAt": "2026-03-02T14:17:04+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.605Z",
+      "suggestedRefreshMinutes": 1806
     },
     {
       "name": "Flamebreaker Buckler",
@@ -9564,7 +9750,9 @@
         }
       ],
       "currentPrice": 21124.2,
-      "lastSaleAt": "2026-03-03T03:29:08+00:00"
+      "lastSaleAt": "2026-03-03T03:29:08+00:00",
+      "lastUpdated": "2026-03-04T14:17:08.685Z",
+      "suggestedRefreshMinutes": 6129
     },
     {
       "name": "Shadowbound Ward",
@@ -9584,7 +9772,9 @@
         }
       ],
       "currentPrice": 11777.4,
-      "lastSaleAt": "2026-03-03T04:57:19+00:00"
+      "lastSaleAt": "2026-03-03T04:57:19+00:00",
+      "lastUpdated": "2026-03-04T14:17:09.763Z",
+      "suggestedRefreshMinutes": 5835
     },
     {
       "name": "Stoneheart Solution",
@@ -9604,7 +9794,9 @@
         }
       ],
       "currentPrice": 3131.9,
-      "lastSaleAt": "2026-03-03T06:35:36+00:00"
+      "lastSaleAt": "2026-03-03T06:35:36+00:00",
+      "lastUpdated": "2026-03-04T14:18:07.158Z",
+      "suggestedRefreshMinutes": 2835
     },
     {
       "name": "Lightning Sprint",
@@ -9624,7 +9816,9 @@
         }
       ],
       "currentPrice": 4839,
-      "lastSaleAt": "2026-03-03T09:36:38+00:00"
+      "lastSaleAt": "2026-03-03T09:36:38+00:00",
+      "lastUpdated": "2026-03-04T14:18:07.332Z",
+      "suggestedRefreshMinutes": 734
     },
     {
       "name": "Celestial Edge",
@@ -9644,7 +9838,9 @@
         }
       ],
       "currentPrice": 25690,
-      "lastSaleAt": "2026-03-03T09:04:47+00:00"
+      "lastSaleAt": "2026-03-03T09:04:47+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.418Z",
+      "suggestedRefreshMinutes": 7356
     },
     {
       "name": "Bloodmoon Sword",
@@ -9664,7 +9860,9 @@
         }
       ],
       "currentPrice": 22450.5,
-      "lastSaleAt": "2026-03-02T20:46:49+00:00"
+      "lastSaleAt": "2026-03-02T20:46:49+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.503Z",
+      "suggestedRefreshMinutes": 2965
     },
     {
       "name": "Quickstrike",
@@ -9684,7 +9882,9 @@
         }
       ],
       "currentPrice": 10812.7,
-      "lastSaleAt": "2026-02-18T07:30:39+00:00"
+      "lastSaleAt": "2026-02-18T07:30:39+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.576Z",
+      "suggestedRefreshMinutes": 3325
     },
     {
       "name": "Runeblade Dagger",
@@ -9704,7 +9904,9 @@
         }
       ],
       "currentPrice": 47486.9,
-      "lastSaleAt": "2026-02-24T04:30:02+00:00"
+      "lastSaleAt": "2026-02-24T04:30:02+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.656Z",
+      "suggestedRefreshMinutes": 10815
     },
     {
       "name": "Moonshot",
@@ -9732,7 +9934,9 @@
         }
       ],
       "currentPrice": 2740.6,
-      "lastSaleAt": "2026-03-02T11:32:19+00:00"
+      "lastSaleAt": "2026-03-02T11:32:19+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.732Z",
+      "suggestedRefreshMinutes": 8301
     },
     {
       "name": "Stormsong",
@@ -9764,7 +9968,9 @@
         }
       ],
       "currentPrice": 8794.9,
-      "lastSaleAt": "2026-02-24T12:50:03+00:00"
+      "lastSaleAt": "2026-02-24T12:50:03+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.811Z",
+      "suggestedRefreshMinutes": 5742
     },
     {
       "name": "Thunder Helm",
@@ -9784,7 +9990,9 @@
         }
       ],
       "currentPrice": 12479.7,
-      "lastSaleAt": "2026-03-03T18:23:59+00:00"
+      "lastSaleAt": "2026-03-03T18:23:59+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.900Z",
+      "suggestedRefreshMinutes": 3139
     },
     {
       "name": "Emberfist",
@@ -9820,7 +10028,9 @@
         }
       ],
       "currentPrice": 27399.5,
-      "lastSaleAt": "2026-02-27T14:59:40+00:00"
+      "lastSaleAt": "2026-02-27T14:59:40+00:00",
+      "lastUpdated": "2026-03-04T14:18:08.970Z",
+      "suggestedRefreshMinutes": 1669
     },
     {
       "name": "Celestial Radiance",
@@ -9844,7 +10054,9 @@
         }
       ],
       "currentPrice": 71675.3,
-      "lastSaleAt": "2026-03-02T13:09:29+00:00"
+      "lastSaleAt": "2026-03-02T13:09:29+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.046Z",
+      "suggestedRefreshMinutes": 2769
     },
     {
       "name": "Ironbark Cuirass",
@@ -9872,7 +10084,9 @@
         }
       ],
       "currentPrice": 12589.7,
-      "lastSaleAt": "2026-02-28T23:54:28+00:00"
+      "lastSaleAt": "2026-02-28T23:54:28+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.125Z",
+      "suggestedRefreshMinutes": 1430
     },
     {
       "name": "Emberfoot Greaves",
@@ -9892,7 +10106,9 @@
         }
       ],
       "currentPrice": 38834.6,
-      "lastSaleAt": "2026-03-02T12:29:10+00:00"
+      "lastSaleAt": "2026-03-02T12:29:10+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.217Z",
+      "suggestedRefreshMinutes": 4753
     },
     {
       "name": "Thunderclash Greaves",
@@ -9908,7 +10124,9 @@
         }
       ],
       "currentPrice": 7062.4,
-      "lastSaleAt": "2026-02-27T18:13:58+00:00"
+      "lastSaleAt": "2026-02-27T18:13:58+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.286Z",
+      "suggestedRefreshMinutes": 3001
     },
     {
       "name": "Celestial Ascenders",
@@ -9928,7 +10146,9 @@
         }
       ],
       "currentPrice": 20216.3,
-      "lastSaleAt": "2026-03-03T17:54:38+00:00"
+      "lastSaleAt": "2026-03-03T17:54:38+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.355Z",
+      "suggestedRefreshMinutes": 3700
     },
     {
       "name": "Emberfoot Boots",
@@ -9948,7 +10168,9 @@
         }
       ],
       "currentPrice": 15337.6,
-      "lastSaleAt": "2026-03-04T10:09:30+00:00"
+      "lastSaleAt": "2026-03-04T10:09:30+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.442Z",
+      "suggestedRefreshMinutes": 3443
     },
     {
       "name": "Frostbite Guard",
@@ -9968,7 +10190,9 @@
         }
       ],
       "currentPrice": 26475.4,
-      "lastSaleAt": "2026-03-04T10:08:35+00:00"
+      "lastSaleAt": "2026-03-04T10:08:35+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.524Z",
+      "suggestedRefreshMinutes": 2202
     },
     {
       "name": "Sentinel's Bulwark",
@@ -9988,7 +10212,9 @@
         }
       ],
       "currentPrice": 21624.9,
-      "lastSaleAt": "2026-02-27T18:12:15+00:00"
+      "lastSaleAt": "2026-02-27T18:12:15+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.593Z",
+      "suggestedRefreshMinutes": 1784
     },
     {
       "name": "Ocean's Whisper",
@@ -10012,7 +10238,9 @@
         }
       ],
       "currentPrice": 625875.4,
-      "lastSaleAt": "2026-03-04T00:06:05+00:00"
+      "lastSaleAt": "2026-03-04T00:06:05+00:00",
+      "lastUpdated": "2026-03-04T14:18:09.673Z",
+      "suggestedRefreshMinutes": 2371
     },
     {
       "name": "Stone Splinter",
@@ -10036,7 +10264,9 @@
         }
       ],
       "currentPrice": 639499.9,
-      "lastSaleAt": "2026-03-03T08:48:07+00:00"
+      "lastSaleAt": "2026-03-03T08:48:07+00:00",
+      "lastUpdated": "2026-03-04T14:18:10.749Z",
+      "suggestedRefreshMinutes": 4179
     },
     {
       "name": "Branchbane Hatchet",
@@ -10056,7 +10286,9 @@
         }
       ],
       "currentPrice": 436175,
-      "lastSaleAt": "2026-03-02T22:41:41+00:00"
+      "lastSaleAt": "2026-03-02T22:41:41+00:00",
+      "lastUpdated": "2026-03-04T14:19:08.169Z",
+      "suggestedRefreshMinutes": 2136
     },
     {
       "name": "Twinstrike Elixir",
@@ -10076,7 +10308,9 @@
         }
       ],
       "currentPrice": 3136.5,
-      "lastSaleAt": "2026-03-03T06:35:42+00:00"
+      "lastSaleAt": "2026-03-03T06:35:42+00:00",
+      "lastUpdated": "2026-03-04T14:19:08.268Z",
+      "suggestedRefreshMinutes": 3733
     },
     {
       "name": "Frenzy Potion",
@@ -10096,7 +10330,9 @@
         }
       ],
       "currentPrice": 3109.4,
-      "lastSaleAt": "2026-03-04T00:15:04+00:00"
+      "lastSaleAt": "2026-03-04T00:15:04+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.362Z",
+      "suggestedRefreshMinutes": 665
     },
     {
       "name": "Whisperwind Sword",
@@ -10116,7 +10352,9 @@
         }
       ],
       "currentPrice": 37761.1,
-      "lastSaleAt": "2026-03-04T06:05:02+00:00"
+      "lastSaleAt": "2026-03-04T06:05:02+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.439Z",
+      "suggestedRefreshMinutes": 13275
     },
     {
       "name": "Voidslayer",
@@ -10140,7 +10378,9 @@
         }
       ],
       "currentPrice": 45237.9,
-      "lastSaleAt": "2026-02-24T23:51:05+00:00"
+      "lastSaleAt": "2026-02-24T23:51:05+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.524Z",
+      "suggestedRefreshMinutes": 10625
     },
     {
       "name": "Shadowfang",
@@ -10164,7 +10404,9 @@
         }
       ],
       "currentPrice": 39408.2,
-      "lastSaleAt": "2026-02-09T10:52:27+00:00"
+      "lastSaleAt": "2026-02-09T10:52:27+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.596Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Emberheart",
@@ -10196,7 +10438,9 @@
         }
       ],
       "currentPrice": 48239.9,
-      "lastSaleAt": "2026-02-05T22:11:28+00:00"
+      "lastSaleAt": "2026-02-05T22:11:28+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.671Z",
+      "suggestedRefreshMinutes": 12545
     },
     {
       "name": "Otto's Mask",
@@ -10216,7 +10460,9 @@
         }
       ],
       "currentPrice": 45916.7,
-      "lastSaleAt": "2026-03-04T13:11:54+00:00"
+      "lastSaleAt": "2026-03-04T13:11:54+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.768Z",
+      "suggestedRefreshMinutes": 4041
     },
     {
       "name": "Shadowbane Visor",
@@ -10236,7 +10482,9 @@
         }
       ],
       "currentPrice": 112282.9,
-      "lastSaleAt": "2026-02-15T09:44:31+00:00"
+      "lastSaleAt": "2026-02-15T09:44:31+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.840Z",
+      "suggestedRefreshMinutes": 13810
     },
     {
       "name": "Thunderclap",
@@ -10260,7 +10508,9 @@
         }
       ],
       "currentPrice": 27529.7,
-      "lastSaleAt": "2026-03-04T13:12:16+00:00"
+      "lastSaleAt": "2026-03-04T13:12:16+00:00",
+      "lastUpdated": "2026-03-04T14:19:09.921Z",
+      "suggestedRefreshMinutes": 7924
     },
     {
       "name": "Soulgrasp",
@@ -10284,7 +10534,9 @@
         }
       ],
       "currentPrice": 80869,
-      "lastSaleAt": "2026-02-27T09:42:24+00:00"
+      "lastSaleAt": "2026-02-27T09:42:24+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.002Z",
+      "suggestedRefreshMinutes": 4237
     },
     {
       "name": "Flameguard Plate",
@@ -10308,7 +10560,9 @@
         }
       ],
       "currentPrice": 32927.5,
-      "lastSaleAt": "2026-03-02T16:55:29+00:00"
+      "lastSaleAt": "2026-03-02T16:55:29+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.090Z",
+      "suggestedRefreshMinutes": 7617
     },
     {
       "name": "Stormbreaker Mail",
@@ -10332,7 +10586,9 @@
         }
       ],
       "currentPrice": 99923.8,
-      "lastSaleAt": "2026-02-15T13:05:15+00:00"
+      "lastSaleAt": "2026-02-15T13:05:15+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.171Z",
+      "suggestedRefreshMinutes": 2405
     },
     {
       "name": "Soulforge Legplates",
@@ -10348,7 +10604,9 @@
         }
       ],
       "currentPrice": 20671.9,
-      "lastSaleAt": "2026-03-01T20:35:55+00:00"
+      "lastSaleAt": "2026-03-01T20:35:55+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.290Z",
+      "suggestedRefreshMinutes": 9382
     },
     {
       "name": "Shadowbane Greaves",
@@ -10372,7 +10630,9 @@
         }
       ],
       "currentPrice": 26867.2,
-      "lastSaleAt": "2026-02-27T15:12:06+00:00"
+      "lastSaleAt": "2026-02-27T15:12:06+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.367Z",
+      "suggestedRefreshMinutes": 11414
     },
     {
       "name": "Thunderstrike Steps",
@@ -10392,7 +10652,9 @@
         }
       ],
       "currentPrice": 41246.6,
-      "lastSaleAt": "2026-03-03T20:07:02+00:00"
+      "lastSaleAt": "2026-03-03T20:07:02+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.523Z",
+      "suggestedRefreshMinutes": 7579
     },
     {
       "name": "Soulwalkers",
@@ -10412,7 +10674,9 @@
         }
       ],
       "currentPrice": 42212.8,
-      "lastSaleAt": "2026-03-01T14:19:40+00:00"
+      "lastSaleAt": "2026-03-01T14:19:40+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.608Z",
+      "suggestedRefreshMinutes": 9114
     },
     {
       "name": "Celestial Aegis",
@@ -10432,7 +10696,9 @@
         }
       ],
       "currentPrice": 26903,
-      "lastSaleAt": "2026-03-04T06:06:04+00:00"
+      "lastSaleAt": "2026-03-04T06:06:04+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.685Z",
+      "suggestedRefreshMinutes": 12351
     },
     {
       "name": "Thunderstrike Barrier",
@@ -10452,7 +10718,9 @@
         }
       ],
       "currentPrice": 6626.7,
-      "lastSaleAt": "2026-03-03T18:23:49+00:00"
+      "lastSaleAt": "2026-03-03T18:23:49+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.756Z",
+      "suggestedRefreshMinutes": 8583
     },
     {
       "name": "Dragonblood Tonic",
@@ -10472,7 +10740,9 @@
         }
       ],
       "currentPrice": 5295.6,
-      "lastSaleAt": "2026-03-04T12:54:35+00:00"
+      "lastSaleAt": "2026-03-04T12:54:35+00:00",
+      "lastUpdated": "2026-03-04T14:19:10.850Z",
+      "suggestedRefreshMinutes": 118
     },
     {
       "name": "Gourmet Essence Crystal",
@@ -10492,7 +10762,9 @@
         }
       ],
       "currentPrice": 7647.9,
-      "lastSaleAt": "2026-03-04T12:42:25+00:00"
+      "lastSaleAt": "2026-03-04T13:56:14+00:00",
+      "lastUpdated": "2026-03-04T14:20:09.145Z",
+      "suggestedRefreshMinutes": 31
     },
     {
       "name": "Sunfire",
@@ -10516,7 +10788,9 @@
         }
       ],
       "currentPrice": 60500.9,
-      "lastSaleAt": "2026-02-26T23:47:30+00:00"
+      "lastSaleAt": "2026-02-26T23:47:30+00:00",
+      "lastUpdated": "2026-03-04T14:20:09.217Z",
+      "suggestedRefreshMinutes": 10117
     },
     {
       "name": "Flamebrand",
@@ -10536,7 +10810,9 @@
         }
       ],
       "currentPrice": 22027.7,
-      "lastSaleAt": "2026-02-16T08:12:35+00:00"
+      "lastSaleAt": "2026-02-16T08:12:35+00:00",
+      "lastUpdated": "2026-03-04T14:20:10.300Z",
+      "suggestedRefreshMinutes": 29302
     },
     {
       "name": "Soulshard",
@@ -10556,7 +10832,9 @@
         }
       ],
       "currentPrice": 38715,
-      "lastSaleAt": "2026-02-23T14:53:38+00:00"
+      "lastSaleAt": "2026-02-23T14:53:38+00:00",
+      "lastUpdated": "2026-03-04T14:20:10.713Z",
+      "suggestedRefreshMinutes": 15683
     },
     {
       "name": "Piercer",
@@ -10592,7 +10870,9 @@
         }
       ],
       "currentPrice": 22047.4,
-      "lastSaleAt": "2026-03-01T06:05:53+00:00"
+      "lastSaleAt": "2026-03-01T06:05:53+00:00",
+      "lastUpdated": "2026-03-04T14:20:10.783Z",
+      "suggestedRefreshMinutes": 4574
     },
     {
       "name": "Sunseeker",
@@ -10620,7 +10900,9 @@
         }
       ],
       "currentPrice": 55130,
-      "lastSaleAt": "2026-03-01T06:04:42+00:00"
+      "lastSaleAt": "2026-03-01T06:04:42+00:00",
+      "lastUpdated": "2026-03-04T14:20:10.858Z",
+      "suggestedRefreshMinutes": 9689
     },
     {
       "name": "Windborne Casque",
@@ -10640,7 +10922,9 @@
         }
       ],
       "currentPrice": 64744.1,
-      "lastSaleAt": "2026-03-02T04:53:15+00:00"
+      "lastSaleAt": "2026-03-02T04:53:15+00:00",
+      "lastUpdated": "2026-03-04T14:20:10.946Z",
+      "suggestedRefreshMinutes": 16865
     },
     {
       "name": "Stormbreaker Helm",
@@ -10656,7 +10940,9 @@
         }
       ],
       "currentPrice": 49419.4,
-      "lastSaleAt": "2026-03-04T00:55:25+00:00"
+      "lastSaleAt": "2026-03-04T00:55:25+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.028Z",
+      "suggestedRefreshMinutes": 16247
     },
     {
       "name": "Shadowstep Gauntlets",
@@ -10676,7 +10962,9 @@
         }
       ],
       "currentPrice": 33295.7,
-      "lastSaleAt": "2026-03-01T00:02:07+00:00"
+      "lastSaleAt": "2026-03-01T00:02:07+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.096Z",
+      "suggestedRefreshMinutes": 4909
     },
     {
       "name": "Sentinel's Gauntlets",
@@ -10700,7 +10988,9 @@
         }
       ],
       "currentPrice": 43343.1,
-      "lastSaleAt": "2026-03-04T00:56:06+00:00"
+      "lastSaleAt": "2026-03-04T00:56:06+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.181Z",
+      "suggestedRefreshMinutes": 8750
     },
     {
       "name": "Shadeweave Raiment",
@@ -10728,7 +11018,9 @@
         }
       ],
       "currentPrice": 54276.8,
-      "lastSaleAt": "2026-02-24T17:55:24+00:00"
+      "lastSaleAt": "2026-02-24T17:55:24+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.275Z",
+      "suggestedRefreshMinutes": 9451
     },
     {
       "name": "Crystalheart Plate",
@@ -10752,7 +11044,9 @@
         }
       ],
       "currentPrice": 71578.1,
-      "lastSaleAt": "2026-03-04T06:26:39+00:00"
+      "lastSaleAt": "2026-03-04T14:10:29+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.424Z",
+      "suggestedRefreshMinutes": 5811
     },
     {
       "name": "Windrider Greaves",
@@ -10776,7 +11070,9 @@
         }
       ],
       "currentPrice": 29585.5,
-      "lastSaleAt": "2026-03-03T15:03:17+00:00"
+      "lastSaleAt": "2026-03-03T15:03:17+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.504Z",
+      "suggestedRefreshMinutes": 9619
     },
     {
       "name": "Stormbreaker Treads",
@@ -10808,7 +11104,9 @@
         }
       ],
       "currentPrice": 56522,
-      "lastSaleAt": "2026-02-26T23:50:16+00:00"
+      "lastSaleAt": "2026-02-26T23:50:16+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.589Z",
+      "suggestedRefreshMinutes": 7540
     },
     {
       "name": "Shadowbane Footguards",
@@ -10828,7 +11126,9 @@
         }
       ],
       "currentPrice": 34986.6,
-      "lastSaleAt": "2026-02-24T18:52:14+00:00"
+      "lastSaleAt": "2026-02-24T18:52:14+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.663Z",
+      "suggestedRefreshMinutes": 3812
     },
     {
       "name": "Windrider Striders",
@@ -10852,7 +11152,9 @@
         }
       ],
       "currentPrice": 72288,
-      "lastSaleAt": "2026-03-01T06:12:32+00:00"
+      "lastSaleAt": "2026-03-01T06:12:32+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.743Z",
+      "suggestedRefreshMinutes": 5941
     },
     {
       "name": "Essenceweave Shield",
@@ -10872,7 +11174,9 @@
         }
       ],
       "currentPrice": 32377.5,
-      "lastSaleAt": "2026-02-26T07:37:42+00:00"
+      "lastSaleAt": "2026-02-26T07:37:42+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.832Z",
+      "suggestedRefreshMinutes": 10114
     },
     {
       "name": "Wraithbane Essence",
@@ -10892,7 +11196,9 @@
         }
       ],
       "currentPrice": 11860,
-      "lastSaleAt": "2026-03-04T12:42:32+00:00"
+      "lastSaleAt": "2026-03-04T13:15:31+00:00",
+      "lastUpdated": "2026-03-04T14:20:11.992Z",
+      "suggestedRefreshMinutes": 76
     },
     {
       "name": "Thunderfury Brew",
@@ -10912,7 +11218,9 @@
         }
       ],
       "currentPrice": 5240,
-      "lastSaleAt": "2026-03-04T12:58:47+00:00"
+      "lastSaleAt": "2026-03-04T13:56:53+00:00",
+      "lastUpdated": "2026-03-04T14:20:12.094Z",
+      "suggestedRefreshMinutes": 81
     },
     {
       "name": "Thunderstrike",
@@ -10936,7 +11244,9 @@
         }
       ],
       "currentPrice": 111583.7,
-      "lastSaleAt": "2026-03-02T00:46:41+00:00"
+      "lastSaleAt": "2026-03-02T00:46:41+00:00",
+      "lastUpdated": "2026-03-04T14:20:12.178Z",
+      "suggestedRefreshMinutes": 2297
     },
     {
       "name": "Nightfall Sword",
@@ -10956,7 +11266,9 @@
         }
       ],
       "currentPrice": 86241.9,
-      "lastSaleAt": "2026-03-02T13:22:40+00:00"
+      "lastSaleAt": "2026-03-02T13:22:40+00:00",
+      "lastUpdated": "2026-03-04T14:21:10.141Z",
+      "suggestedRefreshMinutes": 20515
     },
     {
       "name": "Night's Whisper",
@@ -10980,7 +11292,9 @@
         }
       ],
       "currentPrice": 56188,
-      "lastSaleAt": "2026-02-18T20:04:28+00:00"
+      "lastSaleAt": "2026-02-18T20:04:28+00:00",
+      "lastUpdated": "2026-03-04T14:21:10.233Z",
+      "suggestedRefreshMinutes": 24470
     },
     {
       "name": "Eclipse",
@@ -11008,7 +11322,9 @@
         }
       ],
       "currentPrice": 120399.9,
-      "lastSaleAt": "2026-03-03T10:56:51+00:00"
+      "lastSaleAt": "2026-03-03T10:56:51+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.320Z",
+      "suggestedRefreshMinutes": 22529
     },
     {
       "name": "Thundershot",
@@ -11036,7 +11352,9 @@
         }
       ],
       "currentPrice": 90303.8,
-      "lastSaleAt": "2026-03-02T09:15:54+00:00"
+      "lastSaleAt": "2026-03-02T09:15:54+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.394Z",
+      "suggestedRefreshMinutes": 18331
     },
     {
       "name": "Nightshade Bow",
@@ -11068,7 +11386,9 @@
         }
       ],
       "currentPrice": 67845.7,
-      "lastSaleAt": "2026-03-01T06:06:41+00:00"
+      "lastSaleAt": "2026-03-01T06:06:41+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.465Z",
+      "suggestedRefreshMinutes": 5230
     },
     {
       "name": "Voidwalker Cowl",
@@ -11088,7 +11408,9 @@
         }
       ],
       "currentPrice": 82073.4,
-      "lastSaleAt": "2026-02-28T19:31:47+00:00"
+      "lastSaleAt": "2026-02-28T19:31:47+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.541Z",
+      "suggestedRefreshMinutes": 5034
     },
     {
       "name": "Lunar Radiance",
@@ -11112,7 +11434,9 @@
         }
       ],
       "currentPrice": 86069.9,
-      "lastSaleAt": "2026-02-22T15:10:01+00:00"
+      "lastSaleAt": "2026-02-22T15:10:01+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.618Z",
+      "suggestedRefreshMinutes": 11669
     },
     {
       "name": "Flameguard Gauntlets",
@@ -11136,7 +11460,9 @@
         }
       ],
       "currentPrice": 100131.5,
-      "lastSaleAt": "2026-03-03T08:05:15+00:00"
+      "lastSaleAt": "2026-03-03T08:05:15+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.699Z",
+      "suggestedRefreshMinutes": 5020
     },
     {
       "name": "Stormbreaker Gauntlets",
@@ -11164,7 +11490,9 @@
         }
       ],
       "currentPrice": 182533.8,
-      "lastSaleAt": "2026-02-22T15:12:08+00:00"
+      "lastSaleAt": "2026-02-22T15:12:08+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.774Z",
+      "suggestedRefreshMinutes": 20411
     },
     {
       "name": "Serpent Scale",
@@ -11192,7 +11520,9 @@
         }
       ],
       "currentPrice": 128316.2,
-      "lastSaleAt": "2026-03-02T12:09:41+00:00"
+      "lastSaleAt": "2026-03-02T12:09:41+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.848Z",
+      "suggestedRefreshMinutes": 7070
     },
     {
       "name": "Phoenix Soulplate",
@@ -11216,7 +11546,9 @@
         }
       ],
       "currentPrice": 252922.5,
-      "lastSaleAt": "2026-02-14T06:32:05+00:00"
+      "lastSaleAt": "2026-02-14T06:32:05+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.921Z",
+      "suggestedRefreshMinutes": 37996
     },
     {
       "name": "Voidwalker Striders",
@@ -11236,7 +11568,9 @@
         }
       ],
       "currentPrice": 82280.4,
-      "lastSaleAt": "2026-03-03T12:21:06+00:00"
+      "lastSaleAt": "2026-03-03T12:21:06+00:00",
+      "lastUpdated": "2026-03-04T14:21:11.997Z",
+      "suggestedRefreshMinutes": 3554
     },
     {
       "name": "Stormbreaker Boots",
@@ -11264,7 +11598,9 @@
         }
       ],
       "currentPrice": 53686.9,
-      "lastSaleAt": "2026-02-26T16:13:36+00:00"
+      "lastSaleAt": "2026-02-26T16:13:36+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.076Z",
+      "suggestedRefreshMinutes": 13301
     },
     {
       "name": "Moonshadow Guard",
@@ -11292,7 +11628,9 @@
         }
       ],
       "currentPrice": 13724.2,
-      "lastSaleAt": "2026-03-02T08:03:50+00:00"
+      "lastSaleAt": "2026-03-02T08:03:50+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.153Z",
+      "suggestedRefreshMinutes": 14187
     },
     {
       "name": "Ashenfire Ward",
@@ -11312,7 +11650,9 @@
         }
       ],
       "currentPrice": 41614.9,
-      "lastSaleAt": "2026-03-04T08:27:57+00:00"
+      "lastSaleAt": "2026-03-04T08:27:57+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.235Z",
+      "suggestedRefreshMinutes": 6595
     },
     {
       "name": "Potion of the Hunter",
@@ -11332,7 +11672,9 @@
         }
       ],
       "currentPrice": 262000,
-      "lastSaleAt": "2026-03-01T09:09:55+00:00"
+      "lastSaleAt": "2026-03-01T09:09:55+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.317Z",
+      "suggestedRefreshMinutes": 27361
     },
     {
       "name": "Dawnbreaker Sword",
@@ -11360,7 +11702,9 @@
         }
       ],
       "currentPrice": 75049.2,
-      "lastSaleAt": "2026-03-03T02:05:52+00:00"
+      "lastSaleAt": "2026-03-03T02:05:52+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.384Z",
+      "suggestedRefreshMinutes": 8981
     },
     {
       "name": "Runeblade Sword",
@@ -11384,7 +11728,9 @@
         }
       ],
       "currentPrice": 1140555.5,
-      "lastSaleAt": "2026-02-19T15:06:33+00:00"
+      "lastSaleAt": "2026-02-19T15:06:33+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.461Z",
+      "suggestedRefreshMinutes": 15634
     },
     {
       "name": "Duskblade",
@@ -11408,7 +11754,9 @@
         }
       ],
       "currentPrice": 69694.4,
-      "lastSaleAt": "2026-02-24T04:29:24+00:00"
+      "lastSaleAt": "2026-02-24T04:29:24+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.529Z",
+      "suggestedRefreshMinutes": 24797
     },
     {
       "name": "Silent Reaper",
@@ -11428,7 +11776,9 @@
         }
       ],
       "currentPrice": 703555.3,
-      "lastSaleAt": "2026-02-02T13:18:10+00:00"
+      "lastSaleAt": "2026-02-02T13:18:10+00:00",
+      "lastUpdated": "2026-03-04T14:21:12.605Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Dawnbreaker Bow",
@@ -11452,7 +11802,9 @@
         }
       ],
       "currentPrice": 98700,
-      "lastSaleAt": "2026-03-04T00:53:32+00:00"
+      "lastSaleAt": "2026-03-04T00:53:32+00:00",
+      "lastUpdated": "2026-03-04T14:22:11.159Z",
+      "suggestedRefreshMinutes": 6945
     },
     {
       "name": "Silverthorn Bow",
@@ -11476,7 +11828,9 @@
         }
       ],
       "currentPrice": 1291999.9,
-      "lastSaleAt": "2026-02-20T15:13:19+00:00"
+      "lastSaleAt": "2026-02-20T15:13:19+00:00",
+      "lastUpdated": "2026-03-04T14:22:11.235Z",
+      "suggestedRefreshMinutes": 21022
     },
     {
       "name": "Ashenfire Crown",
@@ -11500,7 +11854,9 @@
         }
       ],
       "currentPrice": 97159,
-      "lastSaleAt": "2026-02-27T14:17:23+00:00"
+      "lastSaleAt": "2026-02-27T14:17:23+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.321Z",
+      "suggestedRefreshMinutes": 15864
     },
     {
       "name": "Nightshade Mask",
@@ -11520,7 +11876,9 @@
         }
       ],
       "currentPrice": 697900,
-      "lastSaleAt": "2026-03-01T18:03:10+00:00"
+      "lastSaleAt": "2026-03-01T18:03:10+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.388Z",
+      "suggestedRefreshMinutes": 12806
     },
     {
       "name": "Voidrend Gauntlets",
@@ -11548,7 +11906,9 @@
         }
       ],
       "currentPrice": 123736.1,
-      "lastSaleAt": "2026-02-27T14:21:34+00:00"
+      "lastSaleAt": "2026-02-27T14:21:34+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.468Z",
+      "suggestedRefreshMinutes": 5956
     },
     {
       "name": "Windrider",
@@ -11576,7 +11936,9 @@
         }
       ],
       "currentPrice": 1071949.8,
-      "lastSaleAt": "2026-02-26T22:43:08+00:00"
+      "lastSaleAt": "2026-02-26T22:43:08+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.543Z",
+      "suggestedRefreshMinutes": 14585
     },
     {
       "name": "Echosteel Breastplate",
@@ -11596,7 +11958,9 @@
         }
       ],
       "currentPrice": 1135399.9,
-      "lastSaleAt": "2026-02-26T22:42:33+00:00"
+      "lastSaleAt": "2026-02-26T22:42:33+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.625Z",
+      "suggestedRefreshMinutes": 18622
     },
     {
       "name": "Lunarweave Leggings",
@@ -11616,7 +11980,9 @@
         }
       ],
       "currentPrice": 112287.5,
-      "lastSaleAt": "2026-03-02T14:19:11+00:00"
+      "lastSaleAt": "2026-03-02T14:19:11+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.708Z",
+      "suggestedRefreshMinutes": 7337
     },
     {
       "name": "Nightshade Greaves",
@@ -11648,7 +12014,9 @@
         }
       ],
       "currentPrice": 989900,
-      "lastSaleAt": "2026-02-26T22:43:31+00:00"
+      "lastSaleAt": "2026-02-26T22:43:31+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.798Z",
+      "suggestedRefreshMinutes": 35284
     },
     {
       "name": "Voidstep Boots",
@@ -11672,7 +12040,9 @@
         }
       ],
       "currentPrice": 71328.7,
-      "lastSaleAt": "2026-03-01T17:21:48+00:00"
+      "lastSaleAt": "2026-03-01T17:21:48+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.887Z",
+      "suggestedRefreshMinutes": 6477
     },
     {
       "name": "Nightshade Boots",
@@ -11704,7 +12074,9 @@
         }
       ],
       "currentPrice": 1695000,
-      "lastSaleAt": "2026-02-26T22:44:10+00:00"
+      "lastSaleAt": "2026-02-26T22:44:10+00:00",
+      "lastUpdated": "2026-03-04T14:22:12.961Z",
+      "suggestedRefreshMinutes": 29403
     },
     {
       "name": "Runebound Bulwark",
@@ -11724,7 +12096,9 @@
         }
       ],
       "currentPrice": 30358.8,
-      "lastSaleAt": "2026-03-02T12:05:59+00:00"
+      "lastSaleAt": "2026-03-02T12:05:59+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.034Z",
+      "suggestedRefreshMinutes": 4010
     },
     {
       "name": "Shadewalker Bulwark",
@@ -11748,7 +12122,9 @@
         }
       ],
       "currentPrice": 626499.5,
-      "lastSaleAt": "2026-02-20T23:41:48+00:00"
+      "lastSaleAt": "2026-02-20T23:41:48+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.104Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Rune-etched Reeler",
@@ -11772,7 +12148,9 @@
         }
       ],
       "currentPrice": 2660799.9,
-      "lastSaleAt": "2026-03-01T23:46:44+00:00"
+      "lastSaleAt": "2026-03-01T23:46:44+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.183Z",
+      "suggestedRefreshMinutes": 5286
     },
     {
       "name": "Corestrike",
@@ -11796,7 +12174,9 @@
         }
       ],
       "currentPrice": 2274900,
-      "lastSaleAt": "2026-03-01T10:48:18+00:00"
+      "lastSaleAt": "2026-03-01T10:48:18+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.267Z",
+      "suggestedRefreshMinutes": 9529
     },
     {
       "name": "Silvan Splitter",
@@ -11816,7 +12196,9 @@
         }
       ],
       "currentPrice": 968996.8,
-      "lastSaleAt": "2026-03-04T11:06:39+00:00"
+      "lastSaleAt": "2026-03-04T11:06:39+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.362Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Potion of the Gods",
@@ -11836,7 +12218,9 @@
         }
       ],
       "currentPrice": 178938.7,
-      "lastSaleAt": "2026-03-04T07:16:58+00:00"
+      "lastSaleAt": "2026-03-04T07:16:58+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.445Z",
+      "suggestedRefreshMinutes": 5509
     },
     {
       "name": "Eternal Feast Essence Crystal",
@@ -11856,7 +12240,9 @@
         }
       ],
       "currentPrice": 31832.8,
-      "lastSaleAt": "2026-03-04T11:45:52+00:00"
+      "lastSaleAt": "2026-03-04T11:45:52+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.542Z",
+      "suggestedRefreshMinutes": 4987
     },
     {
       "name": "Starshard",
@@ -11876,7 +12262,9 @@
         }
       ],
       "currentPrice": 189730.8,
-      "lastSaleAt": "2026-03-01T11:12:32+00:00"
+      "lastSaleAt": "2026-03-01T11:12:32+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.620Z",
+      "suggestedRefreshMinutes": 7161
     },
     {
       "name": "Phoenix Requiem",
@@ -11904,7 +12292,9 @@
         }
       ],
       "currentPrice": 2148400,
-      "lastSaleAt": "2026-02-11T12:20:21+00:00"
+      "lastSaleAt": "2026-02-11T12:20:21+00:00",
+      "lastUpdated": "2026-03-04T14:22:13.705Z",
+      "suggestedRefreshMinutes": 29861
     },
     {
       "name": "Ghostwalker",
@@ -11932,7 +12322,9 @@
         }
       ],
       "currentPrice": 79284.6,
-      "lastSaleAt": "2026-02-24T05:16:20+00:00"
+      "lastSaleAt": "2026-02-24T05:16:20+00:00",
+      "lastUpdated": "2026-03-04T14:23:12.162Z",
+      "suggestedRefreshMinutes": 29249
     },
     {
       "name": "Silvermist",
@@ -11964,7 +12356,9 @@
         }
       ],
       "currentPrice": 750000,
-      "lastSaleAt": "2025-09-09T21:23:53+00:00"
+      "lastSaleAt": "2025-09-09T21:23:53+00:00",
+      "lastUpdated": "2026-03-04T14:23:12.229Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Starshower",
@@ -11992,7 +12386,9 @@
         }
       ],
       "currentPrice": 285800,
-      "lastSaleAt": "2026-02-23T19:51:21+00:00"
+      "lastSaleAt": "2026-02-23T19:51:21+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.308Z",
+      "suggestedRefreshMinutes": 8336
     },
     {
       "name": "Bloodmoon Bow",
@@ -12020,7 +12416,9 @@
         }
       ],
       "currentPrice": 2950000,
-      "lastSaleAt": "2026-02-12T22:50:53+00:00"
+      "lastSaleAt": "2026-02-12T22:50:53+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.377Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Verdant Guardian Helm",
@@ -12044,7 +12442,9 @@
         }
       ],
       "currentPrice": 314750,
-      "lastSaleAt": "2026-02-24T10:17:12+00:00"
+      "lastSaleAt": "2026-02-24T10:17:12+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.445Z",
+      "suggestedRefreshMinutes": 10954
     },
     {
       "name": "Glimmersteel Helm",
@@ -12064,7 +12464,9 @@
         }
       ],
       "currentPrice": 1180833.3333333333,
-      "lastSaleAt": "2026-02-27T06:53:13+00:00"
+      "lastSaleAt": "2026-02-27T06:53:13+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.512Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Lunarweave Gloves",
@@ -12092,7 +12494,9 @@
         }
       ],
       "currentPrice": 251734.1,
-      "lastSaleAt": "2026-02-20T16:33:13+00:00"
+      "lastSaleAt": "2026-02-20T16:33:13+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.573Z",
+      "suggestedRefreshMinutes": 12335
     },
     {
       "name": "Bloodforged Gauntlets",
@@ -12112,7 +12516,9 @@
         }
       ],
       "currentPrice": 329379.6,
-      "lastSaleAt": "2026-02-13T23:25:29+00:00"
+      "lastSaleAt": "2026-02-13T23:25:29+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.634Z",
+      "suggestedRefreshMinutes": 16318
     },
     {
       "name": "Grasps of Protection",
@@ -12132,7 +12538,9 @@
         }
       ],
       "currentPrice": 1140000,
-      "lastSaleAt": "2026-02-27T00:35:47+00:00"
+      "lastSaleAt": "2026-02-27T00:35:47+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.701Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Guardian's Valor",
@@ -12152,7 +12560,9 @@
         }
       ],
       "currentPrice": 386999.9,
-      "lastSaleAt": "2026-03-01T18:57:03+00:00"
+      "lastSaleAt": "2026-03-01T18:57:03+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.762Z",
+      "suggestedRefreshMinutes": 12258
     },
     {
       "name": "Verdant Chainmail",
@@ -12180,7 +12590,9 @@
         }
       ],
       "currentPrice": 1231166.6666666667,
-      "lastSaleAt": "2026-03-01T17:59:25+00:00"
+      "lastSaleAt": "2026-03-01T17:59:25+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.860Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Runebound Shinplates",
@@ -12200,7 +12612,9 @@
         }
       ],
       "currentPrice": 205171.7,
-      "lastSaleAt": "2026-02-16T04:59:02+00:00"
+      "lastSaleAt": "2026-02-16T04:59:02+00:00",
+      "lastUpdated": "2026-03-04T14:23:13.928Z",
+      "suggestedRefreshMinutes": 11799
     },
     {
       "name": "Glimmersteel Pathguards",
@@ -12228,7 +12642,9 @@
         }
       ],
       "currentPrice": 1355833.25,
-      "lastSaleAt": "2026-03-03T08:48:01+00:00"
+      "lastSaleAt": "2026-03-03T08:48:01+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.003Z",
+      "suggestedRefreshMinutes": 40158
     },
     {
       "name": "Ashenfire Boots",
@@ -12248,7 +12664,9 @@
         }
       ],
       "currentPrice": 107135.9,
-      "lastSaleAt": "2026-03-02T12:11:10+00:00"
+      "lastSaleAt": "2026-03-02T12:11:10+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.086Z",
+      "suggestedRefreshMinutes": 9813
     },
     {
       "name": "Glimmersteel Boots",
@@ -12276,7 +12694,9 @@
         }
       ],
       "currentPrice": 2303703.3333333335,
-      "lastSaleAt": "2026-02-27T14:11:48+00:00"
+      "lastSaleAt": "2026-02-27T14:11:48+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.161Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Bloodbane Barrier",
@@ -12304,7 +12724,9 @@
         }
       ],
       "currentPrice": 60649.9,
-      "lastSaleAt": "2026-03-03T09:34:56+00:00"
+      "lastSaleAt": "2026-03-03T09:34:56+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.227Z",
+      "suggestedRefreshMinutes": 7560
     },
     {
       "name": "Stormbringer Buckler",
@@ -12328,7 +12750,9 @@
         }
       ],
       "currentPrice": 700000,
-      "lastSaleAt": "2025-12-19T00:23:42+00:00"
+      "lastSaleAt": "2025-12-19T00:23:42+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.286Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Divine Essence Crystal",
@@ -12348,7 +12772,9 @@
         }
       ],
       "currentPrice": 34799.6,
-      "lastSaleAt": "2026-03-03T02:19:37+00:00"
+      "lastSaleAt": "2026-03-03T02:19:37+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.352Z",
+      "suggestedRefreshMinutes": 4896
     },
     {
       "name": "Fallen Star Essence",
@@ -12368,7 +12794,9 @@
         }
       ],
       "currentPrice": 277100,
-      "lastSaleAt": "2026-03-03T11:49:44+00:00"
+      "lastSaleAt": "2026-03-03T11:49:44+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.434Z",
+      "suggestedRefreshMinutes": 7603
     },
     {
       "name": "Grimslayer",
@@ -12388,7 +12816,9 @@
         }
       ],
       "currentPrice": 1007735.3,
-      "lastSaleAt": "2026-03-03T22:37:22+00:00"
+      "lastSaleAt": "2026-03-03T22:37:22+00:00",
+      "lastUpdated": "2026-03-04T14:23:14.505Z",
+      "suggestedRefreshMinutes": 7894
     },
     {
       "name": "Death's Embrace",
@@ -12416,7 +12846,9 @@
         }
       ],
       "currentPrice": 3277500,
-      "lastSaleAt": "2026-02-04T19:07:43+00:00"
+      "lastSaleAt": "2026-02-04T19:07:43+00:00",
+      "lastUpdated": "2026-03-04T14:24:13.167Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Nightfall Dagger",
@@ -12444,7 +12876,9 @@
         }
       ],
       "currentPrice": 1019400,
-      "lastSaleAt": "2026-02-13T20:19:02+00:00"
+      "lastSaleAt": "2026-02-13T20:19:02+00:00",
+      "lastUpdated": "2026-03-04T14:24:13.298Z",
+      "suggestedRefreshMinutes": 25881
     },
     {
       "name": "Fury",
@@ -12472,7 +12906,9 @@
         }
       ],
       "currentPrice": 557498,
-      "lastSaleAt": "2026-02-28T11:34:58+00:00"
+      "lastSaleAt": "2026-02-28T11:34:58+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.382Z",
+      "suggestedRefreshMinutes": 8911
     },
     {
       "name": "Death's Touch",
@@ -12504,7 +12940,9 @@
         }
       ],
       "currentPrice": 4064999.8,
-      "lastSaleAt": "2026-02-23T15:41:39+00:00"
+      "lastSaleAt": "2026-02-23T15:41:39+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.469Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Bloodforged Helm",
@@ -12524,7 +12962,9 @@
         }
       ],
       "currentPrice": 445195,
-      "lastSaleAt": "2026-03-03T18:22:47+00:00"
+      "lastSaleAt": "2026-03-03T18:22:47+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.554Z",
+      "suggestedRefreshMinutes": 17730
     },
     {
       "name": "Soul",
@@ -12544,7 +12984,9 @@
         }
       ],
       "currentPrice": 2383542,
-      "lastSaleAt": "2025-10-20T22:43:34+00:00"
+      "lastSaleAt": "2025-10-20T22:43:34+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.628Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Phoenixclaw Gauntlets",
@@ -12560,7 +13002,9 @@
         }
       ],
       "currentPrice": 520999.9,
-      "lastSaleAt": "2026-02-27T12:52:08+00:00"
+      "lastSaleAt": "2026-02-27T12:52:08+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.716Z",
+      "suggestedRefreshMinutes": 14668
     },
     {
       "name": "Gloves of the Protector",
@@ -12588,7 +13032,9 @@
         }
       ],
       "currentPrice": 1480185,
-      "lastSaleAt": "2026-03-02T19:49:53+00:00"
+      "lastSaleAt": "2026-03-02T19:49:53+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.785Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Dreadbane Armor",
@@ -12620,7 +13066,9 @@
         }
       ],
       "currentPrice": 908901.5,
-      "lastSaleAt": "2026-02-28T22:04:34+00:00"
+      "lastSaleAt": "2026-02-28T22:04:34+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.865Z",
+      "suggestedRefreshMinutes": 12521
     },
     {
       "name": "Ashenplate Cuirass",
@@ -12644,7 +13092,9 @@
         }
       ],
       "currentPrice": 2037000,
-      "lastSaleAt": "2026-02-11T12:21:14+00:00"
+      "lastSaleAt": "2026-02-11T12:21:14+00:00",
+      "lastUpdated": "2026-03-04T14:24:14.934Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Phoenix Greaves",
@@ -12676,7 +13126,9 @@
         }
       ],
       "currentPrice": 1306696.9,
-      "lastSaleAt": "2026-02-23T03:05:15+00:00"
+      "lastSaleAt": "2026-02-23T03:05:15+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.005Z",
+      "suggestedRefreshMinutes": 39400
     },
     {
       "name": "Soulshield Legplates",
@@ -12708,7 +13160,9 @@
         }
       ],
       "currentPrice": 1900000,
-      "lastSaleAt": "2026-01-13T05:49:25+00:00"
+      "lastSaleAt": "2026-01-13T05:49:25+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.085Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Verdant Boots",
@@ -12728,7 +13182,9 @@
         }
       ],
       "currentPrice": 228029.9,
-      "lastSaleAt": "2026-02-22T00:05:04+00:00"
+      "lastSaleAt": "2026-02-22T00:05:04+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.151Z",
+      "suggestedRefreshMinutes": 6207
     },
     {
       "name": "Soulshield Treads",
@@ -12756,7 +13212,9 @@
         }
       ],
       "currentPrice": 2234710,
-      "lastSaleAt": "2026-02-21T04:59:38+00:00"
+      "lastSaleAt": "2026-02-21T04:59:38+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.216Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Phoenixguard Shield",
@@ -12776,7 +13234,9 @@
         }
       ],
       "currentPrice": 187901.4,
-      "lastSaleAt": "2026-02-25T22:33:51+00:00"
+      "lastSaleAt": "2026-02-25T22:33:51+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.272Z",
+      "suggestedRefreshMinutes": 7257
     },
     {
       "name": "Ironbark Protector",
@@ -12804,7 +13264,9 @@
         }
       ],
       "currentPrice": 920799.9,
-      "lastSaleAt": "2026-03-01T23:22:07+00:00"
+      "lastSaleAt": "2026-03-01T23:22:07+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.343Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Arboreal Ender",
@@ -12824,7 +13286,9 @@
         }
       ],
       "currentPrice": 4527400,
-      "lastSaleAt": "2026-02-13T17:57:02+00:00"
+      "lastSaleAt": "2026-02-13T17:57:02+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.413Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Guardian's Soul",
@@ -12844,7 +13308,9 @@
         }
       ],
       "currentPrice": 119623.7,
-      "lastSaleAt": "2026-03-03T10:58:04+00:00"
+      "lastSaleAt": "2026-03-03T10:58:04+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.484Z",
+      "suggestedRefreshMinutes": 8172
     },
     {
       "name": "Silverthorn Sword",
@@ -12876,7 +13342,9 @@
         }
       ],
       "currentPrice": 4445000,
-      "lastSaleAt": "2025-10-28T01:15:11+00:00"
+      "lastSaleAt": "2025-10-28T01:15:11+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.555Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Starglitter",
@@ -12900,7 +13368,9 @@
         }
       ],
       "currentPrice": 392799.9,
-      "lastSaleAt": "2026-02-21T12:49:01+00:00"
+      "lastSaleAt": "2026-02-21T12:49:01+00:00",
+      "lastUpdated": "2026-03-04T14:24:15.622Z",
+      "suggestedRefreshMinutes": 22649
     },
     {
       "name": "Widow's Kiss",
@@ -12924,7 +13394,9 @@
         }
       ],
       "currentPrice": 2543785.4444444445,
-      "lastSaleAt": "2026-02-11T07:54:01+00:00"
+      "lastSaleAt": "2026-02-11T07:54:01+00:00",
+      "lastUpdated": "2026-03-04T14:25:14.232Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Grimwood",
@@ -12952,7 +13424,9 @@
         }
       ],
       "currentPrice": 1243896.6,
-      "lastSaleAt": "2026-03-02T13:42:21+00:00"
+      "lastSaleAt": "2026-03-02T13:42:21+00:00",
+      "lastUpdated": "2026-03-04T14:25:14.322Z",
+      "suggestedRefreshMinutes": 43154
     },
     {
       "name": "Soulstring",
@@ -12976,7 +13450,9 @@
         }
       ],
       "currentPrice": 1500000,
-      "lastSaleAt": "2025-08-08T13:53:58+00:00"
+      "lastSaleAt": "2025-08-08T13:53:58+00:00",
+      "lastUpdated": "2026-03-04T14:25:15.426Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Phoenix Crown",
@@ -12996,7 +13472,9 @@
         }
       ],
       "currentPrice": 1568274.2,
-      "lastSaleAt": "2026-03-03T12:31:31+00:00"
+      "lastSaleAt": "2026-03-03T12:31:31+00:00",
+      "lastUpdated": "2026-03-04T14:25:15.511Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Whispersong",
@@ -13016,7 +13494,9 @@
         }
       ],
       "currentPrice": 3133333.3333333335,
-      "lastSaleAt": "2025-11-11T02:10:42+00:00"
+      "lastSaleAt": "2025-11-11T02:10:42+00:00",
+      "lastUpdated": "2026-03-04T14:25:15.612Z",
+      "suggestedRefreshMinutes": 25842
     },
     {
       "name": "Nightshade Grips",
@@ -13044,7 +13524,9 @@
         }
       ],
       "currentPrice": 1165288.8,
-      "lastSaleAt": "2026-01-30T09:12:36+00:00"
+      "lastSaleAt": "2026-01-30T09:12:36+00:00",
+      "lastUpdated": "2026-03-04T14:25:15.702Z",
+      "suggestedRefreshMinutes": 21111
     },
     {
       "name": "Sacred Grasp",
@@ -13068,7 +13550,9 @@
         }
       ],
       "currentPrice": 3700000,
-      "lastSaleAt": "2025-12-29T12:03:24+00:00"
+      "lastSaleAt": "2025-12-29T12:03:24+00:00",
+      "lastUpdated": "2026-03-04T14:25:15.794Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Soulguard Armor",
@@ -13104,7 +13588,9 @@
         }
       ],
       "currentPrice": 3000000,
-      "lastSaleAt": "2025-06-29T18:14:15+00:00"
+      "lastSaleAt": "2025-06-29T18:14:15+00:00",
+      "lastUpdated": "2026-03-04T14:25:15.895Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Whisperstep Greaves",
@@ -13174,7 +13660,9 @@
         }
       ],
       "currentPrice": 2000000,
-      "lastSaleAt": "2026-01-20T07:39:16+00:00"
+      "lastSaleAt": "2026-01-20T07:39:16+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.145Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Kraken's Grasp",
@@ -13198,7 +13686,9 @@
         }
       ],
       "currentPrice": 6333333.333333333,
-      "lastSaleAt": "2026-01-27T09:19:50+00:00"
+      "lastSaleAt": "2026-01-27T09:19:50+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.236Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Phoenix Ashes",
@@ -13218,7 +13708,9 @@
         }
       ],
       "currentPrice": 74963.7,
-      "lastSaleAt": "2026-03-04T05:40:37+00:00"
+      "lastSaleAt": "2026-03-04T05:40:37+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.325Z",
+      "suggestedRefreshMinutes": 1701
     },
     {
       "name": "Omnipotent Might Essence",
@@ -13238,7 +13730,9 @@
         }
       ],
       "currentPrice": 32000,
-      "lastSaleAt": "2026-02-28T20:59:54+00:00"
+      "lastSaleAt": "2026-02-28T20:59:54+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.412Z",
+      "suggestedRefreshMinutes": 41324
     },
     {
       "name": "Emberfang",
@@ -13266,7 +13760,9 @@
         }
       ],
       "currentPrice": 158088.6,
-      "lastSaleAt": "2026-02-13T23:56:46+00:00"
+      "lastSaleAt": "2026-02-13T23:56:46+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.503Z",
+      "suggestedRefreshMinutes": 17626
     },
     {
       "name": "Bloodthirst",
@@ -13309,7 +13805,9 @@
         }
       ],
       "currentPrice": 52349.9,
-      "lastSaleAt": "2026-02-02T13:13:34+00:00"
+      "lastSaleAt": "2026-02-02T13:13:34+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.667Z",
+      "suggestedRefreshMinutes": 25174
     },
     {
       "name": "Fatebreaker",
@@ -13337,7 +13835,9 @@
         }
       ],
       "currentPrice": 4299999,
-      "lastSaleAt": "2025-11-18T12:35:28+00:00"
+      "lastSaleAt": "2025-11-18T12:35:28+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.735Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Ashenwind",
@@ -13361,7 +13861,9 @@
         }
       ],
       "currentPrice": 187708.9,
-      "lastSaleAt": "2026-02-20T20:34:24+00:00"
+      "lastSaleAt": "2026-02-20T20:34:24+00:00",
+      "lastUpdated": "2026-03-04T14:25:16.822Z",
+      "suggestedRefreshMinutes": 10402
     },
     {
       "name": "Archdemon",
@@ -13404,7 +13906,9 @@
         }
       ],
       "currentPrice": 264937,
-      "lastSaleAt": "2026-03-01T19:02:23+00:00"
+      "lastSaleAt": "2026-03-01T19:02:23+00:00",
+      "lastUpdated": "2026-03-04T14:26:15.137Z",
+      "suggestedRefreshMinutes": 17996
     },
     {
       "name": "Balthazar's Head",
@@ -13451,7 +13955,9 @@
         }
       ],
       "currentPrice": 5500000,
-      "lastSaleAt": "2025-12-13T22:17:54+00:00"
+      "lastSaleAt": "2025-12-13T22:17:54+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.300Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Bloodforged Harness",
@@ -13467,7 +13973,9 @@
         }
       ],
       "currentPrice": 434899.4,
-      "lastSaleAt": "2026-01-27T10:26:52+00:00"
+      "lastSaleAt": "2026-01-27T10:26:52+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.384Z",
+      "suggestedRefreshMinutes": 19447
     },
     {
       "name": "Windrider Harness",
@@ -13522,7 +14030,9 @@
         }
       ],
       "currentPrice": 154764.7,
-      "lastSaleAt": "2026-03-03T09:36:27+00:00"
+      "lastSaleAt": "2026-03-03T09:36:27+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.537Z",
+      "suggestedRefreshMinutes": 10478
     },
     {
       "name": "Twilight Veilguards",
@@ -13573,7 +14083,9 @@
         }
       ],
       "currentPrice": 184287.9,
-      "lastSaleAt": "2026-01-22T09:03:34+00:00"
+      "lastSaleAt": "2026-01-22T09:03:34+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.668Z",
+      "suggestedRefreshMinutes": 34871
     },
     {
       "name": "Twilight Veilwalkers",
@@ -13597,7 +14109,9 @@
         }
       ],
       "currentPrice": 3200000,
-      "lastSaleAt": "2025-08-18T23:01:18+00:00"
+      "lastSaleAt": "2025-08-18T23:01:18+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.732Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Verdant Sentinel",
@@ -13617,7 +14131,9 @@
         }
       ],
       "currentPrice": 80218.6,
-      "lastSaleAt": "2026-01-10T09:35:46+00:00"
+      "lastSaleAt": "2026-01-10T09:35:46+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.803Z",
+      "suggestedRefreshMinutes": 20561
     },
     {
       "name": "Deathgate",
@@ -13637,7 +14153,9 @@
         }
       ],
       "currentPrice": 4200000,
-      "lastSaleAt": "2025-09-30T07:25:59+00:00"
+      "lastSaleAt": "2025-09-30T07:25:59+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.872Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Boulder's Bane",
@@ -13661,7 +14179,9 @@
         }
       ],
       "currentPrice": 6275000,
-      "lastSaleAt": "2026-01-29T20:59:08+00:00"
+      "lastSaleAt": "2026-01-29T20:59:08+00:00",
+      "lastUpdated": "2026-03-04T14:26:16.953Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Sun's Light",
@@ -13681,7 +14201,9 @@
         }
       ],
       "currentPrice": 144170,
-      "lastSaleAt": "2026-03-04T07:07:05+00:00"
+      "lastSaleAt": "2026-03-04T07:07:05+00:00",
+      "lastUpdated": "2026-03-04T14:26:17.038Z",
+      "suggestedRefreshMinutes": 7946
     },
     {
       "name": "Essence of a Kraken",
@@ -13701,7 +14223,9 @@
         }
       ],
       "currentPrice": 44899.8,
-      "lastSaleAt": "2026-03-02T11:54:54+00:00"
+      "lastSaleAt": "2026-03-02T11:54:54+00:00",
+      "lastUpdated": "2026-03-04T14:26:17.113Z",
+      "suggestedRefreshMinutes": 5820
     },
     {
       "name": "Cosmic Barrier",
@@ -13721,7 +14245,9 @@
         }
       ],
       "currentPrice": 34506.9,
-      "lastSaleAt": "2026-03-02T22:29:31+00:00"
+      "lastSaleAt": "2026-03-02T22:29:31+00:00",
+      "lastUpdated": "2026-03-04T14:26:17.198Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Flash Velocity Essence",
@@ -13741,7 +14267,9 @@
         }
       ],
       "currentPrice": 39189.6,
-      "lastSaleAt": "2026-03-02T17:39:20+00:00"
+      "lastSaleAt": "2026-03-02T17:39:20+00:00",
+      "lastUpdated": "2026-03-04T14:26:17.275Z",
+      "suggestedRefreshMinutes": 22145
     },
     {
       "name": "Tempest's Fury",
@@ -13761,7 +14289,9 @@
         }
       ],
       "currentPrice": 486060.1,
-      "lastSaleAt": "2026-02-28T14:22:29+00:00"
+      "lastSaleAt": "2026-02-28T14:22:29+00:00",
+      "lastUpdated": "2026-03-04T14:26:17.354Z",
+      "suggestedRefreshMinutes": 15806
     },
     {
       "name": "Everflame",
@@ -13808,7 +14338,9 @@
         }
       ],
       "currentPrice": 162149.9,
-      "lastSaleAt": "2026-03-04T10:34:59+00:00"
+      "lastSaleAt": "2026-03-04T10:34:59+00:00",
+      "lastUpdated": "2026-03-04T14:26:17.494Z",
+      "suggestedRefreshMinutes": 8288
     },
     {
       "name": "Dreadspike",
@@ -13932,7 +14464,9 @@
         }
       ],
       "currentPrice": 480111,
-      "lastSaleAt": "2026-02-27T04:49:29+00:00"
+      "lastSaleAt": "2026-02-27T04:49:29+00:00",
+      "lastUpdated": "2026-03-04T14:27:17.354Z",
+      "suggestedRefreshMinutes": 12315
     },
     {
       "name": "Twilight",
@@ -13975,7 +14509,9 @@
         }
       ],
       "currentPrice": 357500,
-      "lastSaleAt": "2026-02-10T14:52:51+00:00"
+      "lastSaleAt": "2026-02-10T14:52:51+00:00",
+      "lastUpdated": "2026-03-04T14:27:17.495Z",
+      "suggestedRefreshMinutes": 23449
     },
     {
       "name": "Stormbringer Greaves",
@@ -14022,7 +14558,9 @@
         }
       ],
       "currentPrice": 207291,
-      "lastSaleAt": "2026-03-04T08:26:33+00:00"
+      "lastSaleAt": "2026-03-04T08:26:33+00:00",
+      "lastUpdated": "2026-03-04T14:27:17.658Z",
+      "suggestedRefreshMinutes": 10894
     },
     {
       "name": "Stormbringer Striders",
@@ -14050,7 +14588,9 @@
         }
       ],
       "currentPrice": 9000000,
-      "lastSaleAt": "2025-06-24T11:20:56+00:00"
+      "lastSaleAt": "2025-06-24T11:20:56+00:00",
+      "lastUpdated": "2026-03-04T14:27:17.809Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Twilight Sanctum",
@@ -14074,7 +14614,9 @@
         }
       ],
       "currentPrice": 108280.9,
-      "lastSaleAt": "2026-03-04T08:30:20+00:00"
+      "lastSaleAt": "2026-03-04T08:30:20+00:00",
+      "lastUpdated": "2026-03-04T14:27:17.900Z",
+      "suggestedRefreshMinutes": 10502
     },
     {
       "name": "Brute",
@@ -14098,7 +14640,9 @@
         }
       ],
       "currentPrice": 3250000,
-      "lastSaleAt": "2025-10-11T17:32:43+00:00"
+      "lastSaleAt": "2025-10-11T17:32:43+00:00",
+      "lastUpdated": "2026-03-04T14:27:17.979Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Neptune's Soul",
@@ -14118,7 +14662,9 @@
         }
       ],
       "currentPrice": 66000,
-      "lastSaleAt": "2026-03-02T06:31:16+00:00"
+      "lastSaleAt": "2026-03-02T06:31:16+00:00",
+      "lastUpdated": "2026-03-04T14:27:18.064Z",
+      "suggestedRefreshMinutes": 547
     },
     {
       "name": "Magma Vein Infusion",
@@ -14138,7 +14684,9 @@
         }
       ],
       "currentPrice": 48666.666666666664,
-      "lastSaleAt": "2026-03-01T23:06:27+00:00"
+      "lastSaleAt": "2026-03-01T23:06:27+00:00",
+      "lastUpdated": "2026-03-04T14:27:18.141Z",
+      "suggestedRefreshMinutes": 21585
     },
     {
       "name": "Cosmic Finesse Essence",
@@ -14158,7 +14706,9 @@
         }
       ],
       "currentPrice": 32438.777777777777,
-      "lastSaleAt": "2026-02-24T06:01:19+00:00"
+      "lastSaleAt": "2026-02-24T06:01:19+00:00",
+      "lastUpdated": "2026-03-04T14:27:18.217Z",
+      "suggestedRefreshMinutes": 43200
     },
     {
       "name": "Excalibur",
@@ -14297,7 +14847,9 @@
         }
       ],
       "currentPrice": 1388399.9,
-      "lastSaleAt": "2026-02-22T08:29:48+00:00"
+      "lastSaleAt": "2026-02-22T08:29:48+00:00",
+      "lastUpdated": "2026-03-04T14:27:18.645Z",
+      "suggestedRefreshMinutes": 19336
     },
     {
       "name": "Corruption",
@@ -14344,7 +14896,9 @@
         }
       ],
       "currentPrice": 563399.8,
-      "lastSaleAt": "2026-03-01T23:22:38+00:00"
+      "lastSaleAt": "2026-03-01T23:22:38+00:00",
+      "lastUpdated": "2026-03-04T14:28:17.180Z",
+      "suggestedRefreshMinutes": 7450
     },
     {
       "name": "Dirella's Protection",
@@ -14395,7 +14949,9 @@
         }
       ],
       "currentPrice": 311912.9,
-      "lastSaleAt": "2026-02-28T22:05:36+00:00"
+      "lastSaleAt": "2026-02-28T22:05:36+00:00",
+      "lastUpdated": "2026-03-04T14:28:18.321Z",
+      "suggestedRefreshMinutes": 4738
     },
     {
       "name": "Phoenix Boots",
@@ -14415,7 +14971,9 @@
         }
       ],
       "currentPrice": 940099.8,
-      "lastSaleAt": "2026-02-23T03:03:43+00:00"
+      "lastSaleAt": "2026-02-23T03:03:43+00:00",
+      "lastUpdated": "2026-03-04T14:28:18.389Z",
+      "suggestedRefreshMinutes": 22129
     },
     {
       "name": "Fatebreaker Footguards",
@@ -14474,7 +15032,9 @@
         }
       ],
       "currentPrice": 351215.2,
-      "lastSaleAt": "2026-02-22T08:28:37+00:00"
+      "lastSaleAt": "2026-02-22T08:28:37+00:00",
+      "lastUpdated": "2026-03-04T14:28:18.546Z",
+      "suggestedRefreshMinutes": 9506
     },
     {
       "name": "Colossus",
@@ -14559,7 +15119,9 @@
         }
       ],
       "currentPrice": 125000,
-      "lastSaleAt": "2026-03-04T06:22:42+00:00"
+      "lastSaleAt": "2026-03-04T06:22:42+00:00",
+      "lastUpdated": "2026-03-04T14:28:18.820Z",
+      "suggestedRefreshMinutes": 927
     },
     {
       "name": "Mjolnir's Essence Crystal",
@@ -14579,7 +15141,9 @@
         }
       ],
       "currentPrice": 45000,
-      "lastSaleAt": "2025-12-10T03:16:52+00:00"
+      "lastSaleAt": "2025-12-10T03:16:52+00:00",
+      "lastUpdated": "2026-03-04T14:28:18.883Z",
+      "suggestedRefreshMinutes": 1440
     },
     {
       "name": "Dragon's Essence",
@@ -14599,7 +15163,9 @@
         }
       ],
       "currentPrice": 80000,
-      "lastSaleAt": "2025-12-15T15:58:11+00:00"
+      "lastSaleAt": "2025-12-15T15:58:11+00:00",
+      "lastUpdated": "2026-03-04T14:28:18.962Z",
+      "suggestedRefreshMinutes": 4801
     },
     {
       "name": "Titanwood Crystal",
@@ -14623,7 +15189,9 @@
         }
       ],
       "currentPrice": 69898.8,
-      "lastSaleAt": "2026-03-01T17:50:20+00:00"
+      "lastSaleAt": "2026-03-01T17:50:20+00:00",
+      "lastUpdated": "2026-03-04T14:28:19.035Z",
+      "suggestedRefreshMinutes": 22895
     },
     {
       "name": "Primordial Timber Crystal",
@@ -14643,7 +15211,9 @@
         }
       ],
       "currentPrice": 67299.2,
-      "lastSaleAt": "2026-03-02T09:38:23+00:00"
+      "lastSaleAt": "2026-03-02T09:38:23+00:00",
+      "lastUpdated": "2026-03-04T14:28:19.104Z",
+      "suggestedRefreshMinutes": 2024
     },
     {
       "name": "Aqua Reaper",
@@ -14671,14 +15241,14 @@
       "timeSeconds": 8.3,
       "baseCost": 0,
       "vendorValue": 1,
-      "marketPrice": 5.1
+      "marketPrice": 5
     },
     {
       "name": "Stingray",
       "timeSeconds": 28.6,
       "baseCost": 16,
       "vendorValue": 26,
-      "marketPrice": 36.1
+      "marketPrice": 36.3
     },
     {
       "name": "Cooked Stingray",
@@ -14718,14 +15288,14 @@
       "timeSeconds": 32.1,
       "baseCost": 25,
       "vendorValue": 41,
-      "marketPrice": 54
+      "marketPrice": 54.3
     },
     {
       "name": "Cooked Great White Shark",
       "timeSeconds": 45.8,
       "baseCost": 0,
       "vendorValue": 92,
-      "marketPrice": 104.6,
+      "marketPrice": 104.7,
       "inputs": [
         {
           "resourceName": "Great White Shark",
@@ -14765,7 +15335,7 @@
       "timeSeconds": 37.9,
       "baseCost": 0,
       "vendorValue": 20,
-      "marketPrice": 23.7
+      "marketPrice": 23.4
     },
     {
       "name": "Mystic Bar",
