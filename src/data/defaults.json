@@ -15507,5 +15507,5353 @@
     "item": 3,
     "bonus": 10
   },
-  "marketTaxRate": 0.12
+  "marketTaxRate": 0.12,
+  "allItems": [
+    {
+      "hashedId": "leApVoENk101L7nRPy2D",
+      "name": "100 Tokens (Untradable)",
+      "type": "TOKEN",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "yav4OK1wNEOyLZP7rzJb",
+      "name": "30 Days Membership Pack",
+      "type": "MEMBERSHIP",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "zvjoJW96Y8GzN3RaAylw",
+      "name": "30 Days Membership Pack (Untradable)",
+      "type": "MEMBERSHIP",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "98bO5w1QP88gQ3xkREVJ",
+      "name": "50 Tokens (Untradable)",
+      "type": "TOKEN",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "doyA279pNzVxNKRDEWm8",
+      "name": "7 Days Membership Pack (Untradable)",
+      "type": "MEMBERSHIP",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "6leApVoENkJRQ7nRPy2D",
+      "name": "Acrobatic's Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "jGXBy7a4Lbn4L0Pw6Vdg",
+      "name": "Acrobatic's Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "EWGwnXPlY1v4LJqekZ2R",
+      "name": "Aegis of the Seraph",
+      "type": "SHIELD",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "7eA59WrBQRJpQzb62qKv",
+      "name": "Aerion Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Rv5g4z1dQnqlLqy32jpG",
+      "name": "Amulet Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "PjVDJez3LD1OQKWO08Ga",
+      "name": "Ancient Armoire",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "6leApVoENkopN7nRPy2D",
+      "name": "Ancient Armoire (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "98bO5w1QP8ogQ3xkREVJ",
+      "name": "Ancient Knife",
+      "type": "COLLECTABLE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "rx463VdQgvWaL5w1zWKP",
+      "name": "Ancient Parchment",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "0kK49j1VN924Yq6B2doa",
+      "name": "Ancient Parchment (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ZjlPA8v9NM4XQEyMe2Oa",
+      "name": "Anglers Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "brz9RZnWN76DQKAp0Mdl",
+      "name": "Aqua Reaper",
+      "type": "FISHING_ROD",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "oaJydnOmQW1pYbgRe5ME",
+      "name": "Aquarion Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZqEegBydNwo5NkA59J61",
+      "name": "Aquastar Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "JZdg5V3PQo60LEyWq0zl",
+      "name": "Arboreal Ender",
+      "type": "FELLING_AXE",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "27gw0k38L4KzYWevJxyK",
+      "name": "Arboreal Labyrinth Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Ro31P7kZL68BNveGxXOy",
+      "name": "Arcane Bait",
+      "type": "BAIT",
+      "vendorPrice": 15
+    },
+    {
+      "hashedId": "y7Do6jgkY0voQ8BAdKX0",
+      "name": "Arcane Cache",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oaJydnOmQW2MLbgRe5ME",
+      "name": "Arcane Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "j98bO5w1QPPgQ3xkREVJ",
+      "name": "Arcane Chest of Eggs",
+      "type": "CHEST",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "mK5jqPopYGBPNrOzDRGV",
+      "name": "Arcane Strongbox",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN7B0QKAp0Mdl",
+      "name": "Arcane Strongbox (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "0kK49j1VN9zPYq6B2doa",
+      "name": "Archdemon",
+      "type": "BOW",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "JVM29l7kQZPeY80q6WDG",
+      "name": "Archer's Embrace",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BPjze3x2Q335QR85vgZV",
+      "name": "Archer's Embrace (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "lzPeorXNVDD5LaW0kv53",
+      "name": "Ascendent Cache",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "AB1E9poQqZZrNnakeJj5",
+      "name": "Ascendent Cache (Untradable)",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "XyeZRGx9Yj5zNB80gWlP",
+      "name": "Ashenfire Boots",
+      "type": "BOOTS",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "j98bO5w1QPD9Q3xkREVJ",
+      "name": "Ashenfire Crown",
+      "type": "HELMET",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "3Zbym56qLxkJYBRp7Eek",
+      "name": "Ashenfire Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "ZjlPA8v9NM0ZQEyMe2Oa",
+      "name": "Ashenfire Ward",
+      "type": "SHIELD",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "27gw0k38L4v2NWevJxyK",
+      "name": "Ashenplate Cuirass",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "oZwey82VNAPdQD0dXM3g",
+      "name": "Ashenwind",
+      "type": "BOW",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "WGwnXPlY1BdzLJqekZ2R",
+      "name": "Ashspore",
+      "type": "COLLECTABLE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "3ZvrGV8RQpobL2wgA5jD",
+      "name": "Astral Casket",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQqorYnakeJj5",
+      "name": "Astral Casket (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oZwey82VNAA6ND0dXM3g",
+      "name": "Attack Power Potion",
+      "type": "POTION",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "JVM29l7kQZ4mY80q6WDG",
+      "name": "Attack Power Potion (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "ElzPeorXNVM8QaW0kv53",
+      "name": "Attack Power Potion Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "AB1E9poQqZvnNnakeJj5",
+      "name": "Bag of Scrolls",
+      "type": "COLLECTABLE",
+      "vendorPrice": 20
+    },
+    {
+      "hashedId": "Ro31P7kZL6rvLveGxXOy",
+      "name": "Balthazar's Head",
+      "type": "HELMET",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "Z6aDoyRnLyPMYpV5AGXm",
+      "name": "Banyan Bow",
+      "type": "BOW",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "EWGwnXPlY15AYJqekZ2R",
+      "name": "Bastion Elixir Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "jGXBy7a4LbqMY0Pw6Vdg",
+      "name": "Bastion Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "Ro31P7kZL6gAQveGxXOy",
+      "name": "Battle Potion",
+      "type": "POTION",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "JZdg5V3PQo9yYEyWq0zl",
+      "name": "Battle Potion (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "v5g4z1dQnkZJNqy32jpG",
+      "name": "Bestial Record",
+      "type": "COLLECTABLE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "y7Do6jgkY05zL8BAdKX0",
+      "name": "Black Bear Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "Rv5g4z1dQnOJNqy32jpG",
+      "name": "Blade Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Ro31P7kZL63mQveGxXOy",
+      "name": "Blade Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XjEaOeBkLa7MNlGwxVPq",
+      "name": "Bladeburst Elixir",
+      "type": "POTION",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "93R0qXalLlBxNAbn8DBg",
+      "name": "Bladeburst Elixir (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "lrx463VdQg6xL5w1zWKP",
+      "name": "Bladeburst Elixir Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "27gw0k38L4d2LWevJxyK",
+      "name": "Bloodbane Barrier",
+      "type": "SHIELD",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "PjVDJez3LDjlNKWO08Ga",
+      "name": "Bloodforged Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "XyeZRGx9Yjz8YB80gWlP",
+      "name": "Bloodforged Harness",
+      "type": "CHESTPLATE",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "JVM29l7kQZmbL80q6WDG",
+      "name": "Bloodforged Legguards",
+      "type": "GREAVES",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "O2xMjGdBN5W3L9P1nyrv",
+      "name": "Bloodmoon Manor Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Z6aDoyRnLyrkQpV5AGXm",
+      "name": "Boar Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "brz9RZnWN72eQKAp0Mdl",
+      "name": "Book of the Damned",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "j98bO5w1QPX1Q3xkREVJ",
+      "name": "Boots Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "27gw0k38L4RwNWevJxyK",
+      "name": "Boulder Breaker",
+      "type": "PICKAXE",
+      "vendorPrice": 25
+    },
+    {
+      "hashedId": "3yE1A84kYO9BQl6XeVKp",
+      "name": "Boulder's Bane",
+      "type": "PICKAXE",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "93R0qXalLlgrYAbn8DBg",
+      "name": "Bowmaster's Cache",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XjEaOeBkLaRKQlGwxVPq",
+      "name": "Bowmaster's Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3Zbym56qLx0WLBRp7Eek",
+      "name": "Branchbane Hatchet",
+      "type": "FELLING_AXE",
+      "vendorPrice": 75
+    },
+    {
+      "hashedId": "lrx463VdQgvOL5w1zWKP",
+      "name": "Buffalo Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "BPjze3x2Q3ygYR85vgZV",
+      "name": "Bulwark Brew",
+      "type": "POTION",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "O2xMjGdBN5z2Y9P1nyrv",
+      "name": "Bulwark Brew Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "P1vlVrzjLrkbQao8mGKM",
+      "name": "Bunny Ears",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "1rZXlwg5YvPaQk9joDmG",
+      "name": "Cacao Beans",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "7eA59WrBQR7rNzb62qKv",
+      "name": "Cacao Beans (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "kK49j1VN9WVnLq6B2doa",
+      "name": "Carved Pumpkin",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "RVrBKlPdNdkgQWG8xJe9",
+      "name": "Carved Pumpkin (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "XyeZRGx9YjA8NB80gWlP",
+      "name": "Celestial Aegis",
+      "type": "SHIELD",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "doyA279pNzOAYKRDEWm8",
+      "name": "Celestial Ascenders",
+      "type": "BOOTS",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "zvjoJW96Y8aoL3RaAylw",
+      "name": "Celestial Bow Sanctum",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "RVrBKlPdNdamYWG8xJe9",
+      "name": "Celestial Bow Sanctum (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Zbym56qLxVvENBRp7Eek",
+      "name": "Celestial Cloak",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "PjVDJez3LDoVYKWO08Ga",
+      "name": "Celestial Crown",
+      "type": "HELMET",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "O2xMjGdBN5ZRY9P1nyrv",
+      "name": "Celestial Edge",
+      "type": "SWORD",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "3yE1A84kYO86Ll6XeVKp",
+      "name": "Celestial Enclave Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "j98bO5w1QP1nN3xkREVJ",
+      "name": "Celestial Radiance",
+      "type": "CHESTPLATE",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "7Do6jgkY05gKL8BAdKX0",
+      "name": "Celestial Scroll",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "BPjze3x2Q35rYR85vgZV",
+      "name": "Celestial Scroll (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "y7Do6jgkY0BDQ8BAdKX0",
+      "name": "Celestial Striders",
+      "type": "GREAVES",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "oaJydnOmQWXvNbgRe5ME",
+      "name": "Celestial Touch Gloves",
+      "type": "GAUNTLETS",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "7eA59WrBQRg6Nzb62qKv",
+      "name": "Celestial Treasury",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "P1vlVrzjLr9AYao8mGKM",
+      "name": "Celestial Treasury (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "3ZvrGV8RQpEVN2wgA5jD",
+      "name": "Cheap Bait",
+      "type": "BAIT",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "BRn3x72JQ2OrNzOMok41",
+      "name": "Cheap Crystal",
+      "type": "EMPTY_CRYSTAL",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "3Zbym56qLx61NBRp7Eek",
+      "name": "Cheap Vial",
+      "type": "VIAL",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Z6aDoyRnLy6kQpV5AGXm",
+      "name": "Chefs Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "EWGwnXPlY1mzYJqekZ2R",
+      "name": "Chest of Upgrade Stones",
+      "type": "CHEST",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "B2WEpv54Nmv7Yj1xJrXk",
+      "name": "Chestplate Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "q9pwa0kxLBB8LgVj136l",
+      "name": "Chocolate Egg",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ElzPeorXNVy3QaW0kv53",
+      "name": "Chocolate Egg (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "zvjoJW96Y8xKY3RaAylw",
+      "name": "Chromite Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "ElzPeorXNVjpNaW0kv53",
+      "name": "Chromite Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "doyA279pNzd1LKRDEWm8",
+      "name": "Chromite Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "lrx463VdQgy4Y5w1zWKP",
+      "name": "Chromite Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "Z6aDoyRnLyazLpV5AGXm",
+      "name": "City Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Ro31P7kZL668LveGxXOy",
+      "name": "City Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "njoPWKDkLXy3Q06ZOX79",
+      "name": "Cocoa Butter",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "27gw0k38L4nENWevJxyK",
+      "name": "Cocoa Butter (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "dgBq1boWYewwQkJ3rXaD",
+      "name": "Cooked Cod (Untradable)",
+      "type": "FOOD",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "XjEaOeBkLaJMQlGwxVPq",
+      "name": "Cooked Crab",
+      "type": "FOOD",
+      "vendorPrice": 32
+    },
+    {
+      "hashedId": "j98bO5w1QP8jQ3xkREVJ",
+      "name": "Cooked Lantern Fish",
+      "type": "FOOD",
+      "vendorPrice": 65
+    },
+    {
+      "hashedId": "yav4OK1wNE05QZP7rzJb",
+      "name": "Cooked Salmon",
+      "type": "FOOD",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "zvjoJW96Y8W5N3RaAylw",
+      "name": "Cooked Sardines",
+      "type": "FOOD",
+      "vendorPrice": 20
+    },
+    {
+      "hashedId": "ZqEegBydNw57LkA59J61",
+      "name": "Cooked Tuna",
+      "type": "FOOD",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "brz9RZnWN7WDNKAp0Mdl",
+      "name": "Copper Bar",
+      "type": "METAL_BAR",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "JZdg5V3PQok0QEyWq0zl",
+      "name": "Copper Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "Z6aDoyRnLyPkYpV5AGXm",
+      "name": "Copper Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "XjEaOeBkLaVJQlGwxVPq",
+      "name": "Copper Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "ZjlPA8v9NMmnNEyMe2Oa",
+      "name": "Copper Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "93R0qXalLljjNAbn8DBg",
+      "name": "Cosmic Barrier",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "JVM29l7kQZreQ80q6WDG",
+      "name": "Cosmic Barrier (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "3Zbym56qLxJRNBRp7Eek",
+      "name": "Cosmic Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "1rZXlwg5Yvw9Lk9joDmG",
+      "name": "Cosmic Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "oZwey82VNAR2YD0dXM3g",
+      "name": "Cosmic Finesse Essence (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "27gw0k38L4ZxNWevJxyK",
+      "name": "Cosmic Tear",
+      "type": "POTION",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "2xMjGdBN5GG3L9P1nyrv",
+      "name": "Cracked Cache",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "yeZRGx9YjBBxYB80gWlP",
+      "name": "Cracked Cache (Untradable)",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "zvjoJW96Y8B9Q3RaAylw",
+      "name": "Crystal Crypt",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "RVrBKlPdNdvOLWG8xJe9",
+      "name": "Crystal Crypt (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN7oGNKAp0Mdl",
+      "name": "Crystal Forge Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "dgBq1boWYebjLkJ3rXaD",
+      "name": "Crystalheart Plate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "XyeZRGx9Yj1DNB80gWlP",
+      "name": "Cursed Asylum Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "VrBKlPdNd77mQWG8xJe9",
+      "name": "Cursed Ticket (Untradable)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "y7Do6jgkY03KN8BAdKX0",
+      "name": "Dagger Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oaJydnOmQWP9NbgRe5ME",
+      "name": "Dagger Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3Zbym56qLxmGQBRp7Eek",
+      "name": "Dawnbreaker Bow",
+      "type": "BOW",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "gGZ2J71yYKXKLMmjbown",
+      "name": "Dawnbreaker Sword",
+      "type": "SWORD",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "JVM29l7kQZlMY80q6WDG",
+      "name": "Death's Embrace",
+      "type": "SWORD",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "zvjoJW96Y8ZBQ3RaAylw",
+      "name": "Death's Touch",
+      "type": "BOW",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "bAB1E9poQqmKQnakeJj5",
+      "name": "Deathgate",
+      "type": "SHIELD",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "zvjoJW96Y8KON3RaAylw",
+      "name": "Decorated Egg",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "XyeZRGx9Yj8nQB80gWlP",
+      "name": "Decorated Egg (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "y7Do6jgkY0qzL8BAdKX0",
+      "name": "Deepsea Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "bAB1E9poQqZkNnakeJj5",
+      "name": "Deer Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "O2xMjGdBN5j3Y9P1nyrv",
+      "name": "Defenders Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQq9rQnakeJj5",
+      "name": "Defenders Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9YjaxNB80gWlP",
+      "name": "Destiny's Sanctum",
+      "type": "CHEST",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "27gw0k38L4V5NWevJxyK",
+      "name": "Destiny's Sanctum (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "6leApVoENkRQ7nRPy2Dw",
+      "name": "Diamond",
+      "type": "GEMSTONE",
+      "vendorPrice": 25
+    },
+    {
+      "hashedId": "XjEaOeBkLaEBLlGwxVPq",
+      "name": "Dirella's Protection",
+      "type": "GREAVES",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "3yE1A84kYOBwNl6XeVKp",
+      "name": "Divine Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "0kK49j1VN9BnYq6B2doa",
+      "name": "Divine Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "Z6aDoyRnLyo9NpV5AGXm",
+      "name": "Doomblade",
+      "type": "SWORD",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "3Zbym56qLxoPYBRp7Eek",
+      "name": "Draconis Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "mK5jqPopYGvDNrOzDRGV",
+      "name": "Dragon Soulstone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "zvjoJW96Y8j5Q3RaAylw",
+      "name": "Dragon's Essence",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "93R0qXalLlo6YAbn8DBg",
+      "name": "Dragon's Hoard",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XjEaOeBkLaoENlGwxVPq",
+      "name": "Dragon's Hoard (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NMoXLEyMe2Oa",
+      "name": "Dragonblood Tonic",
+      "type": "POTION",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "jGXBy7a4LbDDN0Pw6Vdg",
+      "name": "Dragonfire Grasp",
+      "type": "GAUNTLETS",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "Rv5g4z1dQnnJQqy32jpG",
+      "name": "Dragonheart Cache",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Ro31P7kZL66mLveGxXOy",
+      "name": "Dragonheart Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Rv5g4z1dQnozNqy32jpG",
+      "name": "Dragonheart Chest",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Ro31P7kZL6d8NveGxXOy",
+      "name": "Dragonheart Chest (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54NmR1Yj1xJrXk",
+      "name": "Dragonheart Plate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "oZwey82VNAD5QD0dXM3g",
+      "name": "Drakeling Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQq7OYnakeJj5",
+      "name": "Dreadbane Armor",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "Z6aDoyRnLy19LpV5AGXm",
+      "name": "Dreadspike",
+      "type": "DAGGER",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "brz9RZnWN7eaLKAp0Mdl",
+      "name": "Duck Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "j98bO5w1QP0jQ3xkREVJ",
+      "name": "Dungeon Master's Tonic",
+      "type": "POTION",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "oZwey82VNAZPYD0dXM3g",
+      "name": "Dungeon Potion (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "3ZvrGV8RQprBY2wgA5jD",
+      "name": "Duskblade",
+      "type": "DAGGER",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "DBngxedVYJAZNX64wW8o",
+      "name": "Earth Destroyer",
+      "type": "PICKAXE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Rv5g4z1dQnK9Nqy32jpG",
+      "name": "Earthcore Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "3yE1A84kYOVxNl6XeVKp",
+      "name": "Earthcore Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "yav4OK1wNEgzLZP7rzJb",
+      "name": "Earthcore Infusion Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "O2xMjGdBN5VPY9P1nyrv",
+      "name": "Earthshaker",
+      "type": "PICKAXE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "P1vlVrzjLrR4Lao8mGKM",
+      "name": "Echosteel Breastplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "Z6aDoyRnLyvzQpV5AGXm",
+      "name": "Eden's Embrace Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "dgBq1boWYe7lQkJ3rXaD",
+      "name": "Edge Treasury",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NMnEYEyMe2Oa",
+      "name": "Edge Treasury (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NMepNEyMe2Oa",
+      "name": "Egg Basket",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "XyeZRGx9Yj0EQB80gWlP",
+      "name": "Eldritch Bait",
+      "type": "BAIT",
+      "vendorPrice": 9
+    },
+    {
+      "hashedId": "j98bO5w1QPraY3xkREVJ",
+      "name": "Eldritch Reliquary",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ElzPeorXNVO5YaW0kv53",
+      "name": "Eldritch Reliquary (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ElzPeorXNVkWYaW0kv53",
+      "name": "Elemental Bait",
+      "type": "BAIT",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "jGXBy7a4Lb0MN0Pw6Vdg",
+      "name": "Elephant Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "27gw0k38L4AxQWevJxyK",
+      "name": "Elk Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "Ro31P7kZL6boLveGxXOy",
+      "name": "Ember Mask",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "yav4OK1wNEZyYZP7rzJb",
+      "name": "Emberfang",
+      "type": "SWORD",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "3yE1A84kYORaNl6XeVKp",
+      "name": "Emberfoot Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "BRn3x72JQ2dZYzOMok41",
+      "name": "Emberheart",
+      "type": "BOW",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "B2WEpv54NmxQj1xJrXkK",
+      "name": "Emerald",
+      "type": "GEMSTONE",
+      "vendorPrice": 8
+    },
+    {
+      "hashedId": "q9pwa0kxLBnVLgVj136l",
+      "name": "Empty Crystal",
+      "type": "EMPTY_CRYSTAL",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "O2xMjGdBN5B7Y9P1nyrv",
+      "name": "Empyrean Armoire",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "gGZ2J71yYKj6NMmjbown",
+      "name": "Empyrean Armoire (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "eA59WrBQRpp4Yzb62qKv",
+      "name": "Enchanted Cache",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "rz9RZnWN7ee0LKAp0Mdl",
+      "name": "Enchanted Cache (Untradable)",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "lrx463VdQgaeY5w1zWKP",
+      "name": "Enchanted Coffer",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "yav4OK1wNEEnNZP7rzJb",
+      "name": "Enchanted Coffer (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "DBngxedVYJVxYX64wW8o",
+      "name": "Enigma Casket",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "3Zbym56qLxqwQBRp7Eek",
+      "name": "Enigma Casket (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "dgBq1boWYeaaYkJ3rXaD",
+      "name": "Enigma Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NMMRNEyMe2Oa",
+      "name": "Enigma Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "joPWKDkLXj79N06ZOX79",
+      "name": "Essence of a Ghost",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "j98bO5w1QPp1Q3xkREVJ",
+      "name": "Essence of a Ghost (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "BRn3x72JQ2ADLzOMok41",
+      "name": "Essence of a Kraken",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "yav4OK1wNE8xQZP7rzJb",
+      "name": "Essence of a Kraken (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "brz9RZnWN7v2QKAp0Mdl",
+      "name": "Essenceweave Shield",
+      "type": "SHIELD",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "ElzPeorXNVb5NaW0kv53",
+      "name": "Eternal Cache",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Z6aDoyRnLya3LpV5AGXm",
+      "name": "Eternal Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "y7Do6jgkY0wzN8BAdKX0",
+      "name": "Eternal Feast Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "BPjze3x2Q3b5LR85vgZV",
+      "name": "Eternal Feast Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "y7Do6jgkY0KoN8BAdKX0",
+      "name": "Eternal Lockbox",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oaJydnOmQWJMLbgRe5ME",
+      "name": "Eternal Lockbox (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "yE1A84kYO5b6Ql6XeVKp",
+      "name": "Ethereal Gem",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "XjEaOeBkLa2ZQlGwxVPq",
+      "name": "Ethereal Gem (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "q9pwa0kxLBWRQgVj136l",
+      "name": "Everflame",
+      "type": "SWORD",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "XyeZRGx9Yj4DQB80gWlP",
+      "name": "Excalibre Cache",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "27gw0k38L43zYWevJxyK",
+      "name": "Excalibre Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "zvjoJW96Y8VXQ3RaAylw",
+      "name": "Excalibur",
+      "type": "SWORD",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "7eA59WrBQRP6Yzb62qKv",
+      "name": "Fabled Armory",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "P1vlVrzjLrKAQao8mGKM",
+      "name": "Fabled Armory (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "mK5jqPopYGaeQrOzDRGV",
+      "name": "Falcon's Grace Elixir Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "gGZ2J71yYKr9NMmjbown",
+      "name": "Falcon's Grace Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "DBngxedVYJwPLX64wW8o",
+      "name": "Fallen Star Essence",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "XjEaOeBkLaxKYlGwxVPq",
+      "name": "Fallen Star Essence (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "JVM29l7kQZMML80q6WDG",
+      "name": "Fangor Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "P1vlVrzjLrl5Nao8mGKM",
+      "name": "Fatebreaker",
+      "type": "DAGGER",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "3yE1A84kYODaLl6XeVKp",
+      "name": "Fatebreaker Footguards",
+      "type": "BOOTS",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "dgBq1boWYew9QkJ3rXaD",
+      "name": "Feather",
+      "type": "COLLECTABLE",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "ZqEegBydNwV7QkA59J61",
+      "name": "Felling Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "dgBq1boWYexwNkJ3rXaD",
+      "name": "Felling Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "1vlVrzjLrWWAQao8mGKM",
+      "name": "Festive Bauble",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "j98bO5w1QPjY3xkREVJ7",
+      "name": "Fire Agate",
+      "type": "GEMSTONE",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "ZjlPA8v9NMPmQEyMe2Oa",
+      "name": "First Birthday Cake",
+      "type": "CAKE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "j98bO5w1QPWPL3xkREVJ",
+      "name": "Flamebrand",
+      "type": "DAGGER",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "3ZvrGV8RQpvZY2wgA5jD",
+      "name": "Flamebreaker Buckler",
+      "type": "SHIELD",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "93R0qXalLl0mLAbn8DBg",
+      "name": "Flameguard Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "Rv5g4z1dQnVWQqy32jpG",
+      "name": "Flameguard Plate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "1rZXlwg5Yv08Qk9joDmG",
+      "name": "Flash Velocity Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "JZdg5V3PQoMrYEyWq0zl",
+      "name": "Flash Velocity Essence (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "yav4OK1wNEV5YZP7rzJb",
+      "name": "Flavorburst Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "JVM29l7kQZ9wL80q6WDG",
+      "name": "Forest Reaver",
+      "type": "FELLING_AXE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Ro31P7kZL6xmNveGxXOy",
+      "name": "Forgotten Archives Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Ro31P7kZL6PoNveGxXOy",
+      "name": "Fortified Protection Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "P1vlVrzjLrmZYao8mGKM",
+      "name": "Fortunium (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "oyA279pNz6yXNKRDEWm8",
+      "name": "Four Leaf Clover",
+      "type": "COLLECTABLE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "gGZ2J71yYKJDNMmjbown",
+      "name": "Frostbite Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "7eA59WrBQRO0Nzb62qKv",
+      "name": "Frostbite Guard",
+      "type": "SHIELD",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "O2xMjGdBN5bqY9P1nyrv",
+      "name": "Frostbite Legguards",
+      "type": "GREAVES",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "6leApVoENkx3Y7nRPy2D",
+      "name": "Frostbite Plate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "bAB1E9poQq5nQnakeJj5",
+      "name": "Frostbite Spire Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "RVrBKlPdNdEWYWG8xJe9",
+      "name": "Frostbite Walkers",
+      "type": "BOOTS",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "q9pwa0kxLBAvYgVj136l",
+      "name": "Frostguard Visage",
+      "type": "HELMET",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "eA59WrBQRpp6Yzb62qKv",
+      "name": "Frozen Carrot",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "njoPWKDkLX5XQ06ZOX79",
+      "name": "Frozen Carrot (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "3yE1A84kYOeDQl6XeVKp",
+      "name": "Frozen Carrot (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "1rZXlwg5YvoGLk9joDmG",
+      "name": "Furbella Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Rv5g4z1dQn96Lqy32jpG",
+      "name": "Galeforce Speed Elixir Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "BRn3x72JQ2rDQzOMok41",
+      "name": "Galeforce Speed Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "RVrBKlPdNdggQWG8xJe9",
+      "name": "Gauntlets Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "jEaOeBkLaJ8KQlGwxVPq",
+      "name": "Ghost in a Bottle",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 7
+    },
+    {
+      "hashedId": "doyA279pNzJ1NKRDEWm8",
+      "name": "Ghost in a Bottle (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 7
+    },
+    {
+      "hashedId": "7eA59WrBQRoJNzb62qKv",
+      "name": "Ghostwalker",
+      "type": "DAGGER",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "jlPA8v9NM99ENEyMe2Oa",
+      "name": "Gingerbread Man",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "7eA59WrBQRkGNzb62qKv",
+      "name": "Gleaming Bait",
+      "type": "BAIT",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "q9pwa0kxLBxvNgVj136l",
+      "name": "Glimmersteel Pathguards",
+      "type": "GREAVES",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "7eA59WrBQR6eQzb62qKv",
+      "name": "Glimmersteel Ward",
+      "type": "SHIELD",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "RVrBKlPdNdwzQWG8xJe9",
+      "name": "Golden Carrot",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "bAB1E9poQqrkNnakeJj5",
+      "name": "Gourmet Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "njoPWKDkLX4BL06ZOX79",
+      "name": "Grasps of Protection",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "doyA279pNzP1LKRDEWm8",
+      "name": "Greaves Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "3Zbym56qLx1PQBRp7Eek",
+      "name": "Grimslayer",
+      "type": "SWORD",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "ZqEegBydNwg8NkA59J61",
+      "name": "Grove Cleaver",
+      "type": "FELLING_AXE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "dgBq1boWYealYkJ3rXaD",
+      "name": "Guardian's Citadel",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "ZjlPA8v9NMMENEyMe2Oa",
+      "name": "Guardian's Citadel (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "oZwey82VNAg6LD0dXM3g",
+      "name": "Guardian's Soul",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "6leApVoENklBY7nRPy2D",
+      "name": "Guardian's Stride",
+      "type": "BOOTS",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "Ro31P7kZL6ZOLveGxXOy",
+      "name": "Guardian's Valor",
+      "type": "CHESTPLATE",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "27gw0k38L4VzNWevJxyK",
+      "name": "Guardians Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN770NKAp0Mdl",
+      "name": "Guardians Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3yE1A84kYOgwYl6XeVKp",
+      "name": "Hammerfell Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "EWGwnXPlY1zvLJqekZ2R",
+      "name": "Helmet Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "j98bO5w1QPRBY3xkREVJ",
+      "name": "Herculean Strength Elixir Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "DBngxedVYJMPNX64wW8o",
+      "name": "Herculean Strength Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "3yE1A84kYOy0Ql6XeVKp",
+      "name": "Hero's Treasure Trove",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZqEegBydNw91LkA59J61",
+      "name": "Hero's Treasure Trove (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Z6aDoyRnLyM3LpV5AGXm",
+      "name": "Heroic Archive",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "jGXBy7a4LbkeQ0Pw6Vdg",
+      "name": "Heroic Archive (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9YjlnQB80gWlP",
+      "name": "Human Remains",
+      "type": "COLLECTABLE",
+      "vendorPrice": 5
+    },
+    {
+      "hashedId": "7eA59WrBQR9yLzb62qKv",
+      "name": "Hydra's Coil",
+      "type": "FISHING_ROD",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "Rv5g4z1dQnJoQqy32jpG",
+      "name": "Icy Lake Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54Nm2xYj1xJrXk",
+      "name": "Impenetrable Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "3yE1A84kYOxDLl6XeVKp",
+      "name": "Impenetrable Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "BRn3x72JQ2v7QzOMok41",
+      "name": "Improved Felling axe",
+      "type": "FELLING_AXE",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "ZjlPA8v9NMlnQEyMe2Oa",
+      "name": "Improved Pickaxe",
+      "type": "PICKAXE",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "bAB1E9poQqPVLnakeJj5",
+      "name": "Iron Bar",
+      "type": "METAL_BAR",
+      "vendorPrice": 8
+    },
+    {
+      "hashedId": "JVM29l7kQZZwQ80q6WDG",
+      "name": "Iron Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "27gw0k38L42xNWevJxyK",
+      "name": "Iron Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "njoPWKDkLXZqN06ZOX79",
+      "name": "Iron Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "P1vlVrzjLrP9Nao8mGKM",
+      "name": "Iron Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "EWGwnXPlY1o4QJqekZ2R",
+      "name": "Ironbark Cuirass",
+      "type": "CHESTPLATE",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "Ro31P7kZL61vYveGxXOy",
+      "name": "Ironbark Protector",
+      "type": "SHIELD",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "njoPWKDkLXwxY06ZOX79",
+      "name": "Ironclad Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "DBngxedVYJB1YX64wW8o",
+      "name": "Ironclad Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "y7Do6jgkY0aBL8BAdKX0",
+      "name": "Ironclad Tonic Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "EWGwnXPlY1wzQJqekZ2R",
+      "name": "Ironclad Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9YjaDNB80gWlP",
+      "name": "Ironclad Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "7eA59WrBQRg4Nzb62qKv",
+      "name": "Ironhelm Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "P1vlVrzjLr9MYao8mGKM",
+      "name": "Ironhelm Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZvrGV8RQp246Y2wgA5jD",
+      "name": "Isadora's Hat",
+      "type": "COLLECTABLE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "RVrBKlPdNdVLWG8xJe9p",
+      "name": "Jade",
+      "type": "GEMSTONE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "Ro31P7kZL6j5LveGxXOy",
+      "name": "Kraken's Grasp",
+      "type": "FISHING_ROD",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "gBq1boWYed0lNkJ3rXaD",
+      "name": "Lantern",
+      "type": "COLLECTABLE",
+      "vendorPrice": 15
+    },
+    {
+      "hashedId": "ZqEegBydNw7NkA59J61b",
+      "name": "Lantern Fish",
+      "type": "FISH",
+      "vendorPrice": 32
+    },
+    {
+      "hashedId": "ZjlPA8v9NMgnLEyMe2Oa",
+      "name": "Lead Bar",
+      "type": "METAL_BAR",
+      "vendorPrice": 9
+    },
+    {
+      "hashedId": "gGZ2J71yYK83LMmjbown",
+      "name": "Lead Boots",
+      "type": "BOOTS",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "93R0qXalLl6kNAbn8DBg",
+      "name": "Lead Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "O2xMjGdBN5oML9P1nyrv",
+      "name": "Lead Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "B2WEpv54Nm77Lj1xJrXk",
+      "name": "Lead Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "Z6aDoyRnLyGMNpV5AGXm",
+      "name": "Lead Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "1rZXlwg5YvvVYk9joDmG",
+      "name": "Lead Helmet",
+      "type": "HELMET",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "93R0qXalLljNAbn8DBgr",
+      "name": "Lead Ore",
+      "type": "ORE",
+      "vendorPrice": 5
+    },
+    {
+      "hashedId": "dgBq1boWYeMmYkJ3rXaD",
+      "name": "Lead Shield",
+      "type": "SHIELD",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "ElzPeorXNVjjNaW0kv53",
+      "name": "Lead Sword",
+      "type": "SWORD",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "oaJydnOmQW9zYbgRe5ME",
+      "name": "Leafblade",
+      "type": "FELLING_AXE",
+      "vendorPrice": 25
+    },
+    {
+      "hashedId": "q9pwa0kxLBDRNgVj136l",
+      "name": "Leafy Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "1rZXlwg5Yv6vYk9joDmG",
+      "name": "Legendary Lockbox",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "njoPWKDkLXbMN06ZOX79",
+      "name": "Legendary Lockbox (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ElzPeorXNVEjQaW0kv53",
+      "name": "Leovar Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3yE1A84kYO5wQl6XeVKp",
+      "name": "Lion Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "brz9RZnWN70aYKAp0Mdl",
+      "name": "Lumberjack Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "doyA279pNzRANKRDEWm8",
+      "name": "Lunar Radiance",
+      "type": "HELMET",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "Rv5g4z1dQnDKYqy32jpG",
+      "name": "Lunar Secrets",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "BngxedVYJWv0LX64wW8o",
+      "name": "Lunar Stone",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "njoPWKDkLXrXN06ZOX79",
+      "name": "Lunar Stone (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "aJydnOmQW7p9QbgRe5ME",
+      "name": "Lunar Ticket",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "EWGwnXPlY1y8YJqekZ2R",
+      "name": "Lunar Ticket (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Zwey82VNAwV2LD0dXM3g",
+      "name": "Lunar Ticket (Untradable)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "7gw0k38L4AAzQWevJxyK",
+      "name": "Lunark Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ElzPeorXNV7AYaW0kv53",
+      "name": "Lunarweave Boots",
+      "type": "BOOTS",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "zvjoJW96Y8vBQ3RaAylw",
+      "name": "Lunarweave Gloves",
+      "type": "GAUNTLETS",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "ZqEegBydNwlVYkA59J61",
+      "name": "Lunarweave Leggings",
+      "type": "GREAVES",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "doyA279pNzMXQKRDEWm8",
+      "name": "Magical Chest of Eggs",
+      "type": "CHEST",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "yav4OK1wNEb5YZP7rzJb",
+      "name": "Magma Vein Infusion",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "PjVDJez3LDMmQKWO08Ga",
+      "name": "Magma Vein Infusion (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "Ro31P7kZL6OJQveGxXOy",
+      "name": "Magnifying Glass",
+      "type": "COLLECTABLE",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "lrx463VdQgd4N5w1zWKP",
+      "name": "Mahogany Bow",
+      "type": "BOW",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "27gw0k38L42wNWevJxyK",
+      "name": "Maple Bow",
+      "type": "BOW",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "Z6aDoyRnLyDMYpV5AGXm",
+      "name": "Mercury Bar",
+      "type": "METAL_BAR",
+      "vendorPrice": 20
+    },
+    {
+      "hashedId": "q9pwa0kxLB5lYgVj136l",
+      "name": "Mercury Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "7eA59WrBQRayLzb62qKv",
+      "name": "Mercury Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "6leApVoENkgmN7nRPy2D",
+      "name": "Mercury Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "O2xMjGdBN5xPQ9P1nyrv",
+      "name": "Mercury Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "q9pwa0kxLBoJQgVj136l",
+      "name": "Merfolk Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NMWmLEyMe2Oa",
+      "name": "Merfolk Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "7eA59WrBQRVjQzb62qKv",
+      "name": "Metamorphite",
+      "type": "METAMORPHITE",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "27gw0k38L4K9YWevJxyK",
+      "name": "Millstone Mines Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "bAB1E9poQqwkYnakeJj5",
+      "name": "Miners Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "P1vlVrzjLr0ANao8mGKM",
+      "name": "Mirage Citadel Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ZqEegBydNwO7NkA59J61",
+      "name": "Mjolnir's Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "q9pwa0kxLBj6LgVj136l",
+      "name": "Mjolnir's Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "zvjoJW96Y8O5N3RaAylw",
+      "name": "Molten Core Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "y7Do6jgkY0npQ8BAdKX0",
+      "name": "Molten Core Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "P1vlVrzjLrJZLao8mGKM",
+      "name": "Molten Core Tonic Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "27gw0k38L49GQWevJxyK",
+      "name": "Moonlance",
+      "type": "DAGGER",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "Rn3x72JQ2XGrYzOMok41",
+      "name": "Moonlit Chalice",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "6leApVoENkvoQ7nRPy2D",
+      "name": "Moonlit Chalice (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "B2WEpv54NmMKNj1xJrXk",
+      "name": "Moonshadow",
+      "type": "DAGGER",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "bAB1E9poQqeOQnakeJj5",
+      "name": "Moonshadow Guard",
+      "type": "SHIELD",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "ZjlPA8v9NMXZQEyMe2Oa",
+      "name": "Moonshadow Vestment",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "O2xMjGdBN5GML9P1nyrv",
+      "name": "Moose Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "mK5jqPopYGZ8NrOzDRGV",
+      "name": "Mountains Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "EWGwnXPlY1yYJqekZ2RV",
+      "name": "Musgravite Gemstone",
+      "type": "GEMSTONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "7eA59WrBQReJLzb62qKv",
+      "name": "Mysterious Portal Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "0kK49j1VN9dBQq6B2doa",
+      "name": "Mystic Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "Ro31P7kZL695YveGxXOy",
+      "name": "Mystic Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "EWGwnXPlY1OvQJqekZ2R",
+      "name": "Mystic Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "3yE1A84kYOpBLl6XeVKp",
+      "name": "Mystic Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "y7Do6jgkY0OqN8BAdKX0",
+      "name": "Mystical Bow",
+      "type": "BOW",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "lrx463VdQgPeN5w1zWKP",
+      "name": "Mythic Safeguard",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "yav4OK1wNE3nLZP7rzJb",
+      "name": "Mythic Safeguard (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3yE1A84kYOM0Ql6XeVKp",
+      "name": "Mythic Treasure Trove",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "ZqEegBydNw71NkA59J61",
+      "name": "Mythic Treasure Trove (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "ElzPeorXNVq8QaW0kv53",
+      "name": "Namestone",
+      "type": "NAMESTONE",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "doyA279pNzKwYKRDEWm8",
+      "name": "Nature's Grip",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "oaJydnOmQWMaYbgRe5ME",
+      "name": "Neptune's Soul (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "bAB1E9poQqkgYnakeJj5",
+      "name": "Nightfall Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "BRn3x72JQ20gYzOMok41",
+      "name": "Nightfall Sword",
+      "type": "SWORD",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "3ZvrGV8RQpDBQ2wgA5jD",
+      "name": "Nightime Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "P1vlVrzjLrEDYao8mGKM",
+      "name": "Nightshade Boots",
+      "type": "BOOTS",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "ZqEegBydNwXMYkA59J61",
+      "name": "Nightshade Bow",
+      "type": "BOW",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "1rZXlwg5YvOrLk9joDmG",
+      "name": "Nightshade Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "BPjze3x2Q3a8YR85vgZV",
+      "name": "Nightshade Grips",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "dgBq1boWYekgQkJ3rXaD",
+      "name": "Nightshade Mask",
+      "type": "HELMET",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "JZdg5V3PQo31QEyWq0zl",
+      "name": "Nova Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN7ZDQKAp0Mdl",
+      "name": "Oak Bow",
+      "type": "BOW",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "ElzPeorXNV9pQaW0kv53",
+      "name": "Ocean's Whisper",
+      "type": "FISHING_ROD",
+      "vendorPrice": 75
+    },
+    {
+      "hashedId": "yeZRGx9YjBdDYB80gWlP",
+      "name": "Old Palmguard",
+      "type": "COLLECTABLE",
+      "vendorPrice": 20
+    },
+    {
+      "hashedId": "93R0qXalLlRrNAbn8DBg",
+      "name": "Omnipotent Might Essence (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "XjEaOeBkLaMLlGwxVPq2",
+      "name": "Opal",
+      "type": "GEMSTONE",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "3Zbym56qLxjRNBRp7Eek",
+      "name": "Oreseeker Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "O2xMjGdBN5nnY9P1nyrv",
+      "name": "Oreseeker Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "7eA59WrBQRjjQzb62qKv",
+      "name": "Oreseeker Essence Crystal Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "XjEaOeBkLabBQlGwxVPq",
+      "name": "Otto's Mask",
+      "type": "HELMET",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "vjoJW96Y8WRoN3RaAylw",
+      "name": "Painted Death",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "B2WEpv54NmDnQj1xJrXk",
+      "name": "Parade Hat",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "BPjze3x2Q3gQR85vgZV0",
+      "name": "Pearl",
+      "type": "GEMSTONE",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "JZdg5V3PQoqKYEyWq0zl",
+      "name": "Phoenix Ashes",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "93R0qXalLllMLAbn8DBg",
+      "name": "Phoenix Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "ElzPeorXNV1JQaW0kv53",
+      "name": "Phoenix Soulplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "0kK49j1VN95PNq6B2doa",
+      "name": "Phoenixclaw Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "dgBq1boWYeEgYkJ3rXaD",
+      "name": "Phoenixguard Shield",
+      "type": "SHIELD",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "BPjze3x2Q30eNR85vgZV",
+      "name": "Pink Paint Brush",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "bAB1E9poQqd0LnakeJj5",
+      "name": "Pink Paint Brush (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "dgBq1boWYeKrQkJ3rXaD",
+      "name": "Pirate Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "DBngxedVYJWPLX64wW8o",
+      "name": "Polar Bear Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "PjVDJez3LDBwNKWO08Ga",
+      "name": "Potion of the Gods (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "q9pwa0kxLBlVNgVj136l",
+      "name": "Potion of the Hunter (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "bAB1E9poQqOEYnakeJj5",
+      "name": "Precision Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "0kK49j1VN96yYq6B2doa",
+      "name": "Primordial Timber Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "3Zbym56qLxn1NBRp7Eek",
+      "name": "Primordial Timber Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "oaJydnOmQWrdLbgRe5ME",
+      "name": "Protection Potion (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "3ZvrGV8RQpamN2wgA5jD",
+      "name": "Protection Potion Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "o31P7kZL6WomQveGxXOy",
+      "name": "Puppet Charm",
+      "type": "COLLECTABLE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "PjVDJez3LDZoNKWO08Ga",
+      "name": "Pyroflare Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "njoPWKDkLXxL06ZOX79b",
+      "name": "Quatz",
+      "type": "GEMSTONE",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "brz9RZnWN71eLKAp0Mdl",
+      "name": "Quickstep Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "Ro31P7kZL6WAQveGxXOy",
+      "name": "Rabbit Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "ZjlPA8v9NM9XNEyMe2Oa",
+      "name": "Raccoon Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "93R0qXalLlxMLAbn8DBg",
+      "name": "Radiant Crest",
+      "type": "HELMET",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "0kK49j1VN9vAYq6B2doa",
+      "name": "Raptora Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "leApVoENk111L7nRPy2D",
+      "name": "Rattles Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9YjOKLB80gWlP",
+      "name": "Ravenwing Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BRn3x72JQ23rNzOMok41",
+      "name": "Razorwind Arsenal",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "JZdg5V3PQoJrLEyWq0zl",
+      "name": "Razorwind Arsenal (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "mK5jqPopYGRbNrOzDRGV",
+      "name": "Regal Treasure",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN77GNKAp0Mdl",
+      "name": "Regal Treasure (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "njoPWKDkLXvqN06ZOX79",
+      "name": "Ring Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "mK5jqPopYG6ONrOzDRGV",
+      "name": "Riverbend Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "DBngxedVYJnEYX64wW8o",
+      "name": "Riverbend Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "mK5jqPopYGWDYrOzDRGV",
+      "name": "Rivertamer",
+      "type": "FISHING_ROD",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "lrx463VdQg5OY5w1zWKP",
+      "name": "Rocksplitter Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "lrx463VdQgXaN5w1zWKP",
+      "name": "Ruins of Old Ranhor Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "6leApVoENk7ZN7nRPy2D",
+      "name": "Runeblade Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "oZwey82VNAy5ND0dXM3g",
+      "name": "Runeblade Sword",
+      "type": "SWORD",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "P1vlVrzjLr14Yao8mGKM",
+      "name": "Runebound Bulwark",
+      "type": "SHIELD",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "Ro31P7kZL6zvLveGxXOy",
+      "name": "Runebound Footwraps",
+      "type": "BOOTS",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "oZwey82VNAmbND0dXM3g",
+      "name": "Runebound Shinplates",
+      "type": "GREAVES",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "rz9RZnWN7eXGLKAp0Mdl",
+      "name": "Runemark of Eternity",
+      "type": "COLLECTABLE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "mK5jqPopYGnKNrOzDRGV",
+      "name": "Sack of Gifts",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "RVrBKlPdNdxkNWG8xJe9",
+      "name": "Sacred Grasp",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "jGXBy7a4LbaeY0Pw6Vdg",
+      "name": "Sacred Reliquary",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "oZwey82VNAJRYD0dXM3g",
+      "name": "Sacred Reliquary (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "O2xMjGdBN5MN9P1nyrvR",
+      "name": "Salmon",
+      "type": "FISH",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "BPjze3x2Q3A1YR85vgZV",
+      "name": "Sauronix Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XjEaOeBkLarOQlGwxVPq",
+      "name": "Scalethorn Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "6leApVoENkB2Q7nRPy2D",
+      "name": "Scavenger Hunt Token",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "rZXlwg5Yv4d9Qk9joDmG",
+      "name": "Scroll of the First Ascendant",
+      "type": "RELIC",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "gBq1boWYeddaNkJ3rXaD",
+      "name": "Sealed Cache",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "o31P7kZL6WW8QveGxXOy",
+      "name": "Sealed Cache (Untradable)",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "3ZvrGV8RQp7dL2wgA5jD",
+      "name": "Seasong's Lure",
+      "type": "FISHING_ROD",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "WGwnXPlY1BBzLJqekZ2R",
+      "name": "Second Birthday Cake (Untradable)",
+      "type": "CAKE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "JVM29l7kQZK8N80q6WDG",
+      "name": "Secret Chamber",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BPjze3x2Q3BaLR85vgZV",
+      "name": "Secret Chamber (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54NmjjYj1xJrXk",
+      "name": "Seekers Tonic (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "jlPA8v9NM9AENEyMe2Oa",
+      "name": "Seers Charm",
+      "type": "COLLECTABLE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "ElzPeorXNVaJQaW0kv53",
+      "name": "Sentinel's Bulwark",
+      "type": "SHIELD",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "doyA279pNzkwYKRDEWm8",
+      "name": "Sentinel's Embrace",
+      "type": "CHESTPLATE",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "JVM29l7kQZRXQ80q6WDG",
+      "name": "Sentinel's Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "zvjoJW96Y8w3N3RaAylw",
+      "name": "Sentinel's Gaze",
+      "type": "HELMET",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "3ZvrGV8RQp96N2wgA5jD",
+      "name": "Sentinel's Sanctum",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQq9nQnakeJj5",
+      "name": "Sentinel's Sanctum (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "7eA59WrBQR10Lzb62qKv",
+      "name": "Serpent Scale",
+      "type": "CHESTPLATE",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "y7Do6jgkY0G0N8BAdKX0",
+      "name": "Serpent's Arrow",
+      "type": "BOW",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "ElzPeorXNVrANaW0kv53",
+      "name": "Shadewalker Bulwark",
+      "type": "SHIELD",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "3ZvrGV8RQp6ZY2wgA5jD",
+      "name": "Shadeweave Raiment",
+      "type": "CHESTPLATE",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "1rZXlwg5YvXrQk9joDmG",
+      "name": "Shadow Helm",
+      "type": "HELMET",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "O2xMjGdBN52xY9P1nyrv",
+      "name": "Shadow Shot",
+      "type": "BOW",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "EWGwnXPlY1EqYJqekZ2R",
+      "name": "Shadow Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9YjoxLB80gWlP",
+      "name": "Shadow Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN7a4LKAp0Mdl",
+      "name": "Shadowbane",
+      "type": "SWORD",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "mK5jqPopYGDwLrOzDRGV",
+      "name": "Shadowbane Footguards",
+      "type": "BOOTS",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "BRn3x72JQ2ZWQzOMok41",
+      "name": "Shadowbane Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "njoPWKDkLXM2Q06ZOX79",
+      "name": "Shadowbane Visor",
+      "type": "HELMET",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "O2xMjGdBN533L9P1nyrv",
+      "name": "Shadowblade Cache",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "gGZ2J71yYK2xNMmjbown",
+      "name": "Shadowblade Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "dgBq1boWYeljNkJ3rXaD",
+      "name": "Shadowbound Ward",
+      "type": "SHIELD",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "RVrBKlPdNdqkYWG8xJe9",
+      "name": "Shadowcloak Vestments",
+      "type": "CHESTPLATE",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "DBngxedVYJ6xYX64wW8o",
+      "name": "Shadowed Chest",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3Zbym56qLx9wQBRp7Eek",
+      "name": "Shadowed Chest (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "doyA279pNz15QKRDEWm8",
+      "name": "Shadowfang",
+      "type": "DAGGER",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "P1vlVrzjLrwXQao8mGKM",
+      "name": "Shadowscale Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54Nml3Qj1xJrXk",
+      "name": "Shadowstep Footwear",
+      "type": "BOOTS",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "JZdg5V3PQoyAYEyWq0zl",
+      "name": "Shadowstep Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "27gw0k38L4drLWevJxyK",
+      "name": "Shadowstep Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "PjVDJez3LDOoYKWO08Ga",
+      "name": "Shadowstrike",
+      "type": "DAGGER",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BRn3x72JQ2BZQzOMok41",
+      "name": "Shadowstrike Grips",
+      "type": "GAUNTLETS",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "6leApVoENkjmQ7nRPy2D",
+      "name": "Shield Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "dgBq1boWYeB0LkJ3rXaD",
+      "name": "Shieldbearer's Infusion",
+      "type": "POTION",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "Ro31P7kZL6ejYveGxXOy",
+      "name": "Silent Reaper",
+      "type": "DAGGER",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "DBngxedVYJb0YX64wW8o",
+      "name": "Silent Strike Hoard",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3Zbym56qLx7EYBRp7Eek",
+      "name": "Silent Strike Hoard (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oZwey82VNAO0LD0dXM3g",
+      "name": "Silvan Splitter",
+      "type": "FELLING_AXE",
+      "vendorPrice": 150
+    },
+    {
+      "hashedId": "VrBKlPdNd7mmQWG8xJe9",
+      "name": "Simple Bottled Luck (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "jGXBy7a4Lb99Y0Pw6Vdg",
+      "name": "Simple Felling Axe",
+      "type": "FELLING_AXE",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "bAB1E9poQqqVQnakeJj5",
+      "name": "Simple Pickaxe",
+      "type": "PICKAXE",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "P1vlVrzjLrxRNao8mGKM",
+      "name": "Smelting Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "o31P7kZL6WWmQveGxXOy",
+      "name": "Snowball",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "0kK49j1VN9n4Yq6B2doa",
+      "name": "Snowball (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "O2xMjGdBN5J2Y9P1nyrv",
+      "name": "Snowball (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "v5g4z1dQnkkJNqy32jpG",
+      "name": "Snowball Fight Token",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "gGZ2J71yYKkpYMmjbown",
+      "name": "Snowball Fight Token (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "K5jqPopYGrrbNrOzDRGV",
+      "name": "Snowman",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "6leApVoENkDoY7nRPy2D",
+      "name": "Snowman (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "BRn3x72JQ2gJNzOMok41",
+      "name": "Snowman (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "B2WEpv54NmJKYj1xJrXk",
+      "name": "Solarix Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "jGXBy7a4LblaN0Pw6Vdg",
+      "name": "Soulforge Legplates",
+      "type": "GREAVES",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "oZwey82VNAedND0dXM3g",
+      "name": "Soulgrasp",
+      "type": "GAUNTLETS",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "O2xMjGdBN5dxQ9P1nyrv",
+      "name": "Soulguard Armor",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "EWGwnXPlY19wYJqekZ2R",
+      "name": "Soulshard",
+      "type": "DAGGER",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "zvjoJW96Y8X3Y3RaAylw",
+      "name": "Soulshield Legplates",
+      "type": "GREAVES",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "27gw0k38L4xrLWevJxyK",
+      "name": "Soulshield Treads",
+      "type": "BOOTS",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "Rv5g4z1dQnxkYqy32jpG",
+      "name": "Soulwalkers",
+      "type": "BOOTS",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "mK5jqPopYGq7QrOzDRGV",
+      "name": "Soulward Barrier",
+      "type": "SHIELD",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "ElzPeorXNV6BNaW0kv53",
+      "name": "Space Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "0kK49j1VN9JyYq6B2doa",
+      "name": "Spicefinder Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "XyeZRGx9Yjl1QB80gWlP",
+      "name": "Spicefinder Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "27gw0k38L4k9YWevJxyK",
+      "name": "Spicefinder Essence Crystal Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "RVrBKlPdNdJyLWG8xJe9",
+      "name": "Stardust Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZqEegBydNw1zLkA59J61",
+      "name": "Starfire (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "brz9RZnWN7K2NKAp0Mdl",
+      "name": "Starfire Plate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "XyeZRGx9Yj6PYB80gWlP",
+      "name": "Starglitter",
+      "type": "DAGGER",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "av4OK1wNE0PWQZP7rzJb",
+      "name": "Starlight Gem",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "j98bO5w1QPeEN3xkREVJ",
+      "name": "Starlight Gem (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "O2xMjGdBN5aWN9P1nyrv",
+      "name": "Starmane Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oaJydnOmQWApYbgRe5ME",
+      "name": "Starshard",
+      "type": "SWORD",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "JZdg5V3PQojALEyWq0zl",
+      "name": "Starshower",
+      "type": "BOW",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "1rZXlwg5YveVNk9joDmG",
+      "name": "Steel Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "dgBq1boWYeqmYkJ3rXaD",
+      "name": "Steel Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "RVrBKlPdNddgNWG8xJe9",
+      "name": "Steel Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "27gw0k38L4XwLWevJxyK",
+      "name": "Steel Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "ElzPeorXNVBjNaW0kv53",
+      "name": "Stoneheart Solution",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "dgBq1boWYeWgQkJ3rXaD",
+      "name": "Stormbreaker Boots",
+      "type": "BOOTS",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "1rZXlwg5Yv7jLk9joDmG",
+      "name": "Stormbreaker Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "RVrBKlPdNdPWNWG8xJe9",
+      "name": "Stormbreaker Helm",
+      "type": "HELMET",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "mK5jqPopYGX7LrOzDRGV",
+      "name": "Stormbreaker Mail",
+      "type": "CHESTPLATE",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "yav4OK1wNE1rNZP7rzJb",
+      "name": "Stormbreaker Treads",
+      "type": "GREAVES",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "PjVDJez3LD4mLKWO08Ga",
+      "name": "Stormbringer Cache",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "6leApVoENka1L7nRPy2D",
+      "name": "Stormbringer Cache (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "BPjze3x2Q32ZLR85vgZV",
+      "name": "Stormbringer Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "27gw0k38L412QWevJxyK",
+      "name": "Stormcaster",
+      "type": "BOW",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "njoPWKDkLXJBN06ZOX79",
+      "name": "Stormguard Plate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Rv5g4z1dQndWYqy32jpG",
+      "name": "Stormguard Shield",
+      "type": "SHIELD",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "Z6aDoyRnLykyNpV5AGXm",
+      "name": "Stormstrider Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BRn3x72JQ2mJLzOMok41",
+      "name": "Strike Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "XjEaOeBkLaKANlGwxVPq",
+      "name": "Sugar",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Z6aDoyRnLy7JNpV5AGXm",
+      "name": "Sugar (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "zvjoJW96Y8bzQ3RaAylw",
+      "name": "Sun's Light (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "XyeZRGx9YjgPLB80gWlP",
+      "name": "Sunset Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "q9pwa0kxLBr6LgVj136l",
+      "name": "Swiftwind Arsenal",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54Nm0jQj1xJrXk",
+      "name": "Swiftwind Arsenal (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "7eA59WrBQRm6Lzb62qKv",
+      "name": "Sylvan Sanctum Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "3ZvrGV8RQpWyL2wgA5jD",
+      "name": "Tampering Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "dgBq1boWYerzLkJ3rXaD",
+      "name": "Tarnished Bait",
+      "type": "BAIT",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "oZwey82VNAnPYD0dXM3g",
+      "name": "Tarnished Vial",
+      "type": "VIAL",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "Z6aDoyRnLyRoQpV5AGXm",
+      "name": "Teleportation Stone (Untradable)",
+      "type": "TELEPORTATION_STONE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "DBngxedVYJE0NX64wW8o",
+      "name": "The Nexus Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "3Zbym56qLxMGQBRp7Eek",
+      "name": "Thunderclap",
+      "type": "GAUNTLETS",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "DBngxedVYJobLX64wW8o",
+      "name": "Thunderclash Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "Ro31P7kZL6vOLveGxXOy",
+      "name": "Thunderstrike Barrier",
+      "type": "SHIELD",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "O2xMjGdBN55MN9P1nyrv",
+      "name": "Timberfall Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "gGZ2J71yYKo3YMmjbown",
+      "name": "Timberfall Talon",
+      "type": "FELLING_AXE",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "Ro31P7kZL6A5YveGxXOy",
+      "name": "Tin Bar",
+      "type": "METAL_BAR",
+      "vendorPrice": 5
+    },
+    {
+      "hashedId": "oZwey82VNA40QD0dXM3g",
+      "name": "Tin Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "P1vlVrzjLrGRQao8mGKM",
+      "name": "Tin Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "BPjze3x2Q3xpNR85vgZV",
+      "name": "Tin Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "bAB1E9poQqyVQnakeJj5",
+      "name": "Tin Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "XyeZRGx9Yjv1YB80gWlP",
+      "name": "Titan Power Brew Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "JZdg5V3PQoEKYEyWq0zl",
+      "name": "Titan Power Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "lrx463VdQglAN5w1zWKP",
+      "name": "Titan Power Essence (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "yav4OK1wNE6RYZP7rzJb",
+      "name": "Titan's Embrace",
+      "type": "GAUNTLETS",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "oaJydnOmQWB2LbgRe5ME",
+      "name": "Titans Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "zvjoJW96Y8loY3RaAylw",
+      "name": "Titans Essence (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "j98bO5w1QP4gQ3xkREVJ",
+      "name": "Titans Vault",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ElzPeorXNVb7NaW0kv53",
+      "name": "Titans Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "PjVDJez3LDJvNKWO08Ga",
+      "name": "Titanwood Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "ZqEegBydNwPoYkA59J61",
+      "name": "Titanwood Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "Pjze3x2Q3Gp5QR85vgZV",
+      "name": "Treat Bag",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "6leApVoENkemL7nRPy2D",
+      "name": "Treat Bag (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "lrx463VdQgOQ5w1zWKP8",
+      "name": "Tuna",
+      "type": "FISH",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "O2xMjGdBN5bxY9P1nyrv",
+      "name": "Twilight Sanctum",
+      "type": "SHIELD",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "0kK49j1VN917Nq6B2doa",
+      "name": "Twilight Veilguards",
+      "type": "GREAVES",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "lrx463VdQgJgL5w1zWKP",
+      "name": "Twilight Veilwalkers",
+      "type": "BOOTS",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "BRn3x72JQ24XYzOMok41",
+      "name": "Unyielding Fortitude (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "3Zbym56qLxdWLBRp7Eek",
+      "name": "Uranium Boots",
+      "type": "BOOTS",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "PjVDJez3LDz5NKWO08Ga",
+      "name": "Uranium Chestplate",
+      "type": "CHESTPLATE",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "XyeZRGx9Yjk2LB80gWlP",
+      "name": "Uranium Dagger",
+      "type": "DAGGER",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "j98bO5w1QPg1L3xkREVJ",
+      "name": "Uranium Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "y7Do6jgkY0XqY8BAdKX0",
+      "name": "Uranium Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "0kK49j1VN9xBQq6B2doa",
+      "name": "Uranium Helmet",
+      "type": "HELMET",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "PjVDJez3LDvNKWO08Gaq",
+      "name": "Uranium Ore",
+      "type": "ORE",
+      "vendorPrice": 13
+    },
+    {
+      "hashedId": "Ro31P7kZL6X5NveGxXOy",
+      "name": "Uranium Shield",
+      "type": "SHIELD",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "bAB1E9poQqEkQnakeJj5",
+      "name": "Uranium Sword",
+      "type": "SWORD",
+      "vendorPrice": 70
+    },
+    {
+      "hashedId": "ElzPeorXNVP7LaW0kv53",
+      "name": "Valiant Trove",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Z6aDoyRnLyqzLpV5AGXm",
+      "name": "Valiant Trove (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "0kK49j1VN9pzQq6B2doa",
+      "name": "Valor Vessel",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "doyA279pNzrDNKRDEWm8",
+      "name": "Valor Vessel (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "9pwa0kxLB4p6NgVj136l",
+      "name": "Vampire Cloak",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "0kK49j1VN9jAYq6B2doa",
+      "name": "Venomfang",
+      "type": "DAGGER",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "lrx463VdQgMaY5w1zWKP",
+      "name": "Venomous Stash",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "yav4OK1wNE5WNZP7rzJb",
+      "name": "Venomous Stash (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "1rZXlwg5Yvj9Yk9joDmG",
+      "name": "Verdant Arrow Treasury",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "njoPWKDkLXP9L06ZOX79",
+      "name": "Verdant Arrow Treasury (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN7wpNKAp0Mdl",
+      "name": "Verdant Boots",
+      "type": "BOOTS",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Z6aDoyRnLyprYpV5AGXm",
+      "name": "Verdant Chainmail",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "JZdg5V3PQol6NEyWq0zl",
+      "name": "Verdant Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Rv5g4z1dQn1kLqy32jpG",
+      "name": "Verdant Guardian Helm",
+      "type": "HELMET",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "Z6aDoyRnLykrNpV5AGXm",
+      "name": "Verdant Sentinel",
+      "type": "SHIELD",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "dgBq1boWYeDlNkJ3rXaD",
+      "name": "Verdant Veil Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "6leApVoENkmZL7nRPy2D",
+      "name": "Vexalia Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "O2xMjGdBN5W2L9P1nyrv",
+      "name": "Vineyard Labyrinth Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "q9pwa0kxLBRbLgVj136l",
+      "name": "Voidrend Gauntlets",
+      "type": "GAUNTLETS",
+      "vendorPrice": 900
+    },
+    {
+      "hashedId": "3yE1A84kYOJrNl6XeVKp",
+      "name": "Voidslayer",
+      "type": "SWORD",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "6leApVoENkEBL7nRPy2D",
+      "name": "Voidwalker Cowl",
+      "type": "HELMET",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "oaJydnOmQWmkYbgRe5ME",
+      "name": "Voidwalker Striders",
+      "type": "GREAVES",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "y7Do6jgkY04KY8BAdKX0",
+      "name": "Volcanic Depths Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Ro31P7kZL62jLveGxXOy",
+      "name": "Volcano Background",
+      "type": "SKIN",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Z6aDoyRnLyxoYpV5AGXm",
+      "name": "Vortex Brew Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "doyA279pNzv5NKRDEWm8",
+      "name": "Vulpina Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "6leApVoENkz3Q7nRPy2D",
+      "name": "Warfists",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "gGZ2J71yYKWKYMmjbown",
+      "name": "Water Bucket",
+      "type": "DRINK",
+      "vendorPrice": 20
+    },
+    {
+      "hashedId": "27gw0k38L4gEYWevJxyK",
+      "name": "Weak Scissors",
+      "type": "COLLECTABLE",
+      "vendorPrice": 12
+    },
+    {
+      "hashedId": "VM29l7kQZ87eY80q6WDG",
+      "name": "Weak Starfire (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "XjEaOeBkLadJYlGwxVPq",
+      "name": "Weapon Upgrade Stone",
+      "type": "UPGRADE_STONE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "XjEaOeBkLagONlGwxVPq",
+      "name": "Whisperblade",
+      "type": "DAGGER",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "jGXBy7a4LbV7L0Pw6Vdg",
+      "name": "Whispering Blades Treasury",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "oZwey82VNAM2ND0dXM3g",
+      "name": "Whispering Blades Treasury (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "ElzPeorXNVe7QaW0kv53",
+      "name": "Whispering Catacombs Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "PjVDJez3LD0VLKWO08Ga",
+      "name": "Whisperstep Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "0kK49j1VN93nLq6B2doa",
+      "name": "Whisperwood Vault",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "doyA279pNz9XQKRDEWm8",
+      "name": "Whisperwood Vault (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "B2WEpv54Nmd3Qj1xJrXk",
+      "name": "Windborne Casque",
+      "type": "HELMET",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "DBngxedVYJ2qYX64wW8o",
+      "name": "Windrider Essence Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "gGZ2J71yYKBeNMmjbown",
+      "name": "Windrider Greaves",
+      "type": "GREAVES",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "lrx463VdQgxmN5w1zWKP",
+      "name": "Windrider Harness",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "ZvrGV8RQp226Y2wgA5jD",
+      "name": "Winter Hat",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "RVrBKlPdNdAaYWG8xJe9",
+      "name": "Winter Hat (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "jGXBy7a4LbE4Y0Pw6Vdg",
+      "name": "Winter Hat (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "gBq1boWYeddlNkJ3rXaD",
+      "name": "Winter Scarf",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "B2WEpv54Nm30Lj1xJrXk",
+      "name": "Winter Scarf (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "DBngxedVYJdqQX64wW8o",
+      "name": "Winter Scarf (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "P1vlVrzjLrWRQao8mGKM",
+      "name": "Wolf Remains",
+      "type": "CRAFTING_MATERIAL",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "P1vlVrzjLryRYao8mGKM",
+      "name": "Wraithbane Essence",
+      "type": "POTION",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "1rZXlwg5YvzkYk9joDmG",
+      "name": "Wraithbane Essence (Untradable)",
+      "type": "POTION",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "dgBq1boWYey0YkJ3rXaD",
+      "name": "Wyrmshadow Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "EWGwnXPlY1MyYJqekZ2R",
+      "name": "Yggdrasil Essence Crystal",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "jGXBy7a4LbK1Q0Pw6Vdg",
+      "name": "Yggdrasil Essence Crystal (Untradable)",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 0
+    },
+    {
+      "hashedId": "gGZ2J71yYKKpYMmjbown",
+      "name": "Yggdrasil Nectar Recipe (Untradable)",
+      "type": "RECIPE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "AB1E9poQqZZnNnakeJj5",
+      "name": "Yule Token (Untradable)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "ZjlPA8v9NMZEYEyMe2Oa",
+      "name": "Zenith's Sanctum Alchemy Chest",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "P1vlVrzjLrG9Qao8mGKM",
+      "name": "Birch Bow",
+      "type": "BOW",
+      "vendorPrice": 40
+    },
+    {
+      "hashedId": "bAB1E9poQqKKYnakeJj5",
+      "name": "Bloodforged Boots",
+      "type": "BOOTS",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "mK5jqPopYGjwNrOzDRGV",
+      "name": "Bloodforged Helm",
+      "type": "HELMET",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "BPjze3x2Q391YR85vgZV",
+      "name": "Bloodletter",
+      "type": "DAGGER",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "q9pwa0kxLBkbQgVj136l",
+      "name": "Bloodmoon Bow",
+      "type": "BOW",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "lrx463VdQgr7L5w1zWKP",
+      "name": "Bloodmoon Sword",
+      "type": "SWORD",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "1rZXlwg5YvDGQk9joDmG",
+      "name": "Bloodthirst",
+      "type": "SWORD",
+      "vendorPrice": 1600
+    },
+    {
+      "hashedId": "dgBq1boWYeJrLkJ3rXaD",
+      "name": "Bloodthorn",
+      "type": "DAGGER",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "Z6aDoyRnLyZRQpV5AGXm",
+      "name": "Blooplord Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "3ZvrGV8RQp38L2wgA5jD",
+      "name": "Blue Scroll",
+      "type": "COLLECTABLE",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ZjlPA8v9NMByYEyMe2Oa",
+      "name": "Brute",
+      "type": "SHIELD",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "lzPeorXNVDD7LaW0kv53",
+      "name": "Buttons",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "XjEaOeBkLaWZNlGwxVPq",
+      "name": "Buttons (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "y7Do6jgkY0pBY8BAdKX0",
+      "name": "Buttons (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ZqEegBydNwx8YkA59J61",
+      "name": "Chromite Boots",
+      "type": "BOOTS",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "0kK49j1VN9WyLq6B2doa",
+      "name": "Cooked Lobster",
+      "type": "FOOD",
+      "vendorPrice": 25
+    },
+    {
+      "hashedId": "jGXBy7a4Lbd9N0Pw6Vdg",
+      "name": "Copper Boots",
+      "type": "BOOTS",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "0kK49j1VN9w7Lq6B2doa",
+      "name": "Emberfire Helm",
+      "type": "HELMET",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "ZqEegBydNwqMLkA59J61",
+      "name": "Emberfist",
+      "type": "GAUNTLETS",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "j98bO5w1QPV9Y3xkREVJ",
+      "name": "Emberfoot Boots",
+      "type": "BOOTS",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "ElzPeorXNVABQaW0kv53",
+      "name": "Emberstrike",
+      "type": "DAGGER",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "JZdg5V3PQoZvLEyWq0zl",
+      "name": "Emberwhisp Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "27gw0k38L4a5QWevJxyK",
+      "name": "Forgotten Relic Box",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BRn3x72JQ2WKNzOMok41",
+      "name": "Forgotten Relic Box (Recipe)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NMd8QEyMe2Oa",
+      "name": "Frostbite",
+      "type": "SWORD",
+      "vendorPrice": 350
+    },
+    {
+      "hashedId": "lrx463VdQgKmQ5w1zWKP",
+      "name": "Frostbite Shot",
+      "type": "BOW",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "Z6aDoyRnLyeyLpV5AGXm",
+      "name": "Glimmersteel Boots",
+      "type": "BOOTS",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "BRn3x72JQ2w7NzOMok41",
+      "name": "Iron Boots",
+      "type": "BOOTS",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "Z6aDoyRnLyOMNpV5AGXm",
+      "name": "Ironbite",
+      "type": "PICKAXE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "oaJydnOmQW8zNbgRe5ME",
+      "name": "Mercury Boots",
+      "type": "BOOTS",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "oZwey82VNA50ND0dXM3g",
+      "name": "Mystic Boots",
+      "type": "BOOTS",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "BRn3x72JQ2eKLzOMok41",
+      "name": "Mythic Strongbox",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "JZdg5V3PQom2YEyWq0zl",
+      "name": "Mythic Strongbox (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "ZjlPA8v9NMDyQEyMe2Oa",
+      "name": "Phoenix Boots",
+      "type": "BOOTS",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "7eA59WrBQR44Yzb62qKv",
+      "name": "Runebound Coffer",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "P1vlVrzjLreMYao8mGKM",
+      "name": "Runebound Coffer (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "EWGwnXPlY1jdLJqekZ2R",
+      "name": "Runebound Helm",
+      "type": "HELMET",
+      "vendorPrice": 950
+    },
+    {
+      "hashedId": "1rZXlwg5YvGjLk9joDmG",
+      "name": "Silverthorn Bow",
+      "type": "BOW",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "ZjlPA8v9NManNEyMe2Oa",
+      "name": "Spruce Bow",
+      "type": "BOW",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "yav4OK1wNExwQZP7rzJb",
+      "name": "Steel Boots",
+      "type": "BOOTS",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "P1vlVrzjLrn5Lao8mGKM",
+      "name": "Stormbringer",
+      "type": "SWORD",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "XyeZRGx9YjpzQB80gWlP",
+      "name": "Stormbringer Buckler",
+      "type": "SHIELD",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "y7Do6jgkY0dDY8BAdKX0",
+      "name": "Stormbringer Striders",
+      "type": "BOOTS",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "njoPWKDkLXm2Q06ZOX79",
+      "name": "Swiftwind Boots",
+      "type": "BOOTS",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Z6aDoyRnLybkQpV5AGXm",
+      "name": "Thunderfury Brew",
+      "type": "POTION",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "DBngxedVYJ8ZQX64wW8o",
+      "name": "Tin Boots",
+      "type": "BOOTS",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "7eA59WrBQRReQzb62qKv",
+      "name": "Voidstep Boots",
+      "type": "BOOTS",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "PjVDJez3LDRvNKWO08Ga",
+      "name": "Vortex Brew",
+      "type": "POTION",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "O2xMjGdBN5XqQ9P1nyrv",
+      "name": "Whisperwind Boots",
+      "type": "BOOTS",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "Z6aDoyRnLyErLpV5AGXm",
+      "name": "Whisperwind Bow",
+      "type": "BOW",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "O2xMjGdBN5oPL9P1nyrv",
+      "name": "Willow Bow",
+      "type": "BOW",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "bAB1E9poQqEVQnakeJj5",
+      "name": "Yew Bow",
+      "type": "BOW",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "PjVDJez3LDg5YKWO08Ga",
+      "name": "Chromite Helmet",
+      "type": "HELMET",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "zvjoJW96Y85L3RaAylwE",
+      "name": "Chromite Ore",
+      "type": "ORE",
+      "vendorPrice": 11
+    },
+    {
+      "hashedId": "XyeZRGx9YjK2LB80gWlP",
+      "name": "Chromite Shield",
+      "type": "SHIELD",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "brz9RZnWN7ZaQKAp0Mdl",
+      "name": "Chromite Sword",
+      "type": "SWORD",
+      "vendorPrice": 60
+    },
+    {
+      "hashedId": "27gw0k38L4xLWevJxyKR",
+      "name": "Cod",
+      "type": "FISH",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "P1vlVrzjLr1DYao8mGKM",
+      "name": "Colossus",
+      "type": "SHIELD",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "BRn3x72JQ2XDYzOMok41",
+      "name": "Cooked Cod",
+      "type": "FOOD",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "1rZXlwg5Yv48Qk9joDmG",
+      "name": "Cooked Herring",
+      "type": "FOOD",
+      "vendorPrice": 15
+    },
+    {
+      "hashedId": "JVM29l7kQZ8AY80q6WDG",
+      "name": "Cooked Perch",
+      "type": "FOOD",
+      "vendorPrice": 13
+    },
+    {
+      "hashedId": "oZwey82VNAw6LD0dXM3g",
+      "name": "Cooked Trout",
+      "type": "FOOD",
+      "vendorPrice": 11
+    },
+    {
+      "hashedId": "B2WEpv54NmZxYj1xJrXk",
+      "name": "Cooked Turtle",
+      "type": "FOOD",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "JVM29l7kQZpwY80q6WDG",
+      "name": "Copper Helmet",
+      "type": "HELMET",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "JZdg5V3PQoKQEyWq0zlB",
+      "name": "Copper Ore",
+      "type": "ORE",
+      "vendorPrice": 2
+    },
+    {
+      "hashedId": "mK5jqPopYG1DQrOzDRGV",
+      "name": "Copper Shield",
+      "type": "SHIELD",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "dgBq1boWYeq0YkJ3rXaD",
+      "name": "Copper Sword",
+      "type": "SWORD",
+      "vendorPrice": 30
+    },
+    {
+      "hashedId": "y7Do6jgkY0ZqQ8BAdKX0",
+      "name": "Corestrike",
+      "type": "PICKAXE",
+      "vendorPrice": 150
+    },
+    {
+      "hashedId": "3yE1A84kYOXWLl6XeVKp",
+      "name": "Corruption",
+      "type": "CHESTPLATE",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "q9pwa0kxLB0JNgVj136l",
+      "name": "Cosmic Finesse Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "6leApVoENk51L7nRPy2D",
+      "name": "Curious Chest of Eggs",
+      "type": "CHEST",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "2WEpv54NmZkjYj1xJrXk",
+      "name": "Cursed Ticket",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "bAB1E9poQqXELnakeJj5",
+      "name": "Cursed Ticket (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "mK5jqPopYGb8NrOzDRGV",
+      "name": "Eclipse",
+      "type": "DAGGER",
+      "vendorPrice": 850
+    },
+    {
+      "hashedId": "q9pwa0kxLBPgNgVj136l",
+      "name": "Forgotten Chest",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54Nmo9Lj1xJrXk",
+      "name": "Forgotten Chest (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "JVM29l7kQZAAL80q6WDG",
+      "name": "Fortified Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "B2WEpv54Nmm1Nj1xJrXk",
+      "name": "Gloves of the Protector",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1400
+    },
+    {
+      "hashedId": "ElzPeorXNVq3QaW0kv53",
+      "name": "Green Scroll",
+      "type": "COLLECTABLE",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "Rv5g4z1dQnaKLqy32jpG",
+      "name": "Kringle Crown",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "dgBq1boWYePaNkJ3rXaD",
+      "name": "Lost Crypt",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "ZjlPA8v9NM7RLEyMe2Oa",
+      "name": "Lost Crypt (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "lzPeorXNVDR7LaW0kv53",
+      "name": "Lovers Core",
+      "type": "COLLECTABLE",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "zvjoJW96Y81KL3RaAylw",
+      "name": "Mercury Helmet",
+      "type": "HELMET",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "q9pwa0kxLBJLgVj136l4",
+      "name": "Mercury Ore",
+      "type": "ORE",
+      "vendorPrice": 9
+    },
+    {
+      "hashedId": "ElzPeorXNV0pLaW0kv53",
+      "name": "Mercury Shield",
+      "type": "SHIELD",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "Ro31P7kZL69AYveGxXOy",
+      "name": "Mercury Sword",
+      "type": "SWORD",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "GXBy7a4Lb017N0Pw6Vdg",
+      "name": "Moonlight Essence",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "RVrBKlPdNdWaQWG8xJe9",
+      "name": "Moonlight Essence (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ElzPeorXNVmBQaW0kv53",
+      "name": "Mysterious Chest of Eggs",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "BPjze3x2Q3OpQR85vgZV",
+      "name": "Mystic Helmet",
+      "type": "HELMET",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "brz9RZnWN7zDQKAp0Mdl",
+      "name": "Mystic Shield",
+      "type": "SHIELD",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "ZjlPA8v9NMaXNEyMe2Oa",
+      "name": "Mystic Sword",
+      "type": "SWORD",
+      "vendorPrice": 90
+    },
+    {
+      "hashedId": "JVM29l7kQZdAY80q6WDG",
+      "name": "Omnipotent Might Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "3ZvrGV8RQpdPQ2wgA5jD",
+      "name": "Phoenix Crown",
+      "type": "HELMET",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "gGZ2J71yYKZDNMmjbown",
+      "name": "Piercer",
+      "type": "BOW",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "1rZXlwg5YvR8Yk9joDmG",
+      "name": "Precision Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oaJydnOmQWW2QbgRe5ME",
+      "name": "Protection Potion",
+      "type": "POTION",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "93R0qXalLlbjNAbn8DBg",
+      "name": "Quickstep Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "RVrBKlPdNd5yYWG8xJe9",
+      "name": "Quickstrike",
+      "type": "DAGGER",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "bAB1E9poQqa0QnakeJj5",
+      "name": "Red Scroll",
+      "type": "COLLECTABLE",
+      "vendorPrice": 8
+    },
+    {
+      "hashedId": "3ZvrGV8RQpb6Y2wgA5jD",
+      "name": "Relic Coffer",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQq2nNnakeJj5",
+      "name": "Relic Coffer (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "O2xMjGdBN5j7Y9P1nyrv",
+      "name": "Relic Reservoir",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "gGZ2J71yYK76YMmjbown",
+      "name": "Relic Reservoir (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9Yj92NB80gWlP",
+      "name": "Rune-etched Reeler",
+      "type": "FISHING_ROD",
+      "vendorPrice": 150
+    },
+    {
+      "hashedId": "3R0qXalLlzErNAbn8DBg",
+      "name": "Scroll of Enlightenment",
+      "type": "RELIC",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "3yE1A84kYO16Ql6XeVKp",
+      "name": "Serpent's Covert",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZqEegBydNw6mQkA59J61",
+      "name": "Serpent's Covert (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "doyA279pNz70YKRDEWm8",
+      "name": "Strike Essence",
+      "type": "POTION",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "brz9RZnWN73GNKAp0Mdl",
+      "name": "Sword Shrine (Recipes)",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "7gw0k38L4AbzQWevJxyK",
+      "name": "Torch",
+      "type": "COLLECTABLE",
+      "vendorPrice": 15
+    },
+    {
+      "hashedId": "yav4OK1wNEKwLZP7rzJb",
+      "name": "Wildwood Chopper",
+      "type": "FELLING_AXE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "RVrBKlPdNdrVLWG8xJe9",
+      "name": "Windrider Essence",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "XjEaOeBkLaj7QlGwxVPq",
+      "name": "Divinity",
+      "type": "BOW",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "27gw0k38L44xLWevJxyK",
+      "name": "Dungeon Potion",
+      "type": "POTION",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "93R0qXalLlemQAbn8DBg",
+      "name": "Grimwood",
+      "type": "BOW",
+      "vendorPrice": 1100
+    },
+    {
+      "hashedId": "Rv5g4z1dQnjlQqy32jpG",
+      "name": "Improved Fishing Rod",
+      "type": "FISHING_ROD",
+      "vendorPrice": 4
+    },
+    {
+      "hashedId": "3ZvrGV8RQpPdQ2wgA5jD",
+      "name": "Iron Shield",
+      "type": "SHIELD",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "7eA59WrBQRapLzb62qKv",
+      "name": "Iron Sword",
+      "type": "SWORD",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "lrx463VdQgBOL5w1zWKP",
+      "name": "Potion of the Gods",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "93R0qXalLlddLAbn8DBg",
+      "name": "Silverthorn Sword",
+      "type": "SWORD",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "EWGwnXPlY1lvNJqekZ2R",
+      "name": "Simple Fishing Rod",
+      "type": "FISHING_ROD",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "bAB1E9poQqpgLnakeJj5",
+      "name": "Soulrender",
+      "type": "SWORD",
+      "vendorPrice": 300
+    },
+    {
+      "hashedId": "brz9RZnWN7ppYKAp0Mdl",
+      "name": "Soulshield of Redemption",
+      "type": "SHIELD",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "JVM29l7kQZ5KL80q6WDG",
+      "name": "Springtide Token",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "3ZvrGV8RQpm8N2wgA5jD",
+      "name": "Springtide Token (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "7eA59WrBQRdyYzb62qKv",
+      "name": "Steel Shield",
+      "type": "SHIELD",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "XyeZRGx9YjkKLB80gWlP",
+      "name": "Steel Sword",
+      "type": "SWORD",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "6aDoyRnLyrjzQpV5AGXm",
+      "name": "Stilldrop",
+      "type": "COLLECTABLE",
+      "vendorPrice": 50
+    },
+    {
+      "hashedId": "mK5jqPopYGpbLrOzDRGV",
+      "name": "Sword Shrine",
+      "type": "CHEST",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "brz9RZnWN7ypLKAp0Mdl",
+      "name": "Thunder",
+      "type": "HELMET",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "BPjze3x2Q3wZQR85vgZV",
+      "name": "Thunder Helm",
+      "type": "HELMET",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "27gw0k38L48kLWevJxyK",
+      "name": "Thunderhoof Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oaJydnOmQWyvYbgRe5ME",
+      "name": "Thundershot",
+      "type": "BOW",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "jGXBy7a4LbmKY0Pw6Vdg",
+      "name": "Thunderstrike",
+      "type": "SWORD",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "EWGwnXPlY1GdQJqekZ2R",
+      "name": "Thunderstrike Steps",
+      "type": "BOOTS",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "Rv5g4z1dQnPlYqy32jpG",
+      "name": "Tin Shield",
+      "type": "SHIELD",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "3ZvrGV8RQp2yY2wgA5jD",
+      "name": "Tin Sword",
+      "type": "SWORD",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "7eA59WrBQRBpQzb62qKv",
+      "name": "Unyielding Fortitude",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "y7Do6jgkY00bY8BAdKX0",
+      "name": "Whisperwind Sword",
+      "type": "SWORD",
+      "vendorPrice": 650
+    },
+    {
+      "hashedId": "ZjlPA8v9NMO8LEyMe2Oa",
+      "name": "Widow's Kiss",
+      "type": "DAGGER",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "XjEaOeBkLap7YlGwxVPq",
+      "name": "Windrider",
+      "type": "GAUNTLETS",
+      "vendorPrice": 1200
+    },
+    {
+      "hashedId": "3ZvrGV8RQpKPL2wgA5jD",
+      "name": "Windrider Striders",
+      "type": "BOOTS",
+      "vendorPrice": 700
+    },
+    {
+      "hashedId": "DBngxedVYJynNX64wW8o",
+      "name": "1,000 Tokens",
+      "type": "TOKEN",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "lrx463VdQgm7Y5w1zWKP",
+      "name": "100 Tokens",
+      "type": "TOKEN",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "jGXBy7a4LbJKL0Pw6Vdg",
+      "name": "2,500 Tokens",
+      "type": "TOKEN",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "y7Do6jgkY0WbN8BAdKX0",
+      "name": "250 Tokens",
+      "type": "TOKEN",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "3yE1A84kYOZrNl6XeVKp",
+      "name": "500 Tokens",
+      "type": "TOKEN",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "93R0qXalLlWdYAbn8DBg",
+      "name": "Florien Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "ZjlPA8v9NM1eNEyMe2Oa",
+      "name": "Fluffy Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQqDKLnakeJj5",
+      "name": "Fortune",
+      "type": "HELMET",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "brz9RZnWN7VaQKAp0Mdl",
+      "name": "Frenzy Potion",
+      "type": "POTION",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "7eA59WrBQRleYzb62qKv",
+      "name": "Glimmersteel Helm",
+      "type": "HELMET",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "93R0qXalLl85LAbn8DBg",
+      "name": "Hollow Egg",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "dgBq1boWYeo9QkJ3rXaD",
+      "name": "Hollow Egg (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "93R0qXalLlvkNAbn8DBg",
+      "name": "Iron Helmet",
+      "type": "HELMET",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "JVM29l7kQZAL80q6WDGp",
+      "name": "Iron Ore",
+      "type": "ORE",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "eA59WrBQRp86Yzb62qKv",
+      "name": "Lovegrit",
+      "type": "COLLECTABLE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "zvjoJW96Y89XL3RaAylw",
+      "name": "Lumi Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "qEegBydNw52mLkA59J61",
+      "name": "Meteorite",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "mK5jqPopYG9KQrOzDRGV",
+      "name": "Moon Gem",
+      "type": "SPECIAL",
+      "vendorPrice": 1000
+    },
+    {
+      "hashedId": "dgBq1boWYe9mYkJ3rXaD",
+      "name": "Moonshimmer Hook",
+      "type": "FISHING_ROD",
+      "vendorPrice": 25
+    },
+    {
+      "hashedId": "doyA279pNz0LKRDEWm8b",
+      "name": "Moonstone",
+      "type": "GEMSTONE",
+      "vendorPrice": 35
+    },
+    {
+      "hashedId": "GZ2J71yYKbgxNMmjbown",
+      "name": "Moonstone Ink",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "doyA279pNznjNKRDEWm8",
+      "name": "Moonstone Ink (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "brz9RZnWN7J9QKAp0Mdl",
+      "name": "Mysterious Rune",
+      "type": "COLLECTABLE",
+      "vendorPrice": 7
+    },
+    {
+      "hashedId": "gGZ2J71yYKx9LMmjbown",
+      "name": "Neptune's Soul",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "Rv5g4z1dQnvoQqy32jpG",
+      "name": "Night's Whisper",
+      "type": "DAGGER",
+      "vendorPrice": 800
+    },
+    {
+      "hashedId": "6aDoyRnLyrrzQpV5AGXm",
+      "name": "Nutmeg Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "bAB1E9poQqW6YnakeJj5",
+      "name": "Nutwhisker Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "Zdg5V3PQod2rNEyWq0zl",
+      "name": "Ollo Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "oyA279pNz66XNKRDEWm8",
+      "name": "Orthrus Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "JZdg5V3PQopvNEyWq0zl",
+      "name": "Phoenix Requiem",
+      "type": "SWORD",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "rz9RZnWN7eeGLKAp0Mdl",
+      "name": "Pile of Snow",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "PjVDJez3LDnwNKWO08Ga",
+      "name": "Pile of Snow (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "27gw0k38L4O9YWevJxyK",
+      "name": "Pile of Snow (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "0kK49j1VN9ErNq6B2doa",
+      "name": "Pink Egg",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "brz9RZnWN7n9QKAp0Mdl",
+      "name": "Pink Egg (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "O2xMjGdBN5eMN9P1nyrv",
+      "name": "Potion of the Hunter",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "ZjlPA8v9NMkpLEyMe2Oa",
+      "name": "Rolix Shell",
+      "type": "COLLECTABLE",
+      "vendorPrice": 9
+    },
+    {
+      "hashedId": "P1vlVrzjLrXbNao8mGKM",
+      "name": "Rose",
+      "type": "COLLECTABLE",
+      "vendorPrice": 10
+    },
+    {
+      "hashedId": "lrx463VdQg1gY5w1zWKP",
+      "name": "Sentinel's Resolve",
+      "type": "GREAVES",
+      "vendorPrice": 400
+    },
+    {
+      "hashedId": "njoPWKDkLXAVQ06ZOX79",
+      "name": "Serpent's Kiss",
+      "type": "DAGGER",
+      "vendorPrice": 450
+    },
+    {
+      "hashedId": "27gw0k38L4oGYWevJxyK",
+      "name": "Serpentstrike",
+      "type": "SWORD",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "brz9RZnWN7dAYKAp0Mdl",
+      "name": "Shelly Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "1vlVrzjLrW4AQao8mGKM",
+      "name": "Shrine Sigil",
+      "type": "COLLECTABLE",
+      "vendorPrice": 100
+    },
+    {
+      "hashedId": "brz9RZnWN7R4QKAp0Mdl",
+      "name": "Silvermist",
+      "type": "DAGGER",
+      "vendorPrice": 1300
+    },
+    {
+      "hashedId": "q9pwa0kxLBmlYgVj136l",
+      "name": "Steel Helmet",
+      "type": "HELMET",
+      "vendorPrice": 45
+    },
+    {
+      "hashedId": "1rZXlwg5Yv8Qk9joDmGe",
+      "name": "Steel Ore",
+      "type": "ORE",
+      "vendorPrice": 7
+    },
+    {
+      "hashedId": "lrx463VdQg94Y5w1zWKP",
+      "name": "Stone Splinter",
+      "type": "PICKAXE",
+      "vendorPrice": 75
+    },
+    {
+      "hashedId": "DBngxedVYJ5nNX64wW8o",
+      "name": "Sunfire",
+      "type": "SWORD",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "yav4OK1wNEXRQZP7rzJb",
+      "name": "Sunseeker",
+      "type": "BOW",
+      "vendorPrice": 750
+    },
+    {
+      "hashedId": "ZqEegBydNwG5NkA59J61",
+      "name": "Tempest's Fury",
+      "type": "SWORD",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "JZdg5V3PQoW0QEyWq0zl",
+      "name": "Tin Helmet",
+      "type": "HELMET",
+      "vendorPrice": 18
+    },
+    {
+      "hashedId": "oZwey82VNA6YD0dXM3gO",
+      "name": "Tin Ore",
+      "type": "ORE",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Ro31P7kZL6RALveGxXOy",
+      "name": "Twinstrike Elixir",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "2xMjGdBN5GK3L9P1nyrv",
+      "name": "Unknown Keys",
+      "type": "COLLECTABLE",
+      "vendorPrice": 15
+    },
+    {
+      "hashedId": "P1vlVrzjLrM9Yao8mGKM",
+      "name": "Veinseeker",
+      "type": "PICKAXE",
+      "vendorPrice": 6
+    },
+    {
+      "hashedId": "3yE1A84kYOoWYl6XeVKp",
+      "name": "Viper",
+      "type": "BOW",
+      "vendorPrice": 500
+    },
+    {
+      "hashedId": "j98bO5w1QPJPY3xkREVJ",
+      "name": "Whiskers Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "XyeZRGx9YjDzQB80gWlP",
+      "name": "Whispersong",
+      "type": "HELMET",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "yav4OK1wNE9zNZP7rzJb",
+      "name": "Wingsley Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "njoPWKDkLX1VQ06ZOX79",
+      "name": "Wrex Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "doyA279pNzqjQKRDEWm8",
+      "name": "Yule Gift",
+      "type": "CHEST",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "yeZRGx9YjBBDYB80gWlP",
+      "name": "Yule Token",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "BPjze3x2Q3nrLR85vgZV",
+      "name": "Yule Token (2023)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "lrx463VdQgoxQ5w1zWKP",
+      "name": "Yule Token (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "EWGwnXPlY10wNJqekZ2R",
+      "name": "Zephyrix Egg",
+      "type": "PET_EGG",
+      "vendorPrice": 250
+    },
+    {
+      "hashedId": "j98bO5w1QPZnY3xkREVJ",
+      "name": "Fists of Fury",
+      "type": "GAUNTLETS",
+      "vendorPrice": 2000
+    },
+    {
+      "hashedId": "K5jqPopYGrJbNrOzDRGV",
+      "name": "Florin",
+      "type": "COLLECTABLE",
+      "vendorPrice": 20
+    },
+    {
+      "hashedId": "7eA59WrBQRVrQzb62qKv",
+      "name": "Fossil",
+      "type": "COLLECTABLE",
+      "vendorPrice": 3
+    },
+    {
+      "hashedId": "JVM29l7kQZ1XL80q6WDG",
+      "name": "Fury",
+      "type": "BOW",
+      "vendorPrice": 1050
+    },
+    {
+      "hashedId": "XyeZRGx9YjRKYB80gWlP",
+      "name": "Lightning Sprint",
+      "type": "ESSENCE_CRYSTAL",
+      "vendorPrice": 2500
+    },
+    {
+      "hashedId": "PjVDJez3LDXlLKWO08Ga",
+      "name": "Soulstring",
+      "type": "BOW",
+      "vendorPrice": 1500
+    },
+    {
+      "hashedId": "BPjze3x2Q3l8NR85vgZV",
+      "name": "Sting",
+      "type": "BOW",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "jGXBy7a4Lb6DL0Pw6Vdg",
+      "name": "Stormsong",
+      "type": "BOW",
+      "vendorPrice": 600
+    },
+    {
+      "hashedId": "jGXBy7a4LbBML0Pw6Vdg",
+      "name": "Sun's Light",
+      "type": "POTION",
+      "vendorPrice": 20000
+    },
+    {
+      "hashedId": "Z6aDoyRnLynJQpV5AGXm",
+      "name": "Toy Ghost",
+      "type": "COLLECTABLE",
+      "vendorPrice": 11
+    },
+    {
+      "hashedId": "y7Do6jgkY0A0L8BAdKX0",
+      "name": "Twilight",
+      "type": "CHESTPLATE",
+      "vendorPrice": 1700
+    },
+    {
+      "hashedId": "O2xMjGdBN50nQ9P1nyrv",
+      "name": "Wings",
+      "type": "COLLECTABLE",
+      "vendorPrice": 13
+    },
+    {
+      "hashedId": "DBngxedVYJ11NX64wW8o",
+      "name": "Moonshot",
+      "type": "BOW",
+      "vendorPrice": 550
+    },
+    {
+      "hashedId": "PjVDJez3LDDJLKWO08Ga",
+      "name": "Milk",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "Ro31P7kZL6nJLveGxXOy",
+      "name": "Milk (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "jVDJez3LDx7mLKWO08Ga",
+      "name": "Pumpkin",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "B2WEpv54NmV7Yj1xJrXk",
+      "name": "Pumpkin (2024)",
+      "type": "CAMPAIGN_ITEM",
+      "vendorPrice": 1
+    },
+    {
+      "hashedId": "ElzPeorXNVlALaW0kv53",
+      "name": "Soul",
+      "type": "HELMET",
+      "vendorPrice": 1400
+    }
+  ]
 }

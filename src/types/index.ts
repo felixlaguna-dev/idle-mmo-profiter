@@ -178,4 +178,39 @@ export interface DefaultData {
   resourceGathering: ResourceGather[]
   magicFindDefaults: MagicFindSettings
   marketTaxRate: number
+  allItems?: Array<{
+    hashedId: string
+    name: string
+    type: string
+    vendorPrice: number | null
+  }>
+}
+
+// Character Value Tracker types
+
+export interface CharacterInventoryItem {
+  hashId: string
+  quantity: number
+  priceAtTime: number
+  /** Optional item name for API-sourced items not in defaults.json */
+  name?: string
+}
+
+export interface CharacterSnapshot {
+  timestamp: string
+  gold: number
+  inventory: CharacterInventoryItem[]
+}
+
+export interface Character {
+  id: string
+  name: string
+  gold: number
+  inventory: CharacterInventoryItem[]
+  history: CharacterSnapshot[]
+}
+
+export interface CharacterStore {
+  characters: Character[]
+  activeCharacterId: string | null
 }

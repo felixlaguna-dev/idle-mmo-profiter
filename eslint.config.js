@@ -30,6 +30,7 @@ export default [
         fetch: 'readonly',
         alert: 'readonly',
         confirm: 'readonly',
+        prompt: 'readonly',
         // Browser types
         Headers: 'readonly',
         RequestInit: 'readonly',

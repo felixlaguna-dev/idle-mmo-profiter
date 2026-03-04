@@ -307,6 +307,12 @@ function createDataProvider() {
   const marketTaxRate = computed(() => defaults.value.marketTaxRate)
 
   /**
+   * All items array from defaults.json
+   * This contains items not in any specific category (populated by populate-all-items script)
+   */
+  const allItems = computed(() => defaults.value.allItems || [])
+
+  /**
    * Create lookup maps for material, craftable, and resource prices
    * These allow us to apply overrides to activity data
    */
@@ -1012,6 +1018,7 @@ function createDataProvider() {
     resourceGathering,
     magicFindDefaults,
     marketTaxRate,
+    allItems,
 
     // Price lookup maps
     materialPriceMap,

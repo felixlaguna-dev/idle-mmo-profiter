@@ -31,8 +31,11 @@ const DungeonChart = defineAsyncComponent(() => import('./components/charts/Dung
 const RevenueBreakdown = defineAsyncComponent(
   () => import('./components/charts/RevenueBreakdown.vue')
 )
+const CharacterTracker = defineAsyncComponent(
+  () => import('./components/CharacterTracker.vue')
+)
 // Current tab state
-type Tab = 'all' | 'dungeons' | 'craftables' | 'resources' | 'market' | 'charts'
+type Tab = 'all' | 'dungeons' | 'craftables' | 'resources' | 'market' | 'charts' | 'characters'
 const currentTab = ref<Tab>('all')
 
 // Settings modal state
@@ -203,7 +206,7 @@ const navigateToActivityTab = () => {
 }
 
 // Handle tab navigation with arrow keys
-const tabs: Tab[] = ['all', 'dungeons', 'craftables', 'resources', 'market', 'charts']
+const tabs: Tab[] = ['all', 'dungeons', 'craftables', 'resources', 'market', 'charts', 'characters']
 
 const handleTabKeydown = (e: KeyboardEvent) => {
   if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return
@@ -436,6 +439,18 @@ onUnmounted(() => {
             <span class="tab-label-full">Charts</span>
             <span class="tab-label-short">Charts</span>
           </button>
+          <button
+            class="tab-button"
+            :class="{ active: currentTab === 'characters' }"
+            role="tab"
+            :aria-selected="currentTab === 'characters'"
+            :tabindex="currentTab === 'characters' ? 0 : -1"
+            @click="currentTab = 'characters'"
+            @keydown="handleTabKeydown"
+          >
+            <span class="tab-label-full">Characters</span>
+            <span class="tab-label-short">Chars</span>
+          </button>
         </nav>
         </div>
 
@@ -504,6 +519,18 @@ onUnmounted(() => {
                 </ErrorBoundary>
               </div>
               <!-- PriceHistoryChart hidden until data is available -->
+            </div>
+            <div v-if="currentTab === 'characters'">
+              <ErrorBoundary>
+                <Suspense>
+                  <template #default>
+                    <CharacterTracker />
+                  </template>
+                  <template #fallback>
+                    <LoadingSpinner message="Loading character tracker..." :timeout="10000" />
+                  </template>
+                </Suspense>
+              </ErrorBoundary>
             </div>
           </ErrorBoundary>
         </div>

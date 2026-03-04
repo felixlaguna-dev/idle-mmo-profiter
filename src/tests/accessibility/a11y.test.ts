@@ -19,7 +19,7 @@ describe('Accessibility Features', () => {
       const wrapper = mount(App)
       const tabButtons = wrapper.findAll('[role="tab"]')
 
-      expect(tabButtons.length).toBe(6) // all, dungeons, craftables, resources, market, charts
+      expect(tabButtons.length).toBe(7) // all, dungeons, craftables, resources, market, charts, characters
       tabButtons.forEach((tab) => {
         expect(tab.attributes('aria-selected')).toBeDefined()
         expect(tab.attributes('role')).toBe('tab')
