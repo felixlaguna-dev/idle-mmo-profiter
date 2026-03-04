@@ -61,13 +61,13 @@ export function useProfitRanking(options: UseProfitRankingOptions): UseProfitRan
 
   const rankedActivities = computed(() => {
     // Get current values
-    const currentDungeons = unwrap(dungeons)
-    const currentRecipes = unwrap(recipes)
-    const currentCraftableRecipes = unwrap(craftableRecipes)
-    const currentResourceGathering = unwrap(resourceGathering)
-    const currentMagicFind = unwrap(magicFind)
-    const currentTaxRate = unwrap(taxRate)
-    const currentMaterialPriceMap = unwrap(materialPriceMap)
+    const currentDungeons = unwrap(dungeons) ?? []
+    const currentRecipes = unwrap(recipes) ?? []
+    const currentCraftableRecipes = unwrap(craftableRecipes) ?? []
+    const currentResourceGathering = unwrap(resourceGathering) ?? []
+    const currentMagicFind = unwrap(magicFind) ?? { streak: 0, dungeon: 0, item: 0, bonus: 0 }
+    const currentTaxRate = unwrap(taxRate) ?? 0
+    const currentMaterialPriceMap = unwrap(materialPriceMap) ?? new Map<string, number>()
     const currentMaterialLastSaleAtMap = unwrap(materialLastSaleAtMap)
     const currentMaterialVendorValueMap = unwrap(materialVendorValueMap)
     const currentIncludeNegative = unwrap(includeNegative)
