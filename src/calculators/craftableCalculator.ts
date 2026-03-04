@@ -111,6 +111,8 @@ export interface CraftableProfitResult {
   isLowConfidence?: boolean
   /** True if the tradable recipe's price is low-confidence (shown as warning on recipe cost line) */
   isRecipeLowConfidence?: boolean
+  /** Weekly sales volume of the finished product */
+  weeklySalesVolume?: number
 }
 
 /**
@@ -260,6 +262,7 @@ export function calculateCraftableProfits(
         materialVendorValues
       ),
       isRecipeLowConfidence: tradableRecipe ? isRecipeLowConfidence(tradableRecipe.lastSaleAt) : false,
+      weeklySalesVolume: craftable.weeklySalesVolume,
     }
 
     // Show dual profitability when:

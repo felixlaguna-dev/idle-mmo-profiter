@@ -7,6 +7,7 @@ import LowConfidenceToggle from './LowConfidenceToggle.vue'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useStaticMode } from '../composables/useStaticMode'
 import { useLowConfidenceFilter } from '../composables/useLowConfidenceFilter'
+import { getVolumeTierInfo } from '../utils/salesVolume'
 
 const { getHeatmapStyle, getSubduedHeatmapStyle } = useHeatmap()
 const { isStaticMode } = useStaticMode()
@@ -296,6 +297,12 @@ const formatTime = (seconds: number): string => {
               </td>
               <td class="name-cell" data-label="Craftable">
                 {{ craftable.name }}
+                <span
+                  v-if="craftable.weeklySalesVolume !== undefined"
+                  class="volume-badge"
+                  :class="'volume-' + getVolumeTierInfo(craftable.weeklySalesVolume).tier"
+                  :title="getVolumeTierInfo(craftable.weeklySalesVolume).tooltip"
+                >{{ getVolumeTierInfo(craftable.weeklySalesVolume).icon }}</span>
                 <span
                   v-if="craftable.isLowConfidence"
                   class="low-confidence-badge"
@@ -1284,6 +1291,42 @@ const formatTime = (seconds: number): string => {
 
 .low-confidence-badge:hover {
   opacity: 1;
+}
+
+/* Volume badge */
+.volume-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.375rem;
+  font-size: 0.75rem;
+  cursor: help;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.volume-badge:hover {
+  opacity: 1;
+}
+
+.volume-dead {
+  opacity: 0.3;
+}
+
+.volume-trickle {
+  color: var(--text-secondary, #9ca3af);
+}
+
+.volume-moderate {
+  color: var(--text-primary, #e5e7eb);
+}
+
+.volume-active {
+  color: #fbbf24;
+}
+
+.volume-hot {
+  color: #f97316;
 }
 
 /* Recipe low-confidence badge (inside expanded row) */

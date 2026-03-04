@@ -10,7 +10,7 @@
  */
 
 import { ref, computed } from 'vue'
-import type { DefaultData, Recipe } from '../types'
+import type { DefaultData, Recipe, CraftableRecipe } from '../types'
 import defaultData from '../data/defaults.json'
 
 // Storage keys
@@ -116,17 +116,25 @@ function loadCraftableRecipes(
 
     const savedCrafts = JSON.parse(stored) as DefaultData['craftableRecipes']
     // Use saved crafts as the source of truth (includes additions, removals, time edits)
-    // But merge lastSaleAt from defaults for low-confidence detection
+    // But merge lastSaleAt and weeklySalesVolume from defaults for low-confidence and volume detection
     const defaultLastSaleAt = new Map<string, string>()
+    const defaultWeeklySalesVolume = new Map<string, number>()
     defaultCrafts.forEach((craft) => {
       if (craft.lastSaleAt) {
         defaultLastSaleAt.set(craft.name, craft.lastSaleAt)
+      }
+      if (craft.weeklySalesVolume !== undefined) {
+        defaultWeeklySalesVolume.set(craft.name, craft.weeklySalesVolume)
       }
     })
 
     return savedCrafts.map((craft) => {
       const lastSaleAt = defaultLastSaleAt.get(craft.name)
-      return lastSaleAt ? { ...craft, lastSaleAt } : craft
+      const weeklySalesVolume = defaultWeeklySalesVolume.get(craft.name)
+      const updates: Partial<CraftableRecipe> = {}
+      if (lastSaleAt) updates.lastSaleAt = lastSaleAt
+      if (weeklySalesVolume !== undefined) updates.weeklySalesVolume = weeklySalesVolume
+      return Object.keys(updates).length > 0 ? { ...craft, ...updates } : craft
     })
   } catch (error) {
     console.error('Failed to load craftable recipes:', error)
@@ -239,6 +247,8 @@ function createDataProvider() {
         vendorValue,
         // Copy lastSaleAt from craftableRecipe for low-confidence detection
         lastSaleAt: recipe.lastSaleAt,
+        // Copy weeklySalesVolume from craftableRecipe for volume tier detection
+        weeklySalesVolume: recipe.weeklySalesVolume,
       })
       craftableNames.add(recipe.name)
     }

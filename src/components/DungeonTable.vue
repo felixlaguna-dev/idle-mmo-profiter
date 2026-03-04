@@ -5,6 +5,7 @@ import EditableValue from './EditableValue.vue'
 import LowConfidenceToggle from './LowConfidenceToggle.vue'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useLowConfidenceFilter } from '../composables/useLowConfidenceFilter'
+import { getVolumeTierInfo } from '../utils/salesVolume'
 
 const { getHeatmapStyle } = useHeatmap()
 const {
@@ -248,6 +249,12 @@ const isUntradableRecipe = (recipeName: string): boolean => {
               <td class="name-cell" data-label="Dungeon">
                 {{ dungeon.name }}
                 <span
+                  v-if="dungeon.minDropVolume !== undefined"
+                  class="volume-badge"
+                  :class="'volume-' + getVolumeTierInfo(dungeon.minDropVolume).tier"
+                  :title="'Lowest drop volume: ' + dungeon.minDropVolume + ' units/week (' + getVolumeTierInfo(dungeon.minDropVolume).tier + ')'"
+                >{{ getVolumeTierInfo(dungeon.minDropVolume).icon }}</span>
+                <span
                   v-if="dungeon.isLowConfidence"
                   class="low-confidence-badge"
                   title="Low confidence: One or more drops have no recent sales data (over 30 days)"
@@ -322,6 +329,12 @@ const isUntradableRecipe = (recipeName: string): boolean => {
                       <tr v-for="drop in dungeon.drops" :key="drop.recipeName">
                         <td>
                           {{ drop.recipeName }}
+                          <span
+                            v-if="drop.weeklySalesVolume !== undefined"
+                            class="volume-badge small"
+                            :class="'volume-' + getVolumeTierInfo(drop.weeklySalesVolume).tier"
+                            :title="getVolumeTierInfo(drop.weeklySalesVolume).tooltip"
+                          >{{ getVolumeTierInfo(drop.weeklySalesVolume).icon }}</span>
                           <span
                             v-if="drop.isLowConfidence"
                             class="low-confidence-badge small"
@@ -778,6 +791,46 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 
 .low-confidence-badge.small {
   font-size: 0.75rem;
+}
+
+/* Volume badge */
+.volume-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.375rem;
+  font-size: 0.75rem;
+  cursor: help;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.volume-badge:hover {
+  opacity: 1;
+}
+
+.volume-badge.small {
+  font-size: 0.6875rem;
+}
+
+.volume-dead {
+  opacity: 0.3;
+}
+
+.volume-trickle {
+  color: var(--text-secondary, #9ca3af);
+}
+
+.volume-moderate {
+  color: var(--text-primary, #e5e7eb);
+}
+
+.volume-active {
+  color: #fbbf24;
+}
+
+.volume-hot {
+  color: #f97316;
 }
 
 /* Row with low-confidence dungeon */

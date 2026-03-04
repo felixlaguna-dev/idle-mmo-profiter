@@ -8,6 +8,8 @@ export interface DungeonDropResult {
   expectedValue: number
   /** True if this drop's price is low-confidence */
   isLowConfidence?: boolean
+  /** Weekly sales volume of this drop's recipe */
+  weeklySalesVolume?: number
 }
 
 export interface DungeonProfitResult {
@@ -19,6 +21,8 @@ export interface DungeonProfitResult {
   profitPerHour: number
   /** True if ANY drop has a low-confidence price */
   isLowConfidence?: boolean
+  /** Minimum weekly sales volume among tradable drops (indicates overall dungeon liquidity) */
+  minDropVolume?: number
 }
 
 /**
@@ -64,6 +68,7 @@ export function calculateDungeonProfits(
           chance: 0,
           expectedValue: 0,
           isLowConfidence: true,
+          weeklySalesVolume: undefined,
         }
       }
 
@@ -78,6 +83,7 @@ export function calculateDungeonProfits(
         chance: recipe.chance,
         expectedValue,
         isLowConfidence: dropIsLowConfidence,
+        weeklySalesVolume: recipe.weeklySalesVolume,
       }
     })
 
@@ -103,6 +109,17 @@ export function calculateDungeonProfits(
       return drop.isLowConfidence
     })
 
+    // Compute minimum weekly sales volume among tradable drops
+    // This indicates overall dungeon liquidity - limited by the least-traded drop
+    const tradableDropVolumes = dropResults
+      .filter((drop) => {
+        const recipe = recipeMap.get(drop.recipeName)
+        return recipe && !recipe.isUntradable
+      })
+      .map((drop) => drop.weeklySalesVolume ?? 0)
+
+    const minDropVolume = tradableDropVolumes.length > 0 ? Math.min(...tradableDropVolumes) : 0
+
     return {
       name: dungeon.name,
       runCost: dungeon.runCost,
@@ -111,6 +128,7 @@ export function calculateDungeonProfits(
       totalProfit,
       profitPerHour,
       isLowConfidence: dungeonIsLowConfidence,
+      minDropVolume,
     }
   })
 

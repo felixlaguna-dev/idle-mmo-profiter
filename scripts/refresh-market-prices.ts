@@ -52,6 +52,7 @@ interface DefaultItem {
   lastUpdated?: string
   suggestedRefreshMinutes?: number
   lastSaleAt?: string // Most recent sale timestamp for low-confidence detection
+  weeklySalesVolume?: number // Total units sold in last 7 days
   [key: string]: unknown // preserve other fields
 }
 
@@ -169,6 +170,34 @@ function isDueForRefresh(item: DefaultItem): {
 }
 
 /**
+ * Compute weekly sales volume from market history data
+ * Sums total_sold for entries within the last 7 days
+ *
+ * @param historyData - Array of MarketHistoryEntry with date and total_sold
+ * @returns Total units sold in last 7 days (0 if no data)
+ */
+function computeWeeklySalesVolume(
+  historyData: Array<{ date: string; total_sold: number }>
+): number {
+  if (!historyData || historyData.length === 0) {
+    return 0
+  }
+
+  const now = new Date()
+  const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
+
+  let totalSold = 0
+  for (const entry of historyData) {
+    const entryDate = new Date(entry.date)
+    if (entryDate >= sevenDaysAgo && entryDate <= now) {
+      totalSold += entry.total_sold
+    }
+  }
+
+  return totalSold
+}
+
+/**
  * Process a single item: fetch market price and update in-place
  *
  * @param item - The item to process
@@ -252,6 +281,10 @@ async function processItem(
   if (marketData.latest_sold.length > 0) {
     item.lastSaleAt = marketData.latest_sold[0].sold_at
   }
+
+  // Compute and store weekly sales volume
+  const weeklySalesVolume = computeWeeklySalesVolume(marketData.history_data)
+  item.weeklySalesVolume = weeklySalesVolume
 
   // Show the change with refresh interval
   if (oldPrice !== undefined) {
@@ -729,6 +762,10 @@ async function main() {
       // Extract and store the most recent sale timestamp
       const lastSaleAt = marketData.latest_sold[0].sold_at
       ;(craftableRecipe as Record<string, unknown>).lastSaleAt = lastSaleAt
+
+      // Compute and store weekly sales volume
+      const weeklySalesVolume = computeWeeklySalesVolume(marketData.history_data)
+      ;(craftableRecipe as Record<string, unknown>).weeklySalesVolume = weeklySalesVolume
 
       // Compute and store refresh interval so smart mode can skip next time
       const computedRefreshMinutes = computeSuggestedRefreshMinutes(marketData)

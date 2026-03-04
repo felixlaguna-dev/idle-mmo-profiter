@@ -10,6 +10,8 @@ export interface Material {
   suggestedRefreshMinutes?: number
   /** ISO timestamp of most recent sale from market history */
   lastSaleAt?: string
+  /** Weekly sales volume (units sold in last 7 days) from market history */
+  weeklySalesVolume?: number
 }
 
 export interface Craftable {
@@ -22,6 +24,8 @@ export interface Craftable {
   suggestedRefreshMinutes?: number
   /** ISO timestamp of most recent sale from market history */
   lastSaleAt?: string
+  /** Weekly sales volume (units sold in last 7 days) from market history */
+  weeklySalesVolume?: number
 }
 
 export interface Resource {
@@ -52,6 +56,8 @@ export interface Recipe {
   suggestedRefreshMinutes?: number
   /** ISO timestamp of most recent sale from market history */
   lastSaleAt?: string
+  /** Weekly sales volume (units sold in last 7 days) from market history */
+  weeklySalesVolume?: number
 }
 
 export interface DungeonDrop {
@@ -84,6 +90,8 @@ export interface CraftableRecipe {
   skill?: 'alchemy' | 'forging'
   /** ISO timestamp of most recent sale from market history */
   lastSaleAt?: string
+  /** Weekly sales volume (units sold in last 7 days) from market history */
+  weeklySalesVolume?: number
 }
 
 export interface ResourceInput {
