@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useMagicFindConfig } from '../composables/useMagicFindConfig'
-import EditableValue from './EditableValue.vue'
 
 // Initialize magic find config composable
 const { magicFind, dungeonMF, totalMF } = useMagicFindConfig()
+
+// Update a single MF field while preserving reactivity
+const updateMF = (field: 'streak' | 'item' | 'bonus', event: Event) => {
+  const value = Number((event.target as HTMLInputElement).value)
+  if (!isNaN(value) && value >= 0) {
+    magicFind.value = { ...magicFind.value, [field]: value }
+  }
+}
 
 // Local state for collapse/expand
 const isExpanded = ref(false)
@@ -90,21 +97,36 @@ const breakdownSummary = computed(() => {
     <!-- Collapsible card -->
     <div v-show="isExpanded" class="collapsible-card">
       <div class="inputs-grid">
-        <EditableValue
-          v-model="magicFind.streak"
-          :default-value="10"
-          label="MF from Streak"
-        />
-        <EditableValue
-          v-model="magicFind.item"
-          :default-value="3"
-          label="MF from Items"
-        />
-        <EditableValue
-          v-model="magicFind.bonus"
-          :default-value="10"
-          label="MF from Bonus"
-        />
+        <label class="mf-input-group">
+          <span class="mf-label">MF from Streak</span>
+          <input
+            type="number"
+            class="mf-input"
+            :value="magicFind.streak"
+            min="0"
+            @change="updateMF('streak', $event)"
+          />
+        </label>
+        <label class="mf-input-group">
+          <span class="mf-label">MF from Items</span>
+          <input
+            type="number"
+            class="mf-input"
+            :value="magicFind.item"
+            min="0"
+            @change="updateMF('item', $event)"
+          />
+        </label>
+        <label class="mf-input-group">
+          <span class="mf-label">MF from Bonus</span>
+          <input
+            type="number"
+            class="mf-input"
+            :value="magicFind.bonus"
+            min="0"
+            @change="updateMF('bonus', $event)"
+          />
+        </label>
       </div>
 
       <div class="breakdown-summary">
@@ -239,6 +261,45 @@ const breakdownSummary = computed(() => {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.mf-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.mf-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.mf-input {
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 0.375rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  min-height: 36px;
+  font-variant-numeric: tabular-nums;
+  transition: border-color 0.2s var(--ease-out);
+}
+
+.mf-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.mf-input::-webkit-inner-spin-button,
+.mf-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.mf-input {
+  -moz-appearance: textfield;
 }
 
 /* Breakdown summary */
