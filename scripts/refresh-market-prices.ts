@@ -357,7 +357,10 @@ async function main() {
       ...data.recipes.filter((item) => item.hashedId && !item.isUntradable),
     ]
 
-    for (const item of allItems) {
+    // Include craftableRecipes in analysis
+    const craftableRecipesForAnalysis = (data as DefaultData & { craftableRecipes?: DefaultItem[] }).craftableRecipes || []
+
+    for (const item of [...allItems, ...craftableRecipesForAnalysis]) {
       if (!item.lastUpdated) {
         neverRefreshed++
       }
@@ -370,7 +373,7 @@ async function main() {
     }
 
     console.log('Smart mode analysis:')
-    console.log(`  Due now: ${dueNow} items`)
+    console.log(`  Due now: ${dueNow} items (${allItems.length} main + ${craftableRecipesForAnalysis.length} craftableRecipes)`)
     console.log(`  Not yet due: ${notYetDue} items`)
     console.log(`  Never refreshed: ${neverRefreshed} items (will refresh)`)
     const estimatedDueMinutes = Math.ceil(dueNow / 20)
@@ -676,6 +679,7 @@ async function main() {
   // This is needed because craftables are auto-generated from craftableRecipes
   // and they need lastSaleAt for low-confidence detection to work
   const craftableRecipes = (data as DefaultData & { craftableRecipes?: DefaultItem[] }).craftableRecipes
+  let craftableRecipeSmartSkipped = 0
   if (craftableRecipes && craftableRecipes.length > 0) {
     console.log(`\n=== Processing Craftable Recipes (${craftableRecipes.length} items) ===\n`)
 
@@ -698,6 +702,19 @@ async function main() {
         continue
       }
 
+      // Smart mode: check if due for refresh
+      if (smartMode) {
+        const refreshStatus = isDueForRefresh(craftableRecipe)
+        if (!refreshStatus.due) {
+          console.log(
+            `  ⏳ ${craftableRecipe.name}: Not due (last: ${formatRefreshInterval(refreshStatus.minutesSinceLast!)} ago, next in: ${formatRefreshInterval(refreshStatus.minutesUntilDue!)})`
+          )
+          craftableRecipeSmartSkipped++
+          smartSkippedCount++
+          continue
+        }
+      }
+
       currentIndex++
       console.log(`[${currentIndex}/${Math.min(totalItems + craftableRecipes.length, limit)}] Processing: ${craftableRecipe.name} (craftableRecipe)`)
 
@@ -712,11 +729,21 @@ async function main() {
       // Extract and store the most recent sale timestamp
       const lastSaleAt = marketData.latest_sold[0].sold_at
       ;(craftableRecipe as Record<string, unknown>).lastSaleAt = lastSaleAt
+
+      // Compute and store refresh interval so smart mode can skip next time
+      const computedRefreshMinutes = computeSuggestedRefreshMinutes(marketData)
+      craftableRecipe.lastUpdated = new Date().toISOString()
+      craftableRecipe.suggestedRefreshMinutes =
+        computedRefreshMinutes !== null ? computedRefreshMinutes : DEFAULT_REFRESH_MINUTES
+
       craftableRecipeUpdatedCount++
-      console.log(`  ✓ lastSaleAt: ${lastSaleAt}`)
+      console.log(`  ✓ lastSaleAt: ${lastSaleAt} [refresh: ${formatRefreshInterval(craftableRecipe.suggestedRefreshMinutes)}]`)
     }
 
     console.log(`\nCraftable recipes updated: ${craftableRecipeUpdatedCount}`)
+    if (smartMode && craftableRecipeSmartSkipped > 0) {
+      console.log(`Craftable recipes skipped (not due): ${craftableRecipeSmartSkipped}`)
+    }
   }
 
   const endTime = Date.now()
