@@ -36,9 +36,12 @@ jobs:
 
       # Build application inside Docker container
       # VITE_STATIC_MODE=true removes all API/edit/settings UI for static deployment
-      # Volume mount (.:/app) ensures dist/ appears on host for upload step
+      # Uses docker run + docker cp (not docker compose run) for Docker-in-Docker compatibility
       - name: Build application
-        run: docker compose run --rm -e VITE_STATIC_MODE=true app npm run build
+        run: |
+          docker run --name build-tmp -e VITE_STATIC_MODE=true idle-mmo-profiter-app npm run build
+          docker cp build-tmp:/app/dist ./dist
+          docker rm build-tmp
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
