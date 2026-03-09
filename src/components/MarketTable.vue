@@ -1,17 +1,25 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import type { RankedActivity } from '../calculators/profitRanker'
 import { useDataProvider } from '../composables/useDataProvider'
 import { useMarketRefresh } from '../composables/useMarketRefresh'
 import { useStaticMode } from '../composables/useStaticMode'
+import { usePopover } from '../composables/usePopover'
 import { storageManager } from '../storage/persistence'
 import { useToast } from '../composables/useToast'
 import { useHeatmap } from '../composables/useHeatmap'
 import EditableValue from './EditableValue.vue'
 import HashedIdModal from './HashedIdModal.vue'
+import ItemUsesPopover from './ItemUsesPopover.vue'
 import type { RefreshCategory } from '../composables/useMarketRefresh'
+
+const props = defineProps<{
+  rankedActivities: RankedActivity[]
+}>()
 
 const { isStaticMode } = useStaticMode()
 const { getHeatmapStyle, getSpreadStyle } = useHeatmap()
+const { popoverItemName, popoverX, popoverY, openItemUses, closeItemUses } = usePopover()
 
 // Vendor-sold items (vials, crystals) with their buy prices from NPC shops.
 // These items are not tradable on the market, so we use known buy prices.
@@ -1241,7 +1249,13 @@ const refreshItemData = async () => {
                   @change="toggleExclusion('materials', material.id)"
                 />
               </td>
-              <td class="col-name name-cell" data-label="Name">{{ material.name }}</td>
+              <td
+                class="col-name name-cell"
+                data-label="Name"
+                @contextmenu.prevent="openItemUses($event, material.name)"
+              >
+                {{ material.name }}
+              </td>
               <td class="col-vendor" data-label="Vendor Value">
                 <span class="vendor-value">
                   {{ material.vendorValue ? material.vendorValue.toLocaleString() : 'N/A' }}<span v-if="material.vendorValue" class="gold-suffix"> gold</span>
@@ -1405,7 +1419,13 @@ const refreshItemData = async () => {
                   @change="toggleExclusion('craftables', craftable.id)"
                 />
               </td>
-              <td class="col-name name-cell" data-label="Name">{{ craftable.name }}</td>
+              <td
+                class="col-name name-cell"
+                data-label="Name"
+                @contextmenu.prevent="openItemUses($event, craftable.name)"
+              >
+                {{ craftable.name }}
+              </td>
               <td class="col-vendor" data-label="Vendor Value">
                 <span class="vendor-value">
                   {{ craftable.vendorValue ? craftable.vendorValue.toLocaleString() : 'N/A' }}<span v-if="craftable.vendorValue" class="gold-suffix"> gold</span>
@@ -1567,7 +1587,13 @@ const refreshItemData = async () => {
                   @change="toggleExclusion('resources', resource.id)"
                 />
               </td>
-              <td class="col-name name-cell" data-label="Name">{{ resource.name }}</td>
+              <td
+                class="col-name name-cell"
+                data-label="Name"
+                @contextmenu.prevent="openItemUses($event, resource.name)"
+              >
+                {{ resource.name }}
+              </td>
               <td class="col-vendor" data-label="Vendor Value">
                 <span class="vendor-value">{{ resource.vendorValue.toLocaleString() }}<span class="gold-suffix"> gold</span></span>
               </td>
@@ -1749,7 +1775,9 @@ const refreshItemData = async () => {
                 />
               </td>
               <td class="col-name name-cell" data-label="Name">
-                <span>{{ recipe.name }}</span>
+                <span @contextmenu.prevent="openItemUses($event, recipe.name)">
+                  {{ recipe.name }}
+                </span>
                 <span
                   v-if="isUntrackedCraftableRecipe(recipe.name, recipe.producesItemName)"
                   class="untracked-badge"
@@ -1871,6 +1899,17 @@ const refreshItemData = async () => {
         </button>
       </div>
     </section>
+
+    <!-- Item Uses Popover -->
+    <ItemUsesPopover
+      v-if="popoverItemName"
+      :item-name="popoverItemName"
+      :anchor-x="popoverX"
+      :anchor-y="popoverY"
+      :visible="!!popoverItemName"
+      :ranked-activities="props.rankedActivities"
+      @close="closeItemUses"
+    />
   </div>
 </template>
 

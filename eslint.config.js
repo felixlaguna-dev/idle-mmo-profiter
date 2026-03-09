@@ -36,6 +36,7 @@ export default [
         RequestInit: 'readonly',
         Response: 'readonly',
         DOMException: 'readonly',
+        DOMRect: 'readonly',
         Blob: 'readonly',
         URL: 'readonly',
         URLSearchParams: 'readonly',

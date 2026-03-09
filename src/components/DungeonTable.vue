@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import type { DungeonProfitResult } from '../calculators/dungeonCalculator'
+import type { RankedActivity } from '../calculators/profitRanker'
 import EditableValue from './EditableValue.vue'
 import LowConfidenceToggle from './LowConfidenceToggle.vue'
 import MagicFindPanel from './MagicFindPanel.vue'
 import DungeonSelector from './DungeonSelector.vue'
+import ItemUsesPopover from './ItemUsesPopover.vue'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useLowConfidenceFilter } from '../composables/useLowConfidenceFilter'
+import { usePopover } from '../composables/usePopover'
 import { getVolumeTierInfo } from '../utils/salesVolume'
 
 const { getHeatmapStyle } = useHeatmap()
@@ -14,6 +17,7 @@ const {
   showLowConfidenceDungeons,
   filterDungeons,
 } = useLowConfidenceFilter()
+const { popoverItemName, popoverX, popoverY, openItemUses, closeItemUses } = usePopover()
 
 // State for dungeon selector modal
 const isDungeonSelectorOpen = ref(false)
@@ -25,6 +29,7 @@ const openDungeonSelector = () => {
 
 const props = defineProps<{
   dungeons: DungeonProfitResult[]
+  rankedActivities: RankedActivity[]
 }>()
 
 // Emit events for editing values
@@ -204,6 +209,7 @@ const profitRange = computed(() => {
 const isUntradableRecipe = (recipeName: string): boolean => {
   return recipeName.includes('(Untradable)')
 }
+
 </script>
 
 <template>
@@ -259,7 +265,11 @@ const isUntradableRecipe = (recipeName: string): boolean => {
                   <svg class="expand-icon" :class="{ expanded: isExpanded(dungeon.name) }" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
                 </button>
               </td>
-              <td class="name-cell" data-label="Dungeon">
+              <td
+                class="name-cell"
+                data-label="Dungeon"
+                @contextmenu.prevent="openItemUses($event, dungeon.name)"
+              >
                 {{ dungeon.name }}
                 <span
                   v-if="dungeon.minDropVolume !== undefined"
@@ -340,7 +350,7 @@ const isUntradableRecipe = (recipeName: string): boolean => {
                     </thead>
                     <tbody>
                       <tr v-for="drop in dungeon.drops" :key="drop.recipeName">
-                        <td>
+                        <td @contextmenu.prevent="openItemUses($event, drop.recipeName)">
                           {{ drop.recipeName }}
                           <span
                             v-if="drop.weeklySalesVolume !== undefined"
@@ -390,6 +400,17 @@ const isUntradableRecipe = (recipeName: string): boolean => {
 
     <!-- Dungeon Selector Modal -->
     <DungeonSelector v-model="isDungeonSelectorOpen" />
+
+    <!-- Item Uses Popover -->
+    <ItemUsesPopover
+      v-if="popoverItemName"
+      :item-name="popoverItemName"
+      :anchor-x="popoverX"
+      :anchor-y="popoverY"
+      :visible="!!popoverItemName"
+      :ranked-activities="rankedActivities"
+      @close="closeItemUses"
+    />
   </div>
 </template>
 

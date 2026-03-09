@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import type { CraftableProfitResult } from '../calculators/craftableCalculator'
+import type { RankedActivity } from '../calculators/profitRanker'
 import EditableValue from './EditableValue.vue'
 import EmptyState from './EmptyState.vue'
 import LowConfidenceToggle from './LowConfidenceToggle.vue'
+import ItemUsesPopover from './ItemUsesPopover.vue'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useStaticMode } from '../composables/useStaticMode'
 import { useLowConfidenceFilter } from '../composables/useLowConfidenceFilter'
+import { usePopover } from '../composables/usePopover'
 import { getVolumeTierInfo } from '../utils/salesVolume'
 
 const { getHeatmapStyle, getSubduedHeatmapStyle } = useHeatmap()
@@ -15,9 +18,11 @@ const {
   showLowConfidenceCraftables,
   filterCraftables,
 } = useLowConfidenceFilter()
+const { popoverItemName, popoverX, popoverY, openItemUses, closeItemUses } = usePopover()
 
 const props = defineProps<{
   craftables: CraftableProfitResult[]
+  rankedActivities: RankedActivity[]
 }>()
 
 // Emit events for editing values
@@ -214,6 +219,7 @@ const formatTime = (seconds: number): string => {
   if (secs === 0) return `${mins}m`
   return `${mins}m ${secs}s`
 }
+
 </script>
 
 <template>
@@ -295,7 +301,11 @@ const formatTime = (seconds: number): string => {
                   <svg class="expand-icon" :class="{ expanded: isExpanded(craftable.name) }" viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
                 </button>
               </td>
-              <td class="name-cell" data-label="Craftable">
+              <td
+                class="name-cell"
+                data-label="Craftable"
+                @contextmenu.prevent="openItemUses($event, craftable.name)"
+              >
                 {{ craftable.name }}
                 <span
                   v-if="craftable.weeklySalesVolume !== undefined"
@@ -480,7 +490,9 @@ const formatTime = (seconds: number): string => {
                     </thead>
                     <tbody>
                       <tr v-for="material in craftable.materials" :key="material.name">
-                        <td>{{ material.name }}</td>
+                        <td @contextmenu.prevent="openItemUses($event, material.name)">
+                          {{ material.name }}
+                        </td>
                         <td class="text-right">{{ material.quantity }}</td>
                         <td class="text-right">
                           <EditableValue
@@ -599,6 +611,17 @@ const formatTime = (seconds: number): string => {
         </button>
       </div>
     </div>
+
+    <!-- Item Uses Popover -->
+    <ItemUsesPopover
+      v-if="popoverItemName"
+      :item-name="popoverItemName"
+      :anchor-x="popoverX"
+      :anchor-y="popoverY"
+      :visible="!!popoverItemName"
+      :ranked-activities="rankedActivities"
+      @close="closeItemUses"
+    />
   </div>
 </template>
 

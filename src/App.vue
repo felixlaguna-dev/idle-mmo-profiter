@@ -489,21 +489,26 @@ onUnmounted(() => {
               <ProfitRankingTable :activities="rankedActivities" />
             </div>
             <div v-if="currentTab === 'dungeons'">
-              <DungeonTable :dungeons="dungeonProfits" />
+              <DungeonTable :dungeons="dungeonProfits" :ranked-activities="rankedActivities" />
             </div>
             <div v-if="currentTab === 'craftables'">
               <CraftableTable
                 :craftables="craftableProfits"
+                :ranked-activities="rankedActivities"
                 @update:craft-time="updateCraftableRecipeTime"
                 @delete:craftable="removeCraftableRecipe"
               />
             </div>
             <div v-if="currentTab === 'resources'">
               <EfficiencyPanel @open-skill-selector="openEfficiencySelector" />
-              <ResourceTable :resources="resourceProfits" @delete:recipe="removeResourceRecipe" />
+              <ResourceTable
+                :resources="resourceProfits"
+                :ranked-activities="rankedActivities"
+                @delete:recipe="removeResourceRecipe"
+              />
             </div>
             <div v-if="currentTab === 'market'">
-              <MarketTable />
+              <MarketTable :ranked-activities="rankedActivities" />
             </div>
             <div v-if="currentTab === 'charts'" class="charts-section">
               <ErrorBoundary>

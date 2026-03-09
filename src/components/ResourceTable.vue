@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import type { ResourceProfitResult } from '../calculators/resourceCalculator'
+import type { RankedActivity } from '../calculators/profitRanker'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useDataProvider } from '../composables/useDataProvider'
+import { usePopover } from '../composables/usePopover'
+import ItemUsesPopover from './ItemUsesPopover.vue'
 
 const { getHeatmapStyle, getSubduedHeatmapStyle } = useHeatmap()
 const dataProvider = useDataProvider()
+const { popoverItemName, popoverX, popoverY, openItemUses, closeItemUses } = usePopover()
 
 const props = defineProps<{
   resources: ResourceProfitResult[]
+  rankedActivities: RankedActivity[]
 }>()
 
 // Emit events for recipe management
@@ -211,6 +216,7 @@ const profitRange = computed(() => {
 //   dataProvider.updateResourceRecipeTime(baseName, value)
 // }
 
+
 // Get mode badge class
 const getModeBadgeClass = (mode: 'buy' | 'gather' | 'gather-all'): string => {
   switch (mode) {
@@ -313,7 +319,12 @@ const handleDeleteRecipe = (baseName: string) => {
                 </button>
               </td>
               <td class="name-cell" data-label="Resource">
-                <span class="resource-name">{{ group.baseName }}</span>
+                <span
+                  class="resource-name"
+                  @contextmenu.prevent="openItemUses($event, group.baseName)"
+                >
+                  {{ group.baseName }}
+                </span>
                 <span v-if="group.skill" class="skill-badge" :class="getSkillBadgeClass(group.skill)">
                   <span class="skill-badge-full">{{ group.skill }}</span>
                   <span class="skill-badge-short">{{ formatSkillShort(group.skill) }}</span>
@@ -440,6 +451,17 @@ const handleDeleteRecipe = (baseName: string) => {
         </tbody>
       </table>
     </div>
+
+    <!-- Item Uses Popover -->
+    <ItemUsesPopover
+      v-if="popoverItemName"
+      :item-name="popoverItemName"
+      :anchor-x="popoverX"
+      :anchor-y="popoverY"
+      :visible="!!popoverItemName"
+      :ranked-activities="rankedActivities"
+      @close="closeItemUses"
+    />
   </div>
 </template>
 

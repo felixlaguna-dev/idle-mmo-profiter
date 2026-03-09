@@ -4,9 +4,12 @@ import type { RankedActivity } from '../calculators/profitRanker'
 import type { ActivityType } from '../types'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useActivityFilters } from '../composables/useActivityFilters'
+import { usePopover } from '../composables/usePopover'
 import EmptyState from './EmptyState.vue'
+import ItemUsesPopover from './ItemUsesPopover.vue'
 
 const { getHeatmapStyle } = useHeatmap()
+const { popoverItemName, popoverX, popoverY, openItemUses, closeItemUses } = usePopover()
 
 const props = defineProps<{
   activities: RankedActivity[]
@@ -293,7 +296,13 @@ const profitRange = computed(() => {
                 {{ activity.rank }}
               </span>
             </td>
-            <td class="name-cell" data-label="Activity">{{ activity.name }}</td>
+            <td
+              class="name-cell"
+              data-label="Activity"
+              @contextmenu.prevent="openItemUses($event, activity.name)"
+            >
+              {{ activity.name }}
+            </td>
             <td data-label="Type">
               <span class="type-badge" :class="getTypeBadgeClass(activity.activityType)">
                 {{ activity.activityType }}
@@ -328,6 +337,17 @@ const profitRange = computed(() => {
         description="Try adjusting your filters to see more results."
       />
     </div>
+
+    <!-- Item Uses Popover -->
+    <ItemUsesPopover
+      v-if="popoverItemName"
+      :item-name="popoverItemName"
+      :anchor-x="popoverX"
+      :anchor-y="popoverY"
+      :visible="!!popoverItemName"
+      :ranked-activities="activities"
+      @close="closeItemUses"
+    />
   </div>
 </template>
 
