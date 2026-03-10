@@ -12,6 +12,7 @@
 import { apiClient } from './client'
 import { get, set, generateCacheKey } from './cache'
 import type { AuthCheckResponse } from '../types'
+import { computeMarketPrice } from '../utils/computeMarketPrice'
 
 /**
  * API response types based on IdleMMO API documentation
@@ -295,12 +296,8 @@ export async function getMarketPrices(
 ): Promise<{ buyPrice: number | null; sellPrice: number | null }> {
   const marketData = await getMarketHistory(hashedItemId, tier)
 
-  // Calculate average from latest sold items
-  const averagePrice =
-    marketData.latest_sold.length > 0
-      ? marketData.latest_sold.reduce((sum, entry) => sum + entry.price_per_item, 0) /
-        marketData.latest_sold.length
-      : null
+  // Calculate VWAP from recent sales using computeMarketPrice
+  const averagePrice = computeMarketPrice(marketData.latest_sold)
 
   // Return as both buy and sell price (same value since we only have sale data)
   return { buyPrice: averagePrice, sellPrice: averagePrice }
@@ -310,33 +307,16 @@ export async function getMarketPrices(
  * Get average market price from recent sales
  *
  * @param hashedItemId - The hashed item ID
- * @param limit - Number of recent transactions to average (default: 10)
  * @param tier - Optional item tier filter
  * @returns Average price or null if no data
  */
 export async function getAverageMarketPrice(
   hashedItemId: string,
-  limit = 10,
   tier?: number
 ): Promise<number | null> {
   const marketData = await getMarketHistory(hashedItemId, tier)
 
-  if (marketData.latest_sold.length === 0) {
-    return null
-  }
-
-  // Get most recent transactions (up to limit)
-  const recentTransactions = marketData.latest_sold
-    .slice(0, limit)
-    .map((entry) => entry.price_per_item)
-
-  if (recentTransactions.length === 0) {
-    return null
-  }
-
-  // Calculate average
-  const sum = recentTransactions.reduce((acc, price) => acc + price, 0)
-  return sum / recentTransactions.length
+  return computeMarketPrice(marketData.latest_sold)
 }
 
 /**

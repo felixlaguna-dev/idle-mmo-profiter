@@ -35,6 +35,7 @@ import {
   computeSuggestedRefreshMinutes,
   formatRefreshInterval,
 } from '../src/utils/refreshFrequency.js'
+import { computeMarketPrice } from '../src/utils/computeMarketPrice.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -253,10 +254,18 @@ async function processItem(
     }
   }
 
-  // Compute average price from latest_sold (replicate getAverageMarketPrice logic)
-  const recentTransactions = marketData.latest_sold.slice(0, 10).map((e) => e.price_per_item)
-  const average = recentTransactions.reduce((a, b) => a + b, 0) / recentTransactions.length
-  const newPrice = Math.round(average * 10) / 10 // Round to 1 decimal place
+  // Compute VWAP from last 24h sales (or fallback to most recent sale)
+  const computedPrice = computeMarketPrice(marketData.latest_sold)
+  if (computedPrice === null) {
+    console.log(`  ⚠ No market data available`)
+    return {
+      updated: false,
+      oldPrice: item[priceField] as number | undefined,
+      newPrice: null,
+      skipped: false,
+    }
+  }
+  const newPrice = Math.round(computedPrice * 10) / 10 // Round to 1 decimal place
   const oldPrice = item[priceField] as number | undefined
 
   // Compute suggested refresh interval

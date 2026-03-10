@@ -88,7 +88,7 @@ export interface DataProvider {
    * Get average market price from recent history
    * Returns either API average or null
    */
-  getAverageMarketPrice(hashedItemId: string, limit?: number, tier?: number): Promise<number | null>
+  getAverageMarketPrice(hashedItemId: string, tier?: number): Promise<number | null>
 
   /**
    * Check authentication status
@@ -353,10 +353,9 @@ export class ApiProvider implements DataProvider {
 
   async getAverageMarketPrice(
     hashedItemId: string,
-    limit = 10,
     tier?: number
   ): Promise<number | null> {
-    return getAverageMarketPrice(hashedItemId, limit, tier)
+    return getAverageMarketPrice(hashedItemId, tier)
   }
 
   async checkAuth(): Promise<AuthCheckResponse | null> {

@@ -105,23 +105,49 @@ describe('API Services - Real Response Formats', () => {
   })
 
   describe('getAverageMarketPrice', () => {
-    it('should compute average from latest_sold entries with price_per_item field', async () => {
-      // This is the ACTUAL response format from IdleMMO API
+    it('should compute VWAP from recent sales within last 24h', async () => {
+      const now = new Date()
+      const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000).toISOString()
+      const twoHoursAgo = new Date(now.getTime() - 2 * 60 * 60 * 1000).toISOString()
+
       const mockApiResponse = {
-        history_data: [
-          {
-            date: '2025-01-15T00:00:00.000000Z',
-            total_sold: 1250,
-            average_price: 100,
-          },
-        ],
+        history_data: [],
         latest_sold: [
           {
-            item: {
-              hashed_id: 'abc123',
-              name: 'Iron Sword',
-              image_url: '...',
-            },
+            item: { hashed_id: 'abc123', name: 'Iron Sword', image_url: '...' },
+            tier: 3,
+            quantity: 5,
+            price_per_item: 150,
+            total_price: 750,
+            sold_at: oneHourAgo,
+          },
+          {
+            item: { hashed_id: 'abc123', name: 'Iron Sword', image_url: '...' },
+            tier: 3,
+            quantity: 2,
+            price_per_item: 100,
+            total_price: 200,
+            sold_at: twoHoursAgo,
+          },
+        ],
+        type: 'listings',
+        endpoint_updates_at: now.toISOString(),
+      }
+
+      vi.mocked(apiClient.get).mockResolvedValue(mockApiResponse)
+
+      const result = await getAverageMarketPrice('abc123')
+
+      // VWAP: (150*5 + 100*2) / (5+2) = 950/7 ≈ 135.71
+      expect(result).toBeCloseTo(950 / 7, 5)
+    })
+
+    it('should fall back to most recent sale when no sales in last 24h', async () => {
+      const mockApiResponse = {
+        history_data: [],
+        latest_sold: [
+          {
+            item: { hashed_id: 'abc123', name: 'Iron Sword', image_url: '...' },
             tier: 3,
             quantity: 5,
             price_per_item: 150,
@@ -129,11 +155,7 @@ describe('API Services - Real Response Formats', () => {
             sold_at: '2025-01-16T14:30:00.000000Z',
           },
           {
-            item: {
-              hashed_id: 'abc123',
-              name: 'Iron Sword',
-              image_url: '...',
-            },
+            item: { hashed_id: 'abc123', name: 'Iron Sword', image_url: '...' },
             tier: 3,
             quantity: 2,
             price_per_item: 100,
@@ -147,10 +169,10 @@ describe('API Services - Real Response Formats', () => {
 
       vi.mocked(apiClient.get).mockResolvedValue(mockApiResponse)
 
-      const result = await getAverageMarketPrice('abc123', 10)
+      const result = await getAverageMarketPrice('abc123')
 
-      // Average of 150 and 100 should be 125
-      expect(result).toBe(125)
+      // No sales in last 24h, fallback to most recent sale price
+      expect(result).toBe(150)
     })
 
     it('should return null when no latest_sold data', async () => {
@@ -163,7 +185,7 @@ describe('API Services - Real Response Formats', () => {
 
       vi.mocked(apiClient.get).mockResolvedValue(mockApiResponse)
 
-      const result = await getAverageMarketPrice('abc123', 10)
+      const result = await getAverageMarketPrice('abc123')
 
       expect(result).toBeNull()
     })

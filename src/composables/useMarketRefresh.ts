@@ -13,6 +13,7 @@ import { ref } from 'vue'
 import { useDataProvider } from './useDataProvider'
 import { searchItems, getMarketHistory } from '../api/services'
 import { invalidate, generateCacheKey } from '../api/cache'
+import { computeMarketPrice } from '../utils/computeMarketPrice'
 
 /**
  * Category types that support market refresh
@@ -245,10 +246,20 @@ function createMarketRefresh() {
         }
       }
 
-      // Calculate average market price (default to last 10 transactions)
-      const recentTransactions = marketHistory.latest_sold.slice(0, 10)
-      const sum = recentTransactions.reduce((acc, entry) => acc + entry.price_per_item, 0)
-      const averagePrice = sum / recentTransactions.length
+      // Compute VWAP from last 24h sales (or fallback to most recent sale)
+      const averagePrice = computeMarketPrice(marketHistory.latest_sold)
+
+      if (averagePrice === null) {
+        return {
+          success: false,
+          category,
+          itemId,
+          itemName,
+          oldPrice,
+          newPrice: null,
+          error: 'No market data available',
+        }
+      }
 
       // Extract the most recent sold_at timestamp
       // latest_sold is sorted by recency (most recent first)
