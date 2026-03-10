@@ -768,6 +768,18 @@ async function main() {
         continue
       }
 
+      // Compute VWAP from last 24h sales (or fallback to most recent sale)
+      const computedPrice = computeMarketPrice(marketData.latest_sold)
+      if (computedPrice === null) {
+        console.log(`  ⚠ No market data available for ${craftableRecipe.name}`)
+        continue
+      }
+      const newPrice = Math.round(computedPrice * 10) / 10 // Round to 1 decimal place
+      const oldPrice = craftableRecipe.currentPrice
+
+      // Update the currentPrice in-place
+      ;(craftableRecipe as Record<string, unknown>).currentPrice = newPrice
+
       // Extract and store the most recent sale timestamp
       const lastSaleAt = marketData.latest_sold[0].sold_at
       ;(craftableRecipe as Record<string, unknown>).lastSaleAt = lastSaleAt
@@ -783,7 +795,17 @@ async function main() {
         computedRefreshMinutes !== null ? computedRefreshMinutes : DEFAULT_REFRESH_MINUTES
 
       craftableRecipeUpdatedCount++
-      console.log(`  ✓ lastSaleAt: ${lastSaleAt} [refresh: ${formatRefreshInterval(craftableRecipe.suggestedRefreshMinutes)}]`)
+
+      // Show the price change with refresh interval
+      if (oldPrice !== undefined) {
+        const change = newPrice - oldPrice
+        const changeSymbol = change > 0 ? '↑' : change < 0 ? '↓' : '='
+        console.log(
+          `  ✓ ${oldPrice} → ${newPrice} (${changeSymbol} ${Math.abs(change).toFixed(1)}) [refresh: ${formatRefreshInterval(craftableRecipe.suggestedRefreshMinutes)}]`
+        )
+      } else {
+        console.log(`  ✓ New price: ${newPrice} [refresh: ${formatRefreshInterval(craftableRecipe.suggestedRefreshMinutes)}]`)
+      }
     }
 
     console.log(`\nCraftable recipes updated: ${craftableRecipeUpdatedCount}`)
