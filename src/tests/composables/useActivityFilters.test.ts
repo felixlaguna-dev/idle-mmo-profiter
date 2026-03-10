@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { nextTick } from 'vue'
 import { useActivityFilters } from '../../composables/useActivityFilters'
 import { useLowConfidenceFilter } from '../../composables/useLowConfidenceFilter'
+import { useMinSalesFilter } from '../../composables/useMinSalesFilter'
 import type { RankedActivity } from '../../calculators/profitRanker'
 
 describe('useActivityFilters', () => {
@@ -644,6 +645,375 @@ describe('useActivityFilters', () => {
       // Only alchemy should show (undefined skill treated as forging, which is filtered out)
       expect(filtered).toHaveLength(1)
       expect(filtered[0].name).toBe('Alchemy Craftable')
+    })
+  })
+
+  describe('min sales volume filter', () => {
+    it('should filter activities by min sales volume', async () => {
+      const { getFilteredActivities } = useActivityFilters()
+      const { setMinSalesThreshold } = useMinSalesFilter()
+      const { setShowLowConfidenceCraftables, setShowLowConfidenceDungeons } =
+        useLowConfidenceFilter()
+
+      // Enable all low-confidence items so they don't interfere
+      setShowLowConfidenceCraftables(true)
+      setShowLowConfidenceDungeons(true)
+      setMinSalesThreshold(10)
+      await nextTick()
+
+      const activities: RankedActivity[] = [
+        {
+          rank: 1,
+          activityType: 'dungeon',
+          name: 'High Volume Dungeon',
+          profitPerHour: 1000,
+          profitPerAction: 100,
+          timePerAction: 360,
+          cost: 50,
+          details: 'Test',
+          isRecommended: true,
+          weeklySalesVolume: 50,
+        },
+        {
+          rank: 2,
+          activityType: 'dungeon',
+          name: 'Low Volume Dungeon',
+          profitPerHour: 900,
+          profitPerAction: 90,
+          timePerAction: 360,
+          cost: 45,
+          details: 'Test',
+          isRecommended: false,
+          weeklySalesVolume: 5,
+        },
+        {
+          rank: 3,
+          activityType: 'craftable',
+          name: 'High Volume Craftable',
+          profitPerHour: 800,
+          profitPerAction: 80,
+          timePerAction: 360,
+          cost: 40,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'alchemy',
+          weeklySalesVolume: 100,
+        },
+        {
+          rank: 4,
+          activityType: 'resource',
+          name: 'Resource',
+          profitPerHour: 700,
+          profitPerAction: 70,
+          timePerAction: 360,
+          cost: 35,
+          details: 'Test',
+          isRecommended: false,
+          // Resources have undefined weeklySalesVolume
+        },
+      ]
+
+      const filtered = getFilteredActivities(activities)
+      expect(filtered).toHaveLength(3)
+      expect(filtered.map((a) => a.name)).toEqual([
+        'High Volume Dungeon',
+        'High Volume Craftable',
+        'Resource',
+      ])
+    })
+
+    it('should pass through resources with undefined weeklySalesVolume', async () => {
+      const { getFilteredActivities } = useActivityFilters()
+      const { setMinSalesThreshold } = useMinSalesFilter()
+
+      setMinSalesThreshold(1000)
+      await nextTick()
+
+      const activities: RankedActivity[] = [
+        {
+          rank: 1,
+          activityType: 'dungeon',
+          name: 'Low Volume Dungeon',
+          profitPerHour: 1000,
+          profitPerAction: 100,
+          timePerAction: 360,
+          cost: 50,
+          details: 'Test',
+          isRecommended: true,
+          weeklySalesVolume: 5,
+        },
+        {
+          rank: 2,
+          activityType: 'resource',
+          name: 'Resource',
+          profitPerHour: 900,
+          profitPerAction: 90,
+          timePerAction: 360,
+          cost: 45,
+          details: 'Test',
+          isRecommended: false,
+          // undefined weeklySalesVolume
+        },
+      ]
+
+      const filtered = getFilteredActivities(activities)
+      expect(filtered).toHaveLength(1)
+      expect(filtered[0].name).toBe('Resource')
+    })
+
+    it('should include items at exactly the threshold', async () => {
+      const { getFilteredActivities } = useActivityFilters()
+      const { setMinSalesThreshold } = useMinSalesFilter()
+      const { setShowLowConfidenceDungeons } = useLowConfidenceFilter()
+
+      setShowLowConfidenceDungeons(true)
+      setMinSalesThreshold(10)
+      await nextTick()
+
+      const activities: RankedActivity[] = [
+        {
+          rank: 1,
+          activityType: 'dungeon',
+          name: 'Below Threshold',
+          profitPerHour: 1000,
+          profitPerAction: 100,
+          timePerAction: 360,
+          cost: 50,
+          details: 'Test',
+          isRecommended: true,
+          weeklySalesVolume: 9,
+        },
+        {
+          rank: 2,
+          activityType: 'dungeon',
+          name: 'At Threshold',
+          profitPerHour: 900,
+          profitPerAction: 90,
+          timePerAction: 360,
+          cost: 45,
+          details: 'Test',
+          isRecommended: false,
+          weeklySalesVolume: 10,
+        },
+        {
+          rank: 3,
+          activityType: 'dungeon',
+          name: 'Above Threshold',
+          profitPerHour: 800,
+          profitPerAction: 80,
+          timePerAction: 360,
+          cost: 40,
+          details: 'Test',
+          isRecommended: false,
+          weeklySalesVolume: 11,
+        },
+      ]
+
+      const filtered = getFilteredActivities(activities)
+      expect(filtered).toHaveLength(2)
+      expect(filtered.map((a) => a.name)).toEqual(['At Threshold', 'Above Threshold'])
+    })
+
+    it('should combine min sales filter with activity type filters', async () => {
+      const { filterDungeons, filterAlchemy, getFilteredActivities } = useActivityFilters()
+      const { setMinSalesThreshold } = useMinSalesFilter()
+      const { setShowLowConfidenceCraftables, setShowLowConfidenceDungeons } =
+        useLowConfidenceFilter()
+
+      filterDungeons.value = false
+      filterAlchemy.value = true
+      setShowLowConfidenceCraftables(true)
+      setShowLowConfidenceDungeons(true)
+      setMinSalesThreshold(10)
+      await nextTick()
+
+      const activities: RankedActivity[] = [
+        {
+          rank: 1,
+          activityType: 'dungeon',
+          name: 'High Volume Dungeon',
+          profitPerHour: 1000,
+          profitPerAction: 100,
+          timePerAction: 360,
+          cost: 50,
+          details: 'Test',
+          isRecommended: true,
+          weeklySalesVolume: 50,
+        },
+        {
+          rank: 2,
+          activityType: 'craftable',
+          name: 'High Volume Craftable',
+          profitPerHour: 900,
+          profitPerAction: 90,
+          timePerAction: 360,
+          cost: 45,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'alchemy',
+          weeklySalesVolume: 20,
+        },
+        {
+          rank: 3,
+          activityType: 'craftable',
+          name: 'Low Volume Craftable',
+          profitPerHour: 800,
+          profitPerAction: 80,
+          timePerAction: 360,
+          cost: 40,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'alchemy',
+          weeklySalesVolume: 5,
+        },
+      ]
+
+      const filtered = getFilteredActivities(activities)
+      // Dungeon filtered by type, low volume craftable filtered by sales volume
+      expect(filtered).toHaveLength(1)
+      expect(filtered[0].name).toBe('High Volume Craftable')
+    })
+
+    it('should combine min sales filter with low-confidence filter', async () => {
+      const { getFilteredActivities } = useActivityFilters()
+      const { setMinSalesThreshold } = useMinSalesFilter()
+      const { setShowLowConfidenceCraftables } = useLowConfidenceFilter()
+
+      setShowLowConfidenceCraftables(false)
+      setMinSalesThreshold(10)
+      await nextTick()
+
+      const activities: RankedActivity[] = [
+        {
+          rank: 1,
+          activityType: 'craftable',
+          name: 'High Volume Low Confidence',
+          profitPerHour: 1000,
+          profitPerAction: 100,
+          timePerAction: 360,
+          cost: 50,
+          details: 'Test',
+          isRecommended: true,
+          skill: 'alchemy',
+          isLowConfidence: true,
+          weeklySalesVolume: 50,
+        },
+        {
+          rank: 2,
+          activityType: 'craftable',
+          name: 'Low Volume High Confidence',
+          profitPerHour: 900,
+          profitPerAction: 90,
+          timePerAction: 360,
+          cost: 45,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'alchemy',
+          isLowConfidence: false,
+          weeklySalesVolume: 5,
+        },
+        {
+          rank: 3,
+          activityType: 'craftable',
+          name: 'High Volume High Confidence',
+          profitPerHour: 800,
+          profitPerAction: 80,
+          timePerAction: 360,
+          cost: 40,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'alchemy',
+          isLowConfidence: false,
+          weeklySalesVolume: 20,
+        },
+      ]
+
+      const filtered = getFilteredActivities(activities)
+      // Only high volume + high confidence should pass
+      expect(filtered).toHaveLength(1)
+      expect(filtered[0].name).toBe('High Volume High Confidence')
+    })
+
+    it('should exclude low-confidence items with low sales volume even when low-confidence toggle is ON', async () => {
+      const { filterDungeons, filterAlchemy, filterForging, getFilteredActivities } =
+        useActivityFilters()
+      const { setMinSalesThreshold } = useMinSalesFilter()
+      const { setShowLowConfidenceCraftables, setShowLowConfidenceDungeons } =
+        useLowConfidenceFilter()
+
+      // Enable all activity type filters
+      filterDungeons.value = true
+      filterAlchemy.value = true
+      filterForging.value = true
+      // Enable low-confidence items AND set a min sales threshold
+      setShowLowConfidenceCraftables(true)
+      setShowLowConfidenceDungeons(true)
+      setMinSalesThreshold(100)
+      await nextTick()
+
+      const activities: RankedActivity[] = [
+        {
+          rank: 1,
+          activityType: 'dungeon',
+          name: 'Low Confidence Low Volume Dungeon',
+          profitPerHour: 1000,
+          profitPerAction: 100,
+          timePerAction: 360,
+          cost: 50,
+          details: 'Test',
+          isRecommended: true,
+          isLowConfidence: true,
+          weeklySalesVolume: 2,
+        },
+        {
+          rank: 2,
+          activityType: 'craftable',
+          name: 'Low Confidence Low Volume Craftable',
+          profitPerHour: 900,
+          profitPerAction: 90,
+          timePerAction: 360,
+          cost: 45,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'alchemy',
+          isLowConfidence: true,
+          weeklySalesVolume: 5,
+        },
+        {
+          rank: 3,
+          activityType: 'dungeon',
+          name: 'Low Confidence High Volume Dungeon',
+          profitPerHour: 800,
+          profitPerAction: 80,
+          timePerAction: 360,
+          cost: 40,
+          details: 'Test',
+          isRecommended: false,
+          isLowConfidence: true,
+          weeklySalesVolume: 150,
+        },
+        {
+          rank: 4,
+          activityType: 'craftable',
+          name: 'High Confidence Low Volume Craftable',
+          profitPerHour: 700,
+          profitPerAction: 70,
+          timePerAction: 360,
+          cost: 35,
+          details: 'Test',
+          isRecommended: false,
+          skill: 'forging',
+          isLowConfidence: false,
+          weeklySalesVolume: 20,
+        },
+      ]
+
+      const filtered = getFilteredActivities(activities)
+      // Only the low-confidence high-volume dungeon should pass
+      // The low-confidence low-volume items should be excluded by min-sales filter
+      // The high-confidence low-volume item should also be excluded by min-sales filter
+      expect(filtered).toHaveLength(1)
+      expect(filtered[0].name).toBe('Low Confidence High Volume Dungeon')
     })
   })
 })

@@ -18,6 +18,8 @@ export interface RankedActivity {
   skill?: 'alchemy' | 'forging'
   /** True if the activity has low-confidence price data */
   isLowConfidence?: boolean
+  /** Weekly sales volume for market-traded activities (undefined for resources) */
+  weeklySalesVolume?: number
 }
 
 /**
@@ -48,6 +50,7 @@ export function rankAllActivities(
       cost: dungeon.runCost,
       details: `${dungeon.drops.length} drops, ${Math.round(dungeon.timeSeconds / 60)} min run`,
       isLowConfidence: dungeon.isLowConfidence,
+      weeklySalesVolume: dungeon.minDropVolume,
     })
   })
 
@@ -63,6 +66,7 @@ export function rankAllActivities(
       details: `${craftable.materials.length} materials, ${Math.round(craftable.craftTimeSeconds / 60)} min craft`,
       skill: craftable.skill,
       isLowConfidence: craftable.isLowConfidence,
+      weeklySalesVolume: craftable.weeklySalesVolume,
     })
   })
 

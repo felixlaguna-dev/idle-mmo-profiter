@@ -472,4 +472,188 @@ describe('profitRanker', () => {
       expect(ranked[3].skill).toBeUndefined()
     })
   })
+
+  describe('weeklySalesVolume field propagation', () => {
+    it('should propagate minDropVolume from dungeon activities', () => {
+      const dungeonResults: DungeonProfitResult[] = [
+        {
+          name: 'High Volume Dungeon',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 500,
+          totalProfit: 400,
+          profitPerHour: 8000,
+          drops: [],
+          minDropVolume: 50,
+        },
+        {
+          name: 'Low Volume Dungeon',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 400,
+          totalProfit: 300,
+          profitPerHour: 6000,
+          drops: [],
+          minDropVolume: 5,
+        },
+      ]
+
+      const ranked = rankAllActivities(dungeonResults, [], [])
+
+      expect(ranked).toHaveLength(2)
+      expect(ranked[0].name).toBe('High Volume Dungeon')
+      expect(ranked[0].weeklySalesVolume).toBe(50)
+      expect(ranked[1].name).toBe('Low Volume Dungeon')
+      expect(ranked[1].weeklySalesVolume).toBe(5)
+    })
+
+    it('should propagate weeklySalesVolume from craftable activities', () => {
+      const craftableResults: CraftableProfitResult[] = [
+        {
+          name: 'Popular Craftable',
+          craftTimeSeconds: 60,
+          marketPrice: 200,
+          totalCost: 100,
+          profit: 100,
+          profitPerHour: 6000,
+          materials: [],
+          weeklySalesVolume: 100,
+        },
+        {
+          name: 'Niche Craftable',
+          craftTimeSeconds: 60,
+          marketPrice: 180,
+          totalCost: 100,
+          profit: 80,
+          profitPerHour: 4800,
+          materials: [],
+          weeklySalesVolume: 3,
+        },
+      ]
+
+      const ranked = rankAllActivities([], craftableResults, [])
+
+      expect(ranked).toHaveLength(2)
+      expect(ranked[0].name).toBe('Popular Craftable')
+      expect(ranked[0].weeklySalesVolume).toBe(100)
+      expect(ranked[1].name).toBe('Niche Craftable')
+      expect(ranked[1].weeklySalesVolume).toBe(3)
+    })
+
+    it('should have undefined weeklySalesVolume for resource activities', () => {
+      const resourceResults: ResourceProfitResult[] = [
+        {
+          name: 'Oak Log',
+          timeSeconds: 10,
+          cost: 5,
+          vendorValue: 10,
+          marketPrice: 15,
+          vendorProfit: 5,
+          vendorProfitPerHour: 1800,
+          marketProfit: 10,
+          marketProfitPerHour: 3600,
+          bestMethod: 'market',
+          bestProfit: 10,
+          bestProfitPerHour: 3600,
+        },
+      ]
+
+      const ranked = rankAllActivities([], [], resourceResults)
+
+      expect(ranked).toHaveLength(1)
+      expect(ranked[0].name).toBe('Oak Log')
+      expect(ranked[0].weeklySalesVolume).toBeUndefined()
+    })
+
+    it('should handle undefined weeklySalesVolume for dungeons without volume data', () => {
+      const dungeonResults: DungeonProfitResult[] = [
+        {
+          name: 'Dungeon With Volume',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 500,
+          totalProfit: 400,
+          profitPerHour: 8000,
+          drops: [],
+          minDropVolume: 25,
+        },
+        {
+          name: 'Dungeon Without Volume',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 400,
+          totalProfit: 300,
+          profitPerHour: 6000,
+          drops: [],
+          // minDropVolume is undefined
+        },
+      ]
+
+      const ranked = rankAllActivities(dungeonResults, [], [])
+
+      expect(ranked).toHaveLength(2)
+      expect(ranked[0].name).toBe('Dungeon With Volume')
+      expect(ranked[0].weeklySalesVolume).toBe(25)
+      expect(ranked[1].name).toBe('Dungeon Without Volume')
+      expect(ranked[1].weeklySalesVolume).toBeUndefined()
+    })
+
+    it('should preserve weeklySalesVolume when mixing activity types', () => {
+      const dungeonResults: DungeonProfitResult[] = [
+        {
+          name: 'Dungeon',
+          timeSeconds: 180,
+          runCost: 100,
+          totalRevenue: 1000,
+          totalProfit: 900,
+          profitPerHour: 18000,
+          drops: [],
+          minDropVolume: 15,
+        },
+      ]
+
+      const craftableResults: CraftableProfitResult[] = [
+        {
+          name: 'Craftable',
+          craftTimeSeconds: 60,
+          marketPrice: 500,
+          totalCost: 100,
+          profit: 400,
+          profitPerHour: 24000,
+          materials: [],
+          weeklySalesVolume: 75,
+        },
+      ]
+
+      const resourceResults: ResourceProfitResult[] = [
+        {
+          name: 'Resource',
+          timeSeconds: 10,
+          cost: 5,
+          vendorValue: 10,
+          marketPrice: 15,
+          vendorProfit: 5,
+          vendorProfitPerHour: 1800,
+          marketProfit: 10,
+          marketProfitPerHour: 3600,
+          bestMethod: 'market',
+          bestProfit: 10,
+          bestProfitPerHour: 3600,
+        },
+      ]
+
+      const ranked = rankAllActivities(dungeonResults, craftableResults, resourceResults)
+
+      expect(ranked).toHaveLength(3)
+      // Sorted by profit per hour: craftable > dungeon > resource
+      expect(ranked[0].name).toBe('Craftable')
+      expect(ranked[0].weeklySalesVolume).toBe(75)
+
+      expect(ranked[1].name).toBe('Dungeon')
+      expect(ranked[1].weeklySalesVolume).toBe(15)
+
+      expect(ranked[2].name).toBe('Resource')
+      expect(ranked[2].weeklySalesVolume).toBeUndefined()
+    })
+  })
 })

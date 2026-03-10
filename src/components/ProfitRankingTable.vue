@@ -4,12 +4,15 @@ import type { RankedActivity } from '../calculators/profitRanker'
 import type { ActivityType } from '../types'
 import { useHeatmap } from '../composables/useHeatmap'
 import { useActivityFilters } from '../composables/useActivityFilters'
+import { useMinSalesFilter } from '../composables/useMinSalesFilter'
 import { usePopover } from '../composables/usePopover'
 import EmptyState from './EmptyState.vue'
 import ItemUsesPopover from './ItemUsesPopover.vue'
+import MinSalesThreshold from './MinSalesThreshold.vue'
 
 const { getHeatmapStyle } = useHeatmap()
 const { popoverItemName, popoverX, popoverY, openItemUses, closeItemUses } = usePopover()
+const { minSalesThreshold } = useMinSalesFilter()
 
 const props = defineProps<{
   activities: RankedActivity[]
@@ -189,6 +192,7 @@ const profitRange = computed(() => {
       >
         Resources
       </button>
+      <MinSalesThreshold v-model="minSalesThreshold" />
       <span v-if="hasMore && !showAll" class="pagination-info">
         {{ DEFAULT_DISPLAY_LIMIT }}/{{ filteredAndSortedActivities.length }}
         <button class="btn-show-all-inline" @click="showAll = true">all</button>

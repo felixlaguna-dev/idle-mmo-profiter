@@ -1,6 +1,7 @@
 import { computed, type Ref } from 'vue'
 import { useStorage } from './useStorage'
 import { useLowConfidenceFilter } from './useLowConfidenceFilter'
+import { useMinSalesFilter } from './useMinSalesFilter'
 import type { RankedActivity } from '../calculators/profitRanker'
 
 export interface ActivityFilters {
@@ -60,6 +61,10 @@ const filters = useStorage<ActivityFilters>('active-filters', {
 // for the filtering functions
 const lowConfidenceFilter = useLowConfidenceFilter()
 
+// Access min sales filter state (also a singleton) at module level
+// for the filtering functions
+const minSalesFilter = useMinSalesFilter()
+
 /**
  * Composable for managing activity type filters.
  * Persists filter state to localStorage and provides filtering logic.
@@ -100,7 +105,8 @@ export function useActivityFilters(): UseActivityFiltersReturn {
 
   /**
    * Filter activities based on current filter state.
-   * Also respects low-confidence toggles for dungeons and craftables.
+   * Also respects low-confidence toggles for dungeons and craftables,
+   * and min sales volume threshold for all activities.
    * Preserves original rank numbers.
    */
   const getFilteredActivities = (activities: RankedActivity[]): RankedActivity[] => {
@@ -120,11 +126,21 @@ export function useActivityFilters(): UseActivityFiltersReturn {
 
       // Filter by low-confidence status using the composable's state
       // This delegates to the centralized low-confidence filter logic
+      // Only reject items here (return false) - don't accept them (return true)
+      // This ensures items continue through to the min-sales filter
       if (activity.activityType === 'dungeon' && activity.isLowConfidence) {
-        return lowConfidenceFilter.showLowConfidenceDungeons.value
+        if (!lowConfidenceFilter.showLowConfidenceDungeons.value) return false
       }
       if (activity.activityType === 'craftable' && activity.isLowConfidence) {
-        return lowConfidenceFilter.showLowConfidenceCraftables.value
+        if (!lowConfidenceFilter.showLowConfidenceCraftables.value) return false
+      }
+
+      // Filter by min sales volume
+      // Items with undefined weeklySalesVolume (resources) pass through
+      if (activity.weeklySalesVolume !== undefined) {
+        if (activity.weeklySalesVolume < minSalesFilter.minSalesThreshold.value) {
+          return false
+        }
       }
 
       return true
