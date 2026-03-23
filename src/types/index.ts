@@ -96,7 +96,7 @@ export interface CraftableRecipe {
 
 // Resource crafting types (for non-alchemy/forging skills)
 
-export type ResourceSkill = 'smelting' | 'cooking' | 'woodcutting' | 'mining' | 'fishing' | 'hunt' | 'dungeon'
+export type ResourceSkill = 'smelting' | 'cooking' | 'woodcutting' | 'mining' | 'fishing' | 'hunt' | 'dungeon' | 'construction'
 
 export interface ResourceRecipe {
   /** Output item name (e.g., 'Uranium Bar') */

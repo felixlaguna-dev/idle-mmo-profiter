@@ -246,6 +246,7 @@ const formatSkillShort = (skill?: string): string => {
     woodcutting: 'WC',
     mining: 'Mine',
     fishing: 'Fish',
+    construction: 'Build',
   }
   return shortNames[skill] || skill
 }
@@ -718,6 +719,12 @@ const handleDeleteRecipe = (baseName: string) => {
   background-color: rgba(59, 130, 246, 0.15);
   color: #60a5fa;
   border-color: rgba(59, 130, 246, 0.3);
+}
+
+.skill-construction {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border-color: rgba(234, 179, 8, 0.3);
 }
 
 /* Mode Badge */

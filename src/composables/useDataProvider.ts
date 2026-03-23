@@ -430,16 +430,25 @@ function createDataProvider() {
 
   /**
    * Map of raw resource/material names to their market prices
-   * Built from resourceGathering with user overrides applied
+   * Built from resourceGathering with user overrides applied.
+   * Also seeds from resourceRecipes outputs so that recipe outputs used as
+   * cross-recipe materials (e.g. Iron Bar used in Iron Fitting) resolve
+   * to their current market price rather than 0.
    * Used for recipe material cost lookups (e.g., Lantern Fish, Coal, ores, logs)
    */
   const rawResourcePriceMap = computed(() => {
     const map = new Map<string, number>()
-    // Get base data from defaults.json
+    // Seed from resourceRecipes outputs first (lower priority baseline)
+    // This allows recipe outputs (e.g. Iron Bar from smelting) to be used
+    // as materials in other recipes (e.g. Iron Fitting construction recipe)
+    ;(defaults.value.resourceRecipes || []).forEach((recipe) => {
+      map.set(recipe.name, recipe.currentPrice)
+    })
+    // Seed from resourceGathering (overrides recipe prices if same name exists)
     defaults.value.resourceGathering.forEach((gather) => {
       map.set(gather.name, gather.marketPrice)
     })
-    // Apply user overrides for resource prices
+    // Apply user overrides for resource prices (highest priority)
     if (userOverrides.value.resources) {
       for (const [name, override] of Object.entries(userOverrides.value.resources)) {
         if (override.marketPrice !== undefined) {
