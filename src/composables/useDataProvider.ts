@@ -508,18 +508,72 @@ function createDataProvider() {
   const resourceGatheringFromRecipes = computed(() => {
     const gatherEntries: typeof defaults.value.resourceGathering = []
 
-    // Create lookup maps for gathering time and base cost (bait cost for fish)
-    const gatherTimeMap = new Map<string, number>()
-    const baseCostMap = new Map<string, number>()
+    // Build lookup maps for raw gathered resources (leaves of the dependency tree)
+    const rawGatherTimeMap = new Map<string, number>()
+    const rawBaseCostMap = new Map<string, number>()
     defaults.value.resourceGathering.forEach((gather) => {
-      gatherTimeMap.set(gather.name, gather.timeSeconds)
-      baseCostMap.set(gather.name, gather.baseCost)
+      rawGatherTimeMap.set(gather.name, gather.timeSeconds)
+      rawBaseCostMap.set(gather.name, gather.baseCost)
     })
+
+    // Build lookup map for sub-recipes (intermediate crafted materials)
+    const recipeMap = new Map<string, (typeof defaults.value.resourceRecipes)[0]>()
+    ;(defaults.value.resourceRecipes || []).forEach((recipe) => {
+      recipeMap.set(recipe.name, recipe)
+    })
+
+    /**
+     * Recursively resolves gather time and base cost for a single material unit.
+     *
+     * @param materialName - Name of the material to resolve
+     * @param excludeCoal - If true, coal is purchased at market price instead of gathered
+     * @param visited - Cycle-detection set of recipe names currently being resolved
+     * @returns { totalTime, totalBaseCost } for one unit of the material
+     */
+    function resolveMaterial(
+      materialName: string,
+      excludeCoal: boolean,
+      visited: Set<string>,
+    ): { totalTime: number; totalBaseCost: number } {
+      // Coal special case: in "gather except coal" mode, buy at market price
+      if (excludeCoal && materialName.toLowerCase() === 'coal') {
+        const coalPrice = rawResourcePriceMap.value.get(materialName) ?? 0
+        return { totalTime: 0, totalBaseCost: coalPrice }
+      }
+
+      // Raw gathered resource (leaf node)
+      if (rawGatherTimeMap.has(materialName)) {
+        return {
+          totalTime: rawGatherTimeMap.get(materialName)!,
+          totalBaseCost: rawBaseCostMap.get(materialName) ?? 0,
+        }
+      }
+
+      // Sub-recipe (intermediate crafted material)
+      const subRecipe = recipeMap.get(materialName)
+      if (subRecipe && !visited.has(materialName)) {
+        const nextVisited = new Set(visited)
+        nextVisited.add(materialName)
+
+        let subTime = subRecipe.timeSeconds
+        let subBaseCost = 0
+
+        for (const subMat of subRecipe.materials) {
+          const resolved = resolveMaterial(subMat.name, excludeCoal, nextVisited)
+          subTime += resolved.totalTime * subMat.quantity
+          subBaseCost += resolved.totalBaseCost * subMat.quantity
+        }
+
+        return { totalTime: subTime, totalBaseCost: subBaseCost }
+      }
+
+      // Unknown material — resolve to zero (no gather time, no cost)
+      return { totalTime: 0, totalBaseCost: 0 }
+    }
 
     for (const recipe of resourceRecipes.value) {
       // Mode 1: Buy All - All materials at market price, craft time only
       const buyAllCost = recipe.materials.reduce((sum, mat) => {
-        // Look up price in rawResourcePriceMap (raw resources like fish, ores, logs)
         const matPrice = rawResourcePriceMap.value.get(mat.name) ?? 0
         return sum + matPrice * mat.quantity
       }, 0)
@@ -534,21 +588,14 @@ function createDataProvider() {
         cost: buyAllCost,
       })
 
-      // Mode 2: Gather Except Coal - Gather all materials except coal
-      const coalMat = recipe.materials.find((mat) => mat.name.toLowerCase() === 'coal')
-      const coalCost = coalMat ? (rawResourcePriceMap.value.get(coalMat.name) ?? 0) * coalMat.quantity : 0
-
-      // Calculate gather time for non-coal materials
+      // Mode 2: Gather Except Coal - Gather all raw materials, buy coal at market price
       let gatherExceptCoalTime = recipe.timeSeconds
-      let gatherExceptCoalBaseCost = coalCost
+      let gatherExceptCoalBaseCost = 0
 
       for (const mat of recipe.materials) {
-        if (mat.name.toLowerCase() !== 'coal') {
-          const matGatherTime = gatherTimeMap.get(mat.name) ?? 0
-          const matBaseCost = baseCostMap.get(mat.name) ?? 0
-          gatherExceptCoalTime += matGatherTime * mat.quantity
-          gatherExceptCoalBaseCost += matBaseCost * mat.quantity
-        }
+        const resolved = resolveMaterial(mat.name, true, new Set([recipe.name]))
+        gatherExceptCoalTime += resolved.totalTime * mat.quantity
+        gatherExceptCoalBaseCost += resolved.totalBaseCost * mat.quantity
       }
 
       gatherEntries.push({
@@ -566,10 +613,9 @@ function createDataProvider() {
       let gatherAllBaseCost = 0
 
       for (const mat of recipe.materials) {
-        const matGatherTime = gatherTimeMap.get(mat.name) ?? 0
-        const matBaseCost = baseCostMap.get(mat.name) ?? 0
-        gatherAllTime += matGatherTime * mat.quantity
-        gatherAllBaseCost += matBaseCost * mat.quantity
+        const resolved = resolveMaterial(mat.name, false, new Set([recipe.name]))
+        gatherAllTime += resolved.totalTime * mat.quantity
+        gatherAllBaseCost += resolved.totalBaseCost * mat.quantity
       }
 
       gatherEntries.push({

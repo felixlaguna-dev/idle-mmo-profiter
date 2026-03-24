@@ -1,13 +1,18 @@
 /**
- * Regression test for Iron Fitting cross-recipe material price resolution bug.
+ * Regression tests for Iron Fitting multi-level recipe dependency resolution.
  *
- * Bug: Iron Fitting (construction recipe) uses Iron Bar (a smelting recipe output)
- * as a material. rawResourcePriceMap only seeds prices from resourceGathering[],
- * so Iron Bar's price resolved to 0, causing Iron Fitting's buy-all cost to be
- * underreported.
+ * Iron Fitting (construction, 115s) requires 3x Iron Bar.
+ * Iron Bar (smelting, 20.9s) requires 1x Iron Ore (mining, 20.9s) + 1x Coal (mining, 10.9s).
  *
- * Fix: rawResourcePriceMap should also seed prices from resourceRecipes[] outputs,
- * so that any recipe output used as a cross-recipe material resolves correctly.
+ * The resolver must recursively traverse the dependency tree so that each mode
+ * correctly accumulates gather/craft time for ALL levels, not just the top level.
+ *
+ * Expected values:
+ *   Buy All:     time=115s,   baseCost = 3 * Iron Bar market price (84g at 28g/bar)
+ *   Gather:      time=240.4s, baseCost = 3 * Coal market price (16.8g at 5.6g/coal)
+ *                  115 + 3*(20.9 smelt + 20.9 mine ore) = 115 + 125.4 = 240.4
+ *   Gather All:  time=273.1s, baseCost = 0g (gather everything)
+ *                  115 + 3*(20.9 smelt + 20.9 mine ore + 10.9 mine coal) = 115 + 158.1 = 273.1
  */
 
 import { describe, it, expect, beforeEach } from 'vitest'
@@ -40,95 +45,145 @@ const localStorageMock = (() => {
 
 global.localStorage = localStorageMock as Storage
 
-describe('Iron Fitting cross-recipe material price resolution', () => {
+describe('Iron Fitting multi-level recursive recipe resolution', () => {
   beforeEach(() => {
     localStorage.clear()
     const dataProvider = useDataProvider()
     dataProvider.clearAllOverrides()
   })
 
+  // --- Prerequisite data checks ---
+
   it('Iron Bar should have a non-zero currentPrice in resourceRecipes', () => {
-    // Prerequisite: Iron Bar must exist in resourceRecipes with a real market price
-    const ironBarRecipe = (defaultData as typeof defaultData).resourceRecipes?.find(
-      (r) => r.name === 'Iron Bar',
-    )
+    const ironBarRecipe = defaultData.resourceRecipes?.find((r) => r.name === 'Iron Bar')
     expect(ironBarRecipe).toBeDefined()
     expect(ironBarRecipe!.currentPrice).toBeGreaterThan(0)
   })
 
   it('Iron Fitting recipe should exist in resourceRecipes and use Iron Bar as material', () => {
-    const ironFittingRecipe = (defaultData as typeof defaultData).resourceRecipes?.find(
-      (r) => r.name === 'Iron Fitting',
-    )
+    const ironFittingRecipe = defaultData.resourceRecipes?.find((r) => r.name === 'Iron Fitting')
     expect(ironFittingRecipe).toBeDefined()
     const ironBarMaterial = ironFittingRecipe!.materials.find((m) => m.name === 'Iron Bar')
     expect(ironBarMaterial).toBeDefined()
     expect(ironBarMaterial!.quantity).toBe(3)
   })
 
-  it('Iron Fitting buy-all baseCost should be non-zero (Iron Bar price must resolve)', () => {
-    const dataProvider = useDataProvider()
-
-    // Find the auto-generated "buy all" entry for Iron Fitting in resourceGathering
-    const ironFittingBuyAll = dataProvider.resourceGathering.value.find(
-      (g) => g.name === 'Iron Fitting',
-    )
-
-    expect(ironFittingBuyAll).toBeDefined()
-
-    // Iron Bar currentPrice is 28g, quantity 3 => material cost = 84g
-    // Without the fix, rawResourcePriceMap doesn't include Iron Bar, so baseCost = 0
-    expect(ironFittingBuyAll!.baseCost).toBeGreaterThan(0)
+  it('Iron Bar recipe should use Iron Ore and Coal as materials', () => {
+    const ironBarRecipe = defaultData.resourceRecipes?.find((r) => r.name === 'Iron Bar')
+    expect(ironBarRecipe).toBeDefined()
+    const ironOreMat = ironBarRecipe!.materials.find((m) => m.name === 'Iron Ore')
+    const coalMat = ironBarRecipe!.materials.find((m) => m.name === 'Coal')
+    expect(ironOreMat).toBeDefined()
+    expect(ironOreMat!.quantity).toBe(1)
+    expect(coalMat).toBeDefined()
+    expect(coalMat!.quantity).toBe(1)
   })
 
-  it('Iron Fitting buy-all baseCost should equal Iron Bar market price * quantity', () => {
+  // --- Buy All mode ---
+
+  it('Iron Fitting buy-all: timeSeconds should equal recipe craft time only (115s)', () => {
     const dataProvider = useDataProvider()
-
-    // Get Iron Bar's current price from resourceRecipes
-    const ironBarRecipe = (defaultData as typeof defaultData).resourceRecipes?.find(
-      (r) => r.name === 'Iron Bar',
-    )
-    const ironFittingRecipe = (defaultData as typeof defaultData).resourceRecipes?.find(
-      (r) => r.name === 'Iron Fitting',
-    )
-    const ironBarMaterial = ironFittingRecipe!.materials.find((m) => m.name === 'Iron Bar')!
-
-    const expectedCost = ironBarRecipe!.currentPrice * ironBarMaterial.quantity
-
-    // Find the auto-generated "buy all" entry for Iron Fitting
-    const ironFittingBuyAll = dataProvider.resourceGathering.value.find(
-      (g) => g.name === 'Iron Fitting',
-    )
-
-    expect(ironFittingBuyAll).toBeDefined()
-    expect(ironFittingBuyAll!.baseCost).toBeCloseTo(expectedCost, 2)
+    const entry = dataProvider.resourceGathering.value.find((g) => g.name === 'Iron Fitting')
+    expect(entry).toBeDefined()
+    // Buy All only includes the top-level recipe craft time
+    expect(entry!.timeSeconds).toBeCloseTo(115, 1)
   })
 
-  it('rawResourcePriceMap should resolve Iron Bar price from resourceRecipes output', () => {
+  it('Iron Fitting buy-all: baseCost should equal Iron Bar market price * 3', () => {
     const dataProvider = useDataProvider()
+    const ironBarRecipe = defaultData.resourceRecipes.find((r) => r.name === 'Iron Bar')!
+    const expectedCost = ironBarRecipe.currentPrice * 3
 
-    // The exported resourceGathering should reflect correct material pricing.
-    // If rawResourcePriceMap seeds from resourceRecipes, Iron Bar entry will exist
-    // and Iron Fitting's buy-all entry will have the correct cost.
-    const ironFittingBuyAll = dataProvider.resourceGathering.value.find(
-      (g) => g.name === 'Iron Fitting',
-    )
-    const ironFittingGather = dataProvider.resourceGathering.value.find(
+    const entry = dataProvider.resourceGathering.value.find((g) => g.name === 'Iron Fitting')
+    expect(entry).toBeDefined()
+    expect(entry!.baseCost).toBeCloseTo(expectedCost, 2)
+  })
+
+  // --- Gather (except coal) mode ---
+
+  it('Iron Fitting gather: timeSeconds should include smelt + mine ore for each Iron Bar (240.4s)', () => {
+    // 115 (craft fitting) + 3 * (20.9 smelt bar + 20.9 mine ore) = 115 + 125.4 = 240.4
+    const dataProvider = useDataProvider()
+    const entry = dataProvider.resourceGathering.value.find(
       (g) => g.name === 'Iron Fitting (gather)',
     )
-    const ironFittingGatherAll = dataProvider.resourceGathering.value.find(
+    expect(entry).toBeDefined()
+    expect(entry!.timeSeconds).toBeCloseTo(240.4, 1)
+  })
+
+  it('Iron Fitting gather: baseCost should equal Coal market price * 3 (coal bought, not gathered)', () => {
+    // Coal is excluded from gathering and bought at market price instead.
+    // Iron Bar needs 1 Coal, so Iron Fitting needs 3 Coal total.
+    const dataProvider = useDataProvider()
+    const coalData = defaultData.resourceGathering.find((r) => r.name === 'Coal')!
+    const expectedBaseCost = coalData.marketPrice * 3 // 5.6g * 3 = 16.8g
+
+    const entry = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather)',
+    )
+    expect(entry).toBeDefined()
+    expect(entry!.baseCost).toBeCloseTo(expectedBaseCost, 2)
+  })
+
+  // --- Gather All mode ---
+
+  it('Iron Fitting gather all: timeSeconds should include smelt + mine ore + mine coal (273.1s)', () => {
+    // 115 (craft fitting) + 3 * (20.9 smelt + 20.9 mine ore + 10.9 mine coal) = 115 + 158.1 = 273.1
+    const dataProvider = useDataProvider()
+    const entry = dataProvider.resourceGathering.value.find(
       (g) => g.name === 'Iron Fitting (gather all)',
     )
+    expect(entry).toBeDefined()
+    expect(entry!.timeSeconds).toBeCloseTo(273.1, 1)
+  })
 
-    expect(ironFittingBuyAll).toBeDefined()
-    expect(ironFittingGather).toBeDefined()
-    expect(ironFittingGatherAll).toBeDefined()
+  it('Iron Fitting gather all: baseCost should be 0 (everything gathered, no market purchases)', () => {
+    const dataProvider = useDataProvider()
+    const entry = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather all)',
+    )
+    expect(entry).toBeDefined()
+    expect(entry!.baseCost).toBeCloseTo(0, 2)
+  })
 
-    // All three modes should have non-zero baseCost since Iron Bar has a market price
-    // and no "gather" version of Iron Bar exists (it's a smelting recipe, not raw ore)
-    // In gather/gather-all modes, Iron Bar isn't in resourceGathering so gatherTime=0
-    // but baseCost (buy cost) is still used for non-gathereable materials
-    // Buy-all mode: baseCost must be non-zero
-    expect(ironFittingBuyAll!.baseCost).toBeGreaterThan(0)
+  // --- Ordering invariants ---
+
+  it('gather mode should have more timeSeconds than buy-all mode', () => {
+    const dataProvider = useDataProvider()
+    const buyAll = dataProvider.resourceGathering.value.find((g) => g.name === 'Iron Fitting')
+    const gather = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather)',
+    )
+    expect(buyAll).toBeDefined()
+    expect(gather).toBeDefined()
+    expect(gather!.timeSeconds).toBeGreaterThan(buyAll!.timeSeconds)
+  })
+
+  it('gather all mode should have more timeSeconds than gather mode (coal gather time added)', () => {
+    const dataProvider = useDataProvider()
+    const gather = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather)',
+    )
+    const gatherAll = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather all)',
+    )
+    expect(gather).toBeDefined()
+    expect(gatherAll).toBeDefined()
+    // Gather all adds coal mining time (3 * 10.9s = 32.7s) compared to gather
+    expect(gatherAll!.timeSeconds).toBeGreaterThan(gather!.timeSeconds)
+  })
+
+  it('gather all mode should have lower baseCost than gather mode (no coal purchase)', () => {
+    const dataProvider = useDataProvider()
+    const gather = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather)',
+    )
+    const gatherAll = dataProvider.resourceGathering.value.find(
+      (g) => g.name === 'Iron Fitting (gather all)',
+    )
+    expect(gather).toBeDefined()
+    expect(gatherAll).toBeDefined()
+    // Gather mode has coal purchase cost; gather all has zero base cost
+    expect(gatherAll!.baseCost).toBeLessThan(gather!.baseCost)
   })
 })
