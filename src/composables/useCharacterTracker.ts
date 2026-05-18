@@ -297,6 +297,39 @@ function createCharacterTracker() {
   }
 
   /**
+   * Undo the latest snapshot — pops it from history and restores previous state
+   */
+  function undoLatestSnapshot(): void {
+    if (!activeCharacter.value) return
+
+    const character = store.value.characters.find(
+      (c) => c.id === activeCharacter.value!.id
+    )
+    if (!character || character.history.length === 0) return
+
+    // Pop the latest snapshot
+    character.history.pop()
+
+    // Restore inventory and gold from the new latest snapshot (or empty if none left)
+    const latestSnapshot = character.history[character.history.length - 1]
+    if (latestSnapshot) {
+      character.inventory = latestSnapshot.inventory.map((item) => ({ ...item }))
+      character.gold = latestSnapshot.gold
+    } else {
+      character.inventory = []
+      character.gold = 0
+    }
+
+    store.value = { ...store.value }
+    pendingChanges.value.clear()
+  }
+
+  const canUndoSnapshot = computed(() => {
+    if (!activeCharacter.value) return false
+    return activeCharacter.value.history.length > 0
+  })
+
+  /**
    * Calculate snapshot value using priceAtTime from the snapshot
    * For HISTORICAL PRICES, we use item.priceAtTime
    */
@@ -357,6 +390,8 @@ function createCharacterTracker() {
 
     // Snapshot
     saveSnapshot,
+    undoLatestSnapshot,
+    canUndoSnapshot,
 
     // Helpers
     calculateSnapshotValue,

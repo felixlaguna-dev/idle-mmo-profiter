@@ -260,6 +260,20 @@ const handleDiscardChanges = () => {
   showToast('Changes discarded', 'success')
 }
 
+// Undo latest snapshot
+const handleUndoSnapshot = () => {
+  if (!tracker.activeCharacter.value) return
+  if (!confirm('Undo the latest snapshot? This will restore the previous state.')) return
+  tracker.undoLatestSnapshot()
+  goldInput.value = tracker.activeCharacter.value?.gold ?? 0
+  showToast('Latest snapshot undone', 'success')
+  nextTick(() => {
+    setTimeout(() => {
+      createCharts()
+    }, 150)
+  })
+}
+
 // Current inventory value
 const inventoryValue = computed(() => {
   return tracker.getEffectiveInventory.value.reduce((sum, item) => {
@@ -559,6 +573,14 @@ width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               <polyline points="8 6 2 12 8 18" />
             </svg>
             Import Inventory
+          </button>
+          <button
+            v-if="tracker.canUndoSnapshot.value && !tracker.hasPendingChanges.value"
+            class="btn-action btn-undo"
+            title="Undo latest snapshot"
+            @click="handleUndoSnapshot"
+          >
+            Undo
           </button>
         </div>
         <div v-if="tracker.hasPendingChanges.value" class="top-bar-save">
@@ -864,6 +886,15 @@ width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 
 .btn-action.btn-danger:hover {
   background: rgba(239, 68, 68, 0.1);
+}
+
+.btn-action.btn-undo {
+  border-color: rgba(251, 191, 36, 0.5);
+  color: rgba(251, 191, 36, 1);
+}
+
+.btn-action.btn-undo:hover {
+  background: rgba(251, 191, 36, 0.1);
 }
 
 .html-import-btn {
