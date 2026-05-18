@@ -32,10 +32,13 @@ vi.mock('../../composables/useDataProvider', () => ({
 
 vi.mock('../../composables/useCharacterTracker', () => ({
   useCharacterTracker: () => ({
-    activeCharacter: { value: { name: 'Test' } },
+    activeCharacter: { value: { id: 'char1', name: 'Test' } },
+    characters: { value: [{ id: 'char1', name: 'Test' }] },
     getEffectiveInventory: { value: [] },
     setItemQuantity: vi.fn(),
     updateGold: vi.fn(),
+    setActiveCharacter: vi.fn(),
+    addCharacter: vi.fn(() => 'new-char-id'),
   }),
 }))
 

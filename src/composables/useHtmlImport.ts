@@ -67,7 +67,7 @@ export interface ImportProgress {
  * It accesses Alpine's internal data to extract the full inventory as JSON,
  * then copies it to the clipboard via copy() (a DevTools helper).
  */
-export const CONSOLE_SNIPPET = `navigator.clipboard.writeText(JSON.stringify({gold:Alpine.store('current_character')?.gold??null,items:document.querySelector('[x-on\\\\:click*="selected_item"]')&&Alpine.$data(document.querySelector('[x-on\\\\:click*="selected_item"]'))?.inventory_items?.map(i=>({n:i.name,q:i.quantity,k:i.quality,t:i.tier}))||[]}))`
+export const CONSOLE_SNIPPET = `navigator.clipboard.writeText(JSON.stringify({name:Alpine.store('current_character')?.name??null,gold:Alpine.store('current_character')?.gold??null,items:document.querySelector('[x-on\\\\:click*="selected_item"]')&&Alpine.$data(document.querySelector('[x-on\\\\:click*="selected_item"]'))?.inventory_items?.map(i=>({n:i.name,q:i.quantity,k:i.quality,t:i.tier}))||[]}))`
 
 // ---------------------------------------------------------------------------
 // Types for the extracted JSON
@@ -85,6 +85,8 @@ interface ExtractedItem {
 }
 
 interface ExtractedData {
+  /** Character name (from current_character store). */
+  name?: string | null
   /** Gold amount (from current_character store). */
   gold: number | null
   /** Inventory items. */
@@ -101,6 +103,7 @@ export function useHtmlImport() {
   const results = ref<ImportResult[]>([])
   const errors = ref<ImportError[]>([])
   const goldExtracted = ref<number | null>(null)
+  const characterName = ref<string | null>(null)
   const hasResults = computed(() => results.value.length > 0 || errors.value.length > 0)
 
   const matchedCount = computed(() => results.value.length)
@@ -116,6 +119,7 @@ export function useHtmlImport() {
     results.value = []
     errors.value = []
     goldExtracted.value = null
+    characterName.value = null
 
     try {
       progress.value = { step: 'Parsing JSON…', current: 0, total: 0 }
@@ -134,6 +138,11 @@ export function useHtmlImport() {
       // Extract gold
       if (data.gold !== null && data.gold !== undefined) {
         goldExtracted.value = data.gold
+      }
+
+      // Extract character name
+      if (data.name) {
+        characterName.value = data.name
       }
 
       progress.value = { step: `Matching ${data.items.length} items…`, current: 0, total: data.items.length }
@@ -234,9 +243,26 @@ export function useHtmlImport() {
     const tracker = useCharacterTracker()
     const toast = useToast()
 
-    if (!tracker.activeCharacter.value) {
-      toast.error('No active character selected. Please select a character first.')
-      return
+    // Auto-select or create character by name from imported data
+    if (characterName.value) {
+      const existingChar = tracker.characters.value.find(
+        (c) => c.name.toLowerCase() === characterName.value!.toLowerCase()
+      )
+      if (existingChar) {
+        if (tracker.activeCharacter.value?.id !== existingChar.id) {
+          tracker.setActiveCharacter(existingChar.id)
+        }
+      } else {
+        // Create new character with the imported name
+        const newId = tracker.addCharacter(characterName.value)
+        tracker.setActiveCharacter(newId)
+      }
+    } else {
+      // Fallback: use whatever character is currently active
+      if (!tracker.activeCharacter.value) {
+        toast.error('No active character selected and no character name in import data.')
+        return
+      }
     }
 
     // Build price map: max(marketPrice, vendorValue) per hashedId
@@ -300,6 +326,7 @@ export function useHtmlImport() {
     results.value = []
     errors.value = []
     goldExtracted.value = null
+    characterName.value = null
     progress.value = { step: 'Idle', current: 0, total: 0 }
   }
 
@@ -313,6 +340,7 @@ export function useHtmlImport() {
     results,
     errors,
     goldExtracted,
+    characterName,
     hasResults,
     matchedCount,
     unrecognizedCount,

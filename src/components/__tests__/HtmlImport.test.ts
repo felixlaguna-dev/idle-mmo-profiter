@@ -12,6 +12,7 @@ const mockErrors = ref<any[]>([])
 const mockIsProcessing = ref(false)
 const mockProgress = ref({ step: 'Idle', current: 0, total: 0 })
 const mockGoldExtracted = ref<number | null>(null)
+const mockCharacterName = ref<string | null>(null)
 const mockHasResults = computed(
   () => mockResults.value.length > 0 || mockErrors.value.length > 0,
 )
@@ -31,6 +32,7 @@ vi.mock('../../composables/useHtmlImport', () => ({
     results: mockResults,
     errors: mockErrors,
     goldExtracted: mockGoldExtracted,
+    characterName: mockCharacterName,
     hasResults: mockHasResults,
     matchedCount: mockMatchedCount,
     unrecognizedCount: mockUnrecognizedCount,
@@ -85,6 +87,7 @@ describe('HtmlImport', () => {
     mockIsProcessing.value = false
     mockProgress.value = { step: 'Idle', current: 0, total: 0 }
     mockGoldExtracted.value = null
+    mockCharacterName.value = null
     vi.clearAllMocks()
   })
 

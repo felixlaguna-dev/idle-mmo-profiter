@@ -282,6 +282,14 @@ width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               </svg>
               {{ goldExtracted.toLocaleString() }} gold
             </span>
+            <span v-if="htmlImport.characterName.value" class="hi-summary-chip hi-summary-chip--blue">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              {{ htmlImport.characterName.value }}
+            </span>
           </div>
 
           <!-- Results list -->
@@ -354,7 +362,7 @@ width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               :disabled="matchedCount === 0"
               @click="handleApply"
             >
-              Import {{ matchedCount }} item{{ matchedCount !== 1 ? 's' : '' }} to inventory
+              Import {{ matchedCount }} item{{ matchedCount !== 1 ? 's' : '' }} to {{ htmlImport.characterName.value || 'inventory' }}
             </button>
           </div>
         </template>
@@ -798,6 +806,11 @@ width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
   background: rgba(251, 191, 36, 0.15);
   color: #fbbf24;
   border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.hi-summary-chip--blue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
 }
 
 /* Results pane */
