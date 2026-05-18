@@ -67,7 +67,7 @@ export interface ImportProgress {
  * It accesses Alpine's internal data to extract the full inventory as JSON,
  * then copies it to the clipboard via copy() (a DevTools helper).
  */
-export const CONSOLE_SNIPPET = `copy(JSON.stringify({gold:Alpine.store('current_character')?.gold??null,items:document.querySelector('[x-on\\\\:click*="selected_item"]')&&Alpine.$data(document.querySelector('[x-on\\\\:click*="selected_item"]'))?.inventory_items?.map(i=>({n:i.name,q:i.quantity,k:i.quality,t:i.tier}))||[]}))`
+export const CONSOLE_SNIPPET = `navigator.clipboard.writeText(JSON.stringify({gold:Alpine.store('current_character')?.gold??null,items:document.querySelector('[x-on\\\\:click*="selected_item"]')&&Alpine.$data(document.querySelector('[x-on\\\\:click*="selected_item"]'))?.inventory_items?.map(i=>({n:i.name,q:i.quantity,k:i.quality,t:i.tier}))||[]}))`
 
 // ---------------------------------------------------------------------------
 // Types for the extracted JSON

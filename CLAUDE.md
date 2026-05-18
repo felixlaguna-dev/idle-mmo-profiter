@@ -27,12 +27,17 @@
 
 ## Key Files
 - `src/App.vue` — Main app shell, tab navigation, global styles
-- `src/data/defaults.json` — Master data (891 items, 27K+ lines)
+- `src/data/defaults.json` — Master data (891+ items, resources array 47 entries)
 - `src/composables/useScreenshotImport.ts` — Screenshot-based inventory import (dHash pipeline)
 - `src/composables/useHtmlImport.ts` — Console JSON inventory import (Alpine.js snippet approach, deterministic)
 - `src/composables/useCharacterTracker.ts` — Inventory tracking, import integration point
 - `src/calculators/craftableCalculator.ts` — Craftable profit calculator with ALCHEMY_CONTAINERS allowlist (12 vendor-sold containers for skill classification)
+- `src/calculators/resourceCalculator.ts` — Resource profit calculator (includes weeklySalesVolume)
+- `src/calculators/profitRanker.ts` — Combined activity ranker (weeklySalesVolume for 24/7 filter)
+- `src/composables/useDataProvider.ts` — Central data provider (resourceWeeklySalesVolumeMap with materials fallback)
 - `src/composables/useItemUses.ts` — Item usage lookup (also uses ALCHEMY_CONTAINERS)
-- `src/components/CharacterTracker.vue` — Inventory UI with mobile card layout
-- `src/components/HtmlImport.vue` — JSON paste import UI component
+- `src/components/CharacterTracker.vue` — Inventory UI, 15-min chart aggregation
+- `src/components/HtmlImport.vue` — JSON paste import UI, draggable bookmarklet
+- `src/components/ProfitRankingTable.vue` — Ranked leaderboard (mode badges for resource variants)
+- `src/components/ResourceTable.vue` — Resource profit table (volume icons, mode badges)
 - `src/style.css` — Global styles, animations, responsive overrides
