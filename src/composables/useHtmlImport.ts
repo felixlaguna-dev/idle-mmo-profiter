@@ -286,20 +286,23 @@ export function useHtmlImport() {
       }
     }
 
-    const effectiveInventory = tracker.getEffectiveInventory.value
-    const existingQtyMap = new Map<string, number>()
-    for (const item of effectiveInventory) {
-      existingQtyMap.set(item.hashId, item.quantity)
-    }
+    // Import is a full inventory snapshot — replace quantities, don't add.
+    // Also mark items in current inventory but NOT in the snapshot for removal.
+    const importedHashIds = new Set<string>()
 
     let imported = 0
     for (const result of results.value) {
-      const existing = existingQtyMap.get(result.hashedId) ?? 0
-      const newQty = existing + result.quantity
       const priceAtTime = priceMap.get(result.hashedId) ?? 0
-      tracker.setItemQuantity(result.hashedId, newQty, priceAtTime, result.name)
-      existingQtyMap.set(result.hashedId, newQty)
+      tracker.setItemQuantity(result.hashedId, result.quantity, priceAtTime, result.name)
+      importedHashIds.add(result.hashedId)
       imported++
+    }
+
+    // Remove items that exist in current inventory but are NOT in the snapshot
+    for (const item of tracker.getEffectiveInventory.value) {
+      if (!importedHashIds.has(item.hashId)) {
+        tracker.removeItem(item.hashId)
+      }
     }
 
     if (goldExtracted.value !== null) {
