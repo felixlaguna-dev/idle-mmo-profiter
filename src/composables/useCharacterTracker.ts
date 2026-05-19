@@ -89,6 +89,9 @@ function createCharacterTracker() {
   // Pending changes map (hashId -> edit)
   const pendingChanges = ref<Map<string, PendingInventoryEdit>>(new Map())
 
+  // Pending gold change (null = no change, number = new gold value)
+  const pendingGold = ref<number | null>(null)
+
   // Computed reactive refs
   const characters = computed(() => store.value.characters)
 
@@ -99,7 +102,16 @@ function createCharacterTracker() {
     )
   })
 
-  const hasPendingChanges = computed(() => pendingChanges.value.size > 0)
+  const hasPendingChanges = computed(() => pendingChanges.value.size > 0 || pendingGold.value !== null)
+
+  /**
+   * Get effective gold (saved gold + pending gold)
+   * Used for preview before save
+   */
+  const getEffectiveGold = computed<number>(() => {
+    if (!activeCharacter.value) return 0
+    return pendingGold.value !== null ? pendingGold.value : activeCharacter.value.gold
+  })
 
   /**
    * Generate a unique character ID
@@ -161,22 +173,16 @@ function createCharacterTracker() {
       store.value = { ...store.value }
       // Clear pending changes when switching characters
       pendingChanges.value.clear()
+      pendingGold.value = null
     }
   }
 
   /**
-   * Update gold for the active character
+   * Update gold for the active character (as pending change)
    */
   function updateGold(gold: number): void {
     if (!activeCharacter.value) return
-
-    const character = store.value.characters.find(
-      (c) => c.id === activeCharacter.value!.id
-    )
-    if (character) {
-      character.gold = gold
-      store.value = { ...store.value }
-    }
+    pendingGold.value = gold
   }
 
   /**
@@ -217,6 +223,7 @@ function createCharacterTracker() {
    */
   function discardChanges(): void {
     pendingChanges.value.clear()
+    pendingGold.value = null
   }
 
   /**
@@ -282,6 +289,11 @@ function createCharacterTracker() {
 
     character.inventory = Array.from(inventoryMap.values())
 
+    // Apply pending gold
+    if (pendingGold.value !== null) {
+      character.gold = pendingGold.value
+    }
+
     // Create snapshot with HISTORICAL PRICES
     const snapshot: CharacterSnapshot = {
       timestamp: new Date().toISOString(),
@@ -294,6 +306,7 @@ function createCharacterTracker() {
 
     // Clear pending changes
     pendingChanges.value.clear()
+    pendingGold.value = null
   }
 
   /**
@@ -322,6 +335,7 @@ function createCharacterTracker() {
 
     store.value = { ...store.value }
     pendingChanges.value.clear()
+    pendingGold.value = null
   }
 
   const canUndoSnapshot = computed(() => {
@@ -375,6 +389,7 @@ function createCharacterTracker() {
     pendingChanges: computed(() => pendingChanges.value),
     hasPendingChanges,
     getEffectiveInventory,
+    getEffectiveGold,
 
     // Character CRUD
     addCharacter,

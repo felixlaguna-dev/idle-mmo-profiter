@@ -118,14 +118,17 @@ describe('useCharacterTracker', () => {
   })
 
   describe('Gold management', () => {
-    it('should update gold for active character', () => {
+    it('should update gold as pending change', () => {
       const tracker = useCharacterTracker()
       const id = tracker.addCharacter('Rich')
       tracker.setActiveCharacter(id)
 
       tracker.updateGold(1000)
 
-      expect(tracker.activeCharacter.value?.gold).toBe(1000)
+      // Gold is pending, not yet applied to character
+      expect(tracker.activeCharacter.value?.gold).toBe(0)
+      expect(tracker.getEffectiveGold.value).toBe(1000)
+      expect(tracker.hasPendingChanges.value).toBe(true)
     })
 
     it('should not update gold when no active character', () => {

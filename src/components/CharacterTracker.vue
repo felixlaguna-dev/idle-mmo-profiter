@@ -42,13 +42,11 @@ let allChartInstance: Chart | null = null
 // eslint-disable-next-line no-undef
 let resizeObserver: ResizeObserver | null = null
 
-// Sync gold input when active character changes
+// Sync gold input when effective gold changes
 watch(
-  () => tracker.activeCharacter.value,
-  (char) => {
-    if (char) {
-      goldInput.value = char.gold
-    }
+  () => tracker.getEffectiveGold.value,
+  (gold) => {
+    goldInput.value = gold
   },
   { immediate: true }
 )
@@ -265,7 +263,6 @@ const handleUndoSnapshot = () => {
   if (!tracker.activeCharacter.value) return
   if (!confirm('Undo the latest snapshot? This will restore the previous state.')) return
   tracker.undoLatestSnapshot()
-  goldInput.value = tracker.activeCharacter.value?.gold ?? 0
   showToast('Latest snapshot undone', 'success')
   nextTick(() => {
     setTimeout(() => {
