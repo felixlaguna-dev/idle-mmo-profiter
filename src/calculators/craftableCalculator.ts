@@ -265,7 +265,12 @@ export function calculateCraftableProfits(
       skill: craftable.skill || inferSkillFromMaterials(craftable.materials),
       isLowConfidence: isCraftableLowConfidence(
         craftable.lastSaleAt,
-        tradableRecipe ? (tradableRecipe.lastSaleAt ?? null) : undefined,
+        // Only check recipe confidence for consumable recipes (uses > 0).
+        // Unlimited-use recipes (uses === 0) don't affect per-craft economics
+        // and their stale sale data shouldn't hide the craftable.
+        (tradableRecipe && tradableRecipe.uses && tradableRecipe.uses > 0)
+          ? (tradableRecipe.lastSaleAt ?? null)
+          : undefined,
         materialLastSaleAts,
         materialVendorValues
       ),
